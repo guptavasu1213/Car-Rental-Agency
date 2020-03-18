@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace CarRentalApp
 {
+    
     public partial class CustomerLogin : Form
     {
+        private static String database = "server=cra291.database.windows.net;database=cra291;UID=server_login;password=1234";
+        private SqlConnection connection = new SqlConnection(database);
         Color hintColor;
 
         public CustomerLogin()
@@ -66,6 +70,16 @@ namespace CarRentalApp
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
         {
 
         }
