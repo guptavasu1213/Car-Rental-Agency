@@ -31,20 +31,20 @@
             this.header = new System.Windows.Forms.Label();
             this.inputEmail = new System.Windows.Forms.TextBox();
             this.inputPassword = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.newCxLabel = new System.Windows.Forms.Label();
+            this.existingCxLabel = new System.Windows.Forms.Label();
+            this.fNameBox = new System.Windows.Forms.TextBox();
+            this.lNameBox = new System.Windows.Forms.TextBox();
+            this.EmailBox = new System.Windows.Forms.TextBox();
+            this.vSeparator1 = new System.Windows.Forms.Label();
+            this.phoneBox = new System.Windows.Forms.TextBox();
+            this.insuranceBox = new System.Windows.Forms.TextBox();
+            this.driversBox = new System.Windows.Forms.TextBox();
+            this.existingCxButton = new System.Windows.Forms.Button();
+            this.newCxButton = new System.Windows.Forms.Button();
+            this.ageBox = new System.Windows.Forms.TextBox();
+            this.passwordBox = new System.Windows.Forms.TextBox();
+            this.confirmBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // header
@@ -53,7 +53,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.header.AutoSize = true;
             this.header.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.header.Location = new System.Drawing.Point(278, 30);
+            this.header.Location = new System.Drawing.Point(278, 29);
             this.header.Name = "header";
             this.header.Size = new System.Drawing.Size(229, 32);
             this.header.TabIndex = 1;
@@ -89,200 +89,195 @@
             this.inputPassword.Enter += new System.EventHandler(this.inputPassword_Enter);
             this.inputPassword.Leave += new System.EventHandler(this.inputPassword_Leave);
             // 
-            // label1
+            // newCxLabel
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.newCxLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(460, 85);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 24);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "New Customer";
+            this.newCxLabel.AutoSize = true;
+            this.newCxLabel.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newCxLabel.Location = new System.Drawing.Point(460, 85);
+            this.newCxLabel.Name = "newCxLabel";
+            this.newCxLabel.Size = new System.Drawing.Size(156, 24);
+            this.newCxLabel.TabIndex = 5;
+            this.newCxLabel.Text = "New Customer";
             // 
-            // label2
+            // existingCxLabel
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.existingCxLabel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(59, 85);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(196, 24);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Existing Customer";
+            this.existingCxLabel.AutoSize = true;
+            this.existingCxLabel.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.existingCxLabel.Location = new System.Drawing.Point(59, 85);
+            this.existingCxLabel.Name = "existingCxLabel";
+            this.existingCxLabel.Size = new System.Drawing.Size(196, 24);
+            this.existingCxLabel.TabIndex = 6;
+            this.existingCxLabel.Text = "Existing Customer";
             // 
             // textBox1
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.fNameBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox1.Location = new System.Drawing.Point(322, 134);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(207, 26);
-            this.textBox1.TabIndex = 7;
-            this.textBox1.Text = "First Name";
+            this.fNameBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fNameBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.fNameBox.Location = new System.Drawing.Point(322, 134);
+            this.fNameBox.Margin = new System.Windows.Forms.Padding(4);
+            this.fNameBox.Name = "fNameBox";
+            this.fNameBox.Size = new System.Drawing.Size(207, 26);
+            this.fNameBox.TabIndex = 7;
+            this.fNameBox.Text = "First Name";
             // 
             // textBox2
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lNameBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox2.Location = new System.Drawing.Point(537, 134);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(207, 26);
-            this.textBox2.TabIndex = 8;
-            this.textBox2.Text = "Last Name";
+            this.lNameBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lNameBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.lNameBox.Location = new System.Drawing.Point(537, 134);
+            this.lNameBox.Margin = new System.Windows.Forms.Padding(4);
+            this.lNameBox.Name = "lNameBox";
+            this.lNameBox.Size = new System.Drawing.Size(207, 26);
+            this.lNameBox.TabIndex = 8;
+            this.lNameBox.Text = "Last Name";
             // 
             // textBox3
             // 
-            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.EmailBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox3.Location = new System.Drawing.Point(322, 276);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(207, 26);
-            this.textBox3.TabIndex = 9;
-            this.textBox3.Text = "Email";
+            this.EmailBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.EmailBox.Location = new System.Drawing.Point(322, 276);
+            this.EmailBox.Margin = new System.Windows.Forms.Padding(4);
+            this.EmailBox.Name = "EmailBox";
+            this.EmailBox.Size = new System.Drawing.Size(207, 26);
+            this.EmailBox.TabIndex = 9;
+            this.EmailBox.Text = "Email";
             // 
             // label3
             // 
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Location = new System.Drawing.Point(293, 85);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(2, 350);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "label3";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.vSeparator1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.vSeparator1.Location = new System.Drawing.Point(293, 85);
+            this.vSeparator1.Name = "vSeparator1";
+            this.vSeparator1.Size = new System.Drawing.Size(2, 350);
+            this.vSeparator1.TabIndex = 10;
+            this.vSeparator1.Text = "";
             // 
             // textBox4
             // 
-            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.phoneBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox4.Location = new System.Drawing.Point(322, 180);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(207, 26);
-            this.textBox4.TabIndex = 11;
-            this.textBox4.Text = "Phone";
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.phoneBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.phoneBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.phoneBox.Location = new System.Drawing.Point(322, 180);
+            this.phoneBox.Margin = new System.Windows.Forms.Padding(4);
+            this.phoneBox.Name = "phoneBox";
+            this.phoneBox.Size = new System.Drawing.Size(207, 26);
+            this.phoneBox.TabIndex = 11;
+            this.phoneBox.Text = "Phone";
             // 
             // textBox5
             // 
-            this.textBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.insuranceBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox5.Location = new System.Drawing.Point(322, 227);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(207, 26);
-            this.textBox5.TabIndex = 12;
-            this.textBox5.Text = "Insurance Number";
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
+            this.insuranceBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insuranceBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.insuranceBox.Location = new System.Drawing.Point(322, 227);
+            this.insuranceBox.Margin = new System.Windows.Forms.Padding(4);
+            this.insuranceBox.Name = "insuranceBox";
+            this.insuranceBox.Size = new System.Drawing.Size(207, 26);
+            this.insuranceBox.TabIndex = 12;
+            this.insuranceBox.Text = "Insurance Number";
             // 
             // textBox6
             // 
-            this.textBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.driversBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox6.Location = new System.Drawing.Point(537, 227);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(207, 26);
-            this.textBox6.TabIndex = 13;
-            this.textBox6.Text = "Drivers License Class";
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.driversBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.driversBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.driversBox.Location = new System.Drawing.Point(537, 227);
+            this.driversBox.Margin = new System.Windows.Forms.Padding(4);
+            this.driversBox.Name = "driversBox";
+            this.driversBox.Size = new System.Drawing.Size(207, 26);
+            this.driversBox.TabIndex = 13;
+            this.driversBox.Text = "Drivers License Class";
             // 
-            // button1
+            // existingCxButton
             // 
-            this.button1.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(89, 243);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(125, 40);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = true;
+            this.existingCxButton.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.existingCxButton.Location = new System.Drawing.Point(89, 243);
+            this.existingCxButton.Name = "existingCxButton";
+            this.existingCxButton.Size = new System.Drawing.Size(125, 40);
+            this.existingCxButton.TabIndex = 14;
+            this.existingCxButton.Text = "Login";
+            this.existingCxButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // newCxButton
             // 
-            this.button2.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(470, 378);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 40);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Submit";
-            this.button2.UseVisualStyleBackColor = true;
+            this.newCxButton.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newCxButton.Location = new System.Drawing.Point(470, 378);
+            this.newCxButton.Name = "newCxButton";
+            this.newCxButton.Size = new System.Drawing.Size(125, 40);
+            this.newCxButton.TabIndex = 15;
+            this.newCxButton.Text = "Submit";
+            this.newCxButton.UseVisualStyleBackColor = true;
             // 
             // textBox7
             // 
-            this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.ageBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox7.Location = new System.Drawing.Point(537, 180);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(207, 26);
-            this.textBox7.TabIndex = 16;
-            this.textBox7.Text = "Age";
+            this.ageBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ageBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ageBox.Location = new System.Drawing.Point(537, 180);
+            this.ageBox.Margin = new System.Windows.Forms.Padding(4);
+            this.ageBox.Name = "ageBox";
+            this.ageBox.Size = new System.Drawing.Size(207, 26);
+            this.ageBox.TabIndex = 16;
+            this.ageBox.Text = "Age";
             // 
             // textBox8
             // 
-            this.textBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.passwordBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox8.Location = new System.Drawing.Point(537, 276);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(207, 26);
-            this.textBox8.TabIndex = 17;
-            this.textBox8.Text = "New Password";
-            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
+            this.passwordBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.passwordBox.Location = new System.Drawing.Point(537, 276);
+            this.passwordBox.Margin = new System.Windows.Forms.Padding(4);
+            this.passwordBox.Name = "passwordBox";
+            this.passwordBox.Size = new System.Drawing.Size(207, 26);
+            this.passwordBox.TabIndex = 17;
+            this.passwordBox.Text = "New Password";
             // 
             // textBox9
             // 
-            this.textBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.confirmBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox9.Location = new System.Drawing.Point(537, 323);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(207, 26);
-            this.textBox9.TabIndex = 18;
-            this.textBox9.Text = "Confirm Password";
+            this.confirmBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.confirmBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.confirmBox.Location = new System.Drawing.Point(537, 323);
+            this.confirmBox.Margin = new System.Windows.Forms.Padding(4);
+            this.confirmBox.Name = "confirmBox";
+            this.confirmBox.Size = new System.Drawing.Size(207, 26);
+            this.confirmBox.TabIndex = 18;
+            this.confirmBox.Text = "Confirm Password";
             // 
             // CustomerLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 450);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.confirmBox);
+            this.Controls.Add(this.passwordBox);
+            this.Controls.Add(this.ageBox);
+            this.Controls.Add(this.newCxButton);
+            this.Controls.Add(this.existingCxButton);
+            this.Controls.Add(this.driversBox);
+            this.Controls.Add(this.insuranceBox);
+            this.Controls.Add(this.phoneBox);
+            this.Controls.Add(this.vSeparator1);
+            this.Controls.Add(this.EmailBox);
+            this.Controls.Add(this.lNameBox);
+            this.Controls.Add(this.fNameBox);
+            this.Controls.Add(this.existingCxLabel);
+            this.Controls.Add(this.newCxLabel);
             this.Controls.Add(this.inputPassword);
             this.Controls.Add(this.inputEmail);
             this.Controls.Add(this.header);
@@ -298,19 +293,19 @@
         private System.Windows.Forms.Label header;
         private System.Windows.Forms.TextBox inputEmail;
         private System.Windows.Forms.TextBox inputPassword;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label newCxLabel;
+        private System.Windows.Forms.Label existingCxLabel;
+        private System.Windows.Forms.TextBox fNameBox;
+        private System.Windows.Forms.TextBox lNameBox;
+        private System.Windows.Forms.TextBox EmailBox;
+        private System.Windows.Forms.Label vSeparator1;
+        private System.Windows.Forms.TextBox phoneBox;
+        private System.Windows.Forms.TextBox insuranceBox;
+        private System.Windows.Forms.TextBox driversBox;
+        private System.Windows.Forms.Button existingCxButton;
+        private System.Windows.Forms.Button newCxButton;
+        private System.Windows.Forms.TextBox ageBox;
+        private System.Windows.Forms.TextBox passwordBox;
+        private System.Windows.Forms.TextBox confirmBox;
     }
 }
