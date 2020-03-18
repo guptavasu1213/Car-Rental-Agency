@@ -113,7 +113,7 @@
             this.existingCxLabel.TabIndex = 6;
             this.existingCxLabel.Text = "Existing Customer";
             // 
-            // textBox1
+            // fNameBox
             // 
             this.fNameBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -125,8 +125,10 @@
             this.fNameBox.Size = new System.Drawing.Size(207, 26);
             this.fNameBox.TabIndex = 7;
             this.fNameBox.Text = "First Name";
+            this.fNameBox.Enter += new System.EventHandler(this.fNameBox_Enter);
+            this.fNameBox.Leave += new System.EventHandler(this.fNameBox_Leave);
             // 
-            // textBox2
+            // lNameBox
             // 
             this.lNameBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -138,8 +140,10 @@
             this.lNameBox.Size = new System.Drawing.Size(207, 26);
             this.lNameBox.TabIndex = 8;
             this.lNameBox.Text = "Last Name";
+            this.lNameBox.Enter += new System.EventHandler(this.lNameBox_Enter);
+            this.lNameBox.Leave += new System.EventHandler(this.lNameBox_Leave);
             // 
-            // textBox3
+            // EmailBox
             // 
             this.EmailBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -151,17 +155,18 @@
             this.EmailBox.Size = new System.Drawing.Size(207, 26);
             this.EmailBox.TabIndex = 9;
             this.EmailBox.Text = "Email";
+            this.EmailBox.Enter += new System.EventHandler(this.EmailBox_Enter);
+            this.EmailBox.Leave += new System.EventHandler(this.EmailBox_Leave);
             // 
-            // label3
+            // vSeparator1
             // 
             this.vSeparator1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.vSeparator1.Location = new System.Drawing.Point(293, 85);
+            this.vSeparator1.Location = new System.Drawing.Point(284, 85);
             this.vSeparator1.Name = "vSeparator1";
             this.vSeparator1.Size = new System.Drawing.Size(2, 350);
             this.vSeparator1.TabIndex = 10;
-            this.vSeparator1.Text = "";
             // 
-            // textBox4
+            // phoneBox
             // 
             this.phoneBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -173,8 +178,10 @@
             this.phoneBox.Size = new System.Drawing.Size(207, 26);
             this.phoneBox.TabIndex = 11;
             this.phoneBox.Text = "Phone";
+            this.phoneBox.Enter += new System.EventHandler(this.phoneBox_Enter);
+            this.phoneBox.Leave += new System.EventHandler(this.phoneBox_Leave);
             // 
-            // textBox5
+            // insuranceBox
             // 
             this.insuranceBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -186,8 +193,10 @@
             this.insuranceBox.Size = new System.Drawing.Size(207, 26);
             this.insuranceBox.TabIndex = 12;
             this.insuranceBox.Text = "Insurance Number";
+            this.insuranceBox.Enter += new System.EventHandler(this.insuranceBox_Enter);
+            this.insuranceBox.Leave += new System.EventHandler(this.insuranceBox_Leave);
             // 
-            // textBox6
+            // driversBox
             // 
             this.driversBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -199,6 +208,8 @@
             this.driversBox.Size = new System.Drawing.Size(207, 26);
             this.driversBox.TabIndex = 13;
             this.driversBox.Text = "Drivers License Class";
+            this.driversBox.Enter += new System.EventHandler(this.driversBox_Enter);
+            this.driversBox.Leave += new System.EventHandler(this.driversBox_Leave);
             // 
             // existingCxButton
             // 
@@ -220,7 +231,7 @@
             this.newCxButton.Text = "Submit";
             this.newCxButton.UseVisualStyleBackColor = true;
             // 
-            // textBox7
+            // ageBox
             // 
             this.ageBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -232,8 +243,10 @@
             this.ageBox.Size = new System.Drawing.Size(207, 26);
             this.ageBox.TabIndex = 16;
             this.ageBox.Text = "Age";
+            this.ageBox.Enter += new System.EventHandler(this.ageBox_Enter);
+            this.ageBox.Leave += new System.EventHandler(this.ageBox_Leave);
             // 
-            // textBox8
+            // passwordBox
             // 
             this.passwordBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -245,8 +258,10 @@
             this.passwordBox.Size = new System.Drawing.Size(207, 26);
             this.passwordBox.TabIndex = 17;
             this.passwordBox.Text = "New Password";
+            this.passwordBox.Enter += new System.EventHandler(this.passwordBox_Enter);
+            this.passwordBox.Leave += new System.EventHandler(this.passwordBox_Leave);
             // 
-            // textBox9
+            // confirmBox
             // 
             this.confirmBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -258,6 +273,8 @@
             this.confirmBox.Size = new System.Drawing.Size(207, 26);
             this.confirmBox.TabIndex = 18;
             this.confirmBox.Text = "Confirm Password";
+            this.confirmBox.Enter += new System.EventHandler(this.confirmBox_Enter);
+            this.confirmBox.Leave += new System.EventHandler(this.confirmBox_Leave);
             // 
             // CustomerLogin
             // 
