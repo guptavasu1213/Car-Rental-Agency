@@ -15,6 +15,7 @@ namespace CarRentalApp
         public Form1()
         {
             InitializeComponent();
+            this.Text = "Car Rental Agency";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -45,6 +46,12 @@ namespace CarRentalApp
         {
             //inputName.Text = "Full Name";
             //inputName.ForeColor = Color.Silver;
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            CustomerLogin customerLogin = new CustomerLogin();
+            customerLogin.ShowDialog();
         }
     }
 }
