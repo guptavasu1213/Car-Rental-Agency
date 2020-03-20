@@ -17,9 +17,15 @@ namespace CarRentalApp
             InitializeComponent();
             int x = (this.Size.Width - header.Size.Width) / 2;
             int third = (this.Size.Width / 3);
+            int leftAlign = third / 2 - (inputEmail.Width / 2) + 5;
+            int rightAlign = third * 2;
             header.Location = new Point(x, header.Location.Y);
-            inputEmail.Location = new Point(third/2-(inputEmail.Width/2), inputEmail.Location.Y);
-            inputPassword.Location = new Point(third/2-(inputEmail.Width/2), inputEmail.Location.Y + inputEmail.Size.Height + 20);
+            inputEmail.Location = new Point(leftAlign, inputEmail.Location.Y);
+            inputPassword.Location = new Point(leftAlign, inputEmail.Location.Y + 46);
+            existingCxLabel.Location = new Point(leftAlign, inputEmail.Location.Y - 46);
+            existingCxButton.Location = new Point(third / 2 - (existingCxButton.Width / 2) + 5, inputPassword.Location.Y + 56);
+            newCxLabel.Location = new Point(rightAlign - (newCxLabel.Width/2), existingCxLabel.Location.Y);
+            newCxButton.Location = new Point(newCxLabel.Location.X, newCxButton.Location.Y);
             vSeparator1.Location = new Point(third+10, vSeparator1.Location.Y);
 
             hintColor = inputEmail.ForeColor;
@@ -29,6 +35,10 @@ namespace CarRentalApp
         {
             if (text.Text == hint)
             {
+                if (hint.ToUpper().Contains("PASSWORD"))
+                {
+                    text.UseSystemPasswordChar = true;
+                }
                 text.Text = "";
             }
             text.ForeColor = Color.Black;
@@ -152,21 +162,6 @@ namespace CarRentalApp
         private void confirmBox_Leave(object sender, EventArgs e)
         {
             AddText(confirmBox, "Confirm Password", sender, e);
-        }
-
-        private void passwordBox_TextChanged(object sender, EventArgs e)
-        {
-            passwordBox.UseSystemPasswordChar = true;
-        }
-
-        private void confirmBox_TextChanged(object sender, EventArgs e)
-        {
-            confirmBox.UseSystemPasswordChar = true;
-        }
-
-        private void inputPassword_TextChanged(object sender, EventArgs e)
-        {
-            inputPassword.UseSystemPasswordChar = true;
         }
     }
 }

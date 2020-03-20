@@ -61,8 +61,6 @@
             // 
             // inputEmail
             // 
-            this.inputEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.inputEmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputEmail.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.inputEmail.Location = new System.Drawing.Point(53, 134);
@@ -76,8 +74,6 @@
             // 
             // inputPassword
             // 
-            this.inputPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.inputPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputPassword.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.inputPassword.Location = new System.Drawing.Point(53, 180);
@@ -86,7 +82,6 @@
             this.inputPassword.Size = new System.Drawing.Size(202, 26);
             this.inputPassword.TabIndex = 3;
             this.inputPassword.Text = "Password";
-            this.inputPassword.TextChanged += new System.EventHandler(this.inputPassword_TextChanged);
             this.inputPassword.Enter += new System.EventHandler(this.inputPassword_Enter);
             this.inputPassword.Leave += new System.EventHandler(this.inputPassword_Leave);
             // 
@@ -116,11 +111,9 @@
             // 
             // fNameBox
             // 
-            this.fNameBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.fNameBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fNameBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.fNameBox.Location = new System.Drawing.Point(322, 134);
+            this.fNameBox.Location = new System.Drawing.Point(325, 134);
             this.fNameBox.Margin = new System.Windows.Forms.Padding(4);
             this.fNameBox.Name = "fNameBox";
             this.fNameBox.Size = new System.Drawing.Size(207, 26);
@@ -131,11 +124,9 @@
             // 
             // lNameBox
             // 
-            this.lNameBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lNameBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lNameBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.lNameBox.Location = new System.Drawing.Point(537, 134);
+            this.lNameBox.Location = new System.Drawing.Point(540, 134);
             this.lNameBox.Margin = new System.Windows.Forms.Padding(4);
             this.lNameBox.Name = "lNameBox";
             this.lNameBox.Size = new System.Drawing.Size(207, 26);
@@ -146,11 +137,9 @@
             // 
             // EmailBox
             // 
-            this.EmailBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.EmailBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.EmailBox.Location = new System.Drawing.Point(322, 276);
+            this.EmailBox.Location = new System.Drawing.Point(325, 276);
             this.EmailBox.Margin = new System.Windows.Forms.Padding(4);
             this.EmailBox.Name = "EmailBox";
             this.EmailBox.Size = new System.Drawing.Size(207, 26);
@@ -169,11 +158,9 @@
             // 
             // phoneBox
             // 
-            this.phoneBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.phoneBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.phoneBox.Location = new System.Drawing.Point(322, 180);
+            this.phoneBox.Location = new System.Drawing.Point(325, 180);
             this.phoneBox.Margin = new System.Windows.Forms.Padding(4);
             this.phoneBox.Name = "phoneBox";
             this.phoneBox.Size = new System.Drawing.Size(207, 26);
@@ -184,11 +171,9 @@
             // 
             // insuranceBox
             // 
-            this.insuranceBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.insuranceBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.insuranceBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.insuranceBox.Location = new System.Drawing.Point(322, 227);
+            this.insuranceBox.Location = new System.Drawing.Point(325, 227);
             this.insuranceBox.Margin = new System.Windows.Forms.Padding(4);
             this.insuranceBox.Name = "insuranceBox";
             this.insuranceBox.Size = new System.Drawing.Size(207, 26);
@@ -199,11 +184,9 @@
             // 
             // driversBox
             // 
-            this.driversBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.driversBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.driversBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.driversBox.Location = new System.Drawing.Point(537, 227);
+            this.driversBox.Location = new System.Drawing.Point(540, 227);
             this.driversBox.Margin = new System.Windows.Forms.Padding(4);
             this.driversBox.Name = "driversBox";
             this.driversBox.Size = new System.Drawing.Size(207, 26);
@@ -234,11 +217,9 @@
             // 
             // ageBox
             // 
-            this.ageBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.ageBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ageBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ageBox.Location = new System.Drawing.Point(537, 180);
+            this.ageBox.Location = new System.Drawing.Point(540, 180);
             this.ageBox.Margin = new System.Windows.Forms.Padding(4);
             this.ageBox.Name = "ageBox";
             this.ageBox.Size = new System.Drawing.Size(207, 26);
@@ -249,33 +230,27 @@
             // 
             // passwordBox
             // 
-            this.passwordBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.passwordBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.passwordBox.Location = new System.Drawing.Point(537, 276);
+            this.passwordBox.Location = new System.Drawing.Point(540, 276);
             this.passwordBox.Margin = new System.Windows.Forms.Padding(4);
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.Size = new System.Drawing.Size(207, 26);
             this.passwordBox.TabIndex = 17;
             this.passwordBox.Text = "New Password";
-            this.passwordBox.TextChanged += new System.EventHandler(this.passwordBox_TextChanged);
             this.passwordBox.Enter += new System.EventHandler(this.passwordBox_Enter);
             this.passwordBox.Leave += new System.EventHandler(this.passwordBox_Leave);
             // 
             // confirmBox
             // 
-            this.confirmBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.confirmBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.confirmBox.Location = new System.Drawing.Point(537, 323);
+            this.confirmBox.Location = new System.Drawing.Point(540, 323);
             this.confirmBox.Margin = new System.Windows.Forms.Padding(4);
             this.confirmBox.Name = "confirmBox";
             this.confirmBox.Size = new System.Drawing.Size(207, 26);
             this.confirmBox.TabIndex = 18;
             this.confirmBox.Text = "Confirm Password";
-            this.confirmBox.TextChanged += new System.EventHandler(this.confirmBox_TextChanged);
             this.confirmBox.Enter += new System.EventHandler(this.confirmBox_Enter);
             this.confirmBox.Leave += new System.EventHandler(this.confirmBox_Leave);
             // 
