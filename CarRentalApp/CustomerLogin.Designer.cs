@@ -86,6 +86,7 @@
             this.inputPassword.Size = new System.Drawing.Size(202, 26);
             this.inputPassword.TabIndex = 3;
             this.inputPassword.Text = "Password";
+            this.inputPassword.TextChanged += new System.EventHandler(this.inputPassword_TextChanged);
             this.inputPassword.Enter += new System.EventHandler(this.inputPassword_Enter);
             this.inputPassword.Leave += new System.EventHandler(this.inputPassword_Leave);
             // 
@@ -177,7 +178,7 @@
             this.phoneBox.Name = "phoneBox";
             this.phoneBox.Size = new System.Drawing.Size(207, 26);
             this.phoneBox.TabIndex = 11;
-            this.phoneBox.Text = "Phone";
+            this.phoneBox.Text = "Phone Number";
             this.phoneBox.Enter += new System.EventHandler(this.phoneBox_Enter);
             this.phoneBox.Leave += new System.EventHandler(this.phoneBox_Leave);
             // 
@@ -207,7 +208,7 @@
             this.driversBox.Name = "driversBox";
             this.driversBox.Size = new System.Drawing.Size(207, 26);
             this.driversBox.TabIndex = 13;
-            this.driversBox.Text = "Drivers License Class";
+            this.driversBox.Text = "Driver\'s License Class";
             this.driversBox.Enter += new System.EventHandler(this.driversBox_Enter);
             this.driversBox.Leave += new System.EventHandler(this.driversBox_Leave);
             // 
@@ -258,6 +259,7 @@
             this.passwordBox.Size = new System.Drawing.Size(207, 26);
             this.passwordBox.TabIndex = 17;
             this.passwordBox.Text = "New Password";
+            this.passwordBox.TextChanged += new System.EventHandler(this.passwordBox_TextChanged);
             this.passwordBox.Enter += new System.EventHandler(this.passwordBox_Enter);
             this.passwordBox.Leave += new System.EventHandler(this.passwordBox_Leave);
             // 
@@ -273,6 +275,7 @@
             this.confirmBox.Size = new System.Drawing.Size(207, 26);
             this.confirmBox.TabIndex = 18;
             this.confirmBox.Text = "Confirm Password";
+            this.confirmBox.TextChanged += new System.EventHandler(this.confirmBox_TextChanged);
             this.confirmBox.Enter += new System.EventHandler(this.confirmBox_Enter);
             this.confirmBox.Leave += new System.EventHandler(this.confirmBox_Leave);
             // 
@@ -299,7 +302,6 @@
             this.Controls.Add(this.inputEmail);
             this.Controls.Add(this.header);
             this.Name = "CustomerLogin";
-            this.Text = "Customer Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
