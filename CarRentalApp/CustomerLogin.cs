@@ -165,6 +165,9 @@ namespace CarRentalApp
 
         private void existingCxButton_Click(object sender, EventArgs e)
         {
+            string email = inputEmail.Text;
+            Login.IsValidEmail(email);
+            
             string sql = "SELECT * FROM Customers WHERE Email = @email AND Password = @pass";
             SqlParameter pEmail = new SqlParameter("@email", inputEmail.Text);
             SqlParameter pPass = new SqlParameter("@pass", inputPassword.Text);

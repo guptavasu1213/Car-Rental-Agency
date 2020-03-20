@@ -1,17 +1,18 @@
-﻿using System;
-
-public class Login
+﻿namespace CarRentalApp
 {
-    bool IsValidEmail(string email)
+    internal class Login
     {
-        try
+        public static bool IsValidEmail(string email)
         {
-            var addr = new System.Net.Mail.MailAddress(email);
-            return addr.Address == email;
-        }
-        catch
-        {
-            return false;
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }
