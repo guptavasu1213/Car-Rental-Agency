@@ -15,5 +15,5 @@ This project involves the design and implementation of a relational database sys
 * TODO: Description of the relational database scheme of the system, with discussion regarding design decisions and efficiency. Include integrity constraints.
 ### Team Members
 * [Alex](https://github.com/awworthy)
-* [Ahsan]()
+* [Ahsan](https://github.com/ahshassan)
 * [Vasu](https://github.com/guptavasu1213)
