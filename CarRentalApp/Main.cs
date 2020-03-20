@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CarRentalApp
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
-        public Form1()
+        public Main()
         {
             InitializeComponent();
             this.Text = "Car Rental Agency";
@@ -52,6 +52,12 @@ namespace CarRentalApp
         {
             CustomerLogin customerLogin = new CustomerLogin();
             customerLogin.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            startReservation startreservation = new startReservation();
+            startreservation.ShowDialog();
         }
     }
 }
