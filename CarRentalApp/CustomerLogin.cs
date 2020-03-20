@@ -9,7 +9,6 @@ namespace CarRentalApp
     public partial class CustomerLogin : Form
     {
         private static String database = "server=cra291.database.windows.net;database=cra291;UID=server_login;password=1234";
-        private SqlConnection connection = new SqlConnection(database);
         Color hintColor;
 
         public CustomerLogin()
@@ -163,5 +162,31 @@ namespace CarRentalApp
         {
             AddText(confirmBox, "Confirm Password", sender, e);
         }
+
+        private void existingCxButton_Click(object sender, EventArgs e)
+        {
+            string sql = "SELECT * FROM Customers WHERE Email = @email AND Password = @pass";
+            SqlParameter pEmail = new SqlParameter("@email", inputEmail.Text);
+            SqlParameter pPass = new SqlParameter("@pass", inputPassword.Text);
+            SqlConnection connection = new SqlConnection(database);
+
+            connection.Open();
+            SqlCommand cmd = new SqlCommand(sql);
+            cmd.Parameters.Add(pEmail);
+            cmd.Parameters.Add(pPass);
+
+            using (SqlDataReader reader = cmd.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    // sign in successful?
+                    Console.WriteLine("Log in was successful");
+                }
+                else
+                {
+                    Console.WriteLine("Log in failed");
+                }
+            }
+    }
     }
 }

@@ -204,6 +204,7 @@
             this.existingCxButton.TabIndex = 14;
             this.existingCxButton.Text = "Login";
             this.existingCxButton.UseVisualStyleBackColor = true;
+            this.existingCxButton.Click += new System.EventHandler(this.existingCxButton_Click);
             // 
             // newCxButton
             // 
