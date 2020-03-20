@@ -61,8 +61,6 @@
             // 
             // inputEmail
             // 
-            this.inputEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.inputEmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputEmail.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.inputEmail.Location = new System.Drawing.Point(53, 134);
@@ -76,8 +74,6 @@
             // 
             // inputPassword
             // 
-            this.inputPassword.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.inputPassword.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.inputPassword.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.inputPassword.Location = new System.Drawing.Point(53, 180);
@@ -115,11 +111,9 @@
             // 
             // fNameBox
             // 
-            this.fNameBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.fNameBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fNameBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.fNameBox.Location = new System.Drawing.Point(322, 134);
+            this.fNameBox.Location = new System.Drawing.Point(325, 134);
             this.fNameBox.Margin = new System.Windows.Forms.Padding(4);
             this.fNameBox.Name = "fNameBox";
             this.fNameBox.Size = new System.Drawing.Size(207, 26);
@@ -130,11 +124,9 @@
             // 
             // lNameBox
             // 
-            this.lNameBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lNameBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lNameBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.lNameBox.Location = new System.Drawing.Point(537, 134);
+            this.lNameBox.Location = new System.Drawing.Point(540, 134);
             this.lNameBox.Margin = new System.Windows.Forms.Padding(4);
             this.lNameBox.Name = "lNameBox";
             this.lNameBox.Size = new System.Drawing.Size(207, 26);
@@ -145,11 +137,9 @@
             // 
             // EmailBox
             // 
-            this.EmailBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.EmailBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.EmailBox.Location = new System.Drawing.Point(322, 276);
+            this.EmailBox.Location = new System.Drawing.Point(325, 276);
             this.EmailBox.Margin = new System.Windows.Forms.Padding(4);
             this.EmailBox.Name = "EmailBox";
             this.EmailBox.Size = new System.Drawing.Size(207, 26);
@@ -168,26 +158,22 @@
             // 
             // phoneBox
             // 
-            this.phoneBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.phoneBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.phoneBox.Location = new System.Drawing.Point(322, 180);
+            this.phoneBox.Location = new System.Drawing.Point(325, 180);
             this.phoneBox.Margin = new System.Windows.Forms.Padding(4);
             this.phoneBox.Name = "phoneBox";
             this.phoneBox.Size = new System.Drawing.Size(207, 26);
             this.phoneBox.TabIndex = 11;
-            this.phoneBox.Text = "Phone";
+            this.phoneBox.Text = "Phone Number";
             this.phoneBox.Enter += new System.EventHandler(this.phoneBox_Enter);
             this.phoneBox.Leave += new System.EventHandler(this.phoneBox_Leave);
             // 
             // insuranceBox
             // 
-            this.insuranceBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.insuranceBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.insuranceBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.insuranceBox.Location = new System.Drawing.Point(322, 227);
+            this.insuranceBox.Location = new System.Drawing.Point(325, 227);
             this.insuranceBox.Margin = new System.Windows.Forms.Padding(4);
             this.insuranceBox.Name = "insuranceBox";
             this.insuranceBox.Size = new System.Drawing.Size(207, 26);
@@ -198,16 +184,14 @@
             // 
             // driversBox
             // 
-            this.driversBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.driversBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.driversBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.driversBox.Location = new System.Drawing.Point(537, 227);
+            this.driversBox.Location = new System.Drawing.Point(540, 227);
             this.driversBox.Margin = new System.Windows.Forms.Padding(4);
             this.driversBox.Name = "driversBox";
             this.driversBox.Size = new System.Drawing.Size(207, 26);
             this.driversBox.TabIndex = 13;
-            this.driversBox.Text = "Drivers License Class";
+            this.driversBox.Text = "Driver\'s License Class";
             this.driversBox.Enter += new System.EventHandler(this.driversBox_Enter);
             this.driversBox.Leave += new System.EventHandler(this.driversBox_Leave);
             // 
@@ -220,6 +204,7 @@
             this.existingCxButton.TabIndex = 14;
             this.existingCxButton.Text = "Login";
             this.existingCxButton.UseVisualStyleBackColor = true;
+            this.existingCxButton.Click += new System.EventHandler(this.existingCxButton_Click);
             // 
             // newCxButton
             // 
@@ -233,11 +218,9 @@
             // 
             // ageBox
             // 
-            this.ageBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.ageBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ageBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ageBox.Location = new System.Drawing.Point(537, 180);
+            this.ageBox.Location = new System.Drawing.Point(540, 180);
             this.ageBox.Margin = new System.Windows.Forms.Padding(4);
             this.ageBox.Name = "ageBox";
             this.ageBox.Size = new System.Drawing.Size(207, 26);
@@ -248,11 +231,9 @@
             // 
             // passwordBox
             // 
-            this.passwordBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.passwordBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.passwordBox.Location = new System.Drawing.Point(537, 276);
+            this.passwordBox.Location = new System.Drawing.Point(540, 276);
             this.passwordBox.Margin = new System.Windows.Forms.Padding(4);
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.Size = new System.Drawing.Size(207, 26);
@@ -263,11 +244,9 @@
             // 
             // confirmBox
             // 
-            this.confirmBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.confirmBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.confirmBox.Location = new System.Drawing.Point(537, 323);
+            this.confirmBox.Location = new System.Drawing.Point(540, 323);
             this.confirmBox.Margin = new System.Windows.Forms.Padding(4);
             this.confirmBox.Name = "confirmBox";
             this.confirmBox.Size = new System.Drawing.Size(207, 26);
@@ -299,7 +278,6 @@
             this.Controls.Add(this.inputEmail);
             this.Controls.Add(this.header);
             this.Name = "CustomerLogin";
-            this.Text = "Customer Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
