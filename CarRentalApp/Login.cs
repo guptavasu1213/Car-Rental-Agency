@@ -2,6 +2,8 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace CarRentalApp
 {
@@ -23,16 +25,14 @@ namespace CarRentalApp
         public static void CustomerAuth(string inputEmail, string inputPassword)
         {
             string database = "DATABASE CONNECTION STRING -- UPDATE LATER";
-            string sql = "SELECT * FROM Customers WHERE Email = @email AND Password = @pass";
+            string sql = "SELECT Password FROM Customers WHERE Email = @email";
 
             SqlParameter pEmail = new SqlParameter("@email", inputEmail);
-            SqlParameter pPass = new SqlParameter("@pass", inputPassword);
             SqlConnection connection = new SqlConnection(database);
 
             connection.Open();
             SqlCommand cmd = new SqlCommand(sql);
             cmd.Parameters.Add(pEmail);
-            cmd.Parameters.Add(pPass);
 
             using (SqlDataReader reader = cmd.ExecuteReader())
             {
@@ -46,6 +46,27 @@ namespace CarRentalApp
                     Console.WriteLine("Log in failed");
                 }
             }
+        }
+
+        private string HashPassword(string pass)
+        {
+            var bytes = new UTF8Encoding().GetBytes(pass);
+            byte[] hashedBytes;
+            using (var algorithm = new SHA256Managed())
+            {
+                hashedBytes = algorithm.ComputeHash(bytes);
+            }
+            return Convert.ToBase64String(hashedBytes);
+        }
+
+        private bool VerifyPassword(string storedPassword, string enteredPassword)
+        {
+            string hashedPassword = HashPassword(enteredPassword);
+            if (hashedPassword == storedPassword)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
