@@ -16,5 +16,20 @@ namespace CarRentalApp
         {
             InitializeComponent();
         }
+
+        private void UsersLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addUserLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
