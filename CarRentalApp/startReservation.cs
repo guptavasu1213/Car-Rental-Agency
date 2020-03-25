@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CarRentalApp
 {
-    public partial class startReservation : Form
+    public partial class StartReservation : Form
     {
-        public startReservation()
+        public StartReservation()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace CarRentalApp
 {
-    partial class startReservation
+    partial class StartReservation
     {
         /// <summary>
         /// Required designer variable.
@@ -372,7 +372,7 @@
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // startReservation
+            // StartReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -381,7 +381,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "startReservation";
+            this.Name = "StartReservation";
             this.Text = "Begin Your Reservation";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
