@@ -24,7 +24,7 @@ namespace CarRentalApp
 
         public static void CustomerAuth(string inputEmail, string inputPassword)
         {
-            string database = "DATABASE CONNECTION STRING -- UPDATE LATER";
+            string database = Database.Connection("CRA");
             string sql = "SELECT Password FROM Customers WHERE Email = @email";
 
             SqlParameter pEmail = new SqlParameter("@email", inputEmail);
