@@ -56,8 +56,15 @@ namespace CarRentalApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            startReservation startreservation = new startReservation();
+            StartReservation startreservation = new StartReservation();
             startreservation.ShowDialog();
+        }
+
+        private void admin_button_Click(object sender, EventArgs e)
+        {
+            AdminLogin adminLogin = new AdminLogin();
+            this.Hide(); // Hiding this window if we want come back to it
+            adminLogin.Show();
         }
     }
 }

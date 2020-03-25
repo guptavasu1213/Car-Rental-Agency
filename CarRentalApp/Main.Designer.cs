@@ -33,6 +33,7 @@
             this.btn1 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.admin_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // result
@@ -41,7 +42,7 @@
             this.result.Location = new System.Drawing.Point(158, 371);
             this.result.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.result.Name = "result";
-            this.result.Size = new System.Drawing.Size(207, 24);
+            this.result.Size = new System.Drawing.Size(258, 29);
             this.result.TabIndex = 0;
             this.result.Text = "[Gets replaced by your text]";
             this.result.UseCompatibleTextRendering = true;
@@ -53,7 +54,7 @@
             this.inputName.Location = new System.Drawing.Point(158, 153);
             this.inputName.Margin = new System.Windows.Forms.Padding(4);
             this.inputName.Name = "inputName";
-            this.inputName.Size = new System.Drawing.Size(343, 26);
+            this.inputName.Size = new System.Drawing.Size(343, 30);
             this.inputName.TabIndex = 1;
             this.inputName.Text = "Enter your name";
             this.inputName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -91,11 +92,22 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // admin_button
+            // 
+            this.admin_button.Location = new System.Drawing.Point(682, 344);
+            this.admin_button.Name = "admin_button";
+            this.admin_button.Size = new System.Drawing.Size(183, 56);
+            this.admin_button.TabIndex = 5;
+            this.admin_button.Text = "Admin";
+            this.admin_button.UseVisualStyleBackColor = true;
+            this.admin_button.Click += new System.EventHandler(this.admin_button_Click);
+            // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 703);
+            this.Controls.Add(this.admin_button);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btn1);
@@ -117,6 +129,7 @@
         private System.Windows.Forms.TextBox inputName;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button admin_button;
     }
 }
 
