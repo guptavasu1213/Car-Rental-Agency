@@ -37,7 +37,7 @@ namespace CarRentalApp
          */
         private bool Validate_Password(String username, String password)
         {
-            if (username == "" && password == "")
+            if (username == "291" && password == "Win")
             {
                 return true;
             }
