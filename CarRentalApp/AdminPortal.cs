@@ -31,10 +31,6 @@ namespace CarRentalApp
         {
 
         }
-        private void findUserLabel_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void findEmployeeLabel_Click(object sender, EventArgs e)
         {
@@ -216,6 +212,36 @@ namespace CarRentalApp
         private void addVehicleLabel_MouseLeave(object sender, EventArgs e)
         {
             setBackgroundOnMouseLeave(addVehicleLabel);
+        }
+
+        private void leftSidePanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        /* Purpose: Sets up the right hand side panel in the Portal with the form passed to the function
+         * Parameter: The form to be set on the right hand side
+         */
+        private void settingUpRightSidePanel(Form form)
+        {
+            rightHandSidePanel.Controls.Clear(); // Clearing everything present in the panel
+            form.TopLevel = false;
+            rightHandSidePanel.Controls.Add(form); // Adding the form to the panel
+            // Removes top bar (which has minimize, maximize and close) of the form 
+            form.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            form.Show(); // Showing the form on the panel
+        }
+
+        private void popularCarLabel_Click(object sender, EventArgs e)
+        {
+            PopularCar popularCarForm = new PopularCar(); // Creating the form 
+            settingUpRightSidePanel(popularCarForm);
+        }
+
+        private void findUserLabel_Click(object sender, EventArgs e)
+        {
+            AdminLogin loginForm = new AdminLogin(); // Creating the form 
+            settingUpRightSidePanel(loginForm);
         }
     }
 }
