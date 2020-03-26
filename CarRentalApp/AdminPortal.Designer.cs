@@ -443,7 +443,7 @@
             // 
             this.rightHandSidePanel.Location = new System.Drawing.Point(174, 81);
             this.rightHandSidePanel.Name = "rightHandSidePanel";
-            this.rightHandSidePanel.Size = new System.Drawing.Size(1018, 660);
+            this.rightHandSidePanel.Size = new System.Drawing.Size(1018, 878);
             this.rightHandSidePanel.TabIndex = 2;
             // 
             // logoutButton

@@ -228,6 +228,7 @@ namespace CarRentalApp
             rightHandSidePanel.Controls.Add(form); // Adding the form to the panel
             // Removes top bar (which has minimize, maximize and close) of the form 
             form.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
             form.Show(); // Showing the form on the panel
         }
 
