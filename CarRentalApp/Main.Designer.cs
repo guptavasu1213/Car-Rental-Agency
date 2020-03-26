@@ -42,7 +42,7 @@
             this.result.Location = new System.Drawing.Point(158, 371);
             this.result.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.result.Name = "result";
-            this.result.Size = new System.Drawing.Size(258, 29);
+            this.result.Size = new System.Drawing.Size(207, 24);
             this.result.TabIndex = 0;
             this.result.Text = "[Gets replaced by your text]";
             this.result.UseCompatibleTextRendering = true;
@@ -54,7 +54,7 @@
             this.inputName.Location = new System.Drawing.Point(158, 153);
             this.inputName.Margin = new System.Windows.Forms.Padding(4);
             this.inputName.Name = "inputName";
-            this.inputName.Size = new System.Drawing.Size(343, 30);
+            this.inputName.Size = new System.Drawing.Size(343, 26);
             this.inputName.TabIndex = 1;
             this.inputName.Text = "Enter your name";
             this.inputName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -104,9 +104,9 @@
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1200, 703);
+            this.ClientSize = new System.Drawing.Size(904, 465);
             this.Controls.Add(this.admin_button);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -116,7 +116,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Main";
-            this.Text = "Form1";
+            this.Text = "Car Rental Agency";
             this.ResumeLayout(false);
             this.PerformLayout();
 

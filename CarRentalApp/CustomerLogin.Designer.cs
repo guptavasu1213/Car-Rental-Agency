@@ -78,11 +78,11 @@
             this.inputPassword.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.inputPassword.Location = new System.Drawing.Point(53, 180);
             this.inputPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.inputPassword.MaxLength = 20;
             this.inputPassword.Name = "inputPassword";
             this.inputPassword.Size = new System.Drawing.Size(202, 26);
             this.inputPassword.TabIndex = 3;
             this.inputPassword.Text = "Password";
-            this.inputPassword.MaxLength = 20;
             this.inputPassword.Enter += new System.EventHandler(this.inputPassword_Enter);
             this.inputPassword.Leave += new System.EventHandler(this.inputPassword_Leave);
             // 
@@ -278,7 +278,9 @@
             this.Controls.Add(this.inputPassword);
             this.Controls.Add(this.inputEmail);
             this.Controls.Add(this.header);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "CustomerLogin";
+            this.Text = "Customer Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 

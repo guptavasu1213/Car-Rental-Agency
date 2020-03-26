@@ -57,6 +57,7 @@ namespace CarRentalApp
                 AdminPortal adminPortal = new AdminPortal();
                 this.Hide();
                 adminPortal.Show();
+                this.Close();
             }
             else
             {
