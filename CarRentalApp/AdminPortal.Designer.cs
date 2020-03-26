@@ -57,6 +57,7 @@
             this.vehiclesLabel = new System.Windows.Forms.Label();
             this.usersLabel = new System.Windows.Forms.Label();
             this.rightHandSidePanel = new System.Windows.Forms.Panel();
+            this.logoutButton = new System.Windows.Forms.Button();
             this.topPanel.SuspendLayout();
             this.leftSidePanel.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +65,7 @@
             // topPanel
             // 
             this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.topPanel.Controls.Add(this.logoutButton);
             this.topPanel.Controls.Add(this.companyNameLabel);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
@@ -444,6 +446,19 @@
             this.rightHandSidePanel.Size = new System.Drawing.Size(1018, 660);
             this.rightHandSidePanel.TabIndex = 2;
             // 
+            // logoutButton
+            // 
+            this.logoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.logoutButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutButton.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.logoutButton.Location = new System.Drawing.Point(1226, 12);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(116, 42);
+            this.logoutButton.TabIndex = 1;
+            this.logoutButton.Text = "Logout";
+            this.logoutButton.UseVisualStyleBackColor = false;
+            // 
             // AdminPortal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -493,5 +508,6 @@
         private System.Windows.Forms.Label popularBranchLabel;
         private System.Windows.Forms.Label popularCarTypeLabel;
         private System.Windows.Forms.Panel rightHandSidePanel;
+        private System.Windows.Forms.Button logoutButton;
     }
 }
