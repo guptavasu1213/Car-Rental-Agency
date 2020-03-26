@@ -37,7 +37,9 @@
             this.admin_login_result_label = new System.Windows.Forms.Label();
             this.logo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.loginGroupBox = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
+            this.loginGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // username_label
@@ -45,12 +47,11 @@
             this.username_label.AutoSize = true;
             this.username_label.Font = new System.Drawing.Font("Calisto MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.username_label.ForeColor = System.Drawing.Color.Black;
-            this.username_label.Location = new System.Drawing.Point(372, 132);
+            this.username_label.Location = new System.Drawing.Point(13, 53);
             this.username_label.Name = "username_label";
             this.username_label.Size = new System.Drawing.Size(147, 35);
             this.username_label.TabIndex = 0;
             this.username_label.Text = "Username";
-            this.username_label.Click += new System.EventHandler(this.label1_Click);
             // 
             // password_label
             // 
@@ -58,17 +59,16 @@
             this.password_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.password_label.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.password_label.Font = new System.Drawing.Font("Calisto MT", 18F);
-            this.password_label.Location = new System.Drawing.Point(372, 200);
+            this.password_label.Location = new System.Drawing.Point(13, 121);
             this.password_label.Name = "password_label";
             this.password_label.Size = new System.Drawing.Size(138, 35);
             this.password_label.TabIndex = 1;
             this.password_label.Text = "Password";
-            this.password_label.Click += new System.EventHandler(this.label2_Click);
             // 
             // username_field
             // 
             this.username_field.Font = new System.Drawing.Font("Calisto MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username_field.Location = new System.Drawing.Point(561, 125);
+            this.username_field.Location = new System.Drawing.Point(202, 46);
             this.username_field.Name = "username_field";
             this.username_field.Size = new System.Drawing.Size(201, 42);
             this.username_field.TabIndex = 2;
@@ -76,7 +76,7 @@
             // password_field
             // 
             this.password_field.Font = new System.Drawing.Font("Calisto MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.password_field.Location = new System.Drawing.Point(561, 197);
+            this.password_field.Location = new System.Drawing.Point(202, 118);
             this.password_field.Name = "password_field";
             this.password_field.PasswordChar = '*';
             this.password_field.Size = new System.Drawing.Size(201, 42);
@@ -85,7 +85,7 @@
             // Submit
             // 
             this.Submit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.Submit.Location = new System.Drawing.Point(561, 268);
+            this.Submit.Location = new System.Drawing.Point(202, 189);
             this.Submit.Name = "Submit";
             this.Submit.Size = new System.Drawing.Size(199, 42);
             this.Submit.TabIndex = 5;
@@ -96,7 +96,7 @@
             // admin_login_result_label
             // 
             this.admin_login_result_label.AutoSize = true;
-            this.admin_login_result_label.Location = new System.Drawing.Point(558, 340);
+            this.admin_login_result_label.Location = new System.Drawing.Point(199, 261);
             this.admin_login_result_label.Name = "admin_login_result_label";
             this.admin_login_result_label.Size = new System.Drawing.Size(0, 17);
             this.admin_login_result_label.TabIndex = 6;
@@ -117,10 +117,25 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(558, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(155, 34);
+            this.label1.Size = new System.Drawing.Size(181, 17);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Correct Username: 291\r\nCorrect Pass: Win";
+            this.label1.Text = "Hit submit for admin access";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // loginGroupBox
+            // 
+            this.loginGroupBox.Controls.Add(this.admin_login_result_label);
+            this.loginGroupBox.Controls.Add(this.Submit);
+            this.loginGroupBox.Controls.Add(this.password_field);
+            this.loginGroupBox.Controls.Add(this.username_field);
+            this.loginGroupBox.Controls.Add(this.password_label);
+            this.loginGroupBox.Controls.Add(this.username_label);
+            this.loginGroupBox.Location = new System.Drawing.Point(372, 79);
+            this.loginGroupBox.Name = "loginGroupBox";
+            this.loginGroupBox.Size = new System.Drawing.Size(465, 286);
+            this.loginGroupBox.TabIndex = 9;
+            this.loginGroupBox.TabStop = false;
+            this.loginGroupBox.Text = "Enter your credentials here";
             // 
             // AdminLogin
             // 
@@ -128,18 +143,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(864, 525);
+            this.Controls.Add(this.loginGroupBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.logo);
-            this.Controls.Add(this.admin_login_result_label);
-            this.Controls.Add(this.Submit);
-            this.Controls.Add(this.password_field);
-            this.Controls.Add(this.username_field);
-            this.Controls.Add(this.password_label);
-            this.Controls.Add(this.username_label);
             this.Name = "AdminLogin";
             this.Text = "Admin Login";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
+            this.loginGroupBox.ResumeLayout(false);
+            this.loginGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,5 +167,6 @@
         private System.Windows.Forms.Label admin_login_result_label;
         private System.Windows.Forms.PictureBox logo;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox loginGroupBox;
     }
 }
