@@ -22,22 +22,13 @@ namespace CarRentalApp
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
         /* 
          * Validates username and password in the database.
          * Returns True when username and password are found. False when no such entry in the database
          */
         private bool Validate_Password(String username, String password)
         {
-            if (username == "291" && password == "Win")
+            if (username == "" && password == "")
             {
                 return true;
             }

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.topPanel = new System.Windows.Forms.Panel();
             this.companyNameLabel = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.leftSidePanel = new System.Windows.Forms.Panel();
             this.popularCarTypeLabel = new System.Windows.Forms.Label();
             this.top100CustomersLabel = new System.Windows.Forms.Label();
             this.popularBranchLabel = new System.Windows.Forms.Label();
@@ -56,19 +56,20 @@
             this.employeeLabel = new System.Windows.Forms.Label();
             this.vehiclesLabel = new System.Windows.Forms.Label();
             this.usersLabel = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.rightHandSidePanel = new System.Windows.Forms.Panel();
+            this.topPanel.SuspendLayout();
+            this.leftSidePanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // topPanel
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
-            this.panel1.Controls.Add(this.companyNameLabel);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1372, 70);
-            this.panel1.TabIndex = 0;
+            this.topPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.topPanel.Controls.Add(this.companyNameLabel);
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Size = new System.Drawing.Size(1372, 70);
+            this.topPanel.TabIndex = 0;
             // 
             // companyNameLabel
             // 
@@ -81,39 +82,40 @@
             this.companyNameLabel.TabIndex = 0;
             this.companyNameLabel.Text = "<Our Company Name>";
             // 
-            // panel2
+            // leftSidePanel
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
-            this.panel2.Controls.Add(this.popularCarTypeLabel);
-            this.panel2.Controls.Add(this.top100CustomersLabel);
-            this.panel2.Controls.Add(this.popularBranchLabel);
-            this.panel2.Controls.Add(this.findBranchLabel);
-            this.panel2.Controls.Add(this.addBranchLabel);
-            this.panel2.Controls.Add(this.popularCarLabel);
-            this.panel2.Controls.Add(this.top10EmployeeLabel);
-            this.panel2.Controls.Add(this.branchesLabel);
-            this.panel2.Controls.Add(this.updateBookingLabel);
-            this.panel2.Controls.Add(this.findVehicleLabel);
-            this.panel2.Controls.Add(this.addEmployeeLabel);
-            this.panel2.Controls.Add(this.addUserLabel);
-            this.panel2.Controls.Add(this.addBookingLabel);
-            this.panel2.Controls.Add(this.findBookingLabel);
-            this.panel2.Controls.Add(this.addVehicleTypeLabel);
-            this.panel2.Controls.Add(this.updateEmployeeLabel);
-            this.panel2.Controls.Add(this.showUsers);
-            this.panel2.Controls.Add(this.findEmployeeLabel);
-            this.panel2.Controls.Add(this.findUserLabel);
-            this.panel2.Controls.Add(this.addVehicleLabel);
-            this.panel2.Controls.Add(this.statsLabel);
-            this.panel2.Controls.Add(this.bookingsLabel);
-            this.panel2.Controls.Add(this.employeeLabel);
-            this.panel2.Controls.Add(this.vehiclesLabel);
-            this.panel2.Controls.Add(this.usersLabel);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 70);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(164, 889);
-            this.panel2.TabIndex = 1;
+            this.leftSidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.leftSidePanel.Controls.Add(this.popularCarTypeLabel);
+            this.leftSidePanel.Controls.Add(this.top100CustomersLabel);
+            this.leftSidePanel.Controls.Add(this.popularBranchLabel);
+            this.leftSidePanel.Controls.Add(this.findBranchLabel);
+            this.leftSidePanel.Controls.Add(this.addBranchLabel);
+            this.leftSidePanel.Controls.Add(this.popularCarLabel);
+            this.leftSidePanel.Controls.Add(this.top10EmployeeLabel);
+            this.leftSidePanel.Controls.Add(this.branchesLabel);
+            this.leftSidePanel.Controls.Add(this.updateBookingLabel);
+            this.leftSidePanel.Controls.Add(this.findVehicleLabel);
+            this.leftSidePanel.Controls.Add(this.addEmployeeLabel);
+            this.leftSidePanel.Controls.Add(this.addUserLabel);
+            this.leftSidePanel.Controls.Add(this.addBookingLabel);
+            this.leftSidePanel.Controls.Add(this.findBookingLabel);
+            this.leftSidePanel.Controls.Add(this.addVehicleTypeLabel);
+            this.leftSidePanel.Controls.Add(this.updateEmployeeLabel);
+            this.leftSidePanel.Controls.Add(this.showUsers);
+            this.leftSidePanel.Controls.Add(this.findEmployeeLabel);
+            this.leftSidePanel.Controls.Add(this.findUserLabel);
+            this.leftSidePanel.Controls.Add(this.addVehicleLabel);
+            this.leftSidePanel.Controls.Add(this.statsLabel);
+            this.leftSidePanel.Controls.Add(this.bookingsLabel);
+            this.leftSidePanel.Controls.Add(this.employeeLabel);
+            this.leftSidePanel.Controls.Add(this.vehiclesLabel);
+            this.leftSidePanel.Controls.Add(this.usersLabel);
+            this.leftSidePanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.leftSidePanel.Location = new System.Drawing.Point(0, 70);
+            this.leftSidePanel.Name = "leftSidePanel";
+            this.leftSidePanel.Size = new System.Drawing.Size(165, 889);
+            this.leftSidePanel.TabIndex = 1;
+            this.leftSidePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.leftSidePanel_Paint);
             // 
             // popularCarTypeLabel
             // 
@@ -190,6 +192,7 @@
             this.popularCarLabel.TabIndex = 19;
             this.popularCarLabel.Text = "Popular Car";
             this.popularCarLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.popularCarLabel.Click += new System.EventHandler(this.popularCarLabel_Click);
             this.popularCarLabel.MouseLeave += new System.EventHandler(this.popularCarLabel_MouseLeave);
             this.popularCarLabel.MouseHover += new System.EventHandler(this.popularCarLabel_MouseHover);
             // 
@@ -434,27 +437,35 @@
             this.usersLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.usersLabel.Click += new System.EventHandler(this.UsersLabel_Click);
             // 
+            // rightHandSidePanel
+            // 
+            this.rightHandSidePanel.Location = new System.Drawing.Point(174, 81);
+            this.rightHandSidePanel.Name = "rightHandSidePanel";
+            this.rightHandSidePanel.Size = new System.Drawing.Size(1018, 660);
+            this.rightHandSidePanel.TabIndex = 2;
+            // 
             // AdminPortal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1372, 959);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.rightHandSidePanel);
+            this.Controls.Add(this.leftSidePanel);
+            this.Controls.Add(this.topPanel);
             this.Name = "AdminPortal";
             this.Text = "Admin Portal";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
+            this.topPanel.ResumeLayout(false);
+            this.topPanel.PerformLayout();
+            this.leftSidePanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel topPanel;
+        private System.Windows.Forms.Panel leftSidePanel;
         private System.Windows.Forms.Label companyNameLabel;
         private System.Windows.Forms.Label usersLabel;
         private System.Windows.Forms.Label employeeLabel;
@@ -481,5 +492,6 @@
         private System.Windows.Forms.Label top100CustomersLabel;
         private System.Windows.Forms.Label popularBranchLabel;
         private System.Windows.Forms.Label popularCarTypeLabel;
+        private System.Windows.Forms.Panel rightHandSidePanel;
     }
 }
