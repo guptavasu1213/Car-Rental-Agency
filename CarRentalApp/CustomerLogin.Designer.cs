@@ -45,6 +45,7 @@
             this.ageBox = new System.Windows.Forms.TextBox();
             this.passwordBox = new System.Windows.Forms.TextBox();
             this.confirmBox = new System.Windows.Forms.TextBox();
+            this.warningText = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // header
@@ -216,6 +217,7 @@
             this.newCxButton.TabIndex = 15;
             this.newCxButton.Text = "Submit";
             this.newCxButton.UseVisualStyleBackColor = true;
+            this.newCxButton.Click += new System.EventHandler(this.newCxButton_Click);
             // 
             // ageBox
             // 
@@ -256,11 +258,22 @@
             this.confirmBox.Enter += new System.EventHandler(this.confirmBox_Enter);
             this.confirmBox.Leave += new System.EventHandler(this.confirmBox_Leave);
             // 
+            // warningText
+            // 
+            this.warningText.BackColor = System.Drawing.SystemColors.Control;
+            this.warningText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.warningText.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warningText.Location = new System.Drawing.Point(326, 353);
+            this.warningText.Name = "warningText";
+            this.warningText.Size = new System.Drawing.Size(421, 19);
+            this.warningText.TabIndex = 19;
+            // 
             // CustomerLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 450);
+            this.Controls.Add(this.warningText);
             this.Controls.Add(this.confirmBox);
             this.Controls.Add(this.passwordBox);
             this.Controls.Add(this.ageBox);
@@ -305,5 +318,6 @@
         private System.Windows.Forms.TextBox ageBox;
         private System.Windows.Forms.TextBox passwordBox;
         private System.Windows.Forms.TextBox confirmBox;
+        private System.Windows.Forms.TextBox warningText;
     }
 }

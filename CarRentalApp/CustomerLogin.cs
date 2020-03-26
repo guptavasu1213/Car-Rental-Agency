@@ -150,6 +150,10 @@ namespace CarRentalApp
         private void passwordBox_Leave(object sender, EventArgs e)
         {
             AddText(passwordBox, "New Password", sender, e);
+            if (passwordBox.Text.Length < 8)
+            {
+                warningText.Text = "Warning: We recommend a longer password for security";
+            }
         }
 
         private void confirmBox_Enter(object sender, EventArgs e)
@@ -173,6 +177,40 @@ namespace CarRentalApp
             string pass = inputPassword.Text;
 
             Login.CustomerAuth(email, pass);
+        }
+
+        private void newCxButton_Click(object sender, EventArgs e)
+        {
+            Customer cx = new Customer();
+            PhoneNumber phNum = new PhoneNumber();
+
+            string email = EmailBox.Text;
+            if (!Login.IsValidEmail(email))
+            {
+                MessageBox.Show("Error: Email address provided is invalid", "Error");
+                return;
+            }
+            if (passwordBox.Text != confirmBox.Text)
+            {
+                MessageBox.Show("Error: Passwords do not match", "Error");
+                return;
+            }
+            // Use try-catch in case the values are not going to be compatible (ie. letters entered in Age)
+            try
+            {
+                cx.FirstName = fNameBox.Text;
+                cx.LastName = lNameBox.Text;
+                cx.Age = Int32.Parse(ageBox.Text);
+                cx.Insurance = Int32.Parse(insuranceBox.Text);
+                cx.DriversClass = Int32.Parse(driversBox.Text);
+                cx.EmailAddress = email;
+                cx.Password = Login.HashPassword(confirmBox.Text);
+                Login.insertCustomer(cx);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
         }
     }
 }

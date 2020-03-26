@@ -21,5 +21,8 @@ namespace CarRentalApp
         public int Insurance { get; set; }
 
         public int DriversClass { get; set; }
+
+        // password stored is hashed
+        public string Password { get; set; }
     }
 }

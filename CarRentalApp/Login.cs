@@ -24,7 +24,7 @@ namespace CarRentalApp
 
         public static void CustomerAuth(string inputEmail, string inputPassword)
         {
-            string database = Database.Connection("CRA");
+            string database = Database.ConnectionString;
             string sql = "SELECT Password FROM Customers WHERE Email = @email";
 
             SqlParameter pEmail = new SqlParameter("@email", inputEmail);
@@ -46,9 +46,18 @@ namespace CarRentalApp
                     Console.WriteLine("Log in failed");
                 }
             }
+
+            connection.Close();
         }
 
-        private string HashPassword(string pass)
+        public static void insertCustomer(Customer cx)
+        {
+            throw new NotImplementedException();
+
+
+        }
+
+        public static string HashPassword(string pass)
         {
             var bytes = new UTF8Encoding().GetBytes(pass);
             byte[] hashedBytes;
@@ -59,7 +68,7 @@ namespace CarRentalApp
             return Convert.ToBase64String(hashedBytes);
         }
 
-        private bool VerifyPassword(string storedPassword, string enteredPassword)
+        private static bool VerifyPassword(string storedPassword, string enteredPassword)
         {
             string hashedPassword = HashPassword(enteredPassword);
             if (hashedPassword == storedPassword)
