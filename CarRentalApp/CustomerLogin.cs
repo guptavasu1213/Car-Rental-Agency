@@ -174,5 +174,20 @@ namespace CarRentalApp
 
             Login.CustomerAuth(email, pass);
         }
+        /*
+         * Allowing only numerical values for Phone Number
+         */
+        private void allowOnlyNumericalValues(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void newCxButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

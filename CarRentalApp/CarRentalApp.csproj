@@ -62,6 +62,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNewBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewBranch.Designer.cs">
+      <DependentUpon>AddNewBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewCar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewCar.Designer.cs">
+      <DependentUpon>AddNewCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewEmployee.Designer.cs">
+      <DependentUpon>AddNewEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewUser.Designer.cs">
+      <DependentUpon>AddNewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewCarType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewCarType.Designer.cs">
+      <DependentUpon>AddNewCarType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="AdminLogin.cs">
@@ -75,6 +105,12 @@
     </Compile>
     <Compile Include="AdminPortal.Designer.cs">
       <DependentUpon>AdminPortal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindTop100Customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindTop100Customers.Designer.cs">
+      <DependentUpon>FindTop100Customers.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs" />
     <Compile Include="Main.cs">
@@ -90,11 +126,23 @@
       <DependentUpon>CustomerLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="PhoneNumber.cs" />
+    <Compile Include="PopularBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopularBranch.Designer.cs">
+      <DependentUpon>PopularBranch.cs</DependentUpon>
+    </Compile>
     <Compile Include="PopularCar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PopularCar.Designer.cs">
       <DependentUpon>PopularCar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PopularCarType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopularCarType.Designer.cs">
+      <DependentUpon>PopularCarType.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -104,6 +152,27 @@
     <Compile Include="startReservation.Designer.cs">
       <DependentUpon>startReservation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Top10Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Top10Employees.Designer.cs">
+      <DependentUpon>Top10Employees.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddNewBranch.resx">
+      <DependentUpon>AddNewBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewCar.resx">
+      <DependentUpon>AddNewCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewEmployee.resx">
+      <DependentUpon>AddNewEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewUser.resx">
+      <DependentUpon>AddNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewCarType.resx">
+      <DependentUpon>AddNewCarType.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerLogin.resx">
       <DependentUpon>CustomerLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,11 +182,20 @@
     <EmbeddedResource Include="AdminPortal.resx">
       <DependentUpon>AdminPortal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FindTop100Customers.resx">
+      <DependentUpon>FindTop100Customers.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PopularBranch.resx">
+      <DependentUpon>PopularBranch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PopularCar.resx">
       <DependentUpon>PopularCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopularCarType.resx">
+      <DependentUpon>PopularCarType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -130,6 +208,9 @@
     </Compile>
     <EmbeddedResource Include="startReservation.resx">
       <DependentUpon>startReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Top10Employees.resx">
+      <DependentUpon>Top10Employees.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

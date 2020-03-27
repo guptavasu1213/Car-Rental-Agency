@@ -27,21 +27,10 @@ namespace CarRentalApp
 
         }
 
-        private void addUserLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void findEmployeeLabel_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void addEmployeeLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
         /*Setting mouse hover functionality*/
         private void setBackgroundOnMouseHover(Label label)
@@ -61,7 +50,7 @@ namespace CarRentalApp
 
         private void addUserLabel_MouseHover(object sender, EventArgs e)
         {
-            setBackgroundOnMouseHover(addUserLabel);
+            setBackgroundOnMouseHover(addNewUserLabel);
         }
 
         private void addEmployeeLabel_MouseHover(object sender, EventArgs e)
@@ -81,7 +70,7 @@ namespace CarRentalApp
 
         private void addUserLabel_MouseLeave(object sender, EventArgs e)
         {
-            setBackgroundOnMouseLeave(addUserLabel);
+            setBackgroundOnMouseLeave(addNewUserLabel);
         }
 
         private void findEmployeeLabel_MouseLeave(object sender, EventArgs e)
@@ -126,12 +115,12 @@ namespace CarRentalApp
 
         private void addBookingLabel_MouseHover(object sender, EventArgs e)
         {
-            setBackgroundOnMouseHover(addBookingLabel);
+            setBackgroundOnMouseHover(addNewBookingLabel);
         }
 
         private void addBookingLabel_MouseLeave(object sender, EventArgs e)
         {
-            setBackgroundOnMouseLeave(addBookingLabel);
+            setBackgroundOnMouseLeave(addNewBookingLabel);
         }
 
         private void findBranchLabel_MouseHover(object sender, EventArgs e)
@@ -146,12 +135,12 @@ namespace CarRentalApp
 
         private void addBranchLabel_MouseHover(object sender, EventArgs e)
         {
-            setBackgroundOnMouseHover(addBranchLabel);
+            setBackgroundOnMouseHover(addNewBranchLabel);
         }
 
         private void addBranchLabel_MouseLeave(object sender, EventArgs e)
         {
-            setBackgroundOnMouseLeave(addBranchLabel);
+            setBackgroundOnMouseLeave(addNewBranchLabel);
         }
 
         private void top10EmployeeLabel_MouseHover(object sender, EventArgs e)
@@ -206,18 +195,28 @@ namespace CarRentalApp
 
         private void addVehicleLabel_MouseHover(object sender, EventArgs e)
         {
-            setBackgroundOnMouseHover(addVehicleLabel);
+            setBackgroundOnMouseHover(addNewVehicleLabel);
         }
 
         private void addVehicleLabel_MouseLeave(object sender, EventArgs e)
         {
-            setBackgroundOnMouseLeave(addVehicleLabel);
+            setBackgroundOnMouseLeave(addNewVehicleLabel);
         }
 
         private void leftSidePanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
+         /*
+         * When the logout button is clicked, the user is taken back to the login screen
+         */
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            AdminLogin adminLogin = new AdminLogin();
+            this.Close(); // Close this Form
+            adminLogin.Show(); 
+        }
+
         /* Purpose: Sets up the right hand side panel in the Portal with the form passed to the function
          * Parameter: The form to be set on the right hand side
          */
@@ -232,16 +231,102 @@ namespace CarRentalApp
             form.Show(); // Showing the form on the panel
         }
 
+        private void findUserLabel_Click(object sender, EventArgs e)
+        {
+            AdminLogin loginForm = new AdminLogin(); // Creating the form 
+            settingUpRightSidePanel(loginForm);
+        }
+
+        /*
+         * When the Popular Car Label is clicked on, the form for searching for Popular 
+         * Car is loaded on the right hand side panel
+         */
         private void popularCarLabel_Click(object sender, EventArgs e)
         {
             PopularCar popularCarForm = new PopularCar(); // Creating the form 
             settingUpRightSidePanel(popularCarForm);
         }
-
-        private void findUserLabel_Click(object sender, EventArgs e)
+       /*
+         * When the Popular Car Type Label is clicked on, the form for searching for Popular 
+         * Car Type is loaded on the right hand side panel
+         */
+        private void popularCarTypeLabel_Click(object sender, EventArgs e)
         {
-            AdminLogin loginForm = new AdminLogin(); // Creating the form 
-            settingUpRightSidePanel(loginForm);
+            PopularCarType popularCarTypeForm = new PopularCarType();
+            settingUpRightSidePanel(popularCarTypeForm);
+        }
+        /*
+         * When the Top 10 Employees Label is clicked on, the form for searching for Top 10
+         * Employees is loaded on the right hand side panel
+         */
+        private void top10EmployeeLabel_Click(object sender, EventArgs e)
+        {
+            Top10Employees top10EmployeesForm = new Top10Employees();
+            settingUpRightSidePanel(top10EmployeesForm);
+        }
+        /*
+         * When the Top 100 Customers Label is clicked on, the form for searching for Top 100
+         * Customers is loaded on the right hand side panel
+         */
+        private void top100CustomersLabel_Click(object sender, EventArgs e)
+        {
+            FindTop100Customers findTop100CustomersForm = new FindTop100Customers();
+            settingUpRightSidePanel(findTop100CustomersForm);
+        }
+        /*
+         * When the Popular Branch Label is clicked on, the form for searching for Popular
+         * Branches is loaded on the right hand side panel
+         */
+        private void popularBranchLabel_Click(object sender, EventArgs e)
+        {
+            PopularBranch popularBranchForm = new PopularBranch();
+            settingUpRightSidePanel(popularBranchForm);
+        }
+        /*
+         * When the Add Employee Label is clicked on, the form for adding new employees
+         * is loaded on the right hand side panel
+         */
+        private void addNewEmployeeLabel_Click(object sender, EventArgs e)
+        {
+            AddNewEmployee addNewEmployeeForm = new AddNewEmployee();
+            settingUpRightSidePanel(addNewEmployeeForm);
+        }
+
+        /*
+         * When the Add New User Label is clicked on, the form for adding new users
+         * is loaded on the right hand side panel
+         */
+        private void addNewUserLabel_Click(object sender, EventArgs e)
+        {
+            AddNewUser addNewUserForm = new AddNewUser();
+            settingUpRightSidePanel(addNewUserForm);
+        }
+        /*
+         * When the Add New Vehicle User Label is clicked on, the form for adding a new car
+         * is loaded on the right hand side panel
+         */
+        private void addNewVehicleLabel_Click(object sender, EventArgs e)
+        {
+            AddNewCar addNewCarForm = new AddNewCar();
+            settingUpRightSidePanel(addNewCarForm);
+        }
+        /*
+         * When the Add New Branch Label is clicked on, the form for adding a new branch
+         * is loaded on the right hand side panel
+         */
+        private void addNewBranchLabel_Click(object sender, EventArgs e)
+        {
+            AddNewBranch addNewBranchForm = new AddNewBranch();
+            settingUpRightSidePanel(addNewBranchForm);
+        }
+        /*
+         * When the Add Vehicle Type Label is clicked on, the form for adding a new car
+         * type is loaded on the right hand side panel
+         */
+        private void addVehicleTypeLabel_Click(object sender, EventArgs e)
+        {
+            AddNewCarType addNewCarType = new AddNewCarType();
+            settingUpRightSidePanel(addNewCarType);
         }
     }
 }

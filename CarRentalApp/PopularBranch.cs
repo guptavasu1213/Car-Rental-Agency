@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CarRentalApp
 {
-    public partial class PopularCar : Form
+    public partial class PopularBranch : Form
     {
-        public PopularCar()
+        public PopularBranch()
         {
             InitializeComponent();
         }
@@ -26,23 +26,22 @@ namespace CarRentalApp
         private bool errorCheckSpecificFields()
         {
             // If all fields are empty
-            if (branchTextBox.Text.TrimEnd() == "" && cityTextBox.Text.TrimEnd() == "" &&
-                    provinceTextBox.Text.TrimEnd() == "" && countryTextBox.Text.TrimEnd() == "")
+            if (cityTextBox.Text.TrimEnd() == "" && provinceTextBox.Text.TrimEnd() == "" && 
+                countryTextBox.Text.TrimEnd() == "")
             {
                 specificSearchErrorLabel.Text = "Error: Please search by one parameter";
                 specificSearchErrorLabel.Visible = true;
                 return false;
             }
-            // Counting the number of empty fields and if there are less than 3 empty fields,
+            // Counting the number of empty fields and if there are less than 2 empty fields,
             // the function returns false
             int count = 0;
 
-            if (branchTextBox.Text.TrimEnd() == "") { count++; }
             if (cityTextBox.Text.TrimEnd() == "") { count++; }
             if (provinceTextBox.Text.TrimEnd() == "") { count++; }
             if (countryTextBox.Text.TrimEnd() == "") { count++; }
 
-            if (count < 3)
+            if (count < 2)
             {
                 specificSearchErrorLabel.Text = "Error: Please search by only one parameter";
                 specificSearchErrorLabel.Visible = true;
@@ -51,8 +50,7 @@ namespace CarRentalApp
             return true;
         }
         /*
-         * When the admin searches for the most popular car for a specific:
-         * - Branch
+         * When the admin searches for the most popular branch for a specific:
          * - City
          * - Province
          * - Country
@@ -67,10 +65,6 @@ namespace CarRentalApp
 
             specificSearchErrorLabel.Visible = false; // Making the error label for specific search invisible
 
-            if (branchTextBox.Text.TrimEnd() != "")
-            {
-                // query by the branch name
-            }
             if (cityTextBox.Text.TrimEnd() != "")
             {
                 // query by city name
@@ -85,8 +79,7 @@ namespace CarRentalApp
             }
         }
         /*
-         * When a admin searches for the most popular cars for
-         * - Each Branch
+         * When a admin searches for the most popular branchs for
          * - Each City or 
          * - Each Province or 
          * - Each Country
@@ -95,14 +88,7 @@ namespace CarRentalApp
         {
             specificSearchErrorLabel.Visible = false; // Making the error label for specific search invisible
 
-            if (branchRadio.Checked)
-            {
-                branchRadio.Checked = false; // Uncheck the button after the search
-                everySearchErrorLabel.Visible = false;
-
-                //run all branches query
-            }
-            else if (cityRadio.Checked)
+           if (cityRadio.Checked)
             {
                 cityRadio.Checked = false; // Uncheck the button after the search
                 everySearchErrorLabel.Visible = false;
@@ -128,106 +114,6 @@ namespace CarRentalApp
                 // You need to select an option
                 everySearchErrorLabel.Visible = true;
             }
-        }
-
-        private void findMostPopularCarLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void selectionFilterGroupBox_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void countryRadio_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void provinceRadio_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cityRadio_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void branchRadio_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void specificParamGroupBox_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void countryTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void provinceTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cityTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void branchTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void countryLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cityLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void provinceLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void branchLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void specificSearchErrorLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void everySearchErrorLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void topPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void resultsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
