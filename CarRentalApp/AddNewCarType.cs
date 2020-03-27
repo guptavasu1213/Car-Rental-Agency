@@ -16,9 +16,33 @@ namespace CarRentalApp
         {
             InitializeComponent();
         }
-
+        /*
+         * When submit button is clicked, the error check is performed to ensure that all fields are filled.
+         * If all the fields are filled, the values are added to the database
+         */
         private void submitButton_Click(object sender, EventArgs e)
         {
+            // Check to ensure all the fields have text
+            if (carTypeNameTextBox.Text == "" || dailyFeeTextBox.Text == "" || 
+                weeklyFeeTextBox.Text == "" || monthlyFeeTextBox.Text == "" )
+            {
+                resultLabel.Text = "All fields are required";
+                resultLabel.ForeColor = Color.FromArgb(192, 0, 0); // dark red
+                resultLabel.Visible = true;
+            }
+            else
+            {
+                String carType = carTypeNameTextBox.Text;
+                Double dailyFee = Convert.ToDouble(dailyFeeTextBox.Text);
+                Double weeklyFee = Convert.ToDouble(weeklyFeeTextBox.Text);
+                Double monthlyFee = Convert.ToDouble(monthlyFeeTextBox.Text);
+
+                resultLabel.Text = "Added successfully to the database!";
+                resultLabel.ForeColor = Color.FromArgb(0, 192, 0); // Dark Green
+                resultLabel.Visible = true;
+
+                // RUN THE QUERY
+            }
 
         }
         /*

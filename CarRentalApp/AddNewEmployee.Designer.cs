@@ -98,6 +98,7 @@
             this.salaryTextBox.Name = "salaryTextBox";
             this.salaryTextBox.Size = new System.Drawing.Size(259, 26);
             this.salaryTextBox.TabIndex = 15;
+            this.salaryTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.salaryTextBox_KeyPress);
             // 
             // emailTextBox
             // 
@@ -153,9 +154,9 @@
             this.salaryLabel.Location = new System.Drawing.Point(14, 183);
             this.salaryLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.salaryLabel.Name = "salaryLabel";
-            this.salaryLabel.Size = new System.Drawing.Size(45, 19);
+            this.salaryLabel.Size = new System.Drawing.Size(100, 19);
             this.salaryLabel.TabIndex = 10;
-            this.salaryLabel.Text = "Salary";
+            this.salaryLabel.Text = "Salary (in CAD)";
             // 
             // submitButton
             // 
@@ -181,6 +182,7 @@
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
             this.phoneNumberTextBox.Size = new System.Drawing.Size(259, 26);
             this.phoneNumberTextBox.TabIndex = 7;
+            this.phoneNumberTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phoneNumberTextBox_KeyPress);
             // 
             // lastNameTextBox
             // 

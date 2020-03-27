@@ -118,6 +118,7 @@
             this.phoneNumberTextBox.Size = new System.Drawing.Size(280, 26);
             this.phoneNumberTextBox.TabIndex = 7;
             this.phoneNumberTextBox.TextChanged += new System.EventHandler(this.phoneNumberTextBox_TextChanged);
+            this.phoneNumberTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.allowOnlyNumericalValues);
             // 
             // lastNameTextBox
             // 
@@ -257,6 +258,7 @@
             this.ageTextBox.Size = new System.Drawing.Size(280, 26);
             this.ageTextBox.TabIndex = 14;
             this.ageTextBox.TextChanged += new System.EventHandler(this.ageTextBox_TextChanged);
+            this.ageTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.allowOnlyNumericalValues);
             // 
             // insuranceIDTexBox
             // 

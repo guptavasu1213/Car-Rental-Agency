@@ -52,5 +52,36 @@ namespace CarRentalApp
                 //Also put the date time value in the table
             }
         }
+
+        /*
+         * Allowing only numerical values for Phone Number
+         */
+        private void phoneNumberTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        /*
+         * The function checks if the user entered value is a number (integer, or a float).
+         * The digit is not typed in the textbox if the digit is not an integer or a float
+         */
+        private void salaryTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Verify that the pressed key isn't CTRL or any non-numeric digit
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // If you want, you can allow decimal (float) numbers
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+
+        }
     }
 }

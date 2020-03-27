@@ -91,6 +91,7 @@
             this.dailyFeeTextBox.Name = "dailyFeeTextBox";
             this.dailyFeeTextBox.Size = new System.Drawing.Size(280, 26);
             this.dailyFeeTextBox.TabIndex = 15;
+            this.dailyFeeTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.checkForANumber);
             // 
             // dailyFeeLabel
             // 
@@ -136,6 +137,7 @@
             this.monthlyFeeTextBox.Name = "monthlyFeeTextBox";
             this.monthlyFeeTextBox.Size = new System.Drawing.Size(280, 26);
             this.monthlyFeeTextBox.TabIndex = 7;
+            this.monthlyFeeTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.checkForANumber);
             // 
             // weeklyFeeTextBox
             // 
@@ -146,6 +148,7 @@
             this.weeklyFeeTextBox.Name = "weeklyFeeTextBox";
             this.weeklyFeeTextBox.Size = new System.Drawing.Size(280, 26);
             this.weeklyFeeTextBox.TabIndex = 6;
+            this.weeklyFeeTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.checkForANumber);
             // 
             // carTypeNameTextBox
             // 

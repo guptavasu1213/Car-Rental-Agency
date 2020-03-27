@@ -16,6 +16,16 @@ namespace CarRentalApp
         {
             InitializeComponent();
         }
+        /*
+         * Allowing only numerical values for the field
+         */
+        private void allowOnlyNumericalValues(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
 
         /*
          * When the Submit button is clicked and all entries are filled by the user, then entries are added

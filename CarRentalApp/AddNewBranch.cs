@@ -47,5 +47,15 @@ namespace CarRentalApp
                 // RUN THE QUERY
             }
         }
+        /*
+         * Allowing only numerical values for Phone Number
+         */
+        private void phoneNumberTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

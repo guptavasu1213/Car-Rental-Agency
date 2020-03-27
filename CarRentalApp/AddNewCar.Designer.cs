@@ -195,6 +195,7 @@
             this.yearTextBox.Name = "yearTextBox";
             this.yearTextBox.Size = new System.Drawing.Size(259, 26);
             this.yearTextBox.TabIndex = 14;
+            this.yearTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.yearTextBox_KeyPress);
             // 
             // registrationLabel
             // 

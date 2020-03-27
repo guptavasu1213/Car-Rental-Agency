@@ -78,11 +78,11 @@
             this.inputPassword.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.inputPassword.Location = new System.Drawing.Point(53, 180);
             this.inputPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.inputPassword.MaxLength = 20;
             this.inputPassword.Name = "inputPassword";
             this.inputPassword.Size = new System.Drawing.Size(202, 26);
             this.inputPassword.TabIndex = 3;
             this.inputPassword.Text = "Password";
-            this.inputPassword.MaxLength = 20;
             this.inputPassword.Enter += new System.EventHandler(this.inputPassword_Enter);
             this.inputPassword.Leave += new System.EventHandler(this.inputPassword_Leave);
             // 
@@ -168,6 +168,7 @@
             this.phoneBox.TabIndex = 11;
             this.phoneBox.Text = "Phone Number";
             this.phoneBox.Enter += new System.EventHandler(this.phoneBox_Enter);
+            this.phoneBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.allowOnlyNumericalValues);
             this.phoneBox.Leave += new System.EventHandler(this.phoneBox_Leave);
             // 
             // insuranceBox
@@ -216,6 +217,7 @@
             this.newCxButton.TabIndex = 15;
             this.newCxButton.Text = "Submit";
             this.newCxButton.UseVisualStyleBackColor = true;
+            this.newCxButton.Click += new System.EventHandler(this.newCxButton_Click);
             // 
             // ageBox
             // 
@@ -228,6 +230,7 @@
             this.ageBox.TabIndex = 16;
             this.ageBox.Text = "Age";
             this.ageBox.Enter += new System.EventHandler(this.ageBox_Enter);
+            this.ageBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.allowOnlyNumericalValues);
             this.ageBox.Leave += new System.EventHandler(this.ageBox_Leave);
             // 
             // passwordBox
