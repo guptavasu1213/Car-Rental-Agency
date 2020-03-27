@@ -271,7 +271,8 @@ namespace CarRentalApp
          */
         private void top100CustomersLabel_Click(object sender, EventArgs e)
         {
-
+            FindTop100Customers findTop100CustomersForm = new FindTop100Customers();
+            settingUpRightSidePanel(findTop100CustomersForm);
         }
     }
 }
