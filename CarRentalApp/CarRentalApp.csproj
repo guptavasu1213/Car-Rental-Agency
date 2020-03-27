@@ -110,6 +110,12 @@
     <Compile Include="startReservation.Designer.cs">
       <DependentUpon>startReservation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Top10Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Top10Employees.Designer.cs">
+      <DependentUpon>Top10Employees.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CustomerLogin.resx">
       <DependentUpon>CustomerLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +145,9 @@
     </Compile>
     <EmbeddedResource Include="startReservation.resx">
       <DependentUpon>startReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Top10Employees.resx">
+      <DependentUpon>Top10Employees.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

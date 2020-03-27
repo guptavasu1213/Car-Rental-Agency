@@ -69,8 +69,9 @@
             this.topPanel.Controls.Add(this.companyNameLabel);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1372, 70);
+            this.topPanel.Size = new System.Drawing.Size(1029, 57);
             this.topPanel.TabIndex = 0;
             // 
             // logoutButton
@@ -79,9 +80,10 @@
             this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.logoutButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutButton.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.logoutButton.Location = new System.Drawing.Point(1226, 12);
+            this.logoutButton.Location = new System.Drawing.Point(920, 10);
+            this.logoutButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(116, 42);
+            this.logoutButton.Size = new System.Drawing.Size(87, 34);
             this.logoutButton.TabIndex = 1;
             this.logoutButton.Text = "Logout";
             this.logoutButton.UseVisualStyleBackColor = false;
@@ -91,9 +93,10 @@
             this.companyNameLabel.AutoSize = true;
             this.companyNameLabel.Font = new System.Drawing.Font("Microsoft Uighur", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.companyNameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.companyNameLabel.Location = new System.Drawing.Point(3, 4);
+            this.companyNameLabel.Location = new System.Drawing.Point(2, 3);
+            this.companyNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.companyNameLabel.Name = "companyNameLabel";
-            this.companyNameLabel.Size = new System.Drawing.Size(345, 63);
+            this.companyNameLabel.Size = new System.Drawing.Size(274, 51);
             this.companyNameLabel.TabIndex = 0;
             this.companyNameLabel.Text = "<Our Company Name>";
             // 
@@ -126,9 +129,10 @@
             this.leftSidePanel.Controls.Add(this.vehiclesLabel);
             this.leftSidePanel.Controls.Add(this.usersLabel);
             this.leftSidePanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.leftSidePanel.Location = new System.Drawing.Point(0, 70);
+            this.leftSidePanel.Location = new System.Drawing.Point(0, 57);
+            this.leftSidePanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.leftSidePanel.Name = "leftSidePanel";
-            this.leftSidePanel.Size = new System.Drawing.Size(165, 889);
+            this.leftSidePanel.Size = new System.Drawing.Size(133, 714);
             this.leftSidePanel.TabIndex = 1;
             this.leftSidePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.leftSidePanel_Paint);
             // 
@@ -136,9 +140,10 @@
             // 
             this.popularCarTypeLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.popularCarTypeLabel.ForeColor = System.Drawing.Color.White;
-            this.popularCarTypeLabel.Location = new System.Drawing.Point(-1, 769);
+            this.popularCarTypeLabel.Location = new System.Drawing.Point(-1, 625);
+            this.popularCarTypeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.popularCarTypeLabel.Name = "popularCarTypeLabel";
-            this.popularCarTypeLabel.Size = new System.Drawing.Size(165, 23);
+            this.popularCarTypeLabel.Size = new System.Drawing.Size(124, 19);
             this.popularCarTypeLabel.TabIndex = 24;
             this.popularCarTypeLabel.Text = "Popular Car Type";
             this.popularCarTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -150,12 +155,14 @@
             // 
             this.top100CustomersLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.top100CustomersLabel.ForeColor = System.Drawing.Color.White;
-            this.top100CustomersLabel.Location = new System.Drawing.Point(2, 711);
+            this.top100CustomersLabel.Location = new System.Drawing.Point(2, 578);
+            this.top100CustomersLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.top100CustomersLabel.Name = "top100CustomersLabel";
-            this.top100CustomersLabel.Size = new System.Drawing.Size(157, 29);
+            this.top100CustomersLabel.Size = new System.Drawing.Size(129, 24);
             this.top100CustomersLabel.TabIndex = 23;
             this.top100CustomersLabel.Text = "Top 100 Customers";
             this.top100CustomersLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.top100CustomersLabel.Click += new System.EventHandler(this.top100CustomersLabel_Click);
             this.top100CustomersLabel.MouseLeave += new System.EventHandler(this.top100CustomersLabel_MouseLeave);
             this.top100CustomersLabel.MouseHover += new System.EventHandler(this.top100CustomersLabel_MouseHover);
             // 
@@ -163,9 +170,10 @@
             // 
             this.popularBranchLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.popularBranchLabel.ForeColor = System.Drawing.Color.White;
-            this.popularBranchLabel.Location = new System.Drawing.Point(-6, 792);
+            this.popularBranchLabel.Location = new System.Drawing.Point(-4, 644);
+            this.popularBranchLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.popularBranchLabel.Name = "popularBranchLabel";
-            this.popularBranchLabel.Size = new System.Drawing.Size(162, 29);
+            this.popularBranchLabel.Size = new System.Drawing.Size(122, 24);
             this.popularBranchLabel.TabIndex = 22;
             this.popularBranchLabel.Text = "Popular Branch";
             this.popularBranchLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -176,9 +184,10 @@
             // 
             this.findBranchLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.findBranchLabel.ForeColor = System.Drawing.Color.White;
-            this.findBranchLabel.Location = new System.Drawing.Point(1, 574);
+            this.findBranchLabel.Location = new System.Drawing.Point(1, 466);
+            this.findBranchLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.findBranchLabel.Name = "findBranchLabel";
-            this.findBranchLabel.Size = new System.Drawing.Size(162, 29);
+            this.findBranchLabel.Size = new System.Drawing.Size(122, 24);
             this.findBranchLabel.TabIndex = 21;
             this.findBranchLabel.Text = "Find Branch";
             this.findBranchLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -189,9 +198,10 @@
             // 
             this.addBranchLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addBranchLabel.ForeColor = System.Drawing.Color.White;
-            this.addBranchLabel.Location = new System.Drawing.Point(1, 603);
+            this.addBranchLabel.Location = new System.Drawing.Point(1, 490);
+            this.addBranchLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.addBranchLabel.Name = "addBranchLabel";
-            this.addBranchLabel.Size = new System.Drawing.Size(162, 29);
+            this.addBranchLabel.Size = new System.Drawing.Size(122, 24);
             this.addBranchLabel.TabIndex = 20;
             this.addBranchLabel.Text = "Add Branch";
             this.addBranchLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -202,9 +212,10 @@
             // 
             this.popularCarLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.popularCarLabel.ForeColor = System.Drawing.Color.White;
-            this.popularCarLabel.Location = new System.Drawing.Point(-1, 740);
+            this.popularCarLabel.Location = new System.Drawing.Point(-1, 601);
+            this.popularCarLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.popularCarLabel.Name = "popularCarLabel";
-            this.popularCarLabel.Size = new System.Drawing.Size(157, 29);
+            this.popularCarLabel.Size = new System.Drawing.Size(132, 24);
             this.popularCarLabel.TabIndex = 19;
             this.popularCarLabel.Text = "Popular Car";
             this.popularCarLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -216,12 +227,14 @@
             // 
             this.top10EmployeeLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.top10EmployeeLabel.ForeColor = System.Drawing.Color.White;
-            this.top10EmployeeLabel.Location = new System.Drawing.Point(0, 682);
+            this.top10EmployeeLabel.Location = new System.Drawing.Point(0, 554);
+            this.top10EmployeeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.top10EmployeeLabel.Name = "top10EmployeeLabel";
-            this.top10EmployeeLabel.Size = new System.Drawing.Size(157, 29);
+            this.top10EmployeeLabel.Size = new System.Drawing.Size(131, 24);
             this.top10EmployeeLabel.TabIndex = 18;
             this.top10EmployeeLabel.Text = "Top 10 Employees";
             this.top10EmployeeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.top10EmployeeLabel.Click += new System.EventHandler(this.top10EmployeeLabel_Click);
             this.top10EmployeeLabel.MouseLeave += new System.EventHandler(this.top10EmployeeLabel_MouseLeave);
             this.top10EmployeeLabel.MouseHover += new System.EventHandler(this.top10EmployeeLabel_MouseHover);
             // 
@@ -230,9 +243,10 @@
             this.branchesLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
             this.branchesLabel.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.branchesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.branchesLabel.Location = new System.Drawing.Point(3, 534);
+            this.branchesLabel.Location = new System.Drawing.Point(2, 434);
+            this.branchesLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.branchesLabel.Name = "branchesLabel";
-            this.branchesLabel.Size = new System.Drawing.Size(158, 40);
+            this.branchesLabel.Size = new System.Drawing.Size(129, 32);
             this.branchesLabel.TabIndex = 17;
             this.branchesLabel.Text = "Branches";
             this.branchesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -241,9 +255,10 @@
             // 
             this.updateBookingLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateBookingLabel.ForeColor = System.Drawing.Color.White;
-            this.updateBookingLabel.Location = new System.Drawing.Point(0, 505);
+            this.updateBookingLabel.Location = new System.Drawing.Point(0, 410);
+            this.updateBookingLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.updateBookingLabel.Name = "updateBookingLabel";
-            this.updateBookingLabel.Size = new System.Drawing.Size(157, 29);
+            this.updateBookingLabel.Size = new System.Drawing.Size(118, 24);
             this.updateBookingLabel.TabIndex = 16;
             this.updateBookingLabel.Text = "<>";
             this.updateBookingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -252,9 +267,10 @@
             // 
             this.findVehicleLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.findVehicleLabel.ForeColor = System.Drawing.Color.White;
-            this.findVehicleLabel.Location = new System.Drawing.Point(4, 320);
+            this.findVehicleLabel.Location = new System.Drawing.Point(3, 260);
+            this.findVehicleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.findVehicleLabel.Name = "findVehicleLabel";
-            this.findVehicleLabel.Size = new System.Drawing.Size(157, 29);
+            this.findVehicleLabel.Size = new System.Drawing.Size(118, 24);
             this.findVehicleLabel.TabIndex = 9;
             this.findVehicleLabel.Text = "Find Vehicle";
             this.findVehicleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -265,9 +281,10 @@
             // 
             this.addEmployeeLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addEmployeeLabel.ForeColor = System.Drawing.Color.White;
-            this.addEmployeeLabel.Location = new System.Drawing.Point(-1, 211);
+            this.addEmployeeLabel.Location = new System.Drawing.Point(-1, 171);
+            this.addEmployeeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.addEmployeeLabel.Name = "addEmployeeLabel";
-            this.addEmployeeLabel.Size = new System.Drawing.Size(162, 29);
+            this.addEmployeeLabel.Size = new System.Drawing.Size(122, 24);
             this.addEmployeeLabel.TabIndex = 6;
             this.addEmployeeLabel.Text = "Add Employee";
             this.addEmployeeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -279,9 +296,10 @@
             // 
             this.addUserLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addUserLabel.ForeColor = System.Drawing.Color.White;
-            this.addUserLabel.Location = new System.Drawing.Point(-1, 73);
+            this.addUserLabel.Location = new System.Drawing.Point(-1, 59);
+            this.addUserLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.addUserLabel.Name = "addUserLabel";
-            this.addUserLabel.Size = new System.Drawing.Size(162, 29);
+            this.addUserLabel.Size = new System.Drawing.Size(122, 24);
             this.addUserLabel.TabIndex = 5;
             this.addUserLabel.Text = "Add User";
             this.addUserLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -293,9 +311,10 @@
             // 
             this.addBookingLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addBookingLabel.ForeColor = System.Drawing.Color.White;
-            this.addBookingLabel.Location = new System.Drawing.Point(4, 476);
+            this.addBookingLabel.Location = new System.Drawing.Point(3, 387);
+            this.addBookingLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.addBookingLabel.Name = "addBookingLabel";
-            this.addBookingLabel.Size = new System.Drawing.Size(157, 29);
+            this.addBookingLabel.Size = new System.Drawing.Size(118, 24);
             this.addBookingLabel.TabIndex = 15;
             this.addBookingLabel.Text = "Add Booking";
             this.addBookingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -306,9 +325,10 @@
             // 
             this.findBookingLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.findBookingLabel.ForeColor = System.Drawing.Color.White;
-            this.findBookingLabel.Location = new System.Drawing.Point(3, 447);
+            this.findBookingLabel.Location = new System.Drawing.Point(2, 363);
+            this.findBookingLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.findBookingLabel.Name = "findBookingLabel";
-            this.findBookingLabel.Size = new System.Drawing.Size(157, 29);
+            this.findBookingLabel.Size = new System.Drawing.Size(118, 24);
             this.findBookingLabel.TabIndex = 14;
             this.findBookingLabel.Text = "Find Booking";
             this.findBookingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -319,9 +339,10 @@
             // 
             this.addVehicleTypeLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addVehicleTypeLabel.ForeColor = System.Drawing.Color.White;
-            this.addVehicleTypeLabel.Location = new System.Drawing.Point(3, 378);
+            this.addVehicleTypeLabel.Location = new System.Drawing.Point(2, 307);
+            this.addVehicleTypeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.addVehicleTypeLabel.Name = "addVehicleTypeLabel";
-            this.addVehicleTypeLabel.Size = new System.Drawing.Size(157, 29);
+            this.addVehicleTypeLabel.Size = new System.Drawing.Size(118, 24);
             this.addVehicleTypeLabel.TabIndex = 13;
             this.addVehicleTypeLabel.Text = "Add Vehicle Type";
             this.addVehicleTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -332,9 +353,10 @@
             // 
             this.updateEmployeeLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateEmployeeLabel.ForeColor = System.Drawing.Color.White;
-            this.updateEmployeeLabel.Location = new System.Drawing.Point(3, 240);
+            this.updateEmployeeLabel.Location = new System.Drawing.Point(2, 195);
+            this.updateEmployeeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.updateEmployeeLabel.Name = "updateEmployeeLabel";
-            this.updateEmployeeLabel.Size = new System.Drawing.Size(157, 29);
+            this.updateEmployeeLabel.Size = new System.Drawing.Size(118, 24);
             this.updateEmployeeLabel.TabIndex = 12;
             this.updateEmployeeLabel.Text = "<>";
             this.updateEmployeeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -343,9 +365,10 @@
             // 
             this.showUsers.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.showUsers.ForeColor = System.Drawing.Color.White;
-            this.showUsers.Location = new System.Drawing.Point(3, 102);
+            this.showUsers.Location = new System.Drawing.Point(2, 83);
+            this.showUsers.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.showUsers.Name = "showUsers";
-            this.showUsers.Size = new System.Drawing.Size(157, 29);
+            this.showUsers.Size = new System.Drawing.Size(118, 24);
             this.showUsers.TabIndex = 11;
             this.showUsers.Text = "<>";
             this.showUsers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -354,9 +377,10 @@
             // 
             this.findEmployeeLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.findEmployeeLabel.ForeColor = System.Drawing.Color.White;
-            this.findEmployeeLabel.Location = new System.Drawing.Point(2, 182);
+            this.findEmployeeLabel.Location = new System.Drawing.Point(2, 148);
+            this.findEmployeeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.findEmployeeLabel.Name = "findEmployeeLabel";
-            this.findEmployeeLabel.Size = new System.Drawing.Size(157, 29);
+            this.findEmployeeLabel.Size = new System.Drawing.Size(118, 24);
             this.findEmployeeLabel.TabIndex = 10;
             this.findEmployeeLabel.Text = "Find Employee";
             this.findEmployeeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -368,9 +392,10 @@
             // 
             this.findUserLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.findUserLabel.ForeColor = System.Drawing.Color.White;
-            this.findUserLabel.Location = new System.Drawing.Point(2, 43);
+            this.findUserLabel.Location = new System.Drawing.Point(2, 35);
+            this.findUserLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.findUserLabel.Name = "findUserLabel";
-            this.findUserLabel.Size = new System.Drawing.Size(157, 29);
+            this.findUserLabel.Size = new System.Drawing.Size(118, 24);
             this.findUserLabel.TabIndex = 8;
             this.findUserLabel.Text = "Find User";
             this.findUserLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -382,9 +407,10 @@
             // 
             this.addVehicleLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addVehicleLabel.ForeColor = System.Drawing.Color.White;
-            this.addVehicleLabel.Location = new System.Drawing.Point(3, 349);
+            this.addVehicleLabel.Location = new System.Drawing.Point(2, 284);
+            this.addVehicleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.addVehicleLabel.Name = "addVehicleLabel";
-            this.addVehicleLabel.Size = new System.Drawing.Size(157, 29);
+            this.addVehicleLabel.Size = new System.Drawing.Size(118, 24);
             this.addVehicleLabel.TabIndex = 7;
             this.addVehicleLabel.Text = "Add Vehicle";
             this.addVehicleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -396,9 +422,10 @@
             this.statsLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
             this.statsLabel.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.statsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.statsLabel.Location = new System.Drawing.Point(3, 642);
+            this.statsLabel.Location = new System.Drawing.Point(2, 522);
+            this.statsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.statsLabel.Name = "statsLabel";
-            this.statsLabel.Size = new System.Drawing.Size(158, 40);
+            this.statsLabel.Size = new System.Drawing.Size(129, 32);
             this.statsLabel.TabIndex = 4;
             this.statsLabel.Text = "Statistics";
             this.statsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -408,9 +435,10 @@
             this.bookingsLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
             this.bookingsLabel.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.bookingsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bookingsLabel.Location = new System.Drawing.Point(3, 407);
+            this.bookingsLabel.Location = new System.Drawing.Point(2, 331);
+            this.bookingsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bookingsLabel.Name = "bookingsLabel";
-            this.bookingsLabel.Size = new System.Drawing.Size(158, 40);
+            this.bookingsLabel.Size = new System.Drawing.Size(129, 32);
             this.bookingsLabel.TabIndex = 3;
             this.bookingsLabel.Text = "Bookings";
             this.bookingsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -420,9 +448,10 @@
             this.employeeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
             this.employeeLabel.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.employeeLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.employeeLabel.Location = new System.Drawing.Point(3, 142);
+            this.employeeLabel.Location = new System.Drawing.Point(2, 115);
+            this.employeeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.employeeLabel.Name = "employeeLabel";
-            this.employeeLabel.Size = new System.Drawing.Size(158, 40);
+            this.employeeLabel.Size = new System.Drawing.Size(129, 32);
             this.employeeLabel.TabIndex = 2;
             this.employeeLabel.Text = "Employees";
             this.employeeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -432,9 +461,10 @@
             this.vehiclesLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
             this.vehiclesLabel.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.vehiclesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.vehiclesLabel.Location = new System.Drawing.Point(2, 280);
+            this.vehiclesLabel.Location = new System.Drawing.Point(2, 228);
+            this.vehiclesLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.vehiclesLabel.Name = "vehiclesLabel";
-            this.vehiclesLabel.Size = new System.Drawing.Size(158, 40);
+            this.vehiclesLabel.Size = new System.Drawing.Size(129, 32);
             this.vehiclesLabel.TabIndex = 1;
             this.vehiclesLabel.Text = "Vehicles";
             this.vehiclesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -445,9 +475,10 @@
             this.usersLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
             this.usersLabel.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.usersLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.usersLabel.Location = new System.Drawing.Point(3, 3);
+            this.usersLabel.Location = new System.Drawing.Point(2, 2);
+            this.usersLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.usersLabel.Name = "usersLabel";
-            this.usersLabel.Size = new System.Drawing.Size(158, 40);
+            this.usersLabel.Size = new System.Drawing.Size(129, 32);
             this.usersLabel.TabIndex = 0;
             this.usersLabel.Text = "Users";
             this.usersLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -455,20 +486,22 @@
             // 
             // rightHandSidePanel
             // 
-            this.rightHandSidePanel.Location = new System.Drawing.Point(174, 81);
+            this.rightHandSidePanel.Location = new System.Drawing.Point(160, 66);
+            this.rightHandSidePanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rightHandSidePanel.Name = "rightHandSidePanel";
-            this.rightHandSidePanel.Size = new System.Drawing.Size(1018, 878);
+            this.rightHandSidePanel.Size = new System.Drawing.Size(813, 680);
             this.rightHandSidePanel.TabIndex = 2;
             // 
             // AdminPortal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1372, 959);
+            this.ClientSize = new System.Drawing.Size(1029, 771);
             this.Controls.Add(this.rightHandSidePanel);
             this.Controls.Add(this.leftSidePanel);
             this.Controls.Add(this.topPanel);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AdminPortal";
             this.Text = "Admin Portal";
             this.topPanel.ResumeLayout(false);

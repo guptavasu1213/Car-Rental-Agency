@@ -232,18 +232,22 @@ namespace CarRentalApp
             form.Show(); // Showing the form on the panel
         }
 
-        private void popularCarLabel_Click(object sender, EventArgs e)
-        {
-            PopularCar popularCarForm = new PopularCar(); // Creating the form 
-            settingUpRightSidePanel(popularCarForm);
-        }
-
         private void findUserLabel_Click(object sender, EventArgs e)
         {
             AdminLogin loginForm = new AdminLogin(); // Creating the form 
             settingUpRightSidePanel(loginForm);
         }
+
         /*
+         * When the Popular Car Label is clicked on, the form for searching for Popular 
+         * Car is loaded on the right hand side panel
+         */
+        private void popularCarLabel_Click(object sender, EventArgs e)
+        {
+            PopularCar popularCarForm = new PopularCar(); // Creating the form 
+            settingUpRightSidePanel(popularCarForm);
+        }
+       /*
          * When the Popular Car Type Label is clicked on, the form for searching for Popular 
          * Car Type is loaded on the right hand side panel
          */
@@ -251,6 +255,23 @@ namespace CarRentalApp
         {
             PopularCarType popularCarTypeForm = new PopularCarType();
             settingUpRightSidePanel(popularCarTypeForm);
+        }
+        /*
+         * When the Top 10 Employees Label is clicked on, the form for searching for Top 10
+         * Employees is loaded on the right hand side panel
+         */
+        private void top10EmployeeLabel_Click(object sender, EventArgs e)
+        {
+            Top10Employees top10EmployeesForm = new Top10Employees();
+            settingUpRightSidePanel(top10EmployeesForm);
+        }
+        /*
+         * When the Top 100 Customers Label is clicked on, the form for searching for Top 100
+         * Customers is loaded on the right hand side panel
+         */
+        private void top100CustomersLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
