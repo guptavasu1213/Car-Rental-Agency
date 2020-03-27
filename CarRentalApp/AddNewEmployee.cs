@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CarRentalApp
 {
-    public partial class AddNewUser : Form
+    public partial class AddNewEmployee : Form
     {
-        public AddNewUser()
+        public AddNewEmployee()
         {
             InitializeComponent();
         }
@@ -26,14 +26,15 @@ namespace CarRentalApp
             String firstName = firstNameTextBox.Text.TrimEnd();
             String lastName = lastNameTextBox.Text.TrimEnd();
             String phoneNumber = phoneNumberTextBox.Text.TrimEnd(); //MAYBE AN INTEGER FIELD
-            String age = ageTextBox.Text.TrimEnd(); //MAYBE AN INTEGER FIELD
-            String insuranceID = insuranceIDTexBox.Text.TrimEnd();
-            String driverLicenseClassType = driverLicenseClassTypeTextBox.Text.TrimEnd();
-            String driverLicenseNumber = driverLicenseNumberTextBox.Text.TrimEnd();
+            String email = emailTextBox.Text.TrimEnd();
+            String salary = salaryTextBox.Text.TrimEnd();  //MAYBE AN INTEGER FIELD
+            String position = positionTextBox.Text.TrimEnd();
+            String employmentType = employmentTypeTextBox.Text.TrimEnd();
+            String sinNumber = SINTextBox.Text.TrimEnd();
 
             // Check to ensure all the fields have text
-            if (firstName == "" || lastName == "" || phoneNumber == "" || age == "" || insuranceID == "" ||
-                driverLicenseNumber == "" || driverLicenseClassType == "")
+            if (firstName == "" || lastName == "" || phoneNumber == "" || email == "" || salary == "" ||
+                position == "" || employmentType == "" || sinNumber == "")
             {
                 resultLabel.Text = "All fields are required";
                 resultLabel.ForeColor = Color.FromArgb(192, 0, 0); // dark red
@@ -46,6 +47,8 @@ namespace CarRentalApp
                 resultLabel.Visible = true;
 
                 // RUN THE QUERY
+
+                //Also put the date time value in the table
             }
         }
     }

@@ -32,12 +32,6 @@ namespace CarRentalApp
 
         }
 
-        private void addEmployeeLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
         /*Setting mouse hover functionality*/
         private void setBackgroundOnMouseHover(Label label)
         {
@@ -213,6 +207,16 @@ namespace CarRentalApp
         {
 
         }
+         /*
+         * When the logout button is clicked, the user is taken back to the login screen
+         */
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            AdminLogin adminLogin = new AdminLogin();
+            this.Close(); // Close this Form
+            adminLogin.Show(); 
+        }
+
         /* Purpose: Sets up the right hand side panel in the Portal with the form passed to the function
          * Parameter: The form to be set on the right hand side
          */
@@ -279,15 +283,19 @@ namespace CarRentalApp
             settingUpRightSidePanel(popularBranchForm);
         }
         /*
-         * When the logout button is clicked, the user is taken back to the login screen
+         * When the Add Employee Label is clicked on, the form for adding new employees
+         * is loaded on the right hand side panel
          */
-        private void logoutButton_Click(object sender, EventArgs e)
+        private void addEmployeeLabel_Click(object sender, EventArgs e)
         {
-            AdminLogin adminLogin = new AdminLogin();
-            this.Close(); // Close this Form
-            adminLogin.Show(); 
+            AddNewEmployee addNewEmployeeForm = new AddNewEmployee();
+            settingUpRightSidePanel(addNewEmployeeForm);
         }
 
+        /*
+         * When the Add New User Label is clicked on, the form for adding new users
+         * is loaded on the right hand side panel
+         */
         private void addNewUserLabel_Click(object sender, EventArgs e)
         {
             AddNewUser addNewUserForm = new AddNewUser();

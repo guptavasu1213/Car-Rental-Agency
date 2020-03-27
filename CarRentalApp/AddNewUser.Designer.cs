@@ -100,7 +100,7 @@
             this.enterUserDetailsGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.enterUserDetailsGroupBox.Name = "enterUserDetailsGroupBox";
             this.enterUserDetailsGroupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.enterUserDetailsGroupBox.Size = new System.Drawing.Size(446, 364);
+            this.enterUserDetailsGroupBox.Size = new System.Drawing.Size(546, 364);
             this.enterUserDetailsGroupBox.TabIndex = 15;
             this.enterUserDetailsGroupBox.TabStop = false;
             this.enterUserDetailsGroupBox.Text = "Enter user details";
@@ -112,7 +112,7 @@
             this.phoneNumberTextBox.Location = new System.Drawing.Point(211, 105);
             this.phoneNumberTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
-            this.phoneNumberTextBox.Size = new System.Drawing.Size(132, 26);
+            this.phoneNumberTextBox.Size = new System.Drawing.Size(280, 26);
             this.phoneNumberTextBox.TabIndex = 7;
             // 
             // lastNameTextBox
@@ -122,7 +122,7 @@
             this.lastNameTextBox.Location = new System.Drawing.Point(211, 69);
             this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(132, 26);
+            this.lastNameTextBox.Size = new System.Drawing.Size(280, 26);
             this.lastNameTextBox.TabIndex = 6;
             // 
             // firstNameTextBox
@@ -132,7 +132,7 @@
             this.firstNameTextBox.Location = new System.Drawing.Point(211, 31);
             this.firstNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.Size = new System.Drawing.Size(132, 26);
+            this.firstNameTextBox.Size = new System.Drawing.Size(280, 26);
             this.firstNameTextBox.TabIndex = 5;
             // 
             // phoneNumberLabel
@@ -177,7 +177,7 @@
             this.submitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.submitButton.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitButton.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.submitButton.Location = new System.Drawing.Point(211, 307);
+            this.submitButton.Location = new System.Drawing.Point(281, 307);
             this.submitButton.Margin = new System.Windows.Forms.Padding(2);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(132, 30);
@@ -241,7 +241,7 @@
             this.ageTextBox.Location = new System.Drawing.Point(211, 140);
             this.ageTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.ageTextBox.Name = "ageTextBox";
-            this.ageTextBox.Size = new System.Drawing.Size(132, 26);
+            this.ageTextBox.Size = new System.Drawing.Size(280, 26);
             this.ageTextBox.TabIndex = 14;
             // 
             // insuranceIDTexBox
@@ -251,7 +251,7 @@
             this.insuranceIDTexBox.Location = new System.Drawing.Point(211, 176);
             this.insuranceIDTexBox.Margin = new System.Windows.Forms.Padding(2);
             this.insuranceIDTexBox.Name = "insuranceIDTexBox";
-            this.insuranceIDTexBox.Size = new System.Drawing.Size(132, 26);
+            this.insuranceIDTexBox.Size = new System.Drawing.Size(280, 26);
             this.insuranceIDTexBox.TabIndex = 15;
             // 
             // driverLicenseClassTypeTextBox
@@ -261,7 +261,7 @@
             this.driverLicenseClassTypeTextBox.Location = new System.Drawing.Point(211, 217);
             this.driverLicenseClassTypeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.driverLicenseClassTypeTextBox.Name = "driverLicenseClassTypeTextBox";
-            this.driverLicenseClassTypeTextBox.Size = new System.Drawing.Size(132, 26);
+            this.driverLicenseClassTypeTextBox.Size = new System.Drawing.Size(280, 26);
             this.driverLicenseClassTypeTextBox.TabIndex = 16;
             // 
             // driverLicenseNumberTextBox
@@ -271,7 +271,7 @@
             this.driverLicenseNumberTextBox.Location = new System.Drawing.Point(211, 259);
             this.driverLicenseNumberTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.driverLicenseNumberTextBox.Name = "driverLicenseNumberTextBox";
-            this.driverLicenseNumberTextBox.Size = new System.Drawing.Size(132, 26);
+            this.driverLicenseNumberTextBox.Size = new System.Drawing.Size(280, 26);
             this.driverLicenseNumberTextBox.TabIndex = 17;
             // 
             // resultLabel
