@@ -319,5 +319,14 @@ namespace CarRentalApp
             AddNewBranch addNewBranchForm = new AddNewBranch();
             settingUpRightSidePanel(addNewBranchForm);
         }
+        /*
+         * When the Add Vehicle Type Label is clicked on, the form for adding a new car
+         * type is loaded on the right hand side panel
+         */
+        private void addVehicleTypeLabel_Click(object sender, EventArgs e)
+        {
+            AddNewCarType addNewCarType = new AddNewCarType();
+            settingUpRightSidePanel(addNewCarType);
+        }
     }
 }

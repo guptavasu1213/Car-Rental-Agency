@@ -349,6 +349,7 @@
             this.addVehicleTypeLabel.TabIndex = 13;
             this.addVehicleTypeLabel.Text = "Add Vehicle Type";
             this.addVehicleTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.addVehicleTypeLabel.Click += new System.EventHandler(this.addVehicleTypeLabel_Click);
             this.addVehicleTypeLabel.MouseLeave += new System.EventHandler(this.addVehicleTypeLabel_MouseLeave);
             this.addVehicleTypeLabel.MouseHover += new System.EventHandler(this.addVehicleTypeLabel_MouseHover);
             // 

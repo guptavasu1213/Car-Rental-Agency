@@ -86,6 +86,12 @@
     <Compile Include="AddNewUser.Designer.cs">
       <DependentUpon>AddNewUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddNewCarType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewCarType.Designer.cs">
+      <DependentUpon>AddNewCarType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Customer.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="AdminLogin.cs">
@@ -163,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddNewUser.resx">
       <DependentUpon>AddNewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNewCarType.resx">
+      <DependentUpon>AddNewCarType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerLogin.resx">
       <DependentUpon>CustomerLogin.cs</DependentUpon>
