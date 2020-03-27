@@ -87,6 +87,7 @@
             this.logoutButton.TabIndex = 1;
             this.logoutButton.Text = "Logout";
             this.logoutButton.UseVisualStyleBackColor = false;
+            this.logoutButton.Click += new System.EventHandler(this.logoutButton_Click);
             // 
             // companyNameLabel
             // 
@@ -140,10 +141,10 @@
             // 
             this.popularCarTypeLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.popularCarTypeLabel.ForeColor = System.Drawing.Color.White;
-            this.popularCarTypeLabel.Location = new System.Drawing.Point(-1, 625);
+            this.popularCarTypeLabel.Location = new System.Drawing.Point(-1, 626);
             this.popularCarTypeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.popularCarTypeLabel.Name = "popularCarTypeLabel";
-            this.popularCarTypeLabel.Size = new System.Drawing.Size(124, 19);
+            this.popularCarTypeLabel.Size = new System.Drawing.Size(134, 19);
             this.popularCarTypeLabel.TabIndex = 24;
             this.popularCarTypeLabel.Text = "Popular Car Type";
             this.popularCarTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -170,13 +171,14 @@
             // 
             this.popularBranchLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.popularBranchLabel.ForeColor = System.Drawing.Color.White;
-            this.popularBranchLabel.Location = new System.Drawing.Point(-4, 644);
+            this.popularBranchLabel.Location = new System.Drawing.Point(3, 645);
             this.popularBranchLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.popularBranchLabel.Name = "popularBranchLabel";
-            this.popularBranchLabel.Size = new System.Drawing.Size(122, 24);
+            this.popularBranchLabel.Size = new System.Drawing.Size(128, 24);
             this.popularBranchLabel.TabIndex = 22;
             this.popularBranchLabel.Text = "Popular Branch";
             this.popularBranchLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.popularBranchLabel.Click += new System.EventHandler(this.popularBranchLabel_Click);
             this.popularBranchLabel.MouseLeave += new System.EventHandler(this.popularBranchLabel_MouseLeave);
             this.popularBranchLabel.MouseHover += new System.EventHandler(this.popularBranchLabel_MouseHover);
             // 

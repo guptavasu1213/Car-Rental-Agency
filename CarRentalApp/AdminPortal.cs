@@ -274,5 +274,23 @@ namespace CarRentalApp
             FindTop100Customers findTop100CustomersForm = new FindTop100Customers();
             settingUpRightSidePanel(findTop100CustomersForm);
         }
+        /*
+         * When the Popular Branch Label is clicked on, the form for searching for Popular
+         * Branches is loaded on the right hand side panel
+         */
+        private void popularBranchLabel_Click(object sender, EventArgs e)
+        {
+            PopularBranch popularBranchForm = new PopularBranch();
+            settingUpRightSidePanel(popularBranchForm);
+        }
+        /*
+         * When the logout button is clicked, the user is taken back to the login screen
+         */
+        private void logoutButton_Click(object sender, EventArgs e)
+        {
+            AdminLogin adminLogin = new AdminLogin();
+            this.Close(); // Close this Form
+            adminLogin.Show(); 
+        }
     }
 }

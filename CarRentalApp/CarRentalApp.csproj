@@ -96,6 +96,12 @@
       <DependentUpon>CustomerLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="PhoneNumber.cs" />
+    <Compile Include="PopularBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopularBranch.Designer.cs">
+      <DependentUpon>PopularBranch.cs</DependentUpon>
+    </Compile>
     <Compile Include="PopularCar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopularBranch.resx">
+      <DependentUpon>PopularBranch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PopularCar.resx">
       <DependentUpon>PopularCar.cs</DependentUpon>
