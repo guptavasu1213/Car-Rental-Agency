@@ -63,6 +63,7 @@
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(780, 69);
             this.topPanel.TabIndex = 14;
+            this.topPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.topPanel_Paint);
             // 
             // addNewUserLabel
             // 
@@ -75,6 +76,7 @@
             this.addNewUserLabel.Size = new System.Drawing.Size(208, 40);
             this.addNewUserLabel.TabIndex = 0;
             this.addNewUserLabel.Text = "Add New User";
+            this.addNewUserLabel.Click += new System.EventHandler(this.addNewUserLabel_Click);
             // 
             // enterUserDetailsGroupBox
             // 
@@ -104,6 +106,7 @@
             this.enterUserDetailsGroupBox.TabIndex = 15;
             this.enterUserDetailsGroupBox.TabStop = false;
             this.enterUserDetailsGroupBox.Text = "Enter user details";
+            this.enterUserDetailsGroupBox.Enter += new System.EventHandler(this.enterUserDetailsGroupBox_Enter);
             // 
             // phoneNumberTextBox
             // 
@@ -114,6 +117,7 @@
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
             this.phoneNumberTextBox.Size = new System.Drawing.Size(280, 26);
             this.phoneNumberTextBox.TabIndex = 7;
+            this.phoneNumberTextBox.TextChanged += new System.EventHandler(this.phoneNumberTextBox_TextChanged);
             // 
             // lastNameTextBox
             // 
@@ -124,6 +128,7 @@
             this.lastNameTextBox.Name = "lastNameTextBox";
             this.lastNameTextBox.Size = new System.Drawing.Size(280, 26);
             this.lastNameTextBox.TabIndex = 6;
+            this.lastNameTextBox.TextChanged += new System.EventHandler(this.lastNameTextBox_TextChanged);
             // 
             // firstNameTextBox
             // 
@@ -134,6 +139,7 @@
             this.firstNameTextBox.Name = "firstNameTextBox";
             this.firstNameTextBox.Size = new System.Drawing.Size(280, 26);
             this.firstNameTextBox.TabIndex = 5;
+            this.firstNameTextBox.TextChanged += new System.EventHandler(this.firstNameTextBox_TextChanged);
             // 
             // phoneNumberLabel
             // 
@@ -146,6 +152,7 @@
             this.phoneNumberLabel.Size = new System.Drawing.Size(102, 19);
             this.phoneNumberLabel.TabIndex = 3;
             this.phoneNumberLabel.Text = "Phone Number";
+            this.phoneNumberLabel.Click += new System.EventHandler(this.phoneNumberLabel_Click);
             // 
             // firstNameLabel
             // 
@@ -158,6 +165,7 @@
             this.firstNameLabel.Size = new System.Drawing.Size(75, 19);
             this.firstNameLabel.TabIndex = 2;
             this.firstNameLabel.Text = "First Name";
+            this.firstNameLabel.Click += new System.EventHandler(this.firstNameLabel_Click);
             // 
             // LastNameLabel
             // 
@@ -170,6 +178,7 @@
             this.LastNameLabel.Size = new System.Drawing.Size(74, 19);
             this.LastNameLabel.TabIndex = 1;
             this.LastNameLabel.Text = "Last Name";
+            this.LastNameLabel.Click += new System.EventHandler(this.LastNameLabel_Click);
             // 
             // submitButton
             // 
@@ -197,6 +206,7 @@
             this.insuranceID.Size = new System.Drawing.Size(86, 19);
             this.insuranceID.TabIndex = 10;
             this.insuranceID.Text = "Insurance ID";
+            this.insuranceID.Click += new System.EventHandler(this.insuranceID_Click);
             // 
             // ageLabel
             // 
@@ -209,6 +219,7 @@
             this.ageLabel.Size = new System.Drawing.Size(33, 19);
             this.ageLabel.TabIndex = 11;
             this.ageLabel.Text = "Age";
+            this.ageLabel.Click += new System.EventHandler(this.ageLabel_Click);
             // 
             // driverLicenseClassTypeLabel
             // 
@@ -221,6 +232,7 @@
             this.driverLicenseClassTypeLabel.Size = new System.Drawing.Size(162, 19);
             this.driverLicenseClassTypeLabel.TabIndex = 12;
             this.driverLicenseClassTypeLabel.Text = "Driver License Class Type";
+            this.driverLicenseClassTypeLabel.Click += new System.EventHandler(this.driverLicenseClassTypeLabel_Click);
             // 
             // driverLicenseNumberLabel
             // 
@@ -233,6 +245,7 @@
             this.driverLicenseNumberLabel.Size = new System.Drawing.Size(148, 19);
             this.driverLicenseNumberLabel.TabIndex = 13;
             this.driverLicenseNumberLabel.Text = "Driver License Number";
+            this.driverLicenseNumberLabel.Click += new System.EventHandler(this.driverLicenseNumberLabel_Click);
             // 
             // ageTextBox
             // 
@@ -243,6 +256,7 @@
             this.ageTextBox.Name = "ageTextBox";
             this.ageTextBox.Size = new System.Drawing.Size(280, 26);
             this.ageTextBox.TabIndex = 14;
+            this.ageTextBox.TextChanged += new System.EventHandler(this.ageTextBox_TextChanged);
             // 
             // insuranceIDTexBox
             // 
@@ -253,6 +267,7 @@
             this.insuranceIDTexBox.Name = "insuranceIDTexBox";
             this.insuranceIDTexBox.Size = new System.Drawing.Size(280, 26);
             this.insuranceIDTexBox.TabIndex = 15;
+            this.insuranceIDTexBox.TextChanged += new System.EventHandler(this.insuranceIDTexBox_TextChanged);
             // 
             // driverLicenseClassTypeTextBox
             // 
@@ -263,6 +278,7 @@
             this.driverLicenseClassTypeTextBox.Name = "driverLicenseClassTypeTextBox";
             this.driverLicenseClassTypeTextBox.Size = new System.Drawing.Size(280, 26);
             this.driverLicenseClassTypeTextBox.TabIndex = 16;
+            this.driverLicenseClassTypeTextBox.TextChanged += new System.EventHandler(this.driverLicenseClassTypeTextBox_TextChanged);
             // 
             // driverLicenseNumberTextBox
             // 
@@ -273,6 +289,7 @@
             this.driverLicenseNumberTextBox.Name = "driverLicenseNumberTextBox";
             this.driverLicenseNumberTextBox.Size = new System.Drawing.Size(280, 26);
             this.driverLicenseNumberTextBox.TabIndex = 17;
+            this.driverLicenseNumberTextBox.TextChanged += new System.EventHandler(this.driverLicenseNumberTextBox_TextChanged);
             // 
             // resultLabel
             // 
@@ -285,6 +302,7 @@
             this.resultLabel.Size = new System.Drawing.Size(0, 19);
             this.resultLabel.TabIndex = 18;
             this.resultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.resultLabel.Click += new System.EventHandler(this.resultLabel_Click);
             // 
             // AddNewUser
             // 

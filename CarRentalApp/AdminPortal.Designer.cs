@@ -207,6 +207,7 @@
             this.addNewBranchLabel.TabIndex = 20;
             this.addNewBranchLabel.Text = "Add New Branch";
             this.addNewBranchLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.addNewBranchLabel.Click += new System.EventHandler(this.addNewBranchLabel_Click);
             this.addNewBranchLabel.MouseLeave += new System.EventHandler(this.addBranchLabel_MouseLeave);
             this.addNewBranchLabel.MouseHover += new System.EventHandler(this.addBranchLabel_MouseHover);
             // 

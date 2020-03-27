@@ -302,13 +302,22 @@ namespace CarRentalApp
             settingUpRightSidePanel(addNewUserForm);
         }
         /*
-         * When the Add New Vehicle User Label is clicked on, the form for adding new cars
+         * When the Add New Vehicle User Label is clicked on, the form for adding a new car
          * is loaded on the right hand side panel
          */
         private void addNewVehicleLabel_Click(object sender, EventArgs e)
         {
             AddNewCar addNewCarForm = new AddNewCar();
             settingUpRightSidePanel(addNewCarForm);
+        }
+        /*
+         * When the Add New Branch Label is clicked on, the form for adding a new branch
+         * is loaded on the right hand side panel
+         */
+        private void addNewBranchLabel_Click(object sender, EventArgs e)
+        {
+            AddNewBranch addNewBranchForm = new AddNewBranch();
+            settingUpRightSidePanel(addNewBranchForm);
         }
     }
 }

@@ -56,7 +56,5 @@ namespace CarRentalApp
                 // RUN THE QUERY
             }
         }
-
-
     }
 }

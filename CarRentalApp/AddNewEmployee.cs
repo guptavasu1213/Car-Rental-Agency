@@ -32,7 +32,7 @@ namespace CarRentalApp
             String employmentType = employmentTypeTextBox.Text.TrimEnd();
             String sinNumber = SINTextBox.Text.TrimEnd();
 
-            // Check to ensure all the fields have text or nothing is selected in the drop down list
+            // If any text field is empty or nothing is selected in the drop down list
             if (firstName == "" || lastName == "" || phoneNumber == "" || email == "" || salary == "" ||
                 position == "" || employmentType == "" || sinNumber == "" || branchNameComboBox.SelectedIndex == -1)
             {
