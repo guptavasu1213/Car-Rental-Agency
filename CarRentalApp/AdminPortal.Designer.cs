@@ -43,7 +43,7 @@
             this.updateBookingLabel = new System.Windows.Forms.Label();
             this.findVehicleLabel = new System.Windows.Forms.Label();
             this.addEmployeeLabel = new System.Windows.Forms.Label();
-            this.addUserLabel = new System.Windows.Forms.Label();
+            this.addNewUserLabel = new System.Windows.Forms.Label();
             this.addBookingLabel = new System.Windows.Forms.Label();
             this.findBookingLabel = new System.Windows.Forms.Label();
             this.addVehicleTypeLabel = new System.Windows.Forms.Label();
@@ -115,7 +115,7 @@
             this.leftSidePanel.Controls.Add(this.updateBookingLabel);
             this.leftSidePanel.Controls.Add(this.findVehicleLabel);
             this.leftSidePanel.Controls.Add(this.addEmployeeLabel);
-            this.leftSidePanel.Controls.Add(this.addUserLabel);
+            this.leftSidePanel.Controls.Add(this.addNewUserLabel);
             this.leftSidePanel.Controls.Add(this.addBookingLabel);
             this.leftSidePanel.Controls.Add(this.findBookingLabel);
             this.leftSidePanel.Controls.Add(this.addVehicleTypeLabel);
@@ -294,20 +294,20 @@
             this.addEmployeeLabel.MouseLeave += new System.EventHandler(this.addEmployeeLabel_MouseLeave);
             this.addEmployeeLabel.MouseHover += new System.EventHandler(this.addEmployeeLabel_MouseHover);
             // 
-            // addUserLabel
+            // addNewUserLabel
             // 
-            this.addUserLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addUserLabel.ForeColor = System.Drawing.Color.White;
-            this.addUserLabel.Location = new System.Drawing.Point(-1, 59);
-            this.addUserLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.addUserLabel.Name = "addUserLabel";
-            this.addUserLabel.Size = new System.Drawing.Size(122, 24);
-            this.addUserLabel.TabIndex = 5;
-            this.addUserLabel.Text = "Add User";
-            this.addUserLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.addUserLabel.Click += new System.EventHandler(this.addUserLabel_Click);
-            this.addUserLabel.MouseLeave += new System.EventHandler(this.addUserLabel_MouseLeave);
-            this.addUserLabel.MouseHover += new System.EventHandler(this.addUserLabel_MouseHover);
+            this.addNewUserLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addNewUserLabel.ForeColor = System.Drawing.Color.White;
+            this.addNewUserLabel.Location = new System.Drawing.Point(-1, 59);
+            this.addNewUserLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.addNewUserLabel.Name = "addNewUserLabel";
+            this.addNewUserLabel.Size = new System.Drawing.Size(122, 24);
+            this.addNewUserLabel.TabIndex = 5;
+            this.addNewUserLabel.Text = "Add New User";
+            this.addNewUserLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.addNewUserLabel.Click += new System.EventHandler(this.addNewUserLabel_Click);
+            this.addNewUserLabel.MouseLeave += new System.EventHandler(this.addUserLabel_MouseLeave);
+            this.addNewUserLabel.MouseHover += new System.EventHandler(this.addUserLabel_MouseHover);
             // 
             // addBookingLabel
             // 
@@ -523,7 +523,7 @@
         private System.Windows.Forms.Label vehiclesLabel;
         private System.Windows.Forms.Label statsLabel;
         private System.Windows.Forms.Label bookingsLabel;
-        private System.Windows.Forms.Label addUserLabel;
+        private System.Windows.Forms.Label addNewUserLabel;
         private System.Windows.Forms.Label branchesLabel;
         private System.Windows.Forms.Label updateBookingLabel;
         private System.Windows.Forms.Label addBookingLabel;

@@ -27,11 +27,6 @@ namespace CarRentalApp
 
         }
 
-        private void addUserLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void findEmployeeLabel_Click(object sender, EventArgs e)
         {
 
@@ -61,7 +56,7 @@ namespace CarRentalApp
 
         private void addUserLabel_MouseHover(object sender, EventArgs e)
         {
-            setBackgroundOnMouseHover(addUserLabel);
+            setBackgroundOnMouseHover(addNewUserLabel);
         }
 
         private void addEmployeeLabel_MouseHover(object sender, EventArgs e)
@@ -81,7 +76,7 @@ namespace CarRentalApp
 
         private void addUserLabel_MouseLeave(object sender, EventArgs e)
         {
-            setBackgroundOnMouseLeave(addUserLabel);
+            setBackgroundOnMouseLeave(addNewUserLabel);
         }
 
         private void findEmployeeLabel_MouseLeave(object sender, EventArgs e)
@@ -291,6 +286,12 @@ namespace CarRentalApp
             AdminLogin adminLogin = new AdminLogin();
             this.Close(); // Close this Form
             adminLogin.Show(); 
+        }
+
+        private void addNewUserLabel_Click(object sender, EventArgs e)
+        {
+            AddNewUser addNewUserForm = new AddNewUser();
+            settingUpRightSidePanel(addNewUserForm);
         }
     }
 }
