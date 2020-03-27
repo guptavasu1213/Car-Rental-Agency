@@ -67,6 +67,7 @@
             this.findMostPopularCarLabel.Size = new System.Drawing.Size(393, 51);
             this.findMostPopularCarLabel.TabIndex = 0;
             this.findMostPopularCarLabel.Text = "Find Most Popular Car";
+            this.findMostPopularCarLabel.Click += new System.EventHandler(this.findMostPopularCarLabel_Click);
             // 
             // selectionFilterGroupBox
             // 
@@ -82,6 +83,7 @@
             this.selectionFilterGroupBox.TabIndex = 1;
             this.selectionFilterGroupBox.TabStop = false;
             this.selectionFilterGroupBox.Text = "For every:";
+            this.selectionFilterGroupBox.Enter += new System.EventHandler(this.selectionFilterGroupBox_Enter);
             // 
             // countryRadio
             // 
@@ -95,6 +97,7 @@
             this.countryRadio.TabStop = true;
             this.countryRadio.Text = "Country";
             this.countryRadio.UseVisualStyleBackColor = true;
+            this.countryRadio.CheckedChanged += new System.EventHandler(this.countryRadio_CheckedChanged);
             // 
             // provinceRadio
             // 
@@ -108,6 +111,7 @@
             this.provinceRadio.TabStop = true;
             this.provinceRadio.Text = "Province";
             this.provinceRadio.UseVisualStyleBackColor = true;
+            this.provinceRadio.CheckedChanged += new System.EventHandler(this.provinceRadio_CheckedChanged);
             // 
             // cityRadio
             // 
@@ -121,6 +125,7 @@
             this.cityRadio.TabStop = true;
             this.cityRadio.Text = "City";
             this.cityRadio.UseVisualStyleBackColor = true;
+            this.cityRadio.CheckedChanged += new System.EventHandler(this.cityRadio_CheckedChanged);
             // 
             // branchRadio
             // 
@@ -134,6 +139,7 @@
             this.branchRadio.TabStop = true;
             this.branchRadio.Text = "Branch";
             this.branchRadio.UseVisualStyleBackColor = true;
+            this.branchRadio.CheckedChanged += new System.EventHandler(this.branchRadio_CheckedChanged);
             // 
             // specificParamGroupBox
             // 
@@ -153,6 +159,7 @@
             this.specificParamGroupBox.TabIndex = 2;
             this.specificParamGroupBox.TabStop = false;
             this.specificParamGroupBox.Text = "Searching by a specific parameter?";
+            this.specificParamGroupBox.Enter += new System.EventHandler(this.specificParamGroupBox_Enter);
             // 
             // countryTextBox
             // 
@@ -162,6 +169,7 @@
             this.countryTextBox.Name = "countryTextBox";
             this.countryTextBox.Size = new System.Drawing.Size(175, 30);
             this.countryTextBox.TabIndex = 7;
+            this.countryTextBox.TextChanged += new System.EventHandler(this.countryTextBox_TextChanged);
             // 
             // provinceTextBox
             // 
@@ -171,6 +179,7 @@
             this.provinceTextBox.Name = "provinceTextBox";
             this.provinceTextBox.Size = new System.Drawing.Size(175, 30);
             this.provinceTextBox.TabIndex = 6;
+            this.provinceTextBox.TextChanged += new System.EventHandler(this.provinceTextBox_TextChanged);
             // 
             // cityTextBox
             // 
@@ -180,6 +189,7 @@
             this.cityTextBox.Name = "cityTextBox";
             this.cityTextBox.Size = new System.Drawing.Size(175, 30);
             this.cityTextBox.TabIndex = 5;
+            this.cityTextBox.TextChanged += new System.EventHandler(this.cityTextBox_TextChanged);
             // 
             // branchTextBox
             // 
@@ -189,6 +199,7 @@
             this.branchTextBox.Name = "branchTextBox";
             this.branchTextBox.Size = new System.Drawing.Size(175, 30);
             this.branchTextBox.TabIndex = 4;
+            this.branchTextBox.TextChanged += new System.EventHandler(this.branchTextBox_TextChanged);
             // 
             // countryLabel
             // 
@@ -200,6 +211,7 @@
             this.countryLabel.Size = new System.Drawing.Size(71, 22);
             this.countryLabel.TabIndex = 3;
             this.countryLabel.Text = "Country";
+            this.countryLabel.Click += new System.EventHandler(this.countryLabel_Click);
             // 
             // cityLabel
             // 
@@ -211,6 +223,7 @@
             this.cityLabel.Size = new System.Drawing.Size(39, 22);
             this.cityLabel.TabIndex = 2;
             this.cityLabel.Text = "City";
+            this.cityLabel.Click += new System.EventHandler(this.cityLabel_Click);
             // 
             // provinceLabel
             // 
@@ -222,6 +235,7 @@
             this.provinceLabel.Size = new System.Drawing.Size(75, 22);
             this.provinceLabel.TabIndex = 1;
             this.provinceLabel.Text = "Province";
+            this.provinceLabel.Click += new System.EventHandler(this.provinceLabel_Click);
             // 
             // branchLabel
             // 
@@ -233,6 +247,7 @@
             this.branchLabel.Size = new System.Drawing.Size(68, 22);
             this.branchLabel.TabIndex = 0;
             this.branchLabel.Text = "Branch ";
+            this.branchLabel.Click += new System.EventHandler(this.branchLabel_Click);
             // 
             // panel1
             // 
@@ -248,6 +263,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(409, 648);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // specificSearchErrorLabel
             // 
@@ -259,6 +275,7 @@
             this.specificSearchErrorLabel.TabIndex = 10;
             this.specificSearchErrorLabel.Text = "Error: Please search by only one parameter";
             this.specificSearchErrorLabel.Visible = false;
+            this.specificSearchErrorLabel.Click += new System.EventHandler(this.specificSearchErrorLabel_Click);
             // 
             // everySearchErrorLabel
             // 
@@ -270,6 +287,7 @@
             this.everySearchErrorLabel.TabIndex = 9;
             this.everySearchErrorLabel.Text = "Error: Please select one option";
             this.everySearchErrorLabel.Visible = false;
+            this.everySearchErrorLabel.Click += new System.EventHandler(this.everySearchErrorLabel_Click);
             // 
             // searchSpecificButton
             // 
@@ -310,6 +328,7 @@
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1171, 85);
             this.topPanel.TabIndex = 4;
+            this.topPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.topPanel_Paint);
             // 
             // resultsDataGridView
             // 
@@ -319,6 +338,7 @@
             this.resultsDataGridView.RowTemplate.Height = 24;
             this.resultsDataGridView.Size = new System.Drawing.Size(723, 648);
             this.resultsDataGridView.TabIndex = 5;
+            this.resultsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.resultsDataGridView_CellContentClick);
             // 
             // PopularCar
             // 

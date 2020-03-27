@@ -243,5 +243,14 @@ namespace CarRentalApp
             AdminLogin loginForm = new AdminLogin(); // Creating the form 
             settingUpRightSidePanel(loginForm);
         }
+        /*
+         * When the Popular Car Type Label is clicked on, the form for searching for Popular 
+         * Car Type is loaded on the right hand side panel
+         */
+        private void popularCarTypeLabel_Click(object sender, EventArgs e)
+        {
+            PopularCarType popularCarTypeForm = new PopularCarType();
+            settingUpRightSidePanel(popularCarTypeForm);
+        }
     }
 }

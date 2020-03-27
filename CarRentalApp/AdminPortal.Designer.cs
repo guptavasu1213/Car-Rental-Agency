@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.topPanel = new System.Windows.Forms.Panel();
+            this.logoutButton = new System.Windows.Forms.Button();
             this.companyNameLabel = new System.Windows.Forms.Label();
             this.leftSidePanel = new System.Windows.Forms.Panel();
             this.popularCarTypeLabel = new System.Windows.Forms.Label();
@@ -57,7 +58,6 @@
             this.vehiclesLabel = new System.Windows.Forms.Label();
             this.usersLabel = new System.Windows.Forms.Label();
             this.rightHandSidePanel = new System.Windows.Forms.Panel();
-            this.logoutButton = new System.Windows.Forms.Button();
             this.topPanel.SuspendLayout();
             this.leftSidePanel.SuspendLayout();
             this.SuspendLayout();
@@ -72,6 +72,19 @@
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1372, 70);
             this.topPanel.TabIndex = 0;
+            // 
+            // logoutButton
+            // 
+            this.logoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.logoutButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logoutButton.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.logoutButton.Location = new System.Drawing.Point(1226, 12);
+            this.logoutButton.Name = "logoutButton";
+            this.logoutButton.Size = new System.Drawing.Size(116, 42);
+            this.logoutButton.TabIndex = 1;
+            this.logoutButton.Text = "Logout";
+            this.logoutButton.UseVisualStyleBackColor = false;
             // 
             // companyNameLabel
             // 
@@ -129,6 +142,7 @@
             this.popularCarTypeLabel.TabIndex = 24;
             this.popularCarTypeLabel.Text = "Popular Car Type";
             this.popularCarTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.popularCarTypeLabel.Click += new System.EventHandler(this.popularCarTypeLabel_Click);
             this.popularCarTypeLabel.MouseLeave += new System.EventHandler(this.popularCarTypeLabel_MouseLeave);
             this.popularCarTypeLabel.MouseHover += new System.EventHandler(this.popularCarTypeLabel_MouseHover);
             // 
@@ -445,19 +459,6 @@
             this.rightHandSidePanel.Name = "rightHandSidePanel";
             this.rightHandSidePanel.Size = new System.Drawing.Size(1018, 878);
             this.rightHandSidePanel.TabIndex = 2;
-            // 
-            // logoutButton
-            // 
-            this.logoutButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.logoutButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutButton.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.logoutButton.Location = new System.Drawing.Point(1226, 12);
-            this.logoutButton.Name = "logoutButton";
-            this.logoutButton.Size = new System.Drawing.Size(116, 42);
-            this.logoutButton.TabIndex = 1;
-            this.logoutButton.Text = "Logout";
-            this.logoutButton.UseVisualStyleBackColor = false;
             // 
             // AdminPortal
             // 
