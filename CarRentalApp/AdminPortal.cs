@@ -115,12 +115,12 @@ namespace CarRentalApp
 
         private void addBookingLabel_MouseHover(object sender, EventArgs e)
         {
-            setBackgroundOnMouseHover(addBookingLabel);
+            setBackgroundOnMouseHover(addNewBookingLabel);
         }
 
         private void addBookingLabel_MouseLeave(object sender, EventArgs e)
         {
-            setBackgroundOnMouseLeave(addBookingLabel);
+            setBackgroundOnMouseLeave(addNewBookingLabel);
         }
 
         private void findBranchLabel_MouseHover(object sender, EventArgs e)
@@ -135,12 +135,12 @@ namespace CarRentalApp
 
         private void addBranchLabel_MouseHover(object sender, EventArgs e)
         {
-            setBackgroundOnMouseHover(addBranchLabel);
+            setBackgroundOnMouseHover(addNewBranchLabel);
         }
 
         private void addBranchLabel_MouseLeave(object sender, EventArgs e)
         {
-            setBackgroundOnMouseLeave(addBranchLabel);
+            setBackgroundOnMouseLeave(addNewBranchLabel);
         }
 
         private void top10EmployeeLabel_MouseHover(object sender, EventArgs e)
@@ -195,12 +195,12 @@ namespace CarRentalApp
 
         private void addVehicleLabel_MouseHover(object sender, EventArgs e)
         {
-            setBackgroundOnMouseHover(addVehicleLabel);
+            setBackgroundOnMouseHover(addNewVehicleLabel);
         }
 
         private void addVehicleLabel_MouseLeave(object sender, EventArgs e)
         {
-            setBackgroundOnMouseLeave(addVehicleLabel);
+            setBackgroundOnMouseLeave(addNewVehicleLabel);
         }
 
         private void leftSidePanel_Paint(object sender, PaintEventArgs e)
@@ -286,7 +286,7 @@ namespace CarRentalApp
          * When the Add Employee Label is clicked on, the form for adding new employees
          * is loaded on the right hand side panel
          */
-        private void addEmployeeLabel_Click(object sender, EventArgs e)
+        private void addNewEmployeeLabel_Click(object sender, EventArgs e)
         {
             AddNewEmployee addNewEmployeeForm = new AddNewEmployee();
             settingUpRightSidePanel(addNewEmployeeForm);
@@ -300,6 +300,15 @@ namespace CarRentalApp
         {
             AddNewUser addNewUserForm = new AddNewUser();
             settingUpRightSidePanel(addNewUserForm);
+        }
+        /*
+         * When the Add New Vehicle User Label is clicked on, the form for adding new cars
+         * is loaded on the right hand side panel
+         */
+        private void addNewVehicleLabel_Click(object sender, EventArgs e)
+        {
+            AddNewCar addNewCarForm = new AddNewCar();
+            settingUpRightSidePanel(addNewCarForm);
         }
     }
 }

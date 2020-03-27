@@ -36,7 +36,7 @@
             this.top100CustomersLabel = new System.Windows.Forms.Label();
             this.popularBranchLabel = new System.Windows.Forms.Label();
             this.findBranchLabel = new System.Windows.Forms.Label();
-            this.addBranchLabel = new System.Windows.Forms.Label();
+            this.addNewBranchLabel = new System.Windows.Forms.Label();
             this.popularCarLabel = new System.Windows.Forms.Label();
             this.top10EmployeeLabel = new System.Windows.Forms.Label();
             this.branchesLabel = new System.Windows.Forms.Label();
@@ -44,14 +44,14 @@
             this.findVehicleLabel = new System.Windows.Forms.Label();
             this.addEmployeeLabel = new System.Windows.Forms.Label();
             this.addNewUserLabel = new System.Windows.Forms.Label();
-            this.addBookingLabel = new System.Windows.Forms.Label();
+            this.addNewBookingLabel = new System.Windows.Forms.Label();
             this.findBookingLabel = new System.Windows.Forms.Label();
             this.addVehicleTypeLabel = new System.Windows.Forms.Label();
             this.updateEmployeeLabel = new System.Windows.Forms.Label();
             this.showUsers = new System.Windows.Forms.Label();
             this.findEmployeeLabel = new System.Windows.Forms.Label();
             this.findUserLabel = new System.Windows.Forms.Label();
-            this.addVehicleLabel = new System.Windows.Forms.Label();
+            this.addNewVehicleLabel = new System.Windows.Forms.Label();
             this.statsLabel = new System.Windows.Forms.Label();
             this.bookingsLabel = new System.Windows.Forms.Label();
             this.employeeLabel = new System.Windows.Forms.Label();
@@ -108,7 +108,7 @@
             this.leftSidePanel.Controls.Add(this.top100CustomersLabel);
             this.leftSidePanel.Controls.Add(this.popularBranchLabel);
             this.leftSidePanel.Controls.Add(this.findBranchLabel);
-            this.leftSidePanel.Controls.Add(this.addBranchLabel);
+            this.leftSidePanel.Controls.Add(this.addNewBranchLabel);
             this.leftSidePanel.Controls.Add(this.popularCarLabel);
             this.leftSidePanel.Controls.Add(this.top10EmployeeLabel);
             this.leftSidePanel.Controls.Add(this.branchesLabel);
@@ -116,14 +116,14 @@
             this.leftSidePanel.Controls.Add(this.findVehicleLabel);
             this.leftSidePanel.Controls.Add(this.addEmployeeLabel);
             this.leftSidePanel.Controls.Add(this.addNewUserLabel);
-            this.leftSidePanel.Controls.Add(this.addBookingLabel);
+            this.leftSidePanel.Controls.Add(this.addNewBookingLabel);
             this.leftSidePanel.Controls.Add(this.findBookingLabel);
             this.leftSidePanel.Controls.Add(this.addVehicleTypeLabel);
             this.leftSidePanel.Controls.Add(this.updateEmployeeLabel);
             this.leftSidePanel.Controls.Add(this.showUsers);
             this.leftSidePanel.Controls.Add(this.findEmployeeLabel);
             this.leftSidePanel.Controls.Add(this.findUserLabel);
-            this.leftSidePanel.Controls.Add(this.addVehicleLabel);
+            this.leftSidePanel.Controls.Add(this.addNewVehicleLabel);
             this.leftSidePanel.Controls.Add(this.statsLabel);
             this.leftSidePanel.Controls.Add(this.bookingsLabel);
             this.leftSidePanel.Controls.Add(this.employeeLabel);
@@ -189,26 +189,26 @@
             this.findBranchLabel.Location = new System.Drawing.Point(1, 466);
             this.findBranchLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.findBranchLabel.Name = "findBranchLabel";
-            this.findBranchLabel.Size = new System.Drawing.Size(122, 24);
+            this.findBranchLabel.Size = new System.Drawing.Size(129, 24);
             this.findBranchLabel.TabIndex = 21;
             this.findBranchLabel.Text = "Find Branch";
             this.findBranchLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.findBranchLabel.MouseLeave += new System.EventHandler(this.findBranchLabel_MouseLeave);
             this.findBranchLabel.MouseHover += new System.EventHandler(this.findBranchLabel_MouseHover);
             // 
-            // addBranchLabel
+            // addNewBranchLabel
             // 
-            this.addBranchLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addBranchLabel.ForeColor = System.Drawing.Color.White;
-            this.addBranchLabel.Location = new System.Drawing.Point(1, 490);
-            this.addBranchLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.addBranchLabel.Name = "addBranchLabel";
-            this.addBranchLabel.Size = new System.Drawing.Size(122, 24);
-            this.addBranchLabel.TabIndex = 20;
-            this.addBranchLabel.Text = "Add Branch";
-            this.addBranchLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.addBranchLabel.MouseLeave += new System.EventHandler(this.addBranchLabel_MouseLeave);
-            this.addBranchLabel.MouseHover += new System.EventHandler(this.addBranchLabel_MouseHover);
+            this.addNewBranchLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addNewBranchLabel.ForeColor = System.Drawing.Color.White;
+            this.addNewBranchLabel.Location = new System.Drawing.Point(1, 490);
+            this.addNewBranchLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.addNewBranchLabel.Name = "addNewBranchLabel";
+            this.addNewBranchLabel.Size = new System.Drawing.Size(129, 24);
+            this.addNewBranchLabel.TabIndex = 20;
+            this.addNewBranchLabel.Text = "Add New Branch";
+            this.addNewBranchLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.addNewBranchLabel.MouseLeave += new System.EventHandler(this.addBranchLabel_MouseLeave);
+            this.addNewBranchLabel.MouseHover += new System.EventHandler(this.addBranchLabel_MouseHover);
             // 
             // popularCarLabel
             // 
@@ -272,7 +272,7 @@
             this.findVehicleLabel.Location = new System.Drawing.Point(3, 260);
             this.findVehicleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.findVehicleLabel.Name = "findVehicleLabel";
-            this.findVehicleLabel.Size = new System.Drawing.Size(118, 24);
+            this.findVehicleLabel.Size = new System.Drawing.Size(128, 24);
             this.findVehicleLabel.TabIndex = 9;
             this.findVehicleLabel.Text = "Find Vehicle";
             this.findVehicleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -286,11 +286,11 @@
             this.addEmployeeLabel.Location = new System.Drawing.Point(-1, 171);
             this.addEmployeeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.addEmployeeLabel.Name = "addEmployeeLabel";
-            this.addEmployeeLabel.Size = new System.Drawing.Size(122, 24);
+            this.addEmployeeLabel.Size = new System.Drawing.Size(132, 24);
             this.addEmployeeLabel.TabIndex = 6;
-            this.addEmployeeLabel.Text = "Add Employee";
+            this.addEmployeeLabel.Text = "Add New Employee";
             this.addEmployeeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.addEmployeeLabel.Click += new System.EventHandler(this.addEmployeeLabel_Click);
+            this.addEmployeeLabel.Click += new System.EventHandler(this.addNewEmployeeLabel_Click);
             this.addEmployeeLabel.MouseLeave += new System.EventHandler(this.addEmployeeLabel_MouseLeave);
             this.addEmployeeLabel.MouseHover += new System.EventHandler(this.addEmployeeLabel_MouseHover);
             // 
@@ -301,7 +301,7 @@
             this.addNewUserLabel.Location = new System.Drawing.Point(-1, 59);
             this.addNewUserLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.addNewUserLabel.Name = "addNewUserLabel";
-            this.addNewUserLabel.Size = new System.Drawing.Size(122, 24);
+            this.addNewUserLabel.Size = new System.Drawing.Size(132, 24);
             this.addNewUserLabel.TabIndex = 5;
             this.addNewUserLabel.Text = "Add New User";
             this.addNewUserLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -309,19 +309,19 @@
             this.addNewUserLabel.MouseLeave += new System.EventHandler(this.addUserLabel_MouseLeave);
             this.addNewUserLabel.MouseHover += new System.EventHandler(this.addUserLabel_MouseHover);
             // 
-            // addBookingLabel
+            // addNewBookingLabel
             // 
-            this.addBookingLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addBookingLabel.ForeColor = System.Drawing.Color.White;
-            this.addBookingLabel.Location = new System.Drawing.Point(3, 387);
-            this.addBookingLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.addBookingLabel.Name = "addBookingLabel";
-            this.addBookingLabel.Size = new System.Drawing.Size(118, 24);
-            this.addBookingLabel.TabIndex = 15;
-            this.addBookingLabel.Text = "Add Booking";
-            this.addBookingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.addBookingLabel.MouseLeave += new System.EventHandler(this.addBookingLabel_MouseLeave);
-            this.addBookingLabel.MouseHover += new System.EventHandler(this.addBookingLabel_MouseHover);
+            this.addNewBookingLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addNewBookingLabel.ForeColor = System.Drawing.Color.White;
+            this.addNewBookingLabel.Location = new System.Drawing.Point(3, 387);
+            this.addNewBookingLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.addNewBookingLabel.Name = "addNewBookingLabel";
+            this.addNewBookingLabel.Size = new System.Drawing.Size(128, 24);
+            this.addNewBookingLabel.TabIndex = 15;
+            this.addNewBookingLabel.Text = "Add New Booking";
+            this.addNewBookingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.addNewBookingLabel.MouseLeave += new System.EventHandler(this.addBookingLabel_MouseLeave);
+            this.addNewBookingLabel.MouseHover += new System.EventHandler(this.addBookingLabel_MouseHover);
             // 
             // findBookingLabel
             // 
@@ -330,7 +330,7 @@
             this.findBookingLabel.Location = new System.Drawing.Point(2, 363);
             this.findBookingLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.findBookingLabel.Name = "findBookingLabel";
-            this.findBookingLabel.Size = new System.Drawing.Size(118, 24);
+            this.findBookingLabel.Size = new System.Drawing.Size(128, 24);
             this.findBookingLabel.TabIndex = 14;
             this.findBookingLabel.Text = "Find Booking";
             this.findBookingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -344,7 +344,7 @@
             this.addVehicleTypeLabel.Location = new System.Drawing.Point(2, 307);
             this.addVehicleTypeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.addVehicleTypeLabel.Name = "addVehicleTypeLabel";
-            this.addVehicleTypeLabel.Size = new System.Drawing.Size(118, 24);
+            this.addVehicleTypeLabel.Size = new System.Drawing.Size(129, 24);
             this.addVehicleTypeLabel.TabIndex = 13;
             this.addVehicleTypeLabel.Text = "Add Vehicle Type";
             this.addVehicleTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -382,7 +382,7 @@
             this.findEmployeeLabel.Location = new System.Drawing.Point(2, 148);
             this.findEmployeeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.findEmployeeLabel.Name = "findEmployeeLabel";
-            this.findEmployeeLabel.Size = new System.Drawing.Size(118, 24);
+            this.findEmployeeLabel.Size = new System.Drawing.Size(131, 24);
             this.findEmployeeLabel.TabIndex = 10;
             this.findEmployeeLabel.Text = "Find Employee";
             this.findEmployeeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -397,7 +397,7 @@
             this.findUserLabel.Location = new System.Drawing.Point(2, 35);
             this.findUserLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.findUserLabel.Name = "findUserLabel";
-            this.findUserLabel.Size = new System.Drawing.Size(118, 24);
+            this.findUserLabel.Size = new System.Drawing.Size(128, 24);
             this.findUserLabel.TabIndex = 8;
             this.findUserLabel.Text = "Find User";
             this.findUserLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -405,19 +405,20 @@
             this.findUserLabel.MouseLeave += new System.EventHandler(this.findUserLabel_MouseLeave);
             this.findUserLabel.MouseHover += new System.EventHandler(this.findUserLabel_MouseHover);
             // 
-            // addVehicleLabel
+            // addNewVehicleLabel
             // 
-            this.addVehicleLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addVehicleLabel.ForeColor = System.Drawing.Color.White;
-            this.addVehicleLabel.Location = new System.Drawing.Point(2, 284);
-            this.addVehicleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.addVehicleLabel.Name = "addVehicleLabel";
-            this.addVehicleLabel.Size = new System.Drawing.Size(118, 24);
-            this.addVehicleLabel.TabIndex = 7;
-            this.addVehicleLabel.Text = "Add Vehicle";
-            this.addVehicleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.addVehicleLabel.MouseLeave += new System.EventHandler(this.addVehicleLabel_MouseLeave);
-            this.addVehicleLabel.MouseHover += new System.EventHandler(this.addVehicleLabel_MouseHover);
+            this.addNewVehicleLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addNewVehicleLabel.ForeColor = System.Drawing.Color.White;
+            this.addNewVehicleLabel.Location = new System.Drawing.Point(2, 284);
+            this.addNewVehicleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.addNewVehicleLabel.Name = "addNewVehicleLabel";
+            this.addNewVehicleLabel.Size = new System.Drawing.Size(129, 24);
+            this.addNewVehicleLabel.TabIndex = 7;
+            this.addNewVehicleLabel.Text = "Add New Vehicle";
+            this.addNewVehicleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.addNewVehicleLabel.Click += new System.EventHandler(this.addNewVehicleLabel_Click);
+            this.addNewVehicleLabel.MouseLeave += new System.EventHandler(this.addVehicleLabel_MouseLeave);
+            this.addNewVehicleLabel.MouseHover += new System.EventHandler(this.addVehicleLabel_MouseHover);
             // 
             // statsLabel
             // 
@@ -526,7 +527,7 @@
         private System.Windows.Forms.Label addNewUserLabel;
         private System.Windows.Forms.Label branchesLabel;
         private System.Windows.Forms.Label updateBookingLabel;
-        private System.Windows.Forms.Label addBookingLabel;
+        private System.Windows.Forms.Label addNewBookingLabel;
         private System.Windows.Forms.Label findBookingLabel;
         private System.Windows.Forms.Label addVehicleTypeLabel;
         private System.Windows.Forms.Label updateEmployeeLabel;
@@ -534,12 +535,12 @@
         private System.Windows.Forms.Label findEmployeeLabel;
         private System.Windows.Forms.Label findVehicleLabel;
         private System.Windows.Forms.Label findUserLabel;
-        private System.Windows.Forms.Label addVehicleLabel;
+        private System.Windows.Forms.Label addNewVehicleLabel;
         private System.Windows.Forms.Label addEmployeeLabel;
         private System.Windows.Forms.Label popularCarLabel;
         private System.Windows.Forms.Label top10EmployeeLabel;
         private System.Windows.Forms.Label findBranchLabel;
-        private System.Windows.Forms.Label addBranchLabel;
+        private System.Windows.Forms.Label addNewBranchLabel;
         private System.Windows.Forms.Label top100CustomersLabel;
         private System.Windows.Forms.Label popularBranchLabel;
         private System.Windows.Forms.Label popularCarTypeLabel;

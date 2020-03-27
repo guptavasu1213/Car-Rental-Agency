@@ -36,7 +36,7 @@
             this.employmentTypeLabel = new System.Windows.Forms.Label();
             this.positionLabel = new System.Windows.Forms.Label();
             this.emailLabel = new System.Windows.Forms.Label();
-            this.Salary = new System.Windows.Forms.Label();
+            this.salaryLabel = new System.Windows.Forms.Label();
             this.submitButton = new System.Windows.Forms.Button();
             this.phoneNumberTextBox = new System.Windows.Forms.TextBox();
             this.lastNameTextBox = new System.Windows.Forms.TextBox();
@@ -51,6 +51,8 @@
             this.birthDateLabel = new System.Windows.Forms.Label();
             this.SINLabel = new System.Windows.Forms.Label();
             this.dateOfBirthPicker = new System.Windows.Forms.DateTimePicker();
+            this.branchNameLabel = new System.Windows.Forms.Label();
+            this.branchNameComboBox = new System.Windows.Forms.ComboBox();
             this.enterUserDetailsGroupBox.SuspendLayout();
             this.topPanel.SuspendLayout();
             this.SuspendLayout();
@@ -60,7 +62,7 @@
             this.resultLabel.AutoSize = true;
             this.resultLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.resultLabel.Location = new System.Drawing.Point(14, 391);
+            this.resultLabel.Location = new System.Drawing.Point(14, 446);
             this.resultLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.resultLabel.Name = "resultLabel";
             this.resultLabel.Size = new System.Drawing.Size(0, 19);
@@ -143,17 +145,17 @@
             this.emailLabel.TabIndex = 11;
             this.emailLabel.Text = "Email";
             // 
-            // Salary
+            // salaryLabel
             // 
-            this.Salary.AutoSize = true;
-            this.Salary.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Salary.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.Salary.Location = new System.Drawing.Point(14, 183);
-            this.Salary.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Salary.Name = "Salary";
-            this.Salary.Size = new System.Drawing.Size(45, 19);
-            this.Salary.TabIndex = 10;
-            this.Salary.Text = "Salary";
+            this.salaryLabel.AutoSize = true;
+            this.salaryLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salaryLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.salaryLabel.Location = new System.Drawing.Point(14, 183);
+            this.salaryLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.salaryLabel.Name = "salaryLabel";
+            this.salaryLabel.Size = new System.Drawing.Size(45, 19);
+            this.salaryLabel.TabIndex = 10;
+            this.salaryLabel.Text = "Salary";
             // 
             // submitButton
             // 
@@ -161,7 +163,7 @@
             this.submitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.submitButton.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitButton.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.submitButton.Location = new System.Drawing.Point(273, 391);
+            this.submitButton.Location = new System.Drawing.Point(273, 446);
             this.submitButton.Margin = new System.Windows.Forms.Padding(2);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(132, 30);
@@ -226,6 +228,8 @@
             // 
             // enterUserDetailsGroupBox
             // 
+            this.enterUserDetailsGroupBox.Controls.Add(this.branchNameLabel);
+            this.enterUserDetailsGroupBox.Controls.Add(this.branchNameComboBox);
             this.enterUserDetailsGroupBox.Controls.Add(this.dateOfBirthPicker);
             this.enterUserDetailsGroupBox.Controls.Add(this.SINTextBox);
             this.enterUserDetailsGroupBox.Controls.Add(this.birthDateLabel);
@@ -238,7 +242,7 @@
             this.enterUserDetailsGroupBox.Controls.Add(this.employmentTypeLabel);
             this.enterUserDetailsGroupBox.Controls.Add(this.positionLabel);
             this.enterUserDetailsGroupBox.Controls.Add(this.emailLabel);
-            this.enterUserDetailsGroupBox.Controls.Add(this.Salary);
+            this.enterUserDetailsGroupBox.Controls.Add(this.salaryLabel);
             this.enterUserDetailsGroupBox.Controls.Add(this.submitButton);
             this.enterUserDetailsGroupBox.Controls.Add(this.phoneNumberTextBox);
             this.enterUserDetailsGroupBox.Controls.Add(this.lastNameTextBox);
@@ -252,7 +256,7 @@
             this.enterUserDetailsGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.enterUserDetailsGroupBox.Name = "enterUserDetailsGroupBox";
             this.enterUserDetailsGroupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.enterUserDetailsGroupBox.Size = new System.Drawing.Size(535, 438);
+            this.enterUserDetailsGroupBox.Size = new System.Drawing.Size(535, 510);
             this.enterUserDetailsGroupBox.TabIndex = 17;
             this.enterUserDetailsGroupBox.TabStop = false;
             this.enterUserDetailsGroupBox.Text = "Enter user details";
@@ -335,12 +339,33 @@
             this.dateOfBirthPicker.Size = new System.Drawing.Size(259, 26);
             this.dateOfBirthPicker.TabIndex = 23;
             // 
+            // branchNameLabel
+            // 
+            this.branchNameLabel.AutoSize = true;
+            this.branchNameLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.branchNameLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.branchNameLabel.Location = new System.Drawing.Point(14, 390);
+            this.branchNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.branchNameLabel.Name = "branchNameLabel";
+            this.branchNameLabel.Size = new System.Drawing.Size(91, 19);
+            this.branchNameLabel.TabIndex = 26;
+            this.branchNameLabel.Text = "Branch Name";
+            // 
+            // branchNameComboBox
+            // 
+            this.branchNameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.branchNameComboBox.FormattingEnabled = true;
+            this.branchNameComboBox.Location = new System.Drawing.Point(211, 387);
+            this.branchNameComboBox.Name = "branchNameComboBox";
+            this.branchNameComboBox.Size = new System.Drawing.Size(259, 27);
+            this.branchNameComboBox.TabIndex = 25;
+            // 
             // AddNewEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(911, 572);
+            this.ClientSize = new System.Drawing.Size(911, 616);
             this.Controls.Add(this.enterUserDetailsGroupBox);
             this.Controls.Add(this.topPanel);
             this.Name = "AddNewEmployee";
@@ -363,7 +388,7 @@
         private System.Windows.Forms.Label employmentTypeLabel;
         private System.Windows.Forms.Label positionLabel;
         private System.Windows.Forms.Label emailLabel;
-        private System.Windows.Forms.Label Salary;
+        private System.Windows.Forms.Label salaryLabel;
         private System.Windows.Forms.Button submitButton;
         private System.Windows.Forms.TextBox phoneNumberTextBox;
         private System.Windows.Forms.TextBox lastNameTextBox;
@@ -378,5 +403,7 @@
         private System.Windows.Forms.Label LastNameLabel;
         private System.Windows.Forms.Label addNewEmployeeLabel;
         private System.Windows.Forms.Panel topPanel;
+        private System.Windows.Forms.Label branchNameLabel;
+        private System.Windows.Forms.ComboBox branchNameComboBox;
     }
 }

@@ -32,14 +32,15 @@ namespace CarRentalApp
             String employmentType = employmentTypeTextBox.Text.TrimEnd();
             String sinNumber = SINTextBox.Text.TrimEnd();
 
-            // Check to ensure all the fields have text
+            // Check to ensure all the fields have text or nothing is selected in the drop down list
             if (firstName == "" || lastName == "" || phoneNumber == "" || email == "" || salary == "" ||
-                position == "" || employmentType == "" || sinNumber == "")
+                position == "" || employmentType == "" || sinNumber == "" || branchNameComboBox.SelectedIndex == -1)
             {
                 resultLabel.Text = "All fields are required";
-                resultLabel.ForeColor = Color.FromArgb(192, 0, 0); // dark red
+                resultLabel.ForeColor = Color.FromArgb(192, 0, 0); // Dark Red
                 resultLabel.Visible = true;
             }
+            // Adding all the fields for the employee to the database
             else
             {
                 resultLabel.Text = "Added successfully to the database!";
