@@ -507,9 +507,11 @@
             this.Controls.Add(this.rightHandSidePanel);
             this.Controls.Add(this.leftSidePanel);
             this.Controls.Add(this.topPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdminPortal";
             this.Text = "Admin Portal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
             this.leftSidePanel.ResumeLayout(false);
