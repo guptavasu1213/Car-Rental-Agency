@@ -230,11 +230,14 @@ namespace CarRentalApp
             form.Dock = DockStyle.Fill;
             form.Show(); // Showing the form on the panel
         }
-
+        /*
+         * When the Find User Label is clicked on, the form for searching for existing 
+         * Users is loaded on the right hand side panel
+         */
         private void findUserLabel_Click(object sender, EventArgs e)
         {
-            AdminLogin loginForm = new AdminLogin(); // Creating the form 
-            settingUpRightSidePanel(loginForm);
+            FindUser findUserForm = new FindUser();
+            settingUpRightSidePanel(findUserForm);
         }
 
         /*
