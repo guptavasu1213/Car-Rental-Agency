@@ -328,5 +328,14 @@ namespace CarRentalApp
             AddNewCarType addNewCarType = new AddNewCarType();
             settingUpRightSidePanel(addNewCarType);
         }
+        /*
+         * When the Add New Booking Label is clicked on, the form for adding a new 
+         * transaction is loaded on the right hand side panel
+         */
+        private void addNewBookingLabel_Click(object sender, EventArgs e)
+        {
+            AddNewBooking addNewBookingForm = new AddNewBooking();
+            settingUpRightSidePanel(addNewBookingForm);
+        }
     }
 }
