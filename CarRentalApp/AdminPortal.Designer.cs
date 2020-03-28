@@ -69,7 +69,7 @@
             this.topPanel.Controls.Add(this.companyNameLabel);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.topPanel.Margin = new System.Windows.Forms.Padding(2);
             this.topPanel.Name = "topPanel";
             this.topPanel.Size = new System.Drawing.Size(1029, 57);
             this.topPanel.TabIndex = 0;
@@ -81,7 +81,7 @@
             this.logoutButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutButton.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.logoutButton.Location = new System.Drawing.Point(920, 10);
-            this.logoutButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.logoutButton.Margin = new System.Windows.Forms.Padding(2);
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.Size = new System.Drawing.Size(87, 34);
             this.logoutButton.TabIndex = 1;
@@ -131,7 +131,7 @@
             this.leftSidePanel.Controls.Add(this.usersLabel);
             this.leftSidePanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftSidePanel.Location = new System.Drawing.Point(0, 57);
-            this.leftSidePanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.leftSidePanel.Margin = new System.Windows.Forms.Padding(2);
             this.leftSidePanel.Name = "leftSidePanel";
             this.leftSidePanel.Size = new System.Drawing.Size(133, 714);
             this.leftSidePanel.TabIndex = 1;
@@ -321,6 +321,7 @@
             this.addNewBookingLabel.TabIndex = 15;
             this.addNewBookingLabel.Text = "Add New Booking";
             this.addNewBookingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.addNewBookingLabel.Click += new System.EventHandler(this.addNewBookingLabel_Click);
             this.addNewBookingLabel.MouseLeave += new System.EventHandler(this.addBookingLabel_MouseLeave);
             this.addNewBookingLabel.MouseHover += new System.EventHandler(this.addBookingLabel_MouseHover);
             // 
@@ -492,7 +493,7 @@
             // rightHandSidePanel
             // 
             this.rightHandSidePanel.Location = new System.Drawing.Point(160, 66);
-            this.rightHandSidePanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rightHandSidePanel.Margin = new System.Windows.Forms.Padding(2);
             this.rightHandSidePanel.Name = "rightHandSidePanel";
             this.rightHandSidePanel.Size = new System.Drawing.Size(813, 680);
             this.rightHandSidePanel.TabIndex = 2;
@@ -506,7 +507,7 @@
             this.Controls.Add(this.rightHandSidePanel);
             this.Controls.Add(this.leftSidePanel);
             this.Controls.Add(this.topPanel);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdminPortal";
             this.Text = "Admin Portal";
             this.topPanel.ResumeLayout(false);

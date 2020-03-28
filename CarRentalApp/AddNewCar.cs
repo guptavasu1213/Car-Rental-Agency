@@ -39,8 +39,7 @@ namespace CarRentalApp
             // If any text field is empty or nothing is selected in the drop down list
             if (carName == "" || make == "" || model == "" || year == "" || vinNumber == "" ||
                 licensePlateNum == "" || registrationNum == "" || insuranceID == "" || 
-                !inServiceCheckBox.Checked || branchNameComboBox.SelectedIndex == -1 ||
-                carTypeComboBox.SelectedIndex == -1)
+                branchNameComboBox.SelectedIndex == -1 || carTypeComboBox.SelectedIndex == -1)
             {
                 resultLabel.Text = "All fields are required";
                 resultLabel.ForeColor = Color.FromArgb(192, 0, 0); // Dark Red
