@@ -71,7 +71,7 @@
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Margin = new System.Windows.Forms.Padding(2);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1029, 57);
+            this.topPanel.Size = new System.Drawing.Size(1095, 57);
             this.topPanel.TabIndex = 0;
             // 
             // logoutButton
@@ -80,7 +80,7 @@
             this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.logoutButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutButton.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.logoutButton.Location = new System.Drawing.Point(920, 10);
+            this.logoutButton.Location = new System.Drawing.Point(997, 10);
             this.logoutButton.Margin = new System.Windows.Forms.Padding(2);
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.Size = new System.Drawing.Size(87, 34);
@@ -495,7 +495,7 @@
             this.rightHandSidePanel.Location = new System.Drawing.Point(160, 66);
             this.rightHandSidePanel.Margin = new System.Windows.Forms.Padding(2);
             this.rightHandSidePanel.Name = "rightHandSidePanel";
-            this.rightHandSidePanel.Size = new System.Drawing.Size(813, 680);
+            this.rightHandSidePanel.Size = new System.Drawing.Size(924, 680);
             this.rightHandSidePanel.TabIndex = 2;
             // 
             // AdminPortal
@@ -503,7 +503,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1029, 771);
+            this.ClientSize = new System.Drawing.Size(1095, 771);
             this.Controls.Add(this.rightHandSidePanel);
             this.Controls.Add(this.leftSidePanel);
             this.Controls.Add(this.topPanel);
