@@ -112,6 +112,12 @@
     <Compile Include="AdminPortal.Designer.cs">
       <DependentUpon>AdminPortal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FindEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindEmployee.Designer.cs">
+      <DependentUpon>FindEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="FindTop100Customers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminPortal.resx">
       <DependentUpon>AdminPortal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindEmployee.resx">
+      <DependentUpon>FindEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindTop100Customers.resx">
       <DependentUpon>FindTop100Customers.cs</DependentUpon>

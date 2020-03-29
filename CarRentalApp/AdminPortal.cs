@@ -27,11 +27,6 @@ namespace CarRentalApp
 
         }
 
-        private void findEmployeeLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         /*Setting mouse hover functionality*/
         private void setBackgroundOnMouseHover(Label label)
         {
@@ -348,5 +343,16 @@ namespace CarRentalApp
             AddNewBooking addNewBookingForm = new AddNewBooking();
             settingUpRightSidePanel(addNewBookingForm);
         }
+        /*
+         * When the Find Employee label is clicked on, the form for finding an
+         * existing employee is loaded on the right hand side panel
+         */
+        private void findEmployeeLabel_Click(object sender, EventArgs e)
+        {
+            FindEmployee findEmployeeForm = new FindEmployee();
+            settingUpRightSidePanel(findEmployeeForm);
+        }
+
+
     }
 }
