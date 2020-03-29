@@ -18,16 +18,6 @@ namespace CarRentalApp
         }
 
         /*
-         * Allowing only numerical values for Phone Number
-         */
-        private void phoneNumberTextBox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-        /*
          * When search button is clicked while searching by car ID, an error check is
          * performed to ensure that the field is filled with text.
          * The search is performed from the database if the field contain text.
@@ -63,9 +53,9 @@ namespace CarRentalApp
             licensePlateResultLabel.Visible = false;
             carIDResultLabel.Visible = false;
 
-            String fName = makeTextBox.Text.TrimEnd();
-            String lName = modelTextBox.Text.TrimEnd();
-            if (fName == "" || lName == "") // If any of the text fields are empty
+            String make = makeTextBox.Text.TrimEnd();
+            String model = modelTextBox.Text.TrimEnd();
+            if (make == "" || model == "") // If any of the text fields are empty
             {
                 makeModelResultLabel.Text = "Please search by both fields";
                 makeModelResultLabel.ForeColor = Color.FromArgb(192, 0, 0); //dark red
@@ -88,8 +78,8 @@ namespace CarRentalApp
             makeModelResultLabel.Visible = false;
             carIDResultLabel.Visible = false;
 
-            String sin = licensePlateNumTextBox.Text.TrimEnd();
-            if (sin == "") // If the text field is empty
+            String licensePlate = licensePlateNumTextBox.Text.TrimEnd();
+            if (licensePlate == "") // If the text field is empty
             {
                 licensePlateResultLabel.Text = "Please enter something";
                 licensePlateResultLabel.ForeColor = Color.FromArgb(192, 0, 0); //dark red

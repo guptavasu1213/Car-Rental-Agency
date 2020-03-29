@@ -361,5 +361,23 @@ namespace CarRentalApp
             FindVehicle findVehicleForm = new FindVehicle();
             settingUpRightSidePanel(findVehicleForm);
         }
+        /*
+         * When the Find Vehicle Type label is clicked on, the form for finding an
+         * existing vehicle type is loaded on the right hand side panel
+         */
+        private void findVehicleTypeLabel_Click(object sender, EventArgs e)
+        {
+            FindVehicleType findVehicleTypeForm = new FindVehicleType();
+            settingUpRightSidePanel(findVehicleTypeForm);
+        }
+        /*
+         * When the Find branch label is clicked on, the form for finding an
+         * existing branch is loaded on the right hand side panel
+         */
+        private void findBranchLabel_Click(object sender, EventArgs e)
+        {
+            FindBranch findBranchForm = new FindBranch();
+            settingUpRightSidePanel(findBranchForm);
+        }
     }
 }

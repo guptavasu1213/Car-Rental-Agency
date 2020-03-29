@@ -150,6 +150,7 @@
             this.findVehicleTypeLabel.TabIndex = 25;
             this.findVehicleTypeLabel.Text = "Find Vehicle Type";
             this.findVehicleTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.findVehicleTypeLabel.Click += new System.EventHandler(this.findVehicleTypeLabel_Click);
             this.findVehicleTypeLabel.MouseLeave += new System.EventHandler(this.findVehicleTypeLabel_MouseLeave);
             this.findVehicleTypeLabel.MouseHover += new System.EventHandler(this.findVehicleTypeLabel_MouseHover);
             // 
@@ -209,6 +210,7 @@
             this.findBranchLabel.TabIndex = 21;
             this.findBranchLabel.Text = "Find Branch";
             this.findBranchLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.findBranchLabel.Click += new System.EventHandler(this.findBranchLabel_Click);
             this.findBranchLabel.MouseLeave += new System.EventHandler(this.findBranchLabel_MouseLeave);
             this.findBranchLabel.MouseHover += new System.EventHandler(this.findBranchLabel_MouseHover);
             // 
