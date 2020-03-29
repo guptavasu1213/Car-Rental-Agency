@@ -132,6 +132,14 @@ namespace CarRentalApp
         {
             setBackgroundOnMouseLeave(findBranchLabel);
         }
+        private void findVehicleTypeLabel_MouseHover(object sender, EventArgs e)
+        {
+            setBackgroundOnMouseHover(findVehicleTypeLabel);
+        }
+        private void findVehicleTypeLabel_MouseLeave(object sender, EventArgs e)
+        {
+            setBackgroundOnMouseLeave(findVehicleTypeLabel);
+        }
 
         private void addBranchLabel_MouseHover(object sender, EventArgs e)
         {

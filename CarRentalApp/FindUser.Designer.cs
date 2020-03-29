@@ -51,11 +51,17 @@
             this.emailSearchButton = new System.Windows.Forms.Button();
             this.emailTextBox = new System.Windows.Forms.TextBox();
             this.emailLabel = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.customerIDResultLabel = new System.Windows.Forms.Label();
+            this.customerIDSearchButton = new System.Windows.Forms.Button();
+            this.customerIDTextbox = new System.Windows.Forms.TextBox();
+            this.customerIDLabel = new System.Windows.Forms.Label();
             this.topPanel.SuspendLayout();
             this.enterUserDetailsGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // topPanel
@@ -93,7 +99,7 @@
             this.enterUserDetailsGroupBox.Controls.Add(this.LastNameLabel);
             this.enterUserDetailsGroupBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enterUserDetailsGroupBox.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.enterUserDetailsGroupBox.Location = new System.Drawing.Point(11, 88);
+            this.enterUserDetailsGroupBox.Location = new System.Drawing.Point(11, 226);
             this.enterUserDetailsGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.enterUserDetailsGroupBox.Name = "enterUserDetailsGroupBox";
             this.enterUserDetailsGroupBox.Padding = new System.Windows.Forms.Padding(2);
@@ -230,7 +236,7 @@
             this.userDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.userDataGridView.Location = new System.Drawing.Point(383, 136);
             this.userDataGridView.Name = "userDataGridView";
-            this.userDataGridView.Size = new System.Drawing.Size(558, 441);
+            this.userDataGridView.Size = new System.Drawing.Size(622, 552);
             this.userDataGridView.TabIndex = 20;
             // 
             // updateButton
@@ -254,7 +260,7 @@
             this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.deleteButton.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteButton.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.deleteButton.Location = new System.Drawing.Point(759, 89);
+            this.deleteButton.Location = new System.Drawing.Point(823, 89);
             this.deleteButton.Margin = new System.Windows.Forms.Padding(2);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(182, 30);
@@ -272,7 +278,7 @@
             this.groupBox1.Controls.Add(this.phoneNumberLabel);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.groupBox1.Location = new System.Drawing.Point(11, 417);
+            this.groupBox1.Location = new System.Drawing.Point(11, 555);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
@@ -301,7 +307,7 @@
             this.groupBox2.Controls.Add(this.emailLabel);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.groupBox2.Location = new System.Drawing.Point(11, 272);
+            this.groupBox2.Location = new System.Drawing.Point(11, 410);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
@@ -360,12 +366,80 @@
             this.emailLabel.TabIndex = 23;
             this.emailLabel.Text = "Email";
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.customerIDResultLabel);
+            this.groupBox3.Controls.Add(this.customerIDSearchButton);
+            this.groupBox3.Controls.Add(this.customerIDTextbox);
+            this.groupBox3.Controls.Add(this.customerIDLabel);
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.groupBox3.Location = new System.Drawing.Point(11, 89);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox3.Size = new System.Drawing.Size(345, 127);
+            this.groupBox3.TabIndex = 27;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Look up by Customer ID";
+            // 
+            // customerIDResultLabel
+            // 
+            this.customerIDResultLabel.AutoSize = true;
+            this.customerIDResultLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerIDResultLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.customerIDResultLabel.Location = new System.Drawing.Point(22, 72);
+            this.customerIDResultLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.customerIDResultLabel.Name = "customerIDResultLabel";
+            this.customerIDResultLabel.Size = new System.Drawing.Size(0, 19);
+            this.customerIDResultLabel.TabIndex = 26;
+            this.customerIDResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.customerIDResultLabel.Visible = false;
+            // 
+            // customerIDSearchButton
+            // 
+            this.customerIDSearchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.customerIDSearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.customerIDSearchButton.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerIDSearchButton.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.customerIDSearchButton.Location = new System.Drawing.Point(204, 79);
+            this.customerIDSearchButton.Margin = new System.Windows.Forms.Padding(2);
+            this.customerIDSearchButton.Name = "customerIDSearchButton";
+            this.customerIDSearchButton.Size = new System.Drawing.Size(65, 30);
+            this.customerIDSearchButton.TabIndex = 25;
+            this.customerIDSearchButton.Text = "Search";
+            this.customerIDSearchButton.UseVisualStyleBackColor = false;
+            this.customerIDSearchButton.Click += new System.EventHandler(this.customerIDSearchButton_Click);
+            // 
+            // customerIDTextbox
+            // 
+            this.customerIDTextbox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerIDTextbox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.customerIDTextbox.Location = new System.Drawing.Point(137, 37);
+            this.customerIDTextbox.Margin = new System.Windows.Forms.Padding(2);
+            this.customerIDTextbox.Name = "customerIDTextbox";
+            this.customerIDTextbox.Size = new System.Drawing.Size(192, 26);
+            this.customerIDTextbox.TabIndex = 24;
+            // 
+            // customerIDLabel
+            // 
+            this.customerIDLabel.AutoSize = true;
+            this.customerIDLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerIDLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.customerIDLabel.Location = new System.Drawing.Point(17, 37);
+            this.customerIDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.customerIDLabel.Name = "customerIDLabel";
+            this.customerIDLabel.Size = new System.Drawing.Size(87, 19);
+            this.customerIDLabel.TabIndex = 23;
+            this.customerIDLabel.Text = "Customer ID";
+            // 
             // FindUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1017, 609);
+            this.ClientSize = new System.Drawing.Size(1017, 703);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.deleteButton);
@@ -384,6 +458,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -413,5 +489,10 @@
         private System.Windows.Forms.Button emailSearchButton;
         private System.Windows.Forms.TextBox emailTextBox;
         private System.Windows.Forms.Label emailLabel;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label customerIDResultLabel;
+        private System.Windows.Forms.Button customerIDSearchButton;
+        private System.Windows.Forms.TextBox customerIDTextbox;
+        private System.Windows.Forms.Label customerIDLabel;
     }
 }

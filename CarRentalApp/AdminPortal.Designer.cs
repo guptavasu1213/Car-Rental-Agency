@@ -32,6 +32,7 @@
             this.logoutButton = new System.Windows.Forms.Button();
             this.companyNameLabel = new System.Windows.Forms.Label();
             this.leftSidePanel = new System.Windows.Forms.Panel();
+            this.findVehicleTypeLabel = new System.Windows.Forms.Label();
             this.popularCarTypeLabel = new System.Windows.Forms.Label();
             this.top100CustomersLabel = new System.Windows.Forms.Label();
             this.popularBranchLabel = new System.Windows.Forms.Label();
@@ -71,7 +72,7 @@
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Margin = new System.Windows.Forms.Padding(2);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1095, 57);
+            this.topPanel.Size = new System.Drawing.Size(1383, 57);
             this.topPanel.TabIndex = 0;
             // 
             // logoutButton
@@ -80,7 +81,7 @@
             this.logoutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.logoutButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logoutButton.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.logoutButton.Location = new System.Drawing.Point(997, 10);
+            this.logoutButton.Location = new System.Drawing.Point(1244, 10);
             this.logoutButton.Margin = new System.Windows.Forms.Padding(2);
             this.logoutButton.Name = "logoutButton";
             this.logoutButton.Size = new System.Drawing.Size(87, 34);
@@ -104,6 +105,7 @@
             // leftSidePanel
             // 
             this.leftSidePanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(43)))), ((int)(((byte)(43)))));
+            this.leftSidePanel.Controls.Add(this.findVehicleTypeLabel);
             this.leftSidePanel.Controls.Add(this.popularCarTypeLabel);
             this.leftSidePanel.Controls.Add(this.top100CustomersLabel);
             this.leftSidePanel.Controls.Add(this.popularBranchLabel);
@@ -137,11 +139,25 @@
             this.leftSidePanel.TabIndex = 1;
             this.leftSidePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.leftSidePanel_Paint);
             // 
+            // findVehicleTypeLabel
+            // 
+            this.findVehicleTypeLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.findVehicleTypeLabel.ForeColor = System.Drawing.Color.White;
+            this.findVehicleTypeLabel.Location = new System.Drawing.Point(2, 308);
+            this.findVehicleTypeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.findVehicleTypeLabel.Name = "findVehicleTypeLabel";
+            this.findVehicleTypeLabel.Size = new System.Drawing.Size(128, 24);
+            this.findVehicleTypeLabel.TabIndex = 25;
+            this.findVehicleTypeLabel.Text = "Find Vehicle Type";
+            this.findVehicleTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.findVehicleTypeLabel.MouseLeave += new System.EventHandler(this.findVehicleTypeLabel_MouseLeave);
+            this.findVehicleTypeLabel.MouseHover += new System.EventHandler(this.findVehicleTypeLabel_MouseHover);
+            // 
             // popularCarTypeLabel
             // 
             this.popularCarTypeLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.popularCarTypeLabel.ForeColor = System.Drawing.Color.White;
-            this.popularCarTypeLabel.Location = new System.Drawing.Point(-1, 626);
+            this.popularCarTypeLabel.Location = new System.Drawing.Point(-1, 655);
             this.popularCarTypeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.popularCarTypeLabel.Name = "popularCarTypeLabel";
             this.popularCarTypeLabel.Size = new System.Drawing.Size(134, 19);
@@ -156,7 +172,7 @@
             // 
             this.top100CustomersLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.top100CustomersLabel.ForeColor = System.Drawing.Color.White;
-            this.top100CustomersLabel.Location = new System.Drawing.Point(2, 578);
+            this.top100CustomersLabel.Location = new System.Drawing.Point(2, 607);
             this.top100CustomersLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.top100CustomersLabel.Name = "top100CustomersLabel";
             this.top100CustomersLabel.Size = new System.Drawing.Size(129, 24);
@@ -171,7 +187,7 @@
             // 
             this.popularBranchLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.popularBranchLabel.ForeColor = System.Drawing.Color.White;
-            this.popularBranchLabel.Location = new System.Drawing.Point(3, 645);
+            this.popularBranchLabel.Location = new System.Drawing.Point(3, 674);
             this.popularBranchLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.popularBranchLabel.Name = "popularBranchLabel";
             this.popularBranchLabel.Size = new System.Drawing.Size(128, 24);
@@ -186,7 +202,7 @@
             // 
             this.findBranchLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.findBranchLabel.ForeColor = System.Drawing.Color.White;
-            this.findBranchLabel.Location = new System.Drawing.Point(1, 466);
+            this.findBranchLabel.Location = new System.Drawing.Point(1, 495);
             this.findBranchLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.findBranchLabel.Name = "findBranchLabel";
             this.findBranchLabel.Size = new System.Drawing.Size(129, 24);
@@ -200,7 +216,7 @@
             // 
             this.addNewBranchLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addNewBranchLabel.ForeColor = System.Drawing.Color.White;
-            this.addNewBranchLabel.Location = new System.Drawing.Point(1, 490);
+            this.addNewBranchLabel.Location = new System.Drawing.Point(1, 519);
             this.addNewBranchLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.addNewBranchLabel.Name = "addNewBranchLabel";
             this.addNewBranchLabel.Size = new System.Drawing.Size(129, 24);
@@ -215,7 +231,7 @@
             // 
             this.popularCarLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.popularCarLabel.ForeColor = System.Drawing.Color.White;
-            this.popularCarLabel.Location = new System.Drawing.Point(-1, 601);
+            this.popularCarLabel.Location = new System.Drawing.Point(-1, 630);
             this.popularCarLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.popularCarLabel.Name = "popularCarLabel";
             this.popularCarLabel.Size = new System.Drawing.Size(132, 24);
@@ -230,7 +246,7 @@
             // 
             this.top10EmployeeLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.top10EmployeeLabel.ForeColor = System.Drawing.Color.White;
-            this.top10EmployeeLabel.Location = new System.Drawing.Point(0, 554);
+            this.top10EmployeeLabel.Location = new System.Drawing.Point(0, 583);
             this.top10EmployeeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.top10EmployeeLabel.Name = "top10EmployeeLabel";
             this.top10EmployeeLabel.Size = new System.Drawing.Size(131, 24);
@@ -246,7 +262,7 @@
             this.branchesLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
             this.branchesLabel.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.branchesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.branchesLabel.Location = new System.Drawing.Point(2, 434);
+            this.branchesLabel.Location = new System.Drawing.Point(2, 463);
             this.branchesLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.branchesLabel.Name = "branchesLabel";
             this.branchesLabel.Size = new System.Drawing.Size(129, 32);
@@ -258,7 +274,7 @@
             // 
             this.updateBookingLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateBookingLabel.ForeColor = System.Drawing.Color.White;
-            this.updateBookingLabel.Location = new System.Drawing.Point(0, 410);
+            this.updateBookingLabel.Location = new System.Drawing.Point(0, 439);
             this.updateBookingLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.updateBookingLabel.Name = "updateBookingLabel";
             this.updateBookingLabel.Size = new System.Drawing.Size(118, 24);
@@ -314,7 +330,7 @@
             // 
             this.addNewBookingLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addNewBookingLabel.ForeColor = System.Drawing.Color.White;
-            this.addNewBookingLabel.Location = new System.Drawing.Point(3, 387);
+            this.addNewBookingLabel.Location = new System.Drawing.Point(3, 416);
             this.addNewBookingLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.addNewBookingLabel.Name = "addNewBookingLabel";
             this.addNewBookingLabel.Size = new System.Drawing.Size(128, 24);
@@ -329,7 +345,7 @@
             // 
             this.findBookingLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.findBookingLabel.ForeColor = System.Drawing.Color.White;
-            this.findBookingLabel.Location = new System.Drawing.Point(2, 363);
+            this.findBookingLabel.Location = new System.Drawing.Point(2, 392);
             this.findBookingLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.findBookingLabel.Name = "findBookingLabel";
             this.findBookingLabel.Size = new System.Drawing.Size(128, 24);
@@ -343,7 +359,7 @@
             // 
             this.addVehicleTypeLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addVehicleTypeLabel.ForeColor = System.Drawing.Color.White;
-            this.addVehicleTypeLabel.Location = new System.Drawing.Point(2, 307);
+            this.addVehicleTypeLabel.Location = new System.Drawing.Point(2, 332);
             this.addVehicleTypeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.addVehicleTypeLabel.Name = "addVehicleTypeLabel";
             this.addVehicleTypeLabel.Size = new System.Drawing.Size(129, 24);
@@ -428,7 +444,7 @@
             this.statsLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
             this.statsLabel.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.statsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.statsLabel.Location = new System.Drawing.Point(2, 522);
+            this.statsLabel.Location = new System.Drawing.Point(2, 551);
             this.statsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.statsLabel.Name = "statsLabel";
             this.statsLabel.Size = new System.Drawing.Size(129, 32);
@@ -441,7 +457,7 @@
             this.bookingsLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
             this.bookingsLabel.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.bookingsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bookingsLabel.Location = new System.Drawing.Point(2, 331);
+            this.bookingsLabel.Location = new System.Drawing.Point(2, 360);
             this.bookingsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bookingsLabel.Name = "bookingsLabel";
             this.bookingsLabel.Size = new System.Drawing.Size(129, 32);
@@ -495,7 +511,7 @@
             this.rightHandSidePanel.Location = new System.Drawing.Point(160, 66);
             this.rightHandSidePanel.Margin = new System.Windows.Forms.Padding(2);
             this.rightHandSidePanel.Name = "rightHandSidePanel";
-            this.rightHandSidePanel.Size = new System.Drawing.Size(924, 680);
+            this.rightHandSidePanel.Size = new System.Drawing.Size(1171, 705);
             this.rightHandSidePanel.TabIndex = 2;
             // 
             // AdminPortal
@@ -503,7 +519,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1095, 771);
+            this.ClientSize = new System.Drawing.Size(1383, 771);
             this.Controls.Add(this.rightHandSidePanel);
             this.Controls.Add(this.leftSidePanel);
             this.Controls.Add(this.topPanel);
@@ -551,5 +567,6 @@
         private System.Windows.Forms.Label popularCarTypeLabel;
         private System.Windows.Forms.Panel rightHandSidePanel;
         private System.Windows.Forms.Button logoutButton;
+        private System.Windows.Forms.Label findVehicleTypeLabel;
     }
 }
