@@ -352,7 +352,14 @@ namespace CarRentalApp
             FindEmployee findEmployeeForm = new FindEmployee();
             settingUpRightSidePanel(findEmployeeForm);
         }
-
-
+        /*
+         * When the Find Vehicle label is clicked on, the form for finding an
+         * existing vehicle is loaded on the right hand side panel
+         */
+        private void findVehicleLabel_Click(object sender, EventArgs e)
+        {
+            FindVehicle findVehicleForm = new FindVehicle();
+            settingUpRightSidePanel(findVehicleForm);
+        }
     }
 }

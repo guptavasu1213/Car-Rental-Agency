@@ -293,6 +293,7 @@
             this.findVehicleLabel.TabIndex = 9;
             this.findVehicleLabel.Text = "Find Vehicle";
             this.findVehicleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.findVehicleLabel.Click += new System.EventHandler(this.findVehicleLabel_Click);
             this.findVehicleLabel.MouseLeave += new System.EventHandler(this.findVehicle_MouseLeave);
             this.findVehicleLabel.MouseHover += new System.EventHandler(this.findVehicle_MouseHover);
             // 
