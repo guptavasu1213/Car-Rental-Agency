@@ -33,6 +33,33 @@ namespace CarRentalApp
             }
         }
         /*
+         * When search button is clicked while searching by customer ID, an error check is
+         * performed to ensure that the field is filled with text.
+         * The search is performed from the database if the field contain text.
+         */
+        private void customerIDSearchButton_Click(object sender, EventArgs e)
+        {
+            customerIDResultLabel.Visible = true;
+            nameResultLabel.Visible = false;
+            emailResultLabel.Visible = false;
+            phoneNumResultLabel.Visible = false;
+
+            String customerID = customerIDTextbox.Text.TrimEnd();
+            if (customerID == "") // If the text field is empty
+            {
+                customerIDResultLabel.Text = "Please enter something";
+                customerIDResultLabel.ForeColor = Color.FromArgb(192, 0, 0); //dark red
+            }
+            else
+            {
+                customerIDResultLabel.Text = "Running the query . . . ";
+                customerIDResultLabel.ForeColor = Color.FromArgb(0, 192, 0); //dark green
+                // run query
+            }
+
+        }
+
+        /*
          * When search button is clicked while searching by name, an error check is
          * performed to ensure that both fields are filled with text.
          * The search is performed from the database if both fields contain text.
@@ -42,6 +69,8 @@ namespace CarRentalApp
             nameResultLabel.Visible = true;
             emailResultLabel.Visible = false;
             phoneNumResultLabel.Visible = false;
+            customerIDResultLabel.Visible = false;
+
 
             String fName = firstNameTextBox.Text.TrimEnd();
             String lName = lastNameTextBox.Text.TrimEnd();
@@ -67,6 +96,7 @@ namespace CarRentalApp
             phoneNumResultLabel.Visible = true;
             nameResultLabel.Visible = false;
             emailResultLabel.Visible = false;
+            customerIDResultLabel.Visible = false;
 
             String phoneNum = phoneNumberTextBox.Text.TrimEnd();
             if (phoneNum == "") // If the text field is empty
@@ -91,6 +121,7 @@ namespace CarRentalApp
             emailResultLabel.Visible = true;
             phoneNumResultLabel.Visible = false;
             nameResultLabel.Visible = false;
+            customerIDResultLabel.Visible = false;
 
             String email = emailTextBox.Text.TrimEnd();
             if (email == "") // If the text field is empty
@@ -119,5 +150,6 @@ namespace CarRentalApp
         {
 
         }
+
     }
 }
