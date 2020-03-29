@@ -379,5 +379,14 @@ namespace CarRentalApp
             FindBranch findBranchForm = new FindBranch();
             settingUpRightSidePanel(findBranchForm);
         }
+        /*
+         * When the Find Booking label is clicked on, the form for finding an
+         * existing booking is loaded on the right hand side panel
+         */
+        private void findBookingLabel_Click(object sender, EventArgs e)
+        {
+            FindBooking findBookingForm = new FindBooking();
+            settingUpRightSidePanel(findBookingForm);
+        }
     }
 }

@@ -355,6 +355,7 @@
             this.findBookingLabel.TabIndex = 14;
             this.findBookingLabel.Text = "Find Booking";
             this.findBookingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.findBookingLabel.Click += new System.EventHandler(this.findBookingLabel_Click);
             this.findBookingLabel.MouseLeave += new System.EventHandler(this.findBookingLabel_MouseLeave);
             this.findBookingLabel.MouseHover += new System.EventHandler(this.findBookingLabel_MouseHover);
             // 

@@ -32,32 +32,6 @@ namespace CarRentalApp
                 e.Handled = true;
             }
         }
-        /*
-         * When search button is clicked while searching by customer ID, an error check is
-         * performed to ensure that the field is filled with text.
-         * The search is performed from the database if the field contain text.
-         */
-        private void customerIDSearchButton_Click(object sender, EventArgs e)
-        {
-            customerIDResultLabel.Visible = true;
-            nameResultLabel.Visible = false;
-            emailResultLabel.Visible = false;
-            phoneNumResultLabel.Visible = false;
-
-            String customerID = customerIDTextbox.Text.TrimEnd();
-            if (customerID == "") // If the text field is empty
-            {
-                customerIDResultLabel.Text = "Please enter something";
-                customerIDResultLabel.ForeColor = Color.FromArgb(192, 0, 0); //dark red
-            }
-            else
-            {
-                customerIDResultLabel.Text = "Running the query . . . ";
-                customerIDResultLabel.ForeColor = Color.FromArgb(0, 192, 0); //dark green
-                // run query
-            }
-
-        }
 
         /*
          * When search button is clicked while searching by name, an error check is
@@ -151,5 +125,9 @@ namespace CarRentalApp
 
         }
 
+        private void customerIDSearchButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
