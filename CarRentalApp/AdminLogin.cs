@@ -34,7 +34,18 @@ namespace CarRentalApp
             }
             return false;
         }
-        private void Submit_Click(object sender, EventArgs e)
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void submitButton_Click(object sender, EventArgs e)
         {
             String username = username_field.Text;
             String password = password_field.Text;
@@ -56,16 +67,6 @@ namespace CarRentalApp
                 admin_login_result_label.Visible = true;
                 admin_login_result_label.ForeColor = Color.Red;
             }
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
         }
     }
 }

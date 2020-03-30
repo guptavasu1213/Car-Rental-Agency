@@ -212,5 +212,15 @@ namespace CarRentalApp
                 MessageBox.Show(ex.Message, "Error");
             }
         }
+        /*
+         * Allowing only numerical values for Phone Number
+         */
+        private void allowOnlyNumericalValues(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

@@ -169,6 +169,7 @@
             this.phoneBox.TabIndex = 11;
             this.phoneBox.Text = "Phone Number";
             this.phoneBox.Enter += new System.EventHandler(this.phoneBox_Enter);
+            this.phoneBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.allowOnlyNumericalValues);
             this.phoneBox.Leave += new System.EventHandler(this.phoneBox_Leave);
             // 
             // insuranceBox
@@ -230,6 +231,7 @@
             this.ageBox.TabIndex = 16;
             this.ageBox.Text = "Age";
             this.ageBox.Enter += new System.EventHandler(this.ageBox_Enter);
+            this.ageBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.allowOnlyNumericalValues);
             this.ageBox.Leave += new System.EventHandler(this.ageBox_Leave);
             // 
             // passwordBox

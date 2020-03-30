@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CarRentalApp
 {
-    public partial class PopularCar : Form
+    public partial class FindTop100Customers : Form
     {
-        public PopularCar()
+        public FindTop100Customers()
         {
             InitializeComponent();
         }
@@ -128,106 +128,6 @@ namespace CarRentalApp
                 // You need to select an option
                 everySearchErrorLabel.Visible = true;
             }
-        }
-
-        private void findMostPopularCarLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void selectionFilterGroupBox_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void countryRadio_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void provinceRadio_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cityRadio_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void branchRadio_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void specificParamGroupBox_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void countryTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void provinceTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cityTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void branchTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void countryLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cityLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void provinceLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void branchLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void specificSearchErrorLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void everySearchErrorLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void topPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void resultsDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

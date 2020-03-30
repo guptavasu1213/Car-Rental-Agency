@@ -56,10 +56,15 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -77,7 +82,8 @@
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.ForeColor = System.Drawing.Color.AliceBlue;
+            this.groupBox1.Location = new System.Drawing.Point(12, 98);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(228, 354);
             this.groupBox1.TabIndex = 0;
@@ -189,11 +195,13 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(183, 23);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(16, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(119, 16);
@@ -214,7 +222,8 @@
             this.groupBox2.Controls.Add(this.checkBox1);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(250, 12);
+            this.groupBox2.ForeColor = System.Drawing.Color.AliceBlue;
+            this.groupBox2.Location = new System.Drawing.Point(250, 98);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(228, 354);
             this.groupBox2.TabIndex = 1;
@@ -347,9 +356,10 @@
             // 
             this.groupBox3.Controls.Add(this.dataGridView1);
             this.groupBox3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.groupBox3.Location = new System.Drawing.Point(484, 12);
+            this.groupBox3.ForeColor = System.Drawing.Color.AliceBlue;
+            this.groupBox3.Location = new System.Drawing.Point(484, 98);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(622, 435);
+            this.groupBox3.Size = new System.Drawing.Size(726, 540);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Results";
@@ -359,24 +369,76 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(6, 25);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(610, 404);
+            this.dataGridView1.Size = new System.Drawing.Size(714, 506);
             this.dataGridView1.TabIndex = 3;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.button1.Location = new System.Drawing.Point(12, 372);
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(12, 458);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(465, 69);
+            this.button1.Size = new System.Drawing.Size(228, 69);
             this.button1.TabIndex = 3;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label9.Location = new System.Drawing.Point(12, 18);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(453, 62);
+            this.label9.TabIndex = 4;
+            this.label9.Text = "New Reservation";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label10);
+            this.groupBox4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.ForeColor = System.Drawing.Color.AliceBlue;
+            this.groupBox4.Location = new System.Drawing.Point(12, 533);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(466, 146);
+            this.groupBox4.TabIndex = 11;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Summary";
+            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(246, 458);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(228, 69);
+            this.button2.TabIndex = 12;
+            this.button2.Text = "Start Again";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(19, 26);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(0, 15);
+            this.label10.TabIndex = 0;
             // 
             // StartReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1118, 459);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ClientSize = new System.Drawing.Size(1222, 702);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -389,7 +451,10 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -423,5 +488,9 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label10;
     }
 }
