@@ -18,9 +18,19 @@ namespace CarRentalApp
 
         public int Age { get; set; }
 
-        public int Insurance { get; set; }
+        public int PhoneNumber { get; set; }
 
-        public int DriversClass { get; set; }
+        public string Address { get; set; }
+
+        public string City { get; set; }
+
+        public string Province { get; set; }
+
+        public string Country { get; set; }
+
+        public string Insurance { get; set; }
+
+        public string Drivers { get; set; }
 
         // password stored is hashed
         public string Password { get; set; }

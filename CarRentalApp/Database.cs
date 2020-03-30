@@ -12,7 +12,7 @@ namespace CarRentalApp
 {
     public static class Database
     {
-        private static string cString = "Data source = CRA291; Initial Catalog = Databases; Integrated Security = True;";
+        private static readonly string cString = "Data Source=\"142.59.80.79, 5291\";Initial Catalog=CRA291;Persist Security Info=True;User ID=SA";
 
         public static string ConnectionString { get { return cString; } }
 

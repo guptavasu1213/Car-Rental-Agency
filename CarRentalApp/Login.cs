@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
+using System.Data;
 
 namespace CarRentalApp
 {
@@ -52,9 +53,32 @@ namespace CarRentalApp
 
         public static void insertCustomer(Customer cx)
         {
-            throw new NotImplementedException();
+            string dbstring = Database.ConnectionString;
+            string sql = "INSERT INTO Customer (First_Name, Last_Name, Phone_Number, Email, Age, Insurance, Drivers_License, Password, Street_Address, City, Province, Country, Status) ";
+            string values = "VALUES (@fname, @lname, @phone, @email, @age, @insurance, @license, @password, @address, @city, @province, @country, @status)";
+            string insertvals = sql + values;
 
+            using (SqlConnection connection = new SqlConnection(dbstring))
+            using (SqlCommand command = new SqlCommand(insertvals, connection))
+            {
+                command.Parameters.Add("@fname", SqlDbType.VarChar).Value = cx.FirstName;
+                command.Parameters.Add("@lname", SqlDbType.VarChar).Value = cx.LastName;
+                command.Parameters.Add("@phone", SqlDbType.Int).Value = cx.PhoneNumber;
+                command.Parameters.Add("@email", SqlDbType.VarChar).Value = cx.EmailAddress;
+                command.Parameters.Add("@age", SqlDbType.Int).Value = cx.Age;
+                command.Parameters.Add("@insurance", SqlDbType.VarChar).Value = cx.Insurance;
+                command.Parameters.Add("@license", SqlDbType.VarChar).Value = cx.Drivers;
+                command.Parameters.Add("@password", SqlDbType.VarChar).Value = cx.Password;
+                command.Parameters.Add("@address", SqlDbType.VarChar).Value = cx.Address;
+                command.Parameters.Add("@city", SqlDbType.VarChar).Value = cx.City;
+                command.Parameters.Add("@province", SqlDbType.VarChar).Value = cx.Province;
+                command.Parameters.Add("@country", SqlDbType.VarChar).Value = cx.Country;
+                command.Parameters.Add("@status", SqlDbType.VarChar).Value = "Active";
 
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
         }
 
         public static string HashPassword(string pass)

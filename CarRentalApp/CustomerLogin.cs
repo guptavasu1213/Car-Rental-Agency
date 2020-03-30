@@ -124,12 +124,12 @@ namespace CarRentalApp
 
         private void driversBox_Enter(object sender, EventArgs e)
         {
-            RemoveText(driversBox, "Driver's License Class", sender, e);
+            RemoveText(driversBox, "Driver's License", sender, e);
         }
 
         private void driversBox_Leave(object sender, EventArgs e)
         {
-            AddText(driversBox, "Driver's License Class", sender, e);
+            AddText(driversBox, "Driver's License", sender, e);
         }
 
         private void EmailBox_Enter(object sender, EventArgs e)
@@ -201,10 +201,12 @@ namespace CarRentalApp
                 cx.FirstName = fNameBox.Text;
                 cx.LastName = lNameBox.Text;
                 cx.Age = Int32.Parse(ageBox.Text);
-                cx.Insurance = Int32.Parse(insuranceBox.Text);
-                cx.DriversClass = Int32.Parse(driversBox.Text);
+                cx.Insurance = insuranceBox.Text;
+                cx.Drivers = driversBox.Text;
                 cx.EmailAddress = email;
                 cx.Password = Login.HashPassword(confirmBox.Text);
+                cx.City = cityBox.Text;
+                cx.Province = provinceBox.Text;
                 Login.insertCustomer(cx);
             }
             catch (Exception ex)
@@ -221,6 +223,47 @@ namespace CarRentalApp
             {
                 e.Handled = true;
             }
+        }
+
+        private void cityBox_Enter(object sender, EventArgs e)
+        {
+            RemoveText(cityBox, "City", sender, e);
+        }
+
+        private void cityBox_Leave(object sender, EventArgs e)
+        {
+            AddText(cityBox, "City", sender, e);
+        }
+
+
+        private void provinceBox_Enter(object sender, EventArgs e)
+        {
+            RemoveText(provinceBox, "Province", sender, e);
+        }
+
+        private void provinceBox_Leave(object sender, EventArgs e)
+        {
+            AddText(provinceBox, "Province", sender, e);
+        }
+
+        private void countryBox_Enter(object sender, EventArgs e)
+        {
+            RemoveText(countryBox, "Country", sender, e);
+        }
+
+        private void countryBox_Leave(object sender, EventArgs e)
+        {
+            AddText(countryBox, "Country", sender, e);
+        }
+
+        private void addressBox_Enter(object sender, EventArgs e)
+        {
+            RemoveText(addressBox, "Street Address", sender, e);
+        }
+
+        private void addressBox_Leave(object sender, EventArgs e)
+        {
+            AddText(addressBox, "Street Address", sender, e);
         }
     }
 }
