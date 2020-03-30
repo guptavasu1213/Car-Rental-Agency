@@ -98,6 +98,11 @@
     <Compile Include="AddNewCarType.Designer.cs">
       <DependentUpon>AddNewCarType.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRA291DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CRA291DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Customer.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="AdminLogin.cs">
@@ -275,6 +280,17 @@
     <EmbeddedResource Include="Top10Employees.resx">
       <DependentUpon>Top10Employees.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="CRA291DataSet.xsc">
+      <DependentUpon>CRA291DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CRA291DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CRA291DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CRA291DataSet.xss">
+      <DependentUpon>CRA291DataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

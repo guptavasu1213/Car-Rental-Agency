@@ -124,12 +124,12 @@ namespace CarRentalApp
 
         private void driversBox_Enter(object sender, EventArgs e)
         {
-            RemoveText(driversBox, "Driver's License Class", sender, e);
+            RemoveText(driversBox, "Driver's License", sender, e);
         }
 
         private void driversBox_Leave(object sender, EventArgs e)
         {
-            AddText(driversBox, "Driver's License Class", sender, e);
+            AddText(driversBox, "Driver's License", sender, e);
         }
 
         private void EmailBox_Enter(object sender, EventArgs e)
@@ -150,6 +150,10 @@ namespace CarRentalApp
         private void passwordBox_Leave(object sender, EventArgs e)
         {
             AddText(passwordBox, "New Password", sender, e);
+            if (passwordBox.Text.Length < 8)
+            {
+                warningText.Text = "Warning: We recommend a longer password for security";
+            }
         }
 
         private void confirmBox_Enter(object sender, EventArgs e)
@@ -174,6 +178,42 @@ namespace CarRentalApp
 
             Login.CustomerAuth(email, pass);
         }
+
+        private void newCxButton_Click(object sender, EventArgs e)
+        {
+            Customer cx = new Customer();
+            PhoneNumber phNum = new PhoneNumber();
+
+            string email = EmailBox.Text;
+            if (!Login.IsValidEmail(email))
+            {
+                MessageBox.Show("Error: Email address provided is invalid", "Error");
+                return;
+            }
+            if (passwordBox.Text != confirmBox.Text)
+            {
+                MessageBox.Show("Error: Passwords do not match", "Error");
+                return;
+            }
+            // Use try-catch in case the values are not going to be compatible (ie. letters entered in Age)
+            try
+            {
+                cx.FirstName = fNameBox.Text;
+                cx.LastName = lNameBox.Text;
+                cx.Age = Int32.Parse(ageBox.Text);
+                cx.Insurance = insuranceBox.Text;
+                cx.Drivers = driversBox.Text;
+                cx.EmailAddress = email;
+                cx.Password = Login.HashPassword(confirmBox.Text);
+                cx.City = cityBox.Text;
+                cx.Province = provinceBox.Text;
+                Login.insertCustomer(cx);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
+        }
         /*
          * Allowing only numerical values for Phone Number
          */
@@ -185,9 +225,45 @@ namespace CarRentalApp
             }
         }
 
-        private void newCxButton_Click(object sender, EventArgs e)
+        private void cityBox_Enter(object sender, EventArgs e)
         {
+            RemoveText(cityBox, "City", sender, e);
+        }
 
+        private void cityBox_Leave(object sender, EventArgs e)
+        {
+            AddText(cityBox, "City", sender, e);
+        }
+
+
+        private void provinceBox_Enter(object sender, EventArgs e)
+        {
+            RemoveText(provinceBox, "Province", sender, e);
+        }
+
+        private void provinceBox_Leave(object sender, EventArgs e)
+        {
+            AddText(provinceBox, "Province", sender, e);
+        }
+
+        private void countryBox_Enter(object sender, EventArgs e)
+        {
+            RemoveText(countryBox, "Country", sender, e);
+        }
+
+        private void countryBox_Leave(object sender, EventArgs e)
+        {
+            AddText(countryBox, "Country", sender, e);
+        }
+
+        private void addressBox_Enter(object sender, EventArgs e)
+        {
+            RemoveText(addressBox, "Street Address", sender, e);
+        }
+
+        private void addressBox_Leave(object sender, EventArgs e)
+        {
+            AddText(addressBox, "Street Address", sender, e);
         }
     }
 }

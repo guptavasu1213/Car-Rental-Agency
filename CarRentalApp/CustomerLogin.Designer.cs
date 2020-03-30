@@ -45,6 +45,11 @@
             this.ageBox = new System.Windows.Forms.TextBox();
             this.passwordBox = new System.Windows.Forms.TextBox();
             this.confirmBox = new System.Windows.Forms.TextBox();
+            this.warningText = new System.Windows.Forms.TextBox();
+            this.provinceBox = new System.Windows.Forms.TextBox();
+            this.cityBox = new System.Windows.Forms.TextBox();
+            this.countryBox = new System.Windows.Forms.TextBox();
+            this.addressBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // header
@@ -140,7 +145,7 @@
             // 
             this.EmailBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmailBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.EmailBox.Location = new System.Drawing.Point(325, 276);
+            this.EmailBox.Location = new System.Drawing.Point(540, 367);
             this.EmailBox.Margin = new System.Windows.Forms.Padding(4);
             this.EmailBox.Name = "EmailBox";
             this.EmailBox.Size = new System.Drawing.Size(207, 26);
@@ -193,7 +198,7 @@
             this.driversBox.Name = "driversBox";
             this.driversBox.Size = new System.Drawing.Size(207, 26);
             this.driversBox.TabIndex = 13;
-            this.driversBox.Text = "Driver\'s License Class";
+            this.driversBox.Text = "Driver\'s License";
             this.driversBox.Enter += new System.EventHandler(this.driversBox_Enter);
             this.driversBox.Leave += new System.EventHandler(this.driversBox_Leave);
             // 
@@ -211,7 +216,7 @@
             // newCxButton
             // 
             this.newCxButton.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newCxButton.Location = new System.Drawing.Point(470, 378);
+            this.newCxButton.Location = new System.Drawing.Point(470, 464);
             this.newCxButton.Name = "newCxButton";
             this.newCxButton.Size = new System.Drawing.Size(125, 40);
             this.newCxButton.TabIndex = 15;
@@ -237,7 +242,7 @@
             // 
             this.passwordBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passwordBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.passwordBox.Location = new System.Drawing.Point(540, 276);
+            this.passwordBox.Location = new System.Drawing.Point(325, 413);
             this.passwordBox.Margin = new System.Windows.Forms.Padding(4);
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.Size = new System.Drawing.Size(207, 26);
@@ -250,7 +255,7 @@
             // 
             this.confirmBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.confirmBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.confirmBox.Location = new System.Drawing.Point(540, 323);
+            this.confirmBox.Location = new System.Drawing.Point(540, 413);
             this.confirmBox.Margin = new System.Windows.Forms.Padding(4);
             this.confirmBox.Name = "confirmBox";
             this.confirmBox.Size = new System.Drawing.Size(207, 26);
@@ -259,11 +264,78 @@
             this.confirmBox.Enter += new System.EventHandler(this.confirmBox_Enter);
             this.confirmBox.Leave += new System.EventHandler(this.confirmBox_Leave);
             // 
+            // warningText
+            // 
+            this.warningText.BackColor = System.Drawing.SystemColors.Control;
+            this.warningText.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.warningText.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warningText.Location = new System.Drawing.Point(326, 443);
+            this.warningText.Name = "warningText";
+            this.warningText.Size = new System.Drawing.Size(421, 19);
+            this.warningText.TabIndex = 19;
+            // 
+            // provinceBox
+            // 
+            this.provinceBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.provinceBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.provinceBox.Location = new System.Drawing.Point(540, 320);
+            this.provinceBox.Margin = new System.Windows.Forms.Padding(4);
+            this.provinceBox.Name = "provinceBox";
+            this.provinceBox.Size = new System.Drawing.Size(207, 26);
+            this.provinceBox.TabIndex = 21;
+            this.provinceBox.Text = "Province";
+            this.provinceBox.Enter += new System.EventHandler(this.provinceBox_Enter);
+            this.provinceBox.Leave += new System.EventHandler(this.provinceBox_Leave);
+            // 
+            // cityBox
+            // 
+            this.cityBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cityBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cityBox.Location = new System.Drawing.Point(325, 320);
+            this.cityBox.Margin = new System.Windows.Forms.Padding(4);
+            this.cityBox.Name = "cityBox";
+            this.cityBox.Size = new System.Drawing.Size(207, 26);
+            this.cityBox.TabIndex = 20;
+            this.cityBox.Text = "City";
+            this.cityBox.Enter += new System.EventHandler(this.cityBox_Enter);
+            this.cityBox.Leave += new System.EventHandler(this.cityBox_Leave);
+            // 
+            // countryBox
+            // 
+            this.countryBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countryBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.countryBox.Location = new System.Drawing.Point(325, 367);
+            this.countryBox.Margin = new System.Windows.Forms.Padding(4);
+            this.countryBox.Name = "countryBox";
+            this.countryBox.Size = new System.Drawing.Size(207, 26);
+            this.countryBox.TabIndex = 22;
+            this.countryBox.Text = "Country";
+            this.countryBox.Enter += new System.EventHandler(this.countryBox_Enter);
+            this.countryBox.Leave += new System.EventHandler(this.countryBox_Leave);
+            // 
+            // addressBox
+            // 
+            this.addressBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.addressBox.Location = new System.Drawing.Point(325, 274);
+            this.addressBox.Margin = new System.Windows.Forms.Padding(4);
+            this.addressBox.Name = "addressBox";
+            this.addressBox.Size = new System.Drawing.Size(422, 26);
+            this.addressBox.TabIndex = 23;
+            this.addressBox.Text = "Street Address";
+            this.addressBox.Enter += new System.EventHandler(this.addressBox_Enter);
+            this.addressBox.Leave += new System.EventHandler(this.addressBox_Leave);
+            // 
             // CustomerLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 450);
+            this.ClientSize = new System.Drawing.Size(801, 523);
+            this.Controls.Add(this.addressBox);
+            this.Controls.Add(this.countryBox);
+            this.Controls.Add(this.provinceBox);
+            this.Controls.Add(this.cityBox);
+            this.Controls.Add(this.warningText);
             this.Controls.Add(this.confirmBox);
             this.Controls.Add(this.passwordBox);
             this.Controls.Add(this.ageBox);
@@ -281,7 +353,9 @@
             this.Controls.Add(this.inputPassword);
             this.Controls.Add(this.inputEmail);
             this.Controls.Add(this.header);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "CustomerLogin";
+            this.Text = "Customer Login";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -306,5 +380,10 @@
         private System.Windows.Forms.TextBox ageBox;
         private System.Windows.Forms.TextBox passwordBox;
         private System.Windows.Forms.TextBox confirmBox;
+        private System.Windows.Forms.TextBox warningText;
+        private System.Windows.Forms.TextBox provinceBox;
+        private System.Windows.Forms.TextBox cityBox;
+        private System.Windows.Forms.TextBox countryBox;
+        private System.Windows.Forms.TextBox addressBox;
     }
 }
