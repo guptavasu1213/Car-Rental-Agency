@@ -27,11 +27,6 @@ namespace CarRentalApp
 
         }
 
-        private void findEmployeeLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
         /*Setting mouse hover functionality*/
         private void setBackgroundOnMouseHover(Label label)
         {
@@ -347,6 +342,51 @@ namespace CarRentalApp
         {
             AddNewBooking addNewBookingForm = new AddNewBooking();
             settingUpRightSidePanel(addNewBookingForm);
+        }
+        /*
+         * When the Find Employee label is clicked on, the form for finding an
+         * existing employee is loaded on the right hand side panel
+         */
+        private void findEmployeeLabel_Click(object sender, EventArgs e)
+        {
+            FindEmployee findEmployeeForm = new FindEmployee();
+            settingUpRightSidePanel(findEmployeeForm);
+        }
+        /*
+         * When the Find Vehicle label is clicked on, the form for finding an
+         * existing vehicle is loaded on the right hand side panel
+         */
+        private void findVehicleLabel_Click(object sender, EventArgs e)
+        {
+            FindVehicle findVehicleForm = new FindVehicle();
+            settingUpRightSidePanel(findVehicleForm);
+        }
+        /*
+         * When the Find Vehicle Type label is clicked on, the form for finding an
+         * existing vehicle type is loaded on the right hand side panel
+         */
+        private void findVehicleTypeLabel_Click(object sender, EventArgs e)
+        {
+            FindVehicleType findVehicleTypeForm = new FindVehicleType();
+            settingUpRightSidePanel(findVehicleTypeForm);
+        }
+        /*
+         * When the Find branch label is clicked on, the form for finding an
+         * existing branch is loaded on the right hand side panel
+         */
+        private void findBranchLabel_Click(object sender, EventArgs e)
+        {
+            FindBranch findBranchForm = new FindBranch();
+            settingUpRightSidePanel(findBranchForm);
+        }
+        /*
+         * When the Find Booking label is clicked on, the form for finding an
+         * existing booking is loaded on the right hand side panel
+         */
+        private void findBookingLabel_Click(object sender, EventArgs e)
+        {
+            FindBooking findBookingForm = new FindBooking();
+            settingUpRightSidePanel(findBookingForm);
         }
     }
 }

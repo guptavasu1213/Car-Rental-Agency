@@ -112,6 +112,24 @@
     <Compile Include="AdminPortal.Designer.cs">
       <DependentUpon>AdminPortal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FindBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindBooking.Designer.cs">
+      <DependentUpon>FindBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindBranch.Designer.cs">
+      <DependentUpon>FindBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindEmployee.Designer.cs">
+      <DependentUpon>FindEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="FindTop100Customers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +141,18 @@
     </Compile>
     <Compile Include="FindUser.Designer.cs">
       <DependentUpon>FindUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindVehicle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindVehicle.Designer.cs">
+      <DependentUpon>FindVehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindVehicleType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindVehicleType.Designer.cs">
+      <DependentUpon>FindVehicleType.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs" />
     <Compile Include="Main.cs">
@@ -197,11 +227,26 @@
     <EmbeddedResource Include="AdminPortal.resx">
       <DependentUpon>AdminPortal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FindBooking.resx">
+      <DependentUpon>FindBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindBranch.resx">
+      <DependentUpon>FindBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindEmployee.resx">
+      <DependentUpon>FindEmployee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FindTop100Customers.resx">
       <DependentUpon>FindTop100Customers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindUser.resx">
       <DependentUpon>FindUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindVehicle.resx">
+      <DependentUpon>FindVehicle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindVehicleType.resx">
+      <DependentUpon>FindVehicleType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

@@ -150,6 +150,7 @@
             this.findVehicleTypeLabel.TabIndex = 25;
             this.findVehicleTypeLabel.Text = "Find Vehicle Type";
             this.findVehicleTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.findVehicleTypeLabel.Click += new System.EventHandler(this.findVehicleTypeLabel_Click);
             this.findVehicleTypeLabel.MouseLeave += new System.EventHandler(this.findVehicleTypeLabel_MouseLeave);
             this.findVehicleTypeLabel.MouseHover += new System.EventHandler(this.findVehicleTypeLabel_MouseHover);
             // 
@@ -209,6 +210,7 @@
             this.findBranchLabel.TabIndex = 21;
             this.findBranchLabel.Text = "Find Branch";
             this.findBranchLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.findBranchLabel.Click += new System.EventHandler(this.findBranchLabel_Click);
             this.findBranchLabel.MouseLeave += new System.EventHandler(this.findBranchLabel_MouseLeave);
             this.findBranchLabel.MouseHover += new System.EventHandler(this.findBranchLabel_MouseHover);
             // 
@@ -293,6 +295,7 @@
             this.findVehicleLabel.TabIndex = 9;
             this.findVehicleLabel.Text = "Find Vehicle";
             this.findVehicleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.findVehicleLabel.Click += new System.EventHandler(this.findVehicleLabel_Click);
             this.findVehicleLabel.MouseLeave += new System.EventHandler(this.findVehicle_MouseLeave);
             this.findVehicleLabel.MouseHover += new System.EventHandler(this.findVehicle_MouseHover);
             // 
@@ -352,6 +355,7 @@
             this.findBookingLabel.TabIndex = 14;
             this.findBookingLabel.Text = "Find Booking";
             this.findBookingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.findBookingLabel.Click += new System.EventHandler(this.findBookingLabel_Click);
             this.findBookingLabel.MouseLeave += new System.EventHandler(this.findBookingLabel_MouseLeave);
             this.findBookingLabel.MouseHover += new System.EventHandler(this.findBookingLabel_MouseHover);
             // 
