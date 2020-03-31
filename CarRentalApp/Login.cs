@@ -11,6 +11,7 @@ namespace CarRentalApp
 {
     internal class Login
     {
+
         public static bool IsValidEmail(string email)
         {
             try
@@ -24,7 +25,7 @@ namespace CarRentalApp
             }
         }
 
-        public static void CustomerAuth(string inputEmail, string inputPassword)
+        public static bool CustomerAuth(string inputEmail, string inputPassword)
         {
             string database = Database.ConnectionString;
             string sql = "SELECT Password FROM Customer WHERE Email = @email";
@@ -48,7 +49,8 @@ namespace CarRentalApp
                     if (VerifyPassword(password, inputPassword))
                     {
                         MessageBox.Show("Successful Sign In", "Success");
-                        Console.WriteLine("Log in was successful");
+                        connection.Close();
+                        return true;
                     }
                     else
                     {
@@ -63,6 +65,7 @@ namespace CarRentalApp
             }
 
             connection.Close();
+            return false;
         }
 
         public static bool insertCustomer(Customer cx)
