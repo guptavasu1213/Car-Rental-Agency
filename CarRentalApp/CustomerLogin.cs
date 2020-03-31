@@ -102,16 +102,6 @@ namespace CarRentalApp
             AddText(phoneBox, "Phone Number", sender, e);
         }
 
-        private void ageBox_Enter(object sender, EventArgs e)
-        {
-            RemoveText(ageBox, "Age", sender, e);
-        }
-
-        private void ageBox_Leave(object sender, EventArgs e)
-        {
-            AddText(ageBox, "Age", sender, e);
-        }
-
         private void insuranceBox_Enter(object sender, EventArgs e)
         {
             RemoveText(insuranceBox, "Insurance Number", sender, e);
@@ -200,14 +190,21 @@ namespace CarRentalApp
             {
                 cx.FirstName = fNameBox.Text;
                 cx.LastName = lNameBox.Text;
-                cx.Age = Int32.Parse(ageBox.Text);
+                cx.BDay = BDay.Value.ToShortDateString();
                 cx.Insurance = insuranceBox.Text;
                 cx.Drivers = driversBox.Text;
+                cx.PhoneNumber = Decimal.Parse(phoneBox.Text);
                 cx.EmailAddress = email;
                 cx.Password = Login.HashPassword(confirmBox.Text);
+                cx.Address = addressBox.Text;
                 cx.City = cityBox.Text;
                 cx.Province = provinceBox.Text;
-                Login.insertCustomer(cx);
+                cx.Country = countryBox.Text;
+                cx.Status = "Basic";
+                if (Login.insertCustomer(cx))
+                {
+                    MessageBox.Show("Successfully Registered as a new Customer", "Success");
+                }
             }
             catch (Exception ex)
             {

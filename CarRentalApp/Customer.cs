@@ -16,9 +16,9 @@ namespace CarRentalApp
 
         public string EmailAddress { get; set; }
 
-        public int Age { get; set; }
+        public string BDay { get; set; }
 
-        public int PhoneNumber { get; set; }
+        public decimal PhoneNumber { get; set; }
 
         public string Address { get; set; }
 
@@ -31,6 +31,8 @@ namespace CarRentalApp
         public string Insurance { get; set; }
 
         public string Drivers { get; set; }
+
+        public string Status { get; set; }
 
         // password stored is hashed
         public string Password { get; set; }

@@ -42,7 +42,6 @@
             this.driversBox = new System.Windows.Forms.TextBox();
             this.existingCxButton = new System.Windows.Forms.Button();
             this.newCxButton = new System.Windows.Forms.Button();
-            this.ageBox = new System.Windows.Forms.TextBox();
             this.passwordBox = new System.Windows.Forms.TextBox();
             this.confirmBox = new System.Windows.Forms.TextBox();
             this.warningText = new System.Windows.Forms.TextBox();
@@ -50,6 +49,8 @@
             this.cityBox = new System.Windows.Forms.TextBox();
             this.countryBox = new System.Windows.Forms.TextBox();
             this.addressBox = new System.Windows.Forms.TextBox();
+            this.BDay = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // header
@@ -159,8 +160,9 @@
             this.vSeparator1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.vSeparator1.Location = new System.Drawing.Point(284, 85);
             this.vSeparator1.Name = "vSeparator1";
-            this.vSeparator1.Size = new System.Drawing.Size(2, 350);
+            this.vSeparator1.Size = new System.Drawing.Size(2, 400);
             this.vSeparator1.TabIndex = 10;
+            this.vSeparator1.UseWaitCursor = true;
             // 
             // phoneBox
             // 
@@ -169,7 +171,7 @@
             this.phoneBox.Location = new System.Drawing.Point(325, 180);
             this.phoneBox.Margin = new System.Windows.Forms.Padding(4);
             this.phoneBox.Name = "phoneBox";
-            this.phoneBox.Size = new System.Drawing.Size(207, 26);
+            this.phoneBox.Size = new System.Drawing.Size(205, 26);
             this.phoneBox.TabIndex = 11;
             this.phoneBox.Text = "Phone Number";
             this.phoneBox.Enter += new System.EventHandler(this.phoneBox_Enter);
@@ -223,20 +225,6 @@
             this.newCxButton.Text = "Submit";
             this.newCxButton.UseVisualStyleBackColor = true;
             this.newCxButton.Click += new System.EventHandler(this.newCxButton_Click);
-            // 
-            // ageBox
-            // 
-            this.ageBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ageBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ageBox.Location = new System.Drawing.Point(540, 180);
-            this.ageBox.Margin = new System.Windows.Forms.Padding(4);
-            this.ageBox.Name = "ageBox";
-            this.ageBox.Size = new System.Drawing.Size(207, 26);
-            this.ageBox.TabIndex = 16;
-            this.ageBox.Text = "Age";
-            this.ageBox.Enter += new System.EventHandler(this.ageBox_Enter);
-            this.ageBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.allowOnlyNumericalValues);
-            this.ageBox.Leave += new System.EventHandler(this.ageBox_Leave);
             // 
             // passwordBox
             // 
@@ -326,11 +314,35 @@
             this.addressBox.Enter += new System.EventHandler(this.addressBox_Enter);
             this.addressBox.Leave += new System.EventHandler(this.addressBox_Leave);
             // 
+            // BDay
+            // 
+            this.BDay.CalendarFont = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BDay.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BDay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.BDay.Location = new System.Drawing.Point(641, 181);
+            this.BDay.Name = "BDay";
+            this.BDay.Size = new System.Drawing.Size(106, 26);
+            this.BDay.TabIndex = 24;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(540, 185);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 18);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Date of Birth";
+            // 
             // CustomerLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 523);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.BDay);
             this.Controls.Add(this.addressBox);
             this.Controls.Add(this.countryBox);
             this.Controls.Add(this.provinceBox);
@@ -338,7 +350,6 @@
             this.Controls.Add(this.warningText);
             this.Controls.Add(this.confirmBox);
             this.Controls.Add(this.passwordBox);
-            this.Controls.Add(this.ageBox);
             this.Controls.Add(this.newCxButton);
             this.Controls.Add(this.existingCxButton);
             this.Controls.Add(this.driversBox);
@@ -377,7 +388,6 @@
         private System.Windows.Forms.TextBox driversBox;
         private System.Windows.Forms.Button existingCxButton;
         private System.Windows.Forms.Button newCxButton;
-        private System.Windows.Forms.TextBox ageBox;
         private System.Windows.Forms.TextBox passwordBox;
         private System.Windows.Forms.TextBox confirmBox;
         private System.Windows.Forms.TextBox warningText;
@@ -385,5 +395,7 @@
         private System.Windows.Forms.TextBox cityBox;
         private System.Windows.Forms.TextBox countryBox;
         private System.Windows.Forms.TextBox addressBox;
+        private System.Windows.Forms.DateTimePicker BDay;
+        private System.Windows.Forms.Label label1;
     }
 }
