@@ -28,18 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.result = new System.Windows.Forms.Label();
-            this.inputName = new System.Windows.Forms.TextBox();
-            this.btn1 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.admin_button = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.result = new System.Windows.Forms.Label();
+            this.btn1 = new System.Windows.Forms.Button();
+            this.inputName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(213, 140);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(365, 63);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Login for a Customized Solution";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(213, 229);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(365, 63);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Start a new Reservation";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // admin_button
+            // 
+            this.admin_button.Location = new System.Drawing.Point(213, 318);
+            this.admin_button.Name = "admin_button";
+            this.admin_button.Size = new System.Drawing.Size(365, 63);
+            this.admin_button.TabIndex = 5;
+            this.admin_button.Text = "Admin Portal";
+            this.admin_button.UseVisualStyleBackColor = true;
+            this.admin_button.Click += new System.EventHandler(this.admin_button_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(266, 38);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(258, 32);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Car Rental Agency";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 25.25F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(255, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(280, 40);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Welcome Guest!";
             // 
             // result
             // 
             this.result.AutoSize = true;
-            this.result.Location = new System.Drawing.Point(158, 371);
+            this.result.Location = new System.Drawing.Point(586, 426);
             this.result.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.result.Name = "result";
             this.result.Size = new System.Drawing.Size(207, 24);
@@ -48,10 +100,21 @@
             this.result.UseCompatibleTextRendering = true;
             this.result.Click += new System.EventHandler(this.label1_Click);
             // 
+            // btn1
+            // 
+            this.btn1.Location = new System.Drawing.Point(373, 426);
+            this.btn1.Margin = new System.Windows.Forms.Padding(4);
+            this.btn1.Name = "btn1";
+            this.btn1.Size = new System.Drawing.Size(205, 26);
+            this.btn1.TabIndex = 2;
+            this.btn1.Text = "Click Me!";
+            this.btn1.UseVisualStyleBackColor = true;
+            this.btn1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // inputName
             // 
             this.inputName.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.inputName.Location = new System.Drawing.Point(158, 153);
+            this.inputName.Location = new System.Drawing.Point(22, 426);
             this.inputName.Margin = new System.Windows.Forms.Padding(4);
             this.inputName.Name = "inputName";
             this.inputName.Size = new System.Drawing.Size(343, 26);
@@ -61,52 +124,13 @@
             this.inputName.Enter += new System.EventHandler(this.nameTextBoxEnter);
             this.inputName.Leave += new System.EventHandler(this.nameTextBoxLeave);
             // 
-            // btn1
-            // 
-            this.btn1.Location = new System.Drawing.Point(158, 259);
-            this.btn1.Margin = new System.Windows.Forms.Padding(4);
-            this.btn1.Name = "btn1";
-            this.btn1.Size = new System.Drawing.Size(345, 36);
-            this.btn1.TabIndex = 2;
-            this.btn1.Text = "Click Me!";
-            this.btn1.UseVisualStyleBackColor = true;
-            this.btn1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(682, 121);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(183, 58);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Customer Login";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(682, 234);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(183, 61);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Start Reservation";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // admin_button
-            // 
-            this.admin_button.Location = new System.Drawing.Point(682, 344);
-            this.admin_button.Name = "admin_button";
-            this.admin_button.Size = new System.Drawing.Size(183, 56);
-            this.admin_button.TabIndex = 5;
-            this.admin_button.Text = "Admin";
-            this.admin_button.UseVisualStyleBackColor = true;
-            this.admin_button.Click += new System.EventHandler(this.admin_button_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(904, 465);
+            this.ClientSize = new System.Drawing.Size(794, 465);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.admin_button);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -123,13 +147,14 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label result;
-        private System.Windows.Forms.Button btn1;
-        private System.Windows.Forms.TextBox inputName;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button admin_button;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label result;
+        private System.Windows.Forms.Button btn1;
+        private System.Windows.Forms.TextBox inputName;
     }
 }
 
