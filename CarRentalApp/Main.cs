@@ -12,10 +12,19 @@ namespace CarRentalApp
 {
     public partial class Main : Form
     {
+        private Customer User;
+
         public Main()
         {
             InitializeComponent();
             this.Text = "Car Rental Agency";
+            label2.Text = "Welcome, Guest!";
+        }
+
+        public void UpdateUser(Customer cx)
+        {
+            this.User = cx;
+            label2.Text = "Welcome, " + User.FirstName + "!";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -51,7 +60,11 @@ namespace CarRentalApp
         private void button1_Click_1(object sender, EventArgs e)
         {
             CustomerLogin customerLogin = new CustomerLogin();
-            customerLogin.ShowDialog();
+            var result = customerLogin.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                UpdateUser(customerLogin.User);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

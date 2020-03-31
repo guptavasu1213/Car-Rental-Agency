@@ -10,6 +10,8 @@ namespace CarRentalApp
     {
         Color hintColor;
 
+        public Customer User { get; set; }
+
         public CustomerLogin()
         {
             InitializeComponent();
@@ -166,7 +168,14 @@ namespace CarRentalApp
             }
             string pass = inputPassword.Text;
 
-            Login.CustomerAuth(email, pass);
+            if (Login.CustomerAuth(email, pass))
+            {
+                this.DialogResult = DialogResult.OK;
+
+                // Load user details from database
+
+                this.Close();
+            }
         }
 
         private void newCxButton_Click(object sender, EventArgs e)
@@ -204,6 +213,9 @@ namespace CarRentalApp
                 if (Login.insertCustomer(cx))
                 {
                     MessageBox.Show("Successfully Registered as a new Customer", "Success");
+                    this.DialogResult = DialogResult.OK;
+                    this.User = cx;
+                    this.Close();
                 }
             }
             catch (Exception ex)
