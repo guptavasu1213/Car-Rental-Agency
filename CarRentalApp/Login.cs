@@ -26,13 +26,13 @@ namespace CarRentalApp
         public static void CustomerAuth(string inputEmail, string inputPassword)
         {
             string database = Database.ConnectionString;
-            string sql = "SELECT Password FROM Customers WHERE Email = @email";
+            string sql = "SELECT Password FROM Customer WHERE Email = @email";
 
             SqlParameter pEmail = new SqlParameter("@email", inputEmail);
             SqlConnection connection = new SqlConnection(database);
 
             connection.Open();
-            SqlCommand cmd = new SqlCommand(sql);
+            SqlCommand cmd = new SqlCommand(sql, connection);
             cmd.Parameters.Add(pEmail);
 
             using (SqlDataReader reader = cmd.ExecuteReader())
@@ -40,10 +40,12 @@ namespace CarRentalApp
                 if (reader.Read())
                 {
                     // sign in successful?
+                    MessageBox.Show("Successful Sign In", "Success");
                     Console.WriteLine("Log in was successful");
                 }
                 else
                 {
+                    MessageBox.Show("Invalid Username and/or Password", "Invalid");
                     Console.WriteLine("Log in failed");
                 }
             }
@@ -51,11 +53,11 @@ namespace CarRentalApp
             connection.Close();
         }
 
-        public static void insertCustomer(Customer cx)
+        public static bool insertCustomer(Customer cx)
         {
             string dbstring = Database.ConnectionString;
-            string sql = "INSERT INTO Customer (First_Name, Last_Name, Phone_Number, Email, Age, Insurance, Drivers_License, Password, Street_Address, City, Province, Country, Status) ";
-            string values = "VALUES (@fname, @lname, @phone, @email, @age, @insurance, @license, @password, @address, @city, @province, @country, @status)";
+            string sql = "INSERT INTO Customer (First_Name, Last_Name, Phone_Number, Email, Birthday, Insurance_Policy_Number, Drivers_License, Password, Street_Address, City, Province, Country, Membership_Status) ";
+            string values = "VALUES (@fname, @lname, @phone, @email, @bday, @insurance, @license, @password, @address, @city, @province, @country, @status)";
             string insertvals = sql + values;
 
             using (SqlConnection connection = new SqlConnection(dbstring))
@@ -63,9 +65,9 @@ namespace CarRentalApp
             {
                 command.Parameters.Add("@fname", SqlDbType.VarChar).Value = cx.FirstName;
                 command.Parameters.Add("@lname", SqlDbType.VarChar).Value = cx.LastName;
-                command.Parameters.Add("@phone", SqlDbType.Int).Value = cx.PhoneNumber;
+                command.Parameters.Add("@phone", SqlDbType.Decimal).Value = cx.PhoneNumber;
                 command.Parameters.Add("@email", SqlDbType.VarChar).Value = cx.EmailAddress;
-                command.Parameters.Add("@age", SqlDbType.Int).Value = cx.Age;
+                command.Parameters.Add("@bday", SqlDbType.Date).Value = cx.BDay;
                 command.Parameters.Add("@insurance", SqlDbType.VarChar).Value = cx.Insurance;
                 command.Parameters.Add("@license", SqlDbType.VarChar).Value = cx.Drivers;
                 command.Parameters.Add("@password", SqlDbType.VarChar).Value = cx.Password;
@@ -73,12 +75,13 @@ namespace CarRentalApp
                 command.Parameters.Add("@city", SqlDbType.VarChar).Value = cx.City;
                 command.Parameters.Add("@province", SqlDbType.VarChar).Value = cx.Province;
                 command.Parameters.Add("@country", SqlDbType.VarChar).Value = cx.Country;
-                command.Parameters.Add("@status", SqlDbType.VarChar).Value = "Active";
+                command.Parameters.Add("@status", SqlDbType.VarChar).Value = cx.Status;
 
                 connection.Open();
                 command.ExecuteNonQuery();
                 connection.Close();
             }
+            return true;
         }
 
         public static string HashPassword(string pass)
