@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Security.Cryptography;
 using System.Text;
 using System.Data;
+using System.Linq;
 
 namespace CarRentalApp
 {
@@ -35,17 +36,28 @@ namespace CarRentalApp
             SqlCommand cmd = new SqlCommand(sql, connection);
             cmd.Parameters.Add(pEmail);
 
+            // check if there are any rows in the database with this email first
             using (SqlDataReader reader = cmd.ExecuteReader())
             {
                 if (reader.Read())
                 {
-                    // sign in successful?
-                    MessageBox.Show("Successful Sign In", "Success");
-                    Console.WriteLine("Log in was successful");
+                    // get the password from the column as a string
+                    string password = reader.GetString(0);
+
+                    // verify hashes are equal
+                    if (VerifyPassword(password, inputPassword))
+                    {
+                        MessageBox.Show("Successful Sign In", "Success");
+                        Console.WriteLine("Log in was successful");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid password, please try again", "Invalid Password");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Invalid Username and/or Password", "Invalid");
+                    MessageBox.Show("Invalid Username", "Invalid Username");
                     Console.WriteLine("Log in failed");
                 }
             }
@@ -98,7 +110,8 @@ namespace CarRentalApp
         private static bool VerifyPassword(string storedPassword, string enteredPassword)
         {
             string hashedPassword = HashPassword(enteredPassword);
-            if (hashedPassword == storedPassword)
+
+            if (hashedPassword.Equals(storedPassword))
             {
                 return true;
             }
