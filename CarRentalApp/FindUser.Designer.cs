@@ -31,7 +31,6 @@
             this.topPanel = new System.Windows.Forms.Panel();
             this.findExistingUserLabel = new System.Windows.Forms.Label();
             this.customerInfoDataGridView = new System.Windows.Forms.DataGridView();
-            this.updateButton = new System.Windows.Forms.Button();
             this.deleteButton = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.customerIDResultLabel = new System.Windows.Forms.Label();
@@ -74,7 +73,7 @@
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1356, 85);
+            this.topPanel.Size = new System.Drawing.Size(1924, 85);
             this.topPanel.TabIndex = 18;
             // 
             // findExistingUserLabel
@@ -90,27 +89,17 @@
             // 
             // customerInfoDataGridView
             // 
+            this.customerInfoDataGridView.AllowUserToAddRows = false;
+            this.customerInfoDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.customerInfoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.customerInfoDataGridView.Location = new System.Drawing.Point(511, 167);
-            this.customerInfoDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.customerInfoDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.customerInfoDataGridView.Name = "customerInfoDataGridView";
-            this.customerInfoDataGridView.Size = new System.Drawing.Size(829, 679);
+            this.customerInfoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.customerInfoDataGridView.Size = new System.Drawing.Size(1400, 679);
             this.customerInfoDataGridView.TabIndex = 20;
-            // 
-            // updateButton
-            // 
-            this.updateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.updateButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.updateButton.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateButton.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.updateButton.Location = new System.Drawing.Point(511, 110);
-            this.updateButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.updateButton.Name = "updateButton";
-            this.updateButton.Size = new System.Drawing.Size(243, 37);
-            this.updateButton.TabIndex = 23;
-            this.updateButton.Text = "Update";
-            this.updateButton.UseVisualStyleBackColor = false;
-            this.updateButton.Click += new System.EventHandler(this.updateButton_Click);
+            this.customerInfoDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.customerInfoDataGridView_CellValueChanged);
+            this.customerInfoDataGridView.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.customerInfoDataGridView_EditingControlShowing);
             // 
             // deleteButton
             // 
@@ -118,7 +107,7 @@
             this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.deleteButton.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteButton.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.deleteButton.Location = new System.Drawing.Point(1097, 110);
+            this.deleteButton.Location = new System.Drawing.Point(511, 110);
             this.deleteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(243, 37);
@@ -429,16 +418,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1356, 865);
+            this.ClientSize = new System.Drawing.Size(1924, 865);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.deleteButton);
-            this.Controls.Add(this.updateButton);
             this.Controls.Add(this.customerInfoDataGridView);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.enterUserDetailsGroupBox);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FindUser";
             this.Text = "FindUser";
             this.topPanel.ResumeLayout(false);
@@ -461,7 +449,6 @@
         private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.Label findExistingUserLabel;
         private System.Windows.Forms.DataGridView customerInfoDataGridView;
-        private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label customerIDResultLabel;

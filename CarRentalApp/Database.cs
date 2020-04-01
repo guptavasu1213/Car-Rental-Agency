@@ -35,6 +35,26 @@ namespace CarRentalApp
         }
 
         /*
+         * Runs the query passed to the function to communicate with the current database
+         */
+        public static void runQuery(String query)
+        {
+            // Connection string
+            string connectionString = Database.ConnectionString;
+
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+
+                // Creates your command with the query
+                SqlCommand command = new SqlCommand(query, sqlCon);
+
+                // Command execution
+                SqlDataReader reader = command.ExecuteReader();
+            }
+        }
+
+        /*
          * Returns back the Data table after connecting to the database and running the query 
          * passed a parameter to the function.
          */
