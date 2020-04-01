@@ -274,7 +274,7 @@ namespace CarRentalApp
             cmd = new SqlCommand();
             con.Open();
 
-            SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT TYPE_NAME as 'Type', Make, Model, Year, Fuel_Type as 'Fuel', Transmission, Capacity FROM Branch, Car WHERE Branch.BRANCH_ID = Car.BRANCH_ID and Branch.Name = "+ "'" + pBranchComboBox.Text + "'", con);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT TYPE_NAME as 'Type', Make, Model, Year, Fuel_Type as 'Fuel', Transmission, Capacity FROM Branch, Car WHERE Branch.BRANCH_ID = Car.BRANCH_ID and Branch.Name = " + "'" + pBranchComboBox.Text + "'", con);
 
             DataTable dataTable = new DataTable();
             dataAdapter.Fill(dataTable);
@@ -290,22 +290,90 @@ namespace CarRentalApp
 
         }
 
-        private void carResultDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+
+        private void carResultDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+
+            string rentalType;
+            double rentalCost = 0;
+            double dailyRate = 0;
+            double weeklyRate = 0;
+            double monthyRate = 0;
+
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = carResultDataGridView.Rows[e.RowIndex];
+                rentalType = row.Cells["Type"].Value.ToString();
+
+                con = new SqlConnection("" +
+                "Data Source=142.59.80.79,5291; " +
+                "Initial Catalog=CRA291;" +
+                "User ID=SA;" +
+                "Password=@291CRAsql$");
+
+                cmd = new SqlCommand();
+                con.Open();
+                cmd.Connection = con;
+
+                cmd.CommandText = "" +
+                "SELECT Daily_Fee, Weekly_Fee, Monthly_Fee " +
+                "FROM Type " +
+                "WHERE TYPE_NAME = '" + rentalType + "'";
+
+                dr = cmd.ExecuteReader();
+                
+                while (dr.Read())
+                {
+                    dailyRate = Convert.ToDouble(dr["Daily_Fee"]);
+                    weeklyRate = Convert.ToDouble(dr["Weekly_Fee"]);
+                    monthyRate = Convert.ToDouble(dr["Monthly_Fee"]);
+                }
+
+                con.Close();
+
+                TimeSpan rentalTime = rDateTimePicker.Value.Subtract(dDateTimePicker.Value);
+                int rentalDays = rentalTime.Days;
+                int rentalMonths = 0;
+                int rentalWeeks = 0;
+
+                while (rentalDays >= 28)
+                {
+                    rentalCost += monthyRate;
+                    rentalDays -= 28;
+                    rentalMonths += 1;
+
+                }
+
+                while (rentalDays >= 7)
+                {
+                    rentalCost += weeklyRate;
+                    rentalDays -= 7;
+                    rentalWeeks += 1;
+                }
+
+                rentalCost += rentalDays * dailyRate;
+
+                // displaying the rental summary here
+
                 infoLabel.Text =
-                    row.Cells["Year"].Value.ToString() + " "
-                    + row.Cells["Make"].Value.ToString() + " "
-                    + row.Cells["Model"].Value.ToString() + " ("
-                    + row.Cells["Type"].Value.ToString() + "/"
-                    + row.Cells["Transmission"].Value.ToString() + "/"
-                    + row.Cells["Fuel"].Value.ToString() + "/"
-                    + row.Cells["Capacity"].Value.ToString() + " Seats)\n"
-                    + dDateTimePicker.Value.ToString("dddd, MMMM d, yyyy") +
-                    " — " + dDateTimePicker.Value.ToString("dddd, MMMM d, yyyy");
+                row.Cells["Year"].Value.ToString() + " "
+                + row.Cells["Make"].Value.ToString() + " "
+                + row.Cells["Model"].Value.ToString() + " ("
+                + row.Cells["Type"].Value.ToString() + "/"
+                + row.Cells["Transmission"].Value.ToString() + "/"
+                + row.Cells["Fuel"].Value.ToString() + "/"
+                + row.Cells["Capacity"].Value.ToString() + " Seats)\n"
+                + dDateTimePicker.Value.ToString("dddd, MMMM d, yyyy")
+                + " — " + rDateTimePicker.Value.ToString("dddd, MMMM d, yyyy") + "\n"
+                + "Breakdown: " + rentalTime.Days + " Days ==> " + rentalMonths + " Months + ($" + rentalMonths * monthyRate + ") +"
+                + rentalWeeks + " Weeks ($" + rentalWeeks * weeklyRate + ") +"
+                + rentalDays + " Days ($" + rentalDays * dailyRate + ")\n"
+                + "Total: $" + rentalCost;
+
+
             }
+
         }
     }
 }

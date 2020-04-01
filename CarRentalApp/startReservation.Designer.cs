@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pBranchComboBox = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -76,7 +76,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.rProvinceComboBox = new System.Windows.Forms.ComboBox();
             this.rCountryComboBox = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.rDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -457,32 +457,32 @@
             this.carResultDataGridView.AllowUserToDeleteRows = false;
             this.carResultDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.carResultDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.carResultDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.carResultDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
             this.carResultDataGridView.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.carResultDataGridView.Location = new System.Drawing.Point(7, 26);
             this.carResultDataGridView.Margin = new System.Windows.Forms.Padding(0);
             this.carResultDataGridView.Name = "carResultDataGridView";
             this.carResultDataGridView.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.carResultDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.carResultDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.carResultDataGridView.Size = new System.Drawing.Size(794, 483);
             this.carResultDataGridView.TabIndex = 0;
-            this.carResultDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.carResultDataGridView_CellContentClick);
+            this.carResultDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.carResultDataGridView_CellClick);
             // 
             // searchButton
             // 
@@ -541,7 +541,7 @@
             this.groupBox5.Controls.Add(this.label6);
             this.groupBox5.Controls.Add(this.rProvinceComboBox);
             this.groupBox5.Controls.Add(this.rCountryComboBox);
-            this.groupBox5.Controls.Add(this.dateTimePicker3);
+            this.groupBox5.Controls.Add(this.rDateTimePicker);
             this.groupBox5.Controls.Add(this.label11);
             this.groupBox5.Controls.Add(this.label12);
             this.groupBox5.Controls.Add(this.label16);
@@ -615,16 +615,16 @@
             this.rCountryComboBox.TabIndex = 11;
             this.rCountryComboBox.SelectedIndexChanged += new System.EventHandler(this.rCountryComboBox_SelectedIndexChanged);
             // 
-            // dateTimePicker3
+            // rDateTimePicker
             // 
-            this.dateTimePicker3.CustomFormat = "dd/MM/yyyy hh:ss tt";
-            this.dateTimePicker3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker3.Location = new System.Drawing.Point(18, 265);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(258, 22);
-            this.dateTimePicker3.TabIndex = 7;
-            this.dateTimePicker3.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
+            this.rDateTimePicker.CustomFormat = "dd/MM/yyyy hh:ss tt";
+            this.rDateTimePicker.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.rDateTimePicker.Location = new System.Drawing.Point(18, 265);
+            this.rDateTimePicker.Name = "rDateTimePicker";
+            this.rDateTimePicker.Size = new System.Drawing.Size(258, 22);
+            this.rDateTimePicker.TabIndex = 7;
+            this.rDateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
             // 
             // label11
             // 
@@ -765,7 +765,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox rProvinceComboBox;
         private System.Windows.Forms.ComboBox rCountryComboBox;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker rDateTimePicker;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label16;
