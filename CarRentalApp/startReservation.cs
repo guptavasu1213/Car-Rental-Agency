@@ -18,10 +18,17 @@ namespace CarRentalApp
         SqlConnection con;
         SqlCommand cmd;
         SqlDataReader dr;
+        Customer User;
 
-        public StartReservation()
+        public StartReservation(Customer cx)
         {
             InitializeComponent();
+            this.User = cx;
+            if (cx == null)
+            {
+                this.User = new Customer();
+                this.User.FirstName = "Guest";
+            }
         }
 
         private void StartReservation_Load(object sender, EventArgs e)

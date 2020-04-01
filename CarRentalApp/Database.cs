@@ -23,6 +23,8 @@ namespace CarRentalApp
 
             connection.Open();
 
+            Console.WriteLine("cmd = {0}", query);
+
             SqlDataAdapter dataAdapter = new SqlDataAdapter(cmd);
             DataTable table = new DataTable();
 

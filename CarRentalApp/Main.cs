@@ -13,43 +13,23 @@ namespace CarRentalApp
     public partial class Main : Form
     {
         private Customer User;
+        private bool loggedIn;
 
         public Main()
         {
             InitializeComponent();
             this.Text = "Car Rental Agency";
             label2.Text = "Welcome, Guest!";
+            loggedIn = false;
         }
 
         public void UpdateUser(Customer cx)
         {
             this.User = cx;
             label2.Text = "Welcome, " + User.FirstName + "!";
+            loggedIn = true;
+            button1.Text = "Log Out";
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            result.Text = "Hi " + inputName.Text + "!";
-        }
-
-        private void nameTextBoxEnter(object sender, EventArgs e)
-        {
-            if (inputName.Text == "Enter your name")
-            {
-                inputName.Text = "";
-                inputName.ForeColor = Color.Black;
-            } 
-}
 
         private void nameTextBoxLeave(object sender, EventArgs e)
         {
@@ -59,18 +39,28 @@ namespace CarRentalApp
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            CustomerLogin customerLogin = new CustomerLogin();
-            var result = customerLogin.ShowDialog();
-            if (result == DialogResult.OK)
+            if (loggedIn)
             {
-                UpdateUser(customerLogin.User);
+                this.User = null;
+                this.loggedIn = false;
+                label2.Text = "Welcome, Guest!";
+                button1.Text = "Login for a Customized Solution";
+            }
+            else
+            {
+                CustomerLogin customerLogin = new CustomerLogin();
+                var result = customerLogin.ShowDialog();
+                if (result == DialogResult.OK)
+                    UpdateUser(customerLogin.User);
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            StartReservation startreservation = new StartReservation();
+            StartReservation startreservation = new StartReservation(this.User);
+            this.Opacity = 0.0;
             startreservation.ShowDialog();
+            this.Opacity = 100.0;
         }
 
         private void admin_button_Click(object sender, EventArgs e)
