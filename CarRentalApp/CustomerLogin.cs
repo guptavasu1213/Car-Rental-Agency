@@ -181,7 +181,7 @@ namespace CarRentalApp
         private void newCxButton_Click(object sender, EventArgs e)
         {
             Customer cx = new Customer();
-            PhoneNumber phNum = new PhoneNumber();
+            PhoneNumber phNum = new PhoneNumber(); // is this used anywhere?
 
             string email = EmailBox.Text;
             if (!Login.IsValidEmail(email))
