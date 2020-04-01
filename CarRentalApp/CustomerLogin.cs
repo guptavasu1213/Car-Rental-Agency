@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace CarRentalApp
 {
@@ -173,6 +174,13 @@ namespace CarRentalApp
                 this.DialogResult = DialogResult.OK;
 
                 // Load user details from database
+                string query = String.Format("SELECT CUSTOMER_ID, First_Name FROM Customer WHERE Email = '{0}';", email);
+                DataTable table = Database.SqlQuery(query);
+                this.User = new Customer();
+                this.User.ID = Int32.Parse(table.Rows[0][0].ToString());
+                this.User.FirstName = table.Rows[0][1].ToString();
+
+                Console.WriteLine("ID = {0}, FirstName = {1}", this.User.ID, this.User.FirstName);
 
                 this.Close();
             }

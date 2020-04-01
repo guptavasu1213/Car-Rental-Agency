@@ -18,10 +18,17 @@ namespace CarRentalApp
         SqlConnection con;
         SqlCommand cmd;
         SqlDataReader dr;
+        Customer User;
 
-        public StartReservation()
+        public StartReservation(Customer cx)
         {
             InitializeComponent();
+            this.User = cx;
+            if (cx == null)
+            {
+                this.User = new Customer();
+                this.User.FirstName = "Guest";
+            }
         }
 
         private void StartReservation_Load(object sender, EventArgs e)
@@ -274,7 +281,7 @@ namespace CarRentalApp
             cmd = new SqlCommand();
             con.Open();
 
-            SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT TYPE_NAME as ' Car Type', Make, Model, Year, Fuel_Type as 'Fuel Type', Transmission, Capacity FROM Branch, Car WHERE Branch.BRANCH_ID = Car.BRANCH_ID and Branch.Name = "+ "'" + pBranchComboBox.Text + "'", con);
+            SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT TYPE_NAME as 'Type', Make, Model, Year, Fuel_Type as 'Fuel', Transmission, Capacity FROM Branch, Car WHERE Branch.BRANCH_ID = Car.BRANCH_ID and Branch.Name = "+ "'" + pBranchComboBox.Text + "'", con);
 
             DataTable dataTable = new DataTable();
             dataAdapter.Fill(dataTable);
@@ -288,6 +295,24 @@ namespace CarRentalApp
         private void resetButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void carResultDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = carResultDataGridView.Rows[e.RowIndex];
+                infoLabel.Text =
+                    row.Cells["Year"].Value.ToString() + " "
+                    + row.Cells["Make"].Value.ToString() + " "
+                    + row.Cells["Model"].Value.ToString() + " ("
+                    + row.Cells["Type"].Value.ToString() + "/"
+                    + row.Cells["Transmission"].Value.ToString() + "/"
+                    + row.Cells["Fuel"].Value.ToString() + "/"
+                    + row.Cells["Capacity"].Value.ToString() + " Seats)\n"
+                    + dDateTimePicker.Value.ToString("dddd, MMMM d, yyyy") +
+                    " — " + dDateTimePicker.Value.ToString("dddd, MMMM d, yyyy");
+            }
         }
     }
 }
