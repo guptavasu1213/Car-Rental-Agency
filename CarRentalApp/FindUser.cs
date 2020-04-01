@@ -163,13 +163,6 @@ namespace CarRentalApp
                 validTextboxEntry(emailResultLabel, query);
             }
         }
-        /*
-         * 
-         */
-        private void deleteButton_Click(object sender, EventArgs e)
-        {
-
-        }
 
         /*
          * If any cell changes, a check is performed to see which column does the cell lie in, and
@@ -284,6 +277,31 @@ namespace CarRentalApp
                 e.Control.KeyPress -= numericTextBox_KeyPress;
             }
 
+        }
+        /*
+         * The function is called whenever the delete button is hit when a row is selected
+         * Admin is asked for a verification message to check if the record is supposed to be deleted.
+         * The query for deleting the selected row is launcheds
+         */
+        private void customerInfoDataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            // Getting the customer ID at the selected row
+            var customerID = customerInfoDataGridView.CurrentRow.Cells["CUSTOMER_ID"].Value;
+            if (customerID != DBNull.Value)
+            {
+                // Verification message for the admin
+                if (MessageBox.Show("Are you sure to delete an entry?", "Deleting Entry", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    // Creating the query
+                    String query = $"Delete from Customer where CUSTOMER_ID = {customerID}";
+                    // Run the query
+                    Database.runQuery(query);
+                }
+                else
+                    e.Cancel = true; // Do not delete
+            }
+            else
+                e.Cancel = true; // Do not delete
         }
     }
 }

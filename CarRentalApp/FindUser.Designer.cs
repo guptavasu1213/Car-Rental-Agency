@@ -31,7 +31,6 @@
             this.topPanel = new System.Windows.Forms.Panel();
             this.findExistingUserLabel = new System.Windows.Forms.Label();
             this.customerInfoDataGridView = new System.Windows.Forms.DataGridView();
-            this.deleteButton = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.customerIDResultLabel = new System.Windows.Forms.Label();
             this.customerIDSearchButton = new System.Windows.Forms.Button();
@@ -73,7 +72,7 @@
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1924, 85);
+            this.topPanel.Size = new System.Drawing.Size(1747, 85);
             this.topPanel.TabIndex = 18;
             // 
             // findExistingUserLabel
@@ -95,26 +94,11 @@
             this.customerInfoDataGridView.Location = new System.Drawing.Point(511, 167);
             this.customerInfoDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.customerInfoDataGridView.Name = "customerInfoDataGridView";
-            this.customerInfoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.customerInfoDataGridView.Size = new System.Drawing.Size(1400, 679);
+            this.customerInfoDataGridView.Size = new System.Drawing.Size(1099, 679);
             this.customerInfoDataGridView.TabIndex = 20;
             this.customerInfoDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.customerInfoDataGridView_CellValueChanged);
             this.customerInfoDataGridView.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.customerInfoDataGridView_EditingControlShowing);
-            // 
-            // deleteButton
-            // 
-            this.deleteButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.deleteButton.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteButton.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.deleteButton.Location = new System.Drawing.Point(511, 110);
-            this.deleteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.deleteButton.Name = "deleteButton";
-            this.deleteButton.Size = new System.Drawing.Size(243, 37);
-            this.deleteButton.TabIndex = 24;
-            this.deleteButton.Text = "Delete";
-            this.deleteButton.UseVisualStyleBackColor = false;
-            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
+            this.customerInfoDataGridView.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.customerInfoDataGridView_UserDeletingRow);
             // 
             // groupBox3
             // 
@@ -418,11 +402,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1924, 865);
+            this.ClientSize = new System.Drawing.Size(1747, 865);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.customerInfoDataGridView);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.enterUserDetailsGroupBox);
@@ -449,7 +432,6 @@
         private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.Label findExistingUserLabel;
         private System.Windows.Forms.DataGridView customerInfoDataGridView;
-        private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label customerIDResultLabel;
         private System.Windows.Forms.Button customerIDSearchButton;
