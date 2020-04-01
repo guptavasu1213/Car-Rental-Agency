@@ -10,6 +10,8 @@ namespace CarRentalApp
     {
         public int ID { get; set; }
 
+        public bool SelfServer { get; set; }
+
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
@@ -36,5 +38,10 @@ namespace CarRentalApp
 
         // password stored is hashed
         public string Password { get; set; }
+
+        public Customer()
+        {
+            this.SelfServer = true;
+        }
     }
 }
