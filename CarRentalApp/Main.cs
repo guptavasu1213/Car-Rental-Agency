@@ -63,15 +63,15 @@ namespace CarRentalApp
             CustomerLogin customerLogin = new CustomerLogin();
             var result = customerLogin.ShowDialog();
             if (result == DialogResult.OK)
-            {
                 UpdateUser(customerLogin.User);
-            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            StartReservation startreservation = new StartReservation();
+            StartReservation startreservation = new StartReservation(this.User);
+            this.Opacity = 0.0;
             startreservation.ShowDialog();
+            this.Opacity = 100.0;
         }
 
         private void admin_button_Click(object sender, EventArgs e)
