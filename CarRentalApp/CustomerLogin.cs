@@ -29,6 +29,10 @@ namespace CarRentalApp
             newCxButton.Location = new Point(newCxLabel.Location.X, newCxButton.Location.Y);
             vSeparator1.Location = new Point(third+10, vSeparator1.Location.Y);
 
+            BDay.MinDate = new DateTime(1 / 1 / 1900);
+            BDay.MaxDate = new DateTime(1 / 1 / 2002);
+            BDay.Value = new DateTime(1 / 1 / 1990);
+
             hintColor = inputEmail.ForeColor;
         }
 
@@ -205,18 +209,18 @@ namespace CarRentalApp
             // Use try-catch in case the values are not going to be compatible (ie. letters entered in Age)
             try
             {
-                cx.FirstName = fNameBox.Text;
-                cx.LastName = lNameBox.Text;
+                cx.FirstName = fNameBox.Text.Trim();
+                cx.LastName = lNameBox.Text.Trim();
                 cx.BDay = BDay.Value.ToShortDateString();
-                cx.Insurance = insuranceBox.Text;
-                cx.Drivers = driversBox.Text;
+                cx.Insurance = insuranceBox.Text.Trim();
+                cx.Drivers = driversBox.Text.Trim();
                 cx.PhoneNumber = Decimal.Parse(phoneBox.Text);
                 cx.EmailAddress = email;
-                cx.Password = Login.HashPassword(confirmBox.Text);
-                cx.Address = addressBox.Text;
-                cx.City = cityBox.Text;
-                cx.Province = provinceBox.Text;
-                cx.Country = countryBox.Text;
+                cx.Password = Login.HashPassword(confirmBox.Text.Trim());
+                cx.Address = addressBox.Text.Trim();
+                cx.City = cityBox.Text.Trim();
+                cx.Province = provinceBox.Text.Trim();
+                cx.Country = countryBox.Text.Trim();
                 cx.Status = "Basic";
                 if (Login.insertCustomer(cx))
                 {

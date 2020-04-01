@@ -72,12 +72,15 @@ namespace CarRentalApp
         {
             string dbstring = Database.ConnectionString;
             string sql = "INSERT INTO Customer (First_Name, Last_Name, Phone_Number, Email, Birthday, Insurance_Policy_Number, Drivers_License, Password, Street_Address, City, Province, Country, Membership_Status) ";
-            string values = "VALUES (@fname, @lname, @phone, @email, @bday, @insurance, @license, @password, @address, @city, @province, @country, @status)";
+            string values = "VALUES (@fname, @lname, @phone, @email, @bday, @insurance, @license, @password, @address, @city, @province, @country, @status);";
             string insertvals = sql + values;
+            Random random = new Random();
 
             using (SqlConnection connection = new SqlConnection(dbstring))
             using (SqlCommand command = new SqlCommand(insertvals, connection))
             {
+                command.Parameters.Add("@password", SqlDbType.VarChar).Value = Login.HashPassword(random.Next(0, 1000000000).ToString());
+
                 command.Parameters.Add("@fname", SqlDbType.VarChar).Value = cx.FirstName;
                 command.Parameters.Add("@lname", SqlDbType.VarChar).Value = cx.LastName;
                 command.Parameters.Add("@phone", SqlDbType.Decimal).Value = cx.PhoneNumber;
@@ -85,12 +88,16 @@ namespace CarRentalApp
                 command.Parameters.Add("@bday", SqlDbType.Date).Value = cx.BDay;
                 command.Parameters.Add("@insurance", SqlDbType.VarChar).Value = cx.Insurance;
                 command.Parameters.Add("@license", SqlDbType.VarChar).Value = cx.Drivers;
-                command.Parameters.Add("@password", SqlDbType.VarChar).Value = cx.Password;
                 command.Parameters.Add("@address", SqlDbType.VarChar).Value = cx.Address;
                 command.Parameters.Add("@city", SqlDbType.VarChar).Value = cx.City;
                 command.Parameters.Add("@province", SqlDbType.VarChar).Value = cx.Province;
                 command.Parameters.Add("@country", SqlDbType.VarChar).Value = cx.Country;
                 command.Parameters.Add("@status", SqlDbType.VarChar).Value = cx.Status;
+                
+                if (cx.SelfServer)
+                {
+                    command.Parameters.Add("@password", SqlDbType.VarChar).Value = cx.Password;
+                }
 
                 connection.Open();
                 command.ExecuteNonQuery();

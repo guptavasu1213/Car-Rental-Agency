@@ -15,6 +15,9 @@ namespace CarRentalApp
         public AddNewUser()
         {
             InitializeComponent();
+            dateOfBirthPicker.MinDate = new DateTime(1900, 1, 1);
+            dateOfBirthPicker.MaxDate = new DateTime(2002, 1, 1);
+            dateOfBirthPicker.Value = new DateTime(1990, 1, 1);
         }
         /*
          * Allowing only numerical values for the field
@@ -33,17 +36,25 @@ namespace CarRentalApp
          */
         private void submitButton_Click(object sender, EventArgs e)
         {
-            String firstName = firstNameTextBox.Text.TrimEnd();
-            String lastName = lastNameTextBox.Text.TrimEnd();
-            String phoneNumber = phoneNumberTextBox.Text.TrimEnd(); //MAYBE AN INTEGER FIELD
-            String age = ageTextBox.Text.TrimEnd(); //MAYBE AN INTEGER FIELD
-            String insuranceID = insuranceIDTexBox.Text.TrimEnd();
-            String driverLicenseClassType = driverLicenseClassTypeTextBox.Text.TrimEnd();
-            String driverLicenseNumber = driverLicenseNumberTextBox.Text.TrimEnd();
+            Customer cx = new Customer();
+            cx.FirstName = firstNameTextBox.Text.TrimEnd();
+            cx.LastName = lastNameTextBox.Text.TrimEnd();
+            cx.PhoneNumber = Decimal.Parse(phoneNumberTextBox.Text.TrimEnd());
+            cx.BDay = dateOfBirthPicker.Value.ToShortDateString();
+            cx.Insurance  = insuranceIDTexBox.Text.TrimEnd();
+            cx.Drivers = driverLicenseNumberTextBox.Text.TrimEnd();
+            cx.EmailAddress = emailBox.Text.Trim();
+            cx.Address = addressBox.Text.Trim();
+            cx.City = cityBox.Text.Trim();
+            cx.Province = provinceBox.Text.Trim();
+            cx.Country = countryBox.Text.Trim();
+            cx.Status = "Basic";
+            cx.SelfServer = false;
 
             // Check to ensure all the fields have text
-            if (firstName == "" || lastName == "" || phoneNumber == "" || age == "" || insuranceID == "" ||
-                driverLicenseNumber == "" || driverLicenseClassType == "")
+            if (cx.FirstName == "" || cx.LastName == "" || cx.PhoneNumber < 1000000000 || cx.Insurance == "" ||
+                cx.Drivers == "" || cx.EmailAddress == "" || cx.Address == "" || cx.City == "" || cx.Province == "" ||
+                cx.Country == "")
             {
                 resultLabel.Text = "All fields are required";
                 resultLabel.ForeColor = Color.FromArgb(192, 0, 0); // dark red
@@ -51,102 +62,14 @@ namespace CarRentalApp
             }
             else
             {
-                resultLabel.Text = "Added successfully to the database!";
-                resultLabel.ForeColor = Color.FromArgb(0, 192, 0); // Dark Green
-                resultLabel.Visible = true;
-
-                // RUN THE QUERY
+                if (Login.insertCustomer(cx)) // the query is contained within here
+                {
+                    this.DialogResult = DialogResult.OK;
+                    resultLabel.Text = "Added successfully to the database!";
+                    resultLabel.ForeColor = Color.FromArgb(0, 192, 0); // Dark Green
+                    resultLabel.Visible = true;
+                }
             }
-        }
-
-        private void addNewUserLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void enterUserDetailsGroupBox_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void phoneNumberTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lastNameTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void firstNameTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void phoneNumberLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void firstNameLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void LastNameLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void topPanel_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void insuranceID_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ageLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void driverLicenseClassTypeLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void driverLicenseNumberLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ageTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void insuranceIDTexBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void driverLicenseClassTypeTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void driverLicenseNumberTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void resultLabel_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
