@@ -80,13 +80,13 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 25.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(255, 70);
+            this.label2.Location = new System.Drawing.Point(0, 76);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(280, 40);
+            this.label2.Size = new System.Drawing.Size(794, 38);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Welcome Guest!";
+            this.label2.Text = "Welcome, Guest!";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // result
             // 

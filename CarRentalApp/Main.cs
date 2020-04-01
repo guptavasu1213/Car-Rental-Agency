@@ -19,6 +19,7 @@ namespace CarRentalApp
             InitializeComponent();
             this.Text = "Car Rental Agency";
             label2.Text = "Welcome, Guest!";
+            
         }
 
         public void UpdateUser(Customer cx)
