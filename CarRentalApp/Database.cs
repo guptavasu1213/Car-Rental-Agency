@@ -16,6 +16,7 @@ namespace CarRentalApp
 
         public static string ConnectionString { get { return cString; } }
 
+        // WHERE IS THIS METHOD USED?
         public static DataTable SqlQuery(string query)
         {
             SqlConnection connection = new SqlConnection(Database.ConnectionString);
@@ -32,6 +33,54 @@ namespace CarRentalApp
 
             connection.Close();
 
+            return table;
+        }
+
+        /*
+         * Runs the query passed to the function to communicate with the current database
+         */
+        public static void runQuery(String query)
+        {
+            // Connection string
+            string connectionString = Database.ConnectionString;
+
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+
+                // Creates your command with the query
+                SqlCommand command = new SqlCommand(query, sqlCon);
+
+                // Command execution
+                SqlDataReader reader = command.ExecuteReader();
+            }
+        }
+
+        /*
+         * Returns back the Data table after connecting to the database and running the query 
+         * passed a parameter to the function.
+         */
+        public static DataTable getDataTableAfterRunningQuery(String query)
+        {
+            // Connection string
+            string connectionString = Database.ConnectionString;
+
+            // Creating a data table
+            DataTable table = new DataTable();
+
+            using (SqlConnection sqlCon = new SqlConnection(connectionString))
+            {
+                sqlCon.Open();
+
+                // Creates your command with the query
+                SqlCommand command = new SqlCommand(query, sqlCon);
+
+                // Command execution
+                SqlDataReader reader = command.ExecuteReader();
+
+                // Loading the data table with the query result 
+                table.Load(reader);
+            }
             return table;
         }
 
