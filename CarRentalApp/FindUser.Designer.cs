@@ -91,10 +91,10 @@
             this.customerInfoDataGridView.AllowUserToAddRows = false;
             this.customerInfoDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.customerInfoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.customerInfoDataGridView.Location = new System.Drawing.Point(511, 167);
+            this.customerInfoDataGridView.Location = new System.Drawing.Point(511, 122);
             this.customerInfoDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.customerInfoDataGridView.Name = "customerInfoDataGridView";
-            this.customerInfoDataGridView.Size = new System.Drawing.Size(1099, 679);
+            this.customerInfoDataGridView.Size = new System.Drawing.Size(1099, 724);
             this.customerInfoDataGridView.TabIndex = 20;
             this.customerInfoDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.customerInfoDataGridView_CellValueChanged);
             this.customerInfoDataGridView.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.customerInfoDataGridView_EditingControlShowing);

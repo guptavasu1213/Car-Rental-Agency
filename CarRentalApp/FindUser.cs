@@ -175,88 +175,87 @@ namespace CarRentalApp
                 DataGridViewRow row = customerInfoDataGridView.CurrentRow; // Current Row
 
                 int currentColIndex = customerInfoDataGridView.CurrentCell.ColumnIndex; // Index of modified column
-                var whatever = customerInfoDataGridView.CurrentCell.Value; // Value in the modified cell
+                var update = customerInfoDataGridView.CurrentCell.Value; // Value in the modified cell
                 var ID = row.Cells["CUSTOMER_ID"].Value; // Value of customer ID
 
-                Console.WriteLine($"{whatever} in {ID}");
                 // Change First Name
                 if (currentColIndex == 1)
                 {
-                    string query = $"UPDATE Customer SET First_Name = '{whatever}' WHERE CUSTOMER_ID = {ID};";
+                    string query = $"UPDATE Customer SET First_Name = '{update}' WHERE CUSTOMER_ID = {ID};";
                     Database.runQuery(query);
                 }
                 // Change Last Name
                 else if (currentColIndex == 2)
                 {
-                    string query = $"UPDATE Customer SET Last_Name = '{whatever}' WHERE CUSTOMER_ID = {ID};";
+                    string query = $"UPDATE Customer SET Last_Name = '{update}' WHERE CUSTOMER_ID = {ID};";
                     Database.runQuery(query);
                 }
                 // Change Phone Number
                 else if (currentColIndex == 3)
                 {
-                    string query = $"UPDATE Customer SET Phone_Number = '{whatever}' WHERE CUSTOMER_ID = {ID};";
+                    string query = $"UPDATE Customer SET Phone_Number = '{update}' WHERE CUSTOMER_ID = {ID};";
                     Database.runQuery(query);
                 }
                 // Change Email
                 else if (currentColIndex == 4)
                 {
-                    string query = $"UPDATE Customer SET Phone_Number = '{whatever}' WHERE CUSTOMER_ID = {ID};";
+                    string query = $"UPDATE Customer SET Email = '{update}' WHERE CUSTOMER_ID = {ID};";
                     Database.runQuery(query);
                 }
                 // Change Insurance_Policy_Number
                 else if (currentColIndex == 5)
                 {
-                    string query = $"UPDATE Customer SET Insurance_Policy_Number = '{whatever}' WHERE CUSTOMER_ID = {ID};";
+                    string query = $"UPDATE Customer SET Insurance_Policy_Number = '{update}' WHERE CUSTOMER_ID = {ID};";
                     Database.runQuery(query);
                 }
                 // Change Drivers_License
                 else if (currentColIndex == 6)
                 {
-                    string query = $"UPDATE Customer SET Drivers_License = '{whatever}' WHERE CUSTOMER_ID = {ID};";
+                    string query = $"UPDATE Customer SET Drivers_License = '{update}' WHERE CUSTOMER_ID = {ID};";
                     Database.runQuery(query);
                 }
                 // Change Password
                 else if (currentColIndex == 7)
                 {
                     // Hashing password first
-                    string hashedPass = Login.HashPassword(whatever.ToString());
+                    string hashedPass = Login.HashPassword(update.ToString());
                     string query = $"UPDATE Customer SET Password = '{hashedPass}' WHERE CUSTOMER_ID = {ID};";
                     Database.runQuery(query);
                 }
                 // Change City
                 else if (currentColIndex == 8)
                 {
-                    string query = $"UPDATE Customer SET City = '{whatever}' WHERE CUSTOMER_ID = {ID};";
+                    string query = $"UPDATE Customer SET City = '{update}' WHERE CUSTOMER_ID = {ID};";
                     Database.runQuery(query);
                 }
                 // Change Province
                 else if (currentColIndex == 9)
                 {
-                    string query = $"UPDATE Customer SET Province = '{whatever}' WHERE CUSTOMER_ID = {ID};";
+                    string query = $"UPDATE Customer SET Province = '{update}' WHERE CUSTOMER_ID = {ID};";
                     Database.runQuery(query);
                 }
                 // Change Country
                 else if (currentColIndex == 10)
                 {
-                    string query = $"UPDATE Customer SET Country = '{whatever}' WHERE CUSTOMER_ID = {ID};";
+                    string query = $"UPDATE Customer SET Country = '{update}' WHERE CUSTOMER_ID = {ID};";
                     Database.runQuery(query);
                 }
                 // Change Street_Address
                 else if (currentColIndex == 11)
                 {
-                    string query = $"UPDATE Customer SET Street_Address = '{whatever}' WHERE CUSTOMER_ID = {ID};";
+                    string query = $"UPDATE Customer SET Street_Address = '{update}' WHERE CUSTOMER_ID = {ID};";
                     Database.runQuery(query);
                 }
                 // Change Membership_Status
                 else if (currentColIndex == 12)
                 {
-                    string query = $"UPDATE Customer SET Membership_Status = '{whatever}' WHERE CUSTOMER_ID = {ID};";
+                    string query = $"UPDATE Customer SET Membership_Status = '{update}' WHERE CUSTOMER_ID = {ID};";
                     Database.runQuery(query);
                 }
                 // Change Birthday
                 else if (currentColIndex == 13)
                 {
-                    string query = $"UPDATE Customer SET Birthday = '{whatever}' WHERE CUSTOMER_ID = {ID};";
+                    string query = $"UPDATE Customer SET Birthday = '{update}' WHERE CUSTOMER_ID = {ID};";
                     Database.runQuery(query);
                 }
             }
@@ -281,7 +280,7 @@ namespace CarRentalApp
         /*
          * The function is called whenever the delete button is hit when a row is selected
          * Admin is asked for a verification message to check if the record is supposed to be deleted.
-         * The query for deleting the selected row is launcheds
+         * The query for deleting the selected row is launched
          */
         private void customerInfoDataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
         {
