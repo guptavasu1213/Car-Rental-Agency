@@ -468,7 +468,6 @@
             this.vehiclesLabel.TabIndex = 1;
             this.vehiclesLabel.Text = "Vehicles";
             this.vehiclesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.vehiclesLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // usersLabel
             // 
@@ -481,7 +480,6 @@
             this.usersLabel.TabIndex = 0;
             this.usersLabel.Text = "Users";
             this.usersLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.usersLabel.Click += new System.EventHandler(this.UsersLabel_Click);
             // 
             // rightHandSidePanel
             // 

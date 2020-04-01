@@ -17,16 +17,6 @@ namespace CarRentalApp
             InitializeComponent();
         }
 
-        private void UsersLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         /*Setting mouse hover functionality*/
         private void setBackgroundOnMouseHover(Label label)
         {
