@@ -116,48 +116,50 @@ namespace CarRentalApp
 
                 int currentColIndex = vehicleInfoDataGridView.CurrentCell.ColumnIndex; // Index of modified column
                 var update = vehicleInfoDataGridView.CurrentCell.Value; // Value in the modified cell
-                var ID = row.Cells["CAR_ID"].Value; // Value of Car ID
-
+                
                 string query;
                 string queryTable = "Car";
+                string keyName = "CAR_ID"; // Key Name
+
+                var ID = row.Cells[keyName].Value; // Value of Car ID
 
                 switch (currentColIndex) // Column index of the change
                 {
                     case 1: // Change BRANCH_ID
-                        query = $"UPDATE {queryTable} SET BRANCH_ID = '{update}' WHERE CAR_ID = {ID};";
+                        query = $"UPDATE {queryTable} SET BRANCH_ID = '{update}' WHERE {keyName} = {ID};";
                         break;
                     case 2: // Change TYPE_NAME
-                        query = $"UPDATE {queryTable} SET TYPE_NAME = '{update}' WHERE CAR_ID = {ID};";
+                        query = $"UPDATE {queryTable} SET TYPE_NAME = '{update}' WHERE {keyName} = {ID};";
                         break;
                     case 3: // Change Make
-                        query = $"UPDATE {queryTable} SET Make = '{update}' WHERE CAR_ID = {ID};";
+                        query = $"UPDATE {queryTable} SET Make = '{update}' WHERE {keyName} = {ID};";
                         break;
                     case 4: // Change Model
-                        query = $"UPDATE {queryTable} SET Model = '{update}' WHERE CAR_ID = {ID};";
+                        query = $"UPDATE {queryTable} SET Model = '{update}' WHERE {keyName} = {ID};";
                         break;
                     case 5: // Change Year
-                        query = $"UPDATE {queryTable} SET Year = '{update}' WHERE CAR_ID = {ID};";
+                        query = $"UPDATE {queryTable} SET Year = '{update}' WHERE {keyName} = {ID};";
                         break;
                     case 6: // Change VIN
-                        query = $"UPDATE {queryTable} SET VIN = '{update}' WHERE CAR_ID = {ID};";
+                        query = $"UPDATE {queryTable} SET VIN = '{update}' WHERE {keyName} = {ID};";
                         break;
                     case 7: // Change License_Plate
-                        query = $"UPDATE {queryTable} SET License_Plate = '{update}' WHERE CAR_ID = {ID};";
+                        query = $"UPDATE {queryTable} SET License_Plate = '{update}' WHERE {keyName} = {ID};";
                         break;
                     case 8: // Change Insurance_Policy_Number
-                        query = $"UPDATE {queryTable} SET Insurance_Policy_Number = '{update}' WHERE CAR_ID = {ID};";
+                        query = $"UPDATE {queryTable} SET Insurance_Policy_Number = '{update}' WHERE {keyName} = {ID};";
                         break;
                     case 9: // Change In_Service
-                        query = $"UPDATE {queryTable} SET In_Service = '{update}' WHERE CAR_ID = {ID};";
+                        query = $"UPDATE {queryTable} SET In_Service = '{update}' WHERE {keyName} = {ID};";
                         break;
                     case 10: // Change Fuel_Type
-                        query = $"UPDATE {queryTable} SET Fuel_Type = '{update}' WHERE CAR_ID = {ID};";
+                        query = $"UPDATE {queryTable} SET Fuel_Type = '{update}' WHERE {keyName} = {ID};";
                         break;
                     case 11: // Change Transmission
-                        query = $"UPDATE {queryTable} SET Transmission = '{update}' WHERE CAR_ID = {ID};";
+                        query = $"UPDATE {queryTable} SET Transmission = '{update}' WHERE {keyName} = {ID};";
                         break;
                     case 12: // Change Capacity
-                        query = $"UPDATE {queryTable} SET Capacity = '{update}' WHERE CAR_ID = {ID};";
+                        query = $"UPDATE {queryTable} SET Capacity = '{update}' WHERE {keyName} = {ID};";
                         break;
                     default:    // default statement sequence
                         return;

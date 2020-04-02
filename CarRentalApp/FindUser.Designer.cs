@@ -89,6 +89,7 @@
             // customerInfoDataGridView
             // 
             this.customerInfoDataGridView.AllowUserToAddRows = false;
+            this.customerInfoDataGridView.AllowUserToDeleteRows = false;
             this.customerInfoDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.customerInfoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.customerInfoDataGridView.Location = new System.Drawing.Point(511, 122);
@@ -98,7 +99,6 @@
             this.customerInfoDataGridView.TabIndex = 20;
             this.customerInfoDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.customerInfoDataGridView_CellValueChanged);
             this.customerInfoDataGridView.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.customerInfoDataGridView_EditingControlShowing);
-            this.customerInfoDataGridView.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.customerInfoDataGridView_UserDeletingRow);
             // 
             // groupBox3
             // 

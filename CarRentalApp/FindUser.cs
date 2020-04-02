@@ -27,32 +27,6 @@ namespace CarRentalApp
                 e.Handled = true;
             }
         }
-
-        /*
-         * The function is called when the entry in the textbox is valid
-         * PURPOSE:
-         * - Changing the label to success
-         * - Running the query
-         * - If there is no entry found, the error message is displayed
-         * - Else the table is updated
-         */
-        private void validTextboxEntry(Label label, String query)
-        {
-            // Changing the result label
-            label.Text = "Running the query . . . ";
-            label.ForeColor = Color.FromArgb(0, 192, 0); //dark green
-
-            // fill the table with the value retrieved
-            DataTable table = Database.getDataTableAfterRunningQuery(query);
-            // If: Resulting table after the query is empty
-            if (table.Rows.Count == 0)
-            {
-                customerInfoDataGridView.DataSource = null; // Make table empty
-                MessageBox.Show("No such entry found in the database!");
-            }
-            // Else: Populating the table with the query result
-            else { customerInfoDataGridView.DataSource = table; }
-        }
         /*
          * When search button is clicked while searching by customer ID, an error check is
          * performed to ensure that the text field is filled with text by the user.
@@ -76,7 +50,7 @@ namespace CarRentalApp
                 // Creating the query
                 String query = $"select * from Customer where Customer.CUSTOMER_ID = '{customerID}';";
                 // Runs query and updates table
-                validTextboxEntry(customerIDResultLabel, query);
+                Common.validTextboxEntry(customerIDResultLabel, query, customerInfoDataGridView);
             }
         }
 
@@ -106,7 +80,7 @@ namespace CarRentalApp
                 String query = $"select * from Customer where Customer.First_Name = '{fName}' and Customer.Last_Name = '{lName}';";
 
                 // Runs query and updates table
-                validTextboxEntry(nameResultLabel, query);
+                Common.validTextboxEntry(nameResultLabel, query, customerInfoDataGridView);
             }
         }
         /*
@@ -133,7 +107,7 @@ namespace CarRentalApp
                 String query = $"select * from Customer where Customer.Phone_Number = {phoneNum};";
 
                 // Runs query and updates table
-                validTextboxEntry(phoneNumResultLabel, query);
+                Common.validTextboxEntry(phoneNumResultLabel, query, customerInfoDataGridView);
             }
         }
         /*
@@ -160,7 +134,7 @@ namespace CarRentalApp
                 String query = $"select * from Customer where Customer.Email = '{email}';";
 
                 // Runs query and updates table 
-                validTextboxEntry(emailResultLabel, query);
+                Common.validTextboxEntry(emailResultLabel, query, customerInfoDataGridView);
             }
         }
 
@@ -176,131 +150,84 @@ namespace CarRentalApp
 
                 int currentColIndex = customerInfoDataGridView.CurrentCell.ColumnIndex; // Index of modified column
                 var update = customerInfoDataGridView.CurrentCell.Value; // Value in the modified cell
-                var ID = row.Cells["CUSTOMER_ID"].Value; // Value of customer ID
 
-                // Change First Name
-                if (currentColIndex == 1)
+                string query;
+                string queryTable = "Customer"; // Table to query from
+                string keyName = "CUSTOMER_ID"; // Key Name
+
+                var ID = row.Cells[keyName].Value; // Value of Customer ID
+
+                switch (currentColIndex) // Column index of the change
                 {
-                    string query = $"UPDATE Customer SET First_Name = '{update}' WHERE CUSTOMER_ID = {ID};";
-                    Database.runQuery(query);
+                    case 1: // Change First_Name
+                        query = $"UPDATE {queryTable} SET First_Name = '{update}' WHERE {keyName} = {ID};";
+                        break;
+                    case 2: // Change Last_Name
+                        query = $"UPDATE {queryTable} SET Last_Name = '{update}' WHERE {keyName} = {ID};";
+                        break;
+                    case 3: // Change Phone_Number
+                        query = $"UPDATE {queryTable} SET Phone_Number = {update} WHERE {keyName} = {ID};";
+                        break;
+                    case 4: // Change Email
+                        query = $"UPDATE {queryTable} SET Email = '{update}' WHERE {keyName} = {ID};";
+                        break;
+                    case 5: // Change Insurance_Policy_Number
+                        query = $"UPDATE {queryTable} SET Insurance_Policy_Number = '{update}' WHERE {keyName} = {ID};";
+                        break;
+                    case 6: // Change Drivers_License
+                        query = $"UPDATE {queryTable} SET Drivers_License = '{update}' WHERE {keyName} = {ID};";
+                        break;
+                    case 7: // Change Password
+                        // Hashing password first
+                        string hashedPass = Login.HashPassword(update.ToString());
+                        query = $"UPDATE {queryTable} SET Password = '{hashedPass}' WHERE {keyName} = {ID};";
+                        break;
+                    case 8: // Change City
+                        query = $"UPDATE {queryTable} SET City = '{update}' WHERE {keyName} = {ID};";
+                        break;
+                    case 9: // Change Province
+                        query = $"UPDATE {queryTable} SET Province = '{update}' WHERE {keyName} = {ID};";
+                        break;
+                    case 10: // Change Country
+                        query = $"UPDATE {queryTable} SET Country = '{update}' WHERE {keyName} = {ID};";
+                        break;
+                    case 11: // Change Street_Address
+                        query = $"UPDATE {queryTable} SET Street_Address = '{update}' WHERE {keyName} = {ID};";
+                        break;
+                    case 12: // Change Membership_Status
+                        query = $"UPDATE {queryTable} SET Membership_Status = '{update}' WHERE {keyName} = {ID};";
+                        break;
+                    case 13: // Birthday
+                        query = $"UPDATE {queryTable} SET Birthday = '{update}' WHERE {keyName} = {ID};";
+                        break;
+                    case 14: // Card_Type
+                        query = $"UPDATE {queryTable} SET Card_Type = '{update}' WHERE {keyName} = {ID};";
+                        break;
+                    case 15: // Card_Number
+                        query = $"UPDATE {queryTable} SET Card_Number = {update} WHERE {keyName} = {ID};";
+                        break;
+                    default:    // default statement sequence
+                        return;
                 }
-                // Change Last Name
-                else if (currentColIndex == 2)
-                {
-                    string query = $"UPDATE Customer SET Last_Name = '{update}' WHERE CUSTOMER_ID = {ID};";
-                    Database.runQuery(query);
-                }
-                // Change Phone Number
-                else if (currentColIndex == 3)
-                {
-                    string query = $"UPDATE Customer SET Phone_Number = '{update}' WHERE CUSTOMER_ID = {ID};";
-                    Database.runQuery(query);
-                }
-                // Change Email
-                else if (currentColIndex == 4)
-                {
-                    string query = $"UPDATE Customer SET Email = '{update}' WHERE CUSTOMER_ID = {ID};";
-                    Database.runQuery(query);
-                }
-                // Change Insurance_Policy_Number
-                else if (currentColIndex == 5)
-                {
-                    string query = $"UPDATE Customer SET Insurance_Policy_Number = '{update}' WHERE CUSTOMER_ID = {ID};";
-                    Database.runQuery(query);
-                }
-                // Change Drivers_License
-                else if (currentColIndex == 6)
-                {
-                    string query = $"UPDATE Customer SET Drivers_License = '{update}' WHERE CUSTOMER_ID = {ID};";
-                    Database.runQuery(query);
-                }
-                // Change Password
-                else if (currentColIndex == 7)
-                {
-                    // Hashing password first
-                    string hashedPass = Login.HashPassword(update.ToString());
-                    string query = $"UPDATE Customer SET Password = '{hashedPass}' WHERE CUSTOMER_ID = {ID};";
-                    Database.runQuery(query);
-                }
-                // Change City
-                else if (currentColIndex == 8)
-                {
-                    string query = $"UPDATE Customer SET City = '{update}' WHERE CUSTOMER_ID = {ID};";
-                    Database.runQuery(query);
-                }
-                // Change Province
-                else if (currentColIndex == 9)
-                {
-                    string query = $"UPDATE Customer SET Province = '{update}' WHERE CUSTOMER_ID = {ID};";
-                    Database.runQuery(query);
-                }
-                // Change Country
-                else if (currentColIndex == 10)
-                {
-                    string query = $"UPDATE Customer SET Country = '{update}' WHERE CUSTOMER_ID = {ID};";
-                    Database.runQuery(query);
-                }
-                // Change Street_Address
-                else if (currentColIndex == 11)
-                {
-                    string query = $"UPDATE Customer SET Street_Address = '{update}' WHERE CUSTOMER_ID = {ID};";
-                    Database.runQuery(query);
-                }
-                // Change Membership_Status
-                else if (currentColIndex == 12)
-                {
-                    string query = $"UPDATE Customer SET Membership_Status = '{update}' WHERE CUSTOMER_ID = {ID};";
-                    Database.runQuery(query);
-                }
-                // Change Birthday
-                else if (currentColIndex == 13)
-                {
-                    string query = $"UPDATE Customer SET Birthday = '{update}' WHERE CUSTOMER_ID = {ID};";
-                    Database.runQuery(query);
-                }
+                Database.runQuery(query); // Running the query
             }
         }
         /*
-         * Limiting the admin to enter only numeric values in the text box for phone number
+         * Limiting the admin to enter only numeric values in the text box for numeric field
          */
         private void customerInfoDataGridView_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
-            // When column is phone number
-            if (customerInfoDataGridView.CurrentCell.ColumnIndex == 3)
+            // When column is a numeric field
+            if (customerInfoDataGridView.CurrentCell.ColumnIndex == 3 || customerInfoDataGridView.CurrentCell.ColumnIndex == 15)
             {
                 e.Control.KeyPress += numericTextBox_KeyPress;
             }
-            // When it is any other column other than phone number
+            // When it is any other column other than a numeric field
             else
             {
                 e.Control.KeyPress -= numericTextBox_KeyPress;
             }
 
-        }
-        /*
-         * The function is called whenever the delete button is hit when a row is selected
-         * Admin is asked for a verification message to check if the record is supposed to be deleted.
-         * The query for deleting the selected row is launched
-         */
-        private void customerInfoDataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
-        {
-            // Getting the customer ID at the selected row
-            var customerID = customerInfoDataGridView.CurrentRow.Cells["CUSTOMER_ID"].Value;
-            if (customerID != DBNull.Value)
-            {
-                // Verification message for the admin
-                if (MessageBox.Show("Are you sure to delete an entry?", "Deleting Entry", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                {
-                    // Creating the query
-                    String query = $"Delete from Customer where CUSTOMER_ID = {customerID}";
-                    // Run the query
-                    Database.runQuery(query);
-                }
-                else
-                    e.Cancel = true; // Do not delete
-            }
-            else
-                e.Cancel = true; // Do not delete
         }
     }
 }
