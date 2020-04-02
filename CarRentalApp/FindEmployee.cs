@@ -17,7 +17,7 @@ namespace CarRentalApp
             InitializeComponent();
         }
         /*
-         * Allowing only numerical values for for numeric fields
+         * Allowing only numerical values for for numeric fields (integer like only)
          */
         private void numericTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -46,31 +46,6 @@ namespace CarRentalApp
         }
 
         /*
-         * The function is called when the entry in the textbox is valid
-         * PURPOSE:
-         * - Changing the label to success
-         * - Running the query
-         * - If there is no entry found, the error message is displayed
-         * - Else the table is updated
-         */
-        private void validTextboxEntry(Label label, String query)
-        {
-            // Changing the result label
-            label.Text = "Running the query . . . ";
-            label.ForeColor = Color.FromArgb(0, 192, 0); //dark green
-
-            // fill the table with the value retrieved
-            DataTable table = Database.getDataTableAfterRunningQuery(query);
-            // If: Resulting table after the query is empty
-            if (table.Rows.Count == 0)
-            {
-                employeeInfoDataGridView.DataSource = null; // Make table empty
-                MessageBox.Show("No such entry found in the database!");
-            }
-            // Else: Populating the table with the query result
-            else { employeeInfoDataGridView.DataSource = table; }
-        }
-        /*
          * When search button is clicked while searching by employee ID, an error check is
          * performed to ensure that the field is filled with text.
          * The search is performed from the database if the field contain text.
@@ -93,7 +68,7 @@ namespace CarRentalApp
                 // Creating the query
                 String query = $"select * from Employee where EMPLOYEE_ID = '{employeeID}';";
                 // Runs query and updates table
-                validTextboxEntry(employeeIDResultLabel, query);
+                Common.validTextboxEntry(employeeIDResultLabel, query, employeeInfoDataGridView);
             }
         }
 
@@ -121,7 +96,7 @@ namespace CarRentalApp
                 // Creating the query
                 String query = $"select * from Employee where First_Name = '{fName}' and Last_Name = '{lName}';";
                 // Runs query and updates table
-                validTextboxEntry(employeeIDResultLabel, query);
+                Common.validTextboxEntry(nameResultLabel, query, employeeInfoDataGridView);
             }
         }
         /*
@@ -147,7 +122,7 @@ namespace CarRentalApp
                 // Creating the query
                 String query = $"select * from Employee where Employee.SIN = '{sin}';";
                 // Runs query and updates table
-                validTextboxEntry(employeeIDResultLabel, query);
+                Common.validTextboxEntry(sinResultLabel, query, employeeInfoDataGridView);
             }
         }
         /*
@@ -173,33 +148,8 @@ namespace CarRentalApp
                 // Creating the query
                 String query = $"select * from Employee where Phone_Number = '{phoneNum}';";
                 // Runs query and updates table
-                validTextboxEntry(employeeIDResultLabel, query);
+                Common.validTextboxEntry(phoneNumResultLabel, query, employeeInfoDataGridView);
             }
-        }
-        /*
-         * The function is called whenever the delete button is hit when a row is selected
-         * Admin is asked for a verification message to check if the record is supposed to be deleted.
-         * The query for deleting the selected row is launched
-         */
-        private void employeeInfoDataGridView_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
-        {
-            // Getting the Employee ID at the selected row
-            var employeeID = employeeInfoDataGridView.CurrentRow.Cells["EMPLOYEE_ID"].Value;
-            if (employeeID != DBNull.Value)
-            {
-                // Verification message for the admin
-                if (MessageBox.Show("Are you sure to delete an entry?", "Deleting Entry", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                {
-                    // Creating the query
-                    String query = $"Delete from Employee where EMPLOYEE_ID = {employeeID}";
-                    // Run the query
-                    Database.runQuery(query);
-                }
-                else
-                    e.Cancel = true; // Do not delete
-            }
-            else
-                e.Cancel = true; // Do not delete
         }
         /*
          * Limiting the admin to enter only numeric values in the text box for numeric fields and float values

@@ -385,6 +385,7 @@
             // employeeInfoDataGridView
             // 
             this.employeeInfoDataGridView.AllowUserToAddRows = false;
+            this.employeeInfoDataGridView.AllowUserToDeleteRows = false;
             this.employeeInfoDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.employeeInfoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.employeeInfoDataGridView.Location = new System.Drawing.Point(505, 134);
@@ -394,7 +395,6 @@
             this.employeeInfoDataGridView.TabIndex = 27;
             this.employeeInfoDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.employeeInfoDataGridView_CellValueChanged);
             this.employeeInfoDataGridView.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.employeeInfoDataGridView_EditingControlShowing);
-            this.employeeInfoDataGridView.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.employeeInfoDataGridView_UserDeletingRow);
             // 
             // FindEmployee
             // 
