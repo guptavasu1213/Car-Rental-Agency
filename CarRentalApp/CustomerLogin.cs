@@ -195,9 +195,8 @@ namespace CarRentalApp
         private void newCxButton_Click(object sender, EventArgs e)
         {
             Customer cx = new Customer();
-            PhoneNumber phNum = new PhoneNumber(); // is this used anywhere?
 
-            string email = EmailBox.Text;
+            string email = EmailBox.Text.Trim();
             if (!Login.IsValidEmail(email))
             {
                 MessageBox.Show("Error: Email address provided is invalid", "Error");
