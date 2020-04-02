@@ -15,6 +15,8 @@ namespace CarRentalApp
         public AddNewEmployee()
         {
             InitializeComponent();
+            DataTable table = Database.getDataTableAfterRunningQuery("SELECT Name FROM Branch");
+            Common.fillComboBox(branchNameComboBox, "Name", table);
         }
 
         /*
@@ -23,33 +25,56 @@ namespace CarRentalApp
          */
         private void submitButton_Click(object sender, EventArgs e)
         {
-            String firstName = firstNameTextBox.Text.TrimEnd();
-            String lastName = lastNameTextBox.Text.TrimEnd();
-            String phoneNumber = phoneNumberTextBox.Text.TrimEnd(); //MAYBE AN INTEGER FIELD
-            String email = emailTextBox.Text.TrimEnd();
-            String salary = salaryTextBox.Text.TrimEnd();  //MAYBE AN INTEGER FIELD
-            String position = positionTextBox.Text.TrimEnd();
-            String employmentType = employmentTypeTextBox.Text.TrimEnd();
-            String sinNumber = SINTextBox.Text.TrimEnd();
-
+            Employee emp = new Employee();
+            string email = emailTextBox.Text.Trim();
+            if (!Login.IsValidEmail(email))
+            {
+                resultLabel.Text = "Email address provided is invalid!";
+                resultLabel.ForeColor = Color.FromArgb(0, 192, 0); // Dark Green
+                resultLabel.Visible = true;
+            }
+            if (passwordBox.Text != confirmBox.Text)
+            {
+                resultLabel.Text = "Passwords do not match!";
+                resultLabel.ForeColor = Color.FromArgb(0, 192, 0); // Dark Green
+                resultLabel.Visible = true;
+            }
             // If any text field is empty or nothing is selected in the drop down list
-            if (firstName == "" || lastName == "" || phoneNumber == "" || email == "" || salary == "" ||
-                position == "" || employmentType == "" || sinNumber == "" || branchNameComboBox.SelectedIndex == -1)
+            if (firstNameTextBox.Text == "" || lastNameTextBox.Text == "" || phoneNumberTextBox.Text == "" || email == "" || salaryTextBox.Text == "" ||
+                positionTextBox.Text == "" || employmentTypeTextBox.Text == "" || SINTextBox.Text == "" || branchNameComboBox.SelectedIndex == -1)
             {
                 resultLabel.Text = "All fields are required";
                 resultLabel.ForeColor = Color.FromArgb(192, 0, 0); // Dark Red
                 resultLabel.Visible = true;
             }
-            // Adding all the fields for the employee to the database
-            else
+            // Use try-catch in case the values are not going to be compatible (ie. letters entered in Age)
+            try
             {
-                resultLabel.Text = "Added successfully to the database!";
-                resultLabel.ForeColor = Color.FromArgb(0, 192, 0); // Dark Green
-                resultLabel.Visible = true;
-
-                // RUN THE QUERY
-
-                //Also put the date time value in the table
+                emp.FirstName = firstNameTextBox.Text.Trim();
+                emp.LastName = lastNameTextBox.Text.Trim();
+                emp.BDay = dateOfBirthPicker.Value.ToShortDateString();
+                emp.PhoneNumber = Decimal.Parse(phoneNumberTextBox.Text);
+                emp.EmailAddress = email;
+                emp.Password = Login.HashPassword(confirmBox.Text.Trim());
+                emp.Address = addressBox.Text.Trim();
+                emp.City = cityBox.Text.Trim();
+                emp.Province = provinceBox.Text.Trim();
+                emp.Country = countryBox.Text.Trim();
+                emp.Salary = Decimal.Parse(salaryTextBox.Text.Trim());
+                emp.EmploymentType = employmentTypeTextBox.Text.Trim();
+                emp.SIN = Int32.Parse(SINTextBox.Text.Trim());
+                emp.Position = positionTextBox.Text.Trim();
+                emp.Branch = branchNameComboBox.GetItemText(branchNameComboBox.SelectedItem);
+                if (Login.insertEmployee(emp))
+                {
+                    resultLabel.Text = "Added new Employee successfully to the database!";
+                    resultLabel.ForeColor = Color.FromArgb(0, 192, 0); // Dark Green
+                    resultLabel.Visible = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
             }
         }
 

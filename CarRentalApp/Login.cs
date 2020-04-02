@@ -106,6 +106,42 @@ namespace CarRentalApp
             return true;
         }
 
+        public static bool insertEmployee(Employee emp)
+        {
+            string dbstring = Database.ConnectionString;
+            string sql = "INSERT INTO Employee (First_Name, Last_Name, Phone_Number, Email, Birthday, Password, Street_Address, City, Province, Country, Status, SIN, Salary, Position, BRANCH_ID, Employment_Type) ";
+            string values = "VALUES (@fname, @lname, @phone, @email, @bday, @password, @address, @city, @province, @country, @status, @sin, @salary, @position, @branch, @time);";
+            string insertvals = sql + values;
+            Random random = new Random();
+            DataTable branchTable = Database.getDataTableAfterRunningQuery(String.Format("SELECT BRANCH_ID, Name FROM Branch WHERE Name = '{0}'", emp.Branch));
+
+            using (SqlConnection connection = new SqlConnection(dbstring))
+            using (SqlCommand command = new SqlCommand(insertvals, connection))
+            {
+                command.Parameters.Add("@fname", SqlDbType.VarChar).Value = emp.FirstName;
+                command.Parameters.Add("@lname", SqlDbType.VarChar).Value = emp.LastName;
+                command.Parameters.Add("@phone", SqlDbType.Decimal).Value = emp.PhoneNumber;
+                command.Parameters.Add("@email", SqlDbType.VarChar).Value = emp.EmailAddress;
+                command.Parameters.Add("@bday", SqlDbType.Date).Value = emp.BDay;
+                command.Parameters.Add("@address", SqlDbType.VarChar).Value = emp.Address;
+                command.Parameters.Add("@city", SqlDbType.VarChar).Value = emp.City;
+                command.Parameters.Add("@province", SqlDbType.VarChar).Value = emp.Province;
+                command.Parameters.Add("@country", SqlDbType.VarChar).Value = emp.Country;
+                command.Parameters.Add("@status", SqlDbType.VarChar).Value = emp.Status;
+                command.Parameters.Add("@password", SqlDbType.VarChar).Value = emp.Password;
+                command.Parameters.Add("@sin", SqlDbType.VarChar).Value = emp.SIN;
+                command.Parameters.Add("@salary", SqlDbType.VarChar).Value = emp.Salary;
+                command.Parameters.Add("@position", SqlDbType.VarChar).Value = emp.Position;
+                command.Parameters.Add("@branch", SqlDbType.VarChar).Value = branchTable.Rows[0].Field<int>("BRANCH_ID");
+                command.Parameters.Add("@time", SqlDbType.VarChar).Value = emp.EmploymentType;
+
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+            return true;
+        }
+
         public static string HashPassword(string pass)
         {
             var bytes = new UTF8Encoding().GetBytes(pass);
