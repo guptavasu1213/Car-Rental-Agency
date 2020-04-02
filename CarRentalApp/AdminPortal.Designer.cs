@@ -498,7 +498,6 @@
             this.Controls.Add(this.rightHandSidePanel);
             this.Controls.Add(this.leftSidePanel);
             this.Controls.Add(this.topPanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AdminPortal";
             this.Text = "Admin Portal";

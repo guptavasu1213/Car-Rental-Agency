@@ -17,55 +17,47 @@ namespace CarRentalApp
             InitializeComponent();
         }
 
-        private void Form2_Load(object sender, EventArgs e)
-        {
-
-        }
-
         /* 
          * Validates username and password in the database.
          * Returns True when username and password are found. False when no such entry in the database
          */
         private bool Validate_Password(String username, String password)
         {
-            if (username == "" && password == "")
+            string emailQuery = $"select Password from Employee where Email = '{username}';";
+            DataTable resultTable = Database.getDataTableAfterRunningQuery(emailQuery);
+
+            // To check if the email exists
+            // If: Resulting table after the query is empty
+            if (resultTable.Rows.Count == 0)
             {
-                return true;
+                MessageBox.Show("Incorrect Email!");
+            }
+            // Else: Valid email
+            else
+            {   // Computing the hash of user entered password 
+                string userPassHash = Login.HashPassword(password);
+                string correctPassHash = resultTable.Rows[0]["Password"].ToString();
+
+                // Comparing the user entered password hash with the hash stored in the database
+                if (userPassHash == correctPassHash) { return true; }
+                else { MessageBox.Show("Incorrect Password!"); }
             }
             return false;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void submitButton_Click(object sender, EventArgs e)
         {
             String username = username_field.Text;
             String password = password_field.Text;
 
+            // Validating the username and password
             if (Validate_Password(username, password))
-            {
-                //    admin_login_result_label.Text = "Correct Password! Yayy!";
-                //    admin_login_result_label.ForeColor = Color.ForestGreen;
-                //    admin_login_result_label.Visible = true;
-
+            {   // Opening the Admin Portal
                 AdminPortal adminPortal = new AdminPortal();
                 this.Hide();
                 adminPortal.Show();
                 this.Close();
-            }
-            else
-            {
-                admin_login_result_label.Text = "Error: Incorrect username or password.";
-                admin_login_result_label.Visible = true;
-                admin_login_result_label.ForeColor = Color.Red;
             }
         }
     }
