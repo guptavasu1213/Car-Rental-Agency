@@ -17,6 +17,13 @@ namespace CarRentalApp
             InitializeComponent();
             DataTable table = Database.getDataTableAfterRunningQuery("SELECT Name FROM Branch");
             Common.fillComboBox(branchNameComboBox, "Name", table);
+            employmentTypeBox.Items.Add("Full-Time");
+            employmentTypeBox.Items.Add("Part-Time");
+            employmentTypeBox.Items.Add("Contract");
+            employmentTypeBox.Items.Add("Casual");
+            dateOfBirthPicker.MinDate = new DateTime(1900, 1, 1);
+            dateOfBirthPicker.MaxDate = new DateTime(2002, 1, 1);
+            dateOfBirthPicker.Value = new DateTime(1990, 1, 1);
         }
 
         /*
@@ -41,7 +48,7 @@ namespace CarRentalApp
             }
             // If any text field is empty or nothing is selected in the drop down list
             if (firstNameTextBox.Text == "" || lastNameTextBox.Text == "" || phoneNumberTextBox.Text == "" || email == "" || salaryTextBox.Text == "" ||
-                positionTextBox.Text == "" || employmentTypeTextBox.Text == "" || SINTextBox.Text == "" || branchNameComboBox.SelectedIndex == -1)
+                positionTextBox.Text == "" || employmentTypeBox.SelectedIndex == -1 || SINTextBox.Text == "" || branchNameComboBox.SelectedIndex == -1)
             {
                 resultLabel.Text = "All fields are required";
                 resultLabel.ForeColor = Color.FromArgb(192, 0, 0); // Dark Red
@@ -61,7 +68,7 @@ namespace CarRentalApp
                 emp.Province = provinceBox.Text.Trim();
                 emp.Country = countryBox.Text.Trim();
                 emp.Salary = Decimal.Parse(salaryTextBox.Text.Trim());
-                emp.EmploymentType = employmentTypeTextBox.Text.Trim();
+                emp.EmploymentType = employmentTypeBox.GetItemText(employmentTypeBox.SelectedItem);
                 emp.SIN = Int32.Parse(SINTextBox.Text.Trim());
                 emp.Position = positionTextBox.Text.Trim();
                 emp.Branch = branchNameComboBox.GetItemText(branchNameComboBox.SelectedItem);

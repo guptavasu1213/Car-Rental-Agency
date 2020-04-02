@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.resultLabel = new System.Windows.Forms.Label();
-            this.employmentTypeTextBox = new System.Windows.Forms.TextBox();
             this.positionTextBox = new System.Windows.Forms.TextBox();
             this.salaryTextBox = new System.Windows.Forms.TextBox();
             this.emailTextBox = new System.Windows.Forms.TextBox();
@@ -65,6 +64,7 @@
             this.LastNameLabel = new System.Windows.Forms.Label();
             this.addNewEmployeeLabel = new System.Windows.Forms.Label();
             this.topPanel = new System.Windows.Forms.Panel();
+            this.employmentTypeBox = new System.Windows.Forms.ComboBox();
             this.enterUserDetailsGroupBox.SuspendLayout();
             this.topPanel.SuspendLayout();
             this.SuspendLayout();
@@ -80,16 +80,6 @@
             this.resultLabel.Size = new System.Drawing.Size(0, 19);
             this.resultLabel.TabIndex = 18;
             this.resultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // employmentTypeTextBox
-            // 
-            this.employmentTypeTextBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.employmentTypeTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.employmentTypeTextBox.Location = new System.Drawing.Point(158, 273);
-            this.employmentTypeTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.employmentTypeTextBox.Name = "employmentTypeTextBox";
-            this.employmentTypeTextBox.Size = new System.Drawing.Size(189, 26);
-            this.employmentTypeTextBox.TabIndex = 17;
             // 
             // positionTextBox
             // 
@@ -242,6 +232,7 @@
             // 
             // enterUserDetailsGroupBox
             // 
+            this.enterUserDetailsGroupBox.Controls.Add(this.employmentTypeBox);
             this.enterUserDetailsGroupBox.Controls.Add(this.confirmLabel);
             this.enterUserDetailsGroupBox.Controls.Add(this.confirmBox);
             this.enterUserDetailsGroupBox.Controls.Add(this.label5);
@@ -261,7 +252,6 @@
             this.enterUserDetailsGroupBox.Controls.Add(this.birthDateLabel);
             this.enterUserDetailsGroupBox.Controls.Add(this.SINLabel);
             this.enterUserDetailsGroupBox.Controls.Add(this.resultLabel);
-            this.enterUserDetailsGroupBox.Controls.Add(this.employmentTypeTextBox);
             this.enterUserDetailsGroupBox.Controls.Add(this.positionTextBox);
             this.enterUserDetailsGroupBox.Controls.Add(this.salaryTextBox);
             this.enterUserDetailsGroupBox.Controls.Add(this.emailTextBox);
@@ -519,6 +509,15 @@
             this.topPanel.Size = new System.Drawing.Size(911, 69);
             this.topPanel.TabIndex = 16;
             // 
+            // employmentTypeBox
+            // 
+            this.employmentTypeBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.employmentTypeBox.FormattingEnabled = true;
+            this.employmentTypeBox.Location = new System.Drawing.Point(158, 273);
+            this.employmentTypeBox.Name = "employmentTypeBox";
+            this.employmentTypeBox.Size = new System.Drawing.Size(189, 27);
+            this.employmentTypeBox.TabIndex = 39;
+            // 
             // AddNewEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -540,7 +539,6 @@
         #endregion
 
         private System.Windows.Forms.Label resultLabel;
-        private System.Windows.Forms.TextBox employmentTypeTextBox;
         private System.Windows.Forms.TextBox positionTextBox;
         private System.Windows.Forms.TextBox salaryTextBox;
         private System.Windows.Forms.TextBox emailTextBox;
@@ -576,5 +574,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label confirmLabel;
         private System.Windows.Forms.TextBox confirmBox;
+        private System.Windows.Forms.ComboBox employmentTypeBox;
     }
 }
