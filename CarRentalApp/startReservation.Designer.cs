@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pBranchComboBox = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -487,29 +487,29 @@
             this.carResultDataGridView.AllowUserToDeleteRows = false;
             this.carResultDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.carResultDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.carResultDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.carResultDataGridView.DefaultCellStyle = dataGridViewCellStyle5;
             this.carResultDataGridView.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.carResultDataGridView.Location = new System.Drawing.Point(7, 26);
             this.carResultDataGridView.Margin = new System.Windows.Forms.Padding(0);
             this.carResultDataGridView.Name = "carResultDataGridView";
             this.carResultDataGridView.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.carResultDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.carResultDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.carResultDataGridView.Size = new System.Drawing.Size(794, 483);
             this.carResultDataGridView.TabIndex = 0;
             this.carResultDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.carResultDataGridView_CellClick);
@@ -529,11 +529,11 @@
             // welcomeLabel
             // 
             this.welcomeLabel.AutoSize = true;
-            this.welcomeLabel.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeLabel.Font = new System.Drawing.Font("Arial", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.welcomeLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.welcomeLabel.Location = new System.Drawing.Point(12, 9);
+            this.welcomeLabel.Location = new System.Drawing.Point(11, 11);
             this.welcomeLabel.Name = "welcomeLabel";
-            this.welcomeLabel.Size = new System.Drawing.Size(361, 46);
+            this.welcomeLabel.Size = new System.Drawing.Size(341, 44);
             this.welcomeLabel.TabIndex = 4;
             this.welcomeLabel.Text = "Car Rental Search";
             // 
@@ -726,7 +726,7 @@
             this.errorLabel.AutoSize = true;
             this.errorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.errorLabel.ForeColor = System.Drawing.Color.Red;
-            this.errorLabel.Location = new System.Drawing.Point(614, 23);
+            this.errorLabel.Location = new System.Drawing.Point(614, 26);
             this.errorLabel.Name = "errorLabel";
             this.errorLabel.Size = new System.Drawing.Size(0, 29);
             this.errorLabel.TabIndex = 30;

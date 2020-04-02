@@ -29,16 +29,21 @@ namespace CarRentalApp
                 this.User = new Customer();
                 this.User.FirstName = "Guest";
             }
-            welcomeLabel.Text = "Welcome " + User.FirstName ;
+            if (this.User.Status == "Gold")
+            {
+                welcomeLabel.ForeColor = Color.Gold;
+                welcomeLabel.Text = "★ Welcome Gold Member " + User.FirstName + " ★"; 
+            }
+            else welcomeLabel.Text = "Welcome " + User.FirstName;
             pDateTimePicker.Value = DateTime.Now;
             rDateTimePicker.Value = DateTime.Now;
-
+            
         }
         
 
         private void StartReservation_Load(object sender, EventArgs e)
         {
-
+            Console.WriteLine("Status: " + User.Status);
             con = new SqlConnection("" +
                 "Data Source=142.59.80.79,5291; " +
                 "Initial Catalog=CRA291;" +

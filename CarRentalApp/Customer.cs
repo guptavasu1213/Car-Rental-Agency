@@ -38,6 +38,7 @@ namespace CarRentalApp
 
         // password stored is hashed
         public string Password { get; set; }
+        public string Membership { get; internal set; }
 
         public Customer()
         {
