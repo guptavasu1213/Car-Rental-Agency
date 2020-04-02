@@ -16,7 +16,7 @@ namespace CarRentalApp
 
         public static string ConnectionString { get { return cString; } }
 
-        // WHERE IS THIS METHOD USED?
+        // SAME as getDataTableAfterRunningQuery()
         public static DataTable SqlQuery(string query)
         {
             SqlConnection connection = new SqlConnection(Database.ConnectionString);

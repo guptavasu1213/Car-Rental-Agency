@@ -15,31 +15,42 @@ namespace CarRentalApp
         public AddNewCar()
         {
             InitializeComponent();
-            branchNameComboBox.Items.Add("Vasu"); // Remove
-            branchNameComboBox.Items.Add("Alex"); // Remove
-            carTypeComboBox.Items.Add("Ahsan"); // Remove
-        }
 
+            // Filling branch combo box
+            string query = "select BRANCH_ID from Branch;";
+            DataTable table = Database.getDataTableAfterRunningQuery(query);
+            Common.fillComboBox(branchIDComboBox, "BRANCH_ID",  table);
+
+            // Filling TYPE_NAME combo box
+            query = "select TYPE_NAME from Type;";
+            table = Database.getDataTableAfterRunningQuery(query);
+            Common.fillComboBox(carTypeComboBox, "TYPE_NAME", table);
+        }
+        
         /*
          * When the Submit button is clicked and all entries are filled by the user, then entries are added
          * to the database
-         * //https://www.youtube.com/watch?v=cdkDHkXyVFI ---------------SHOWS HOW TO POPULATE DROP DOWN FROM THE DATABASE
          */
         private void submitButton_Click(object sender, EventArgs e)
         {
-            String carName = carNameTextBox.Text.TrimEnd();
+            String carName = fuelTypeTextBox.Text.TrimEnd();
             String make = makeTextBox.Text.TrimEnd();
             String model = modelTextBox.Text.TrimEnd(); 
-            String year = yearTextBox.Text.TrimEnd(); //MAYBE AN INTEGER FIELD
+            String year = yearTextBox.Text.TrimEnd(); 
             String vinNumber = VINTextBox.Text.TrimEnd();  
             String licensePlateNum = licensePlateTextBox.Text.TrimEnd();
-            String registrationNum = registrationTextBox.Text.TrimEnd();
             String insuranceID = insuranceIDTextBox.Text.TrimEnd();
+            String fuelType = fuelTypeTextBox.Text.TrimEnd();
+            String transmission = transmissionTextBox.Text.TrimEnd();
+            String capacity = capacityTextBox.Text.TrimEnd();
+            String inService = inServiceCheckBox.Checked.ToString();
 
             // If any text field is empty or nothing is selected in the drop down list
             if (carName == "" || make == "" || model == "" || year == "" || vinNumber == "" ||
-                licensePlateNum == "" || registrationNum == "" || insuranceID == "" || 
-                branchNameComboBox.SelectedIndex == -1 || carTypeComboBox.SelectedIndex == -1)
+                licensePlateNum == "" || insuranceID == "" || 
+                fuelType == "" || transmission == "" || capacity == "" ||
+                branchIDComboBox.SelectedIndex == -1 || carTypeComboBox.SelectedIndex == -1
+                )
             {
                 resultLabel.Text = "All fields are required";
                 resultLabel.ForeColor = Color.FromArgb(192, 0, 0); // Dark Red
@@ -52,7 +63,13 @@ namespace CarRentalApp
                 resultLabel.ForeColor = Color.FromArgb(0, 192, 0); // Dark Green
                 resultLabel.Visible = true;
 
-                // RUN THE QUERY
+                string branchID = branchIDComboBox.SelectedItem.ToString();
+                string typeName = carTypeComboBox.SelectedItem.ToString();
+
+                // Create the query
+                string query = "INSERT INTO Car(BRANCH_ID, TYPE_NAME, Make, Model, Year, VIN, License_Plate, Insurance_Policy_Number, In_Service, Fuel_Type, Transmission, Capacity) " +
+                    $"VALUES('{branchID}', '{typeName}', '{make}', '{model}', {year}, '{vinNumber}', '{licensePlateNum}', '{insuranceID}', '{inService}', '{fuelType}', '{transmission}', '{capacity}')";
+                Database.runQuery(query);
             }
         }
         /*

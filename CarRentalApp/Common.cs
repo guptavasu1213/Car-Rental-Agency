@@ -37,5 +37,16 @@ namespace CarRentalApp
             // Else: Populating the table with the query result
             else { dataGridView.DataSource = table; }
         }
+        /*
+         * Fills the comboBox with the values in the DataTable
+         */
+        public static void fillComboBox(ComboBox cb, string colName, DataTable table)
+        {
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                string val = table.Rows[i][colName].ToString();
+                cb.Items.Add(val);
+            }
+        }
     }
 }
