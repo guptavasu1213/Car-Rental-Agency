@@ -105,7 +105,7 @@ namespace CarRentalApp
 
                 int currentColIndex = vehicleTypeInfoDataGridView.CurrentCell.ColumnIndex; // Index of modified column
                 var update = vehicleTypeInfoDataGridView.CurrentCell.Value; // Value in the modified cell
-                var typeName = row.Cells["TYPE_NAME"].Value; // Value of Car ID
+                var typeName = row.Cells["TYPE_NAME"].Value; // Value of TYPE NAME
 
                 string query;
                 string queryTable = "Type"; // Table to query from

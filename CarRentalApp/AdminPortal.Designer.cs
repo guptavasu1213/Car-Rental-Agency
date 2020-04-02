@@ -48,8 +48,6 @@
             this.addNewBookingLabel = new System.Windows.Forms.Label();
             this.findBookingLabel = new System.Windows.Forms.Label();
             this.addVehicleTypeLabel = new System.Windows.Forms.Label();
-            this.updateEmployeeLabel = new System.Windows.Forms.Label();
-            this.showUsers = new System.Windows.Forms.Label();
             this.findEmployeeLabel = new System.Windows.Forms.Label();
             this.findUserLabel = new System.Windows.Forms.Label();
             this.addNewVehicleLabel = new System.Windows.Forms.Label();
@@ -59,6 +57,8 @@
             this.vehiclesLabel = new System.Windows.Forms.Label();
             this.usersLabel = new System.Windows.Forms.Label();
             this.rightHandSidePanel = new System.Windows.Forms.Panel();
+            this.updateEmployeeLabel = new System.Windows.Forms.Label();
+            this.showUsers = new System.Windows.Forms.Label();
             this.topPanel.SuspendLayout();
             this.leftSidePanel.SuspendLayout();
             this.SuspendLayout();
@@ -357,28 +357,6 @@
             this.addVehicleTypeLabel.MouseLeave += new System.EventHandler(this.addVehicleTypeLabel_MouseLeave);
             this.addVehicleTypeLabel.MouseHover += new System.EventHandler(this.addVehicleTypeLabel_MouseHover);
             // 
-            // updateEmployeeLabel
-            // 
-            this.updateEmployeeLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateEmployeeLabel.ForeColor = System.Drawing.Color.White;
-            this.updateEmployeeLabel.Location = new System.Drawing.Point(3, 240);
-            this.updateEmployeeLabel.Name = "updateEmployeeLabel";
-            this.updateEmployeeLabel.Size = new System.Drawing.Size(157, 30);
-            this.updateEmployeeLabel.TabIndex = 12;
-            this.updateEmployeeLabel.Text = "<>";
-            this.updateEmployeeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // showUsers
-            // 
-            this.showUsers.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.showUsers.ForeColor = System.Drawing.Color.White;
-            this.showUsers.Location = new System.Drawing.Point(3, 102);
-            this.showUsers.Name = "showUsers";
-            this.showUsers.Size = new System.Drawing.Size(157, 30);
-            this.showUsers.TabIndex = 11;
-            this.showUsers.Text = "<>";
-            this.showUsers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // findEmployeeLabel
             // 
             this.findEmployeeLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -489,6 +467,28 @@
             this.rightHandSidePanel.Size = new System.Drawing.Size(1717, 868);
             this.rightHandSidePanel.TabIndex = 2;
             // 
+            // updateEmployeeLabel
+            // 
+            this.updateEmployeeLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateEmployeeLabel.ForeColor = System.Drawing.Color.White;
+            this.updateEmployeeLabel.Location = new System.Drawing.Point(3, 240);
+            this.updateEmployeeLabel.Name = "updateEmployeeLabel";
+            this.updateEmployeeLabel.Size = new System.Drawing.Size(157, 30);
+            this.updateEmployeeLabel.TabIndex = 12;
+            this.updateEmployeeLabel.Text = "<>";
+            this.updateEmployeeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // showUsers
+            // 
+            this.showUsers.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.showUsers.ForeColor = System.Drawing.Color.White;
+            this.showUsers.Location = new System.Drawing.Point(3, 102);
+            this.showUsers.Name = "showUsers";
+            this.showUsers.Size = new System.Drawing.Size(157, 30);
+            this.showUsers.TabIndex = 11;
+            this.showUsers.Text = "<>";
+            this.showUsers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // AdminPortal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -526,8 +526,6 @@
         private System.Windows.Forms.Label addNewBookingLabel;
         private System.Windows.Forms.Label findBookingLabel;
         private System.Windows.Forms.Label addVehicleTypeLabel;
-        private System.Windows.Forms.Label updateEmployeeLabel;
-        private System.Windows.Forms.Label showUsers;
         private System.Windows.Forms.Label findEmployeeLabel;
         private System.Windows.Forms.Label findVehicleLabel;
         private System.Windows.Forms.Label findUserLabel;
@@ -543,5 +541,7 @@
         private System.Windows.Forms.Panel rightHandSidePanel;
         private System.Windows.Forms.Button logoutButton;
         private System.Windows.Forms.Label findVehicleTypeLabel;
+        private System.Windows.Forms.Label updateEmployeeLabel;
+        private System.Windows.Forms.Label showUsers;
     }
 }
