@@ -19,6 +19,7 @@ namespace CarRentalApp
         SqlCommand cmd;
         SqlDataReader dr;
         Customer User;
+        int carID = 0;
 
         public StartReservation(Customer cx)
         {
@@ -32,14 +33,14 @@ namespace CarRentalApp
             if (this.User.Status == "Gold")
             {
                 welcomeLabel.ForeColor = Color.Gold;
-                welcomeLabel.Text = "★ Welcome Gold Member " + User.FirstName + " ★"; 
+                welcomeLabel.Text = "★ Welcome Gold Member " + User.FirstName + " ★";
             }
             else welcomeLabel.Text = "Welcome " + User.FirstName;
             pDateTimePicker.Value = DateTime.Now;
             rDateTimePicker.Value = DateTime.Now;
-            
+
         }
-        
+
 
         private void StartReservation_Load(object sender, EventArgs e)
         {
@@ -505,7 +506,7 @@ namespace CarRentalApp
                 con.Open();
 
                 string sqlstring = "" +
-                    "SELECT TYPE_NAME as 'Type', Make, Model, Year, Fuel_Type as 'Fuel', Transmission, Capacity " +
+                    "SELECT CAR_ID as 'Car #', TYPE_NAME as 'Type', Make, Model, Year, Fuel_Type as 'Fuel', Transmission, Capacity " +
                     "FROM Branch, Car " +
                     "WHERE Branch.BRANCH_ID = Car.BRANCH_ID " +
                     "and Branch.Name = " + "'" + pBranchComboBox.Text + "' " +
@@ -527,9 +528,9 @@ namespace CarRentalApp
 
         private void resetButton_Click(object sender, EventArgs e)
         {
-           StartReservation NewForm = new StartReservation(User);
-           NewForm.Show();
-           this.Dispose(false);
+            StartReservation NewForm = new StartReservation(User);
+            NewForm.Show();
+            this.Dispose(false);
         }
 
         private void carResultDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -540,10 +541,12 @@ namespace CarRentalApp
             double dailyRate = 0;
             double weeklyRate = 0;
             double monthyRate = 0;
+            double differentBranchFee = 29.99;
 
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = carResultDataGridView.Rows[e.RowIndex];
+                carID = Convert.ToInt32(row.Cells["Car #"].Value);
                 rentalType = row.Cells["Type"].Value.ToString();
 
                 con = new SqlConnection("" +
@@ -596,8 +599,7 @@ namespace CarRentalApp
 
                 // displaying the rental summary here
 
-                infoLabel.Text =
-                row.Cells["Year"].Value.ToString() + " "
+                string summary = row.Cells["Year"].Value.ToString() + " "
                 + row.Cells["Make"].Value.ToString() + " "
                 + row.Cells["Model"].Value.ToString() + " ("
                 + row.Cells["Type"].Value.ToString() + "/"
@@ -608,8 +610,18 @@ namespace CarRentalApp
                 + " — " + rDateTimePicker.Value.ToString("dddd, MMMM d, yyyy") + "\n"
                 + "Breakdown: " + rentalTime.Days + " Days ==> " + rentalMonths + " Months + ($" + rentalMonths * monthyRate + ") + "
                 + rentalWeeks + " Weeks ($" + rentalWeeks * weeklyRate + ") + "
-                + rentalDays + " Days ($" + rentalDays * dailyRate + ")\n"
-                + "Total: $" + rentalCost;
+                + rentalDays + " Days ($" + rentalDays * dailyRate + ")\n";
+
+                double rentalSubtotal = rentalCost;
+
+                if (rBranchComboBox.Text != pBranchComboBox.Text && User.Status != "Gold")
+                {
+                    rentalCost += differentBranchFee;
+                    infoLabel.Text = summary
+                        + "Subtotal: $" + rentalSubtotal
+                        + " + Additional Fee for Different Branch Return: $" + differentBranchFee + " = Total: " + rentalCost;
+                }
+                else infoLabel.Text = summary + "Total: " + rentalCost;
             }
 
         }
@@ -731,6 +743,13 @@ namespace CarRentalApp
             carResultDataGridView.DataSource = null;
             infoLabel.Text = "Waiting for Selection...";
             errorLabel.Text = "";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            infoLabel.Text = "cuID:" + User.ID.ToString() + " caID: " + carID;
+
         }
     }
 }
