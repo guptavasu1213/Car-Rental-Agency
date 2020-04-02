@@ -22,28 +22,28 @@ namespace CarRentalApp
          */
         private void submitButton_Click(object sender, EventArgs e)
         {
+            resultLabel.Visible = true;
+            String carType = carTypeNameTextBox.Text;
+            String dailyFee = dailyFeeTextBox.Text;
+            String weeklyFee = weeklyFeeTextBox.Text;
+            String monthlyFee = monthlyFeeTextBox.Text;
+
             // Check to ensure all the fields have text
-            if (carTypeNameTextBox.Text == "" || dailyFeeTextBox.Text == "" || 
-                weeklyFeeTextBox.Text == "" || monthlyFeeTextBox.Text == "" )
+            if (carType == "" || dailyFee == "" || weeklyFee == "" || monthlyFee == "" )
             {
                 resultLabel.Text = "All fields are required";
-                resultLabel.ForeColor = Color.FromArgb(192, 0, 0); // dark red
-                resultLabel.Visible = true;
+                resultLabel.ForeColor = Color.FromArgb(192, 0, 0); // dark red                
             }
             else
             {
-                String carType = carTypeNameTextBox.Text;
-                Double dailyFee = Convert.ToDouble(dailyFeeTextBox.Text);
-                Double weeklyFee = Convert.ToDouble(weeklyFeeTextBox.Text);
-                Double monthlyFee = Convert.ToDouble(monthlyFeeTextBox.Text);
-
                 resultLabel.Text = "Added successfully to the database!";
                 resultLabel.ForeColor = Color.FromArgb(0, 192, 0); // Dark Green
-                resultLabel.Visible = true;
 
-                // RUN THE QUERY
+                // Create the query
+                string query = "INSERT INTO Type(TYPE_NAME, Daily_Fee, Weekly_Fee, Monthly_Fee) " +
+                    $"VALUES('{carType}', '{dailyFee}', '{weeklyFee}', '{monthlyFee}')";
+                Database.runQuery(query);
             }
-
         }
         /*
          * The function checks if the user entered value is a number (integer, or a float).

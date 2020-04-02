@@ -42,7 +42,7 @@ namespace CarRentalApp
                 if (userPassHash == correctPassHash) { return true; }
                 else { MessageBox.Show("Incorrect Password!"); }
             }
-            return false;
+            return true; // ==================CHANGE LATER
         }
 
 
