@@ -77,6 +77,7 @@ namespace CarRentalApp
                     resultLabel.Text = "Added new Employee successfully to the database!";
                     resultLabel.ForeColor = Color.FromArgb(0, 192, 0); // Dark Green
                     resultLabel.Visible = true;
+                    CleanForm();
                 }
             }
             catch (Exception ex)
@@ -114,6 +115,22 @@ namespace CarRentalApp
                 e.Handled = true;
             }
 
+        }
+
+        private void CleanForm()
+        {
+            Action<Control.ControlCollection> func = null;
+
+            func = (controls) =>
+            {
+                foreach (Control control in controls)
+                    if (control is TextBox)
+                        (control as TextBox).Clear();
+                    else
+                        func(control.Controls);
+            };
+
+            func(Controls);
         }
     }
 }

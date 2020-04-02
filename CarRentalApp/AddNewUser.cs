@@ -30,6 +30,22 @@ namespace CarRentalApp
             }
         }
 
+        private void CleanForm()
+        {
+            Action<Control.ControlCollection> func = null;
+
+            func = (controls) =>
+            {
+                foreach (Control control in controls)
+                    if (control is TextBox)
+                        (control as TextBox).Clear();
+                    else
+                        func(control.Controls);
+            };
+
+            func(Controls);
+        }
+
         /*
          * When the Submit button is clicked and all entries are filled by the user, then entries are added
          * to the database
@@ -68,6 +84,7 @@ namespace CarRentalApp
                     resultLabel.Text = "Added successfully to the database!";
                     resultLabel.ForeColor = Color.FromArgb(0, 192, 0); // Dark Green
                     resultLabel.Visible = true;
+                    CleanForm();
                 }
             }
         }
