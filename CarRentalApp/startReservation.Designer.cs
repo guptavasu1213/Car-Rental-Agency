@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pBranchComboBox = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -38,33 +38,34 @@
             this.label13 = new System.Windows.Forms.Label();
             this.pProvinceComboBox = new System.Windows.Forms.ComboBox();
             this.pCountryComboBox = new System.Windows.Forms.ComboBox();
-            this.dDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.pDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBox14 = new System.Windows.Forms.CheckBox();
-            this.checkBox12 = new System.Windows.Forms.CheckBox();
-            this.checkBox13 = new System.Windows.Forms.CheckBox();
+            this.hatchbackCheckBox = new System.Windows.Forms.CheckBox();
+            this.electricCheckBox = new System.Windows.Forms.CheckBox();
+            this.dieselCheckBox = new System.Windows.Forms.CheckBox();
+            this.gasolineCheckBox = new System.Windows.Forms.CheckBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.checkBox11 = new System.Windows.Forms.CheckBox();
-            this.checkBox10 = new System.Windows.Forms.CheckBox();
+            this.manualCheckBox = new System.Windows.Forms.CheckBox();
+            this.automaticCheckBox = new System.Windows.Forms.CheckBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.eightCheckBox = new System.Windows.Forms.CheckBox();
+            this.sevenCheckBox = new System.Windows.Forms.CheckBox();
+            this.fiveCheckBox = new System.Windows.Forms.CheckBox();
+            this.fourCheckBox = new System.Windows.Forms.CheckBox();
+            this.twoCheckBox = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.minivanCheckBox = new System.Windows.Forms.CheckBox();
+            this.coupeCheckBox = new System.Windows.Forms.CheckBox();
+            this.suvCheckBox = new System.Windows.Forms.CheckBox();
+            this.sedanCheckBox = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.carResultDataGridView = new System.Windows.Forms.DataGridView();
             this.searchButton = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
+            this.welcomeLabel = new System.Windows.Forms.Label();
             this.resetButton = new System.Windows.Forms.Button();
             this.cRA291DataSet = new CarRentalApp.CRA291DataSet();
             this.carBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -83,6 +84,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.infoLabel = new System.Windows.Forms.Label();
+            this.errorLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -101,7 +103,7 @@
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.pProvinceComboBox);
             this.groupBox1.Controls.Add(this.pCountryComboBox);
-            this.groupBox1.Controls.Add(this.dDateTimePicker);
+            this.groupBox1.Controls.Add(this.pDateTimePicker);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label1);
@@ -175,15 +177,16 @@
             this.pCountryComboBox.TabIndex = 11;
             this.pCountryComboBox.SelectedIndexChanged += new System.EventHandler(this.pCountryComboBoxIndexChanged);
             // 
-            // dDateTimePicker
+            // pDateTimePicker
             // 
-            this.dDateTimePicker.CustomFormat = "dd/MM/yyyy hh:ss tt";
-            this.dDateTimePicker.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dDateTimePicker.Location = new System.Drawing.Point(18, 265);
-            this.dDateTimePicker.Name = "dDateTimePicker";
-            this.dDateTimePicker.Size = new System.Drawing.Size(260, 22);
-            this.dDateTimePicker.TabIndex = 6;
+            this.pDateTimePicker.CustomFormat = "dd/MM/yyyy hh:ss tt";
+            this.pDateTimePicker.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.pDateTimePicker.Location = new System.Drawing.Point(18, 265);
+            this.pDateTimePicker.Name = "pDateTimePicker";
+            this.pDateTimePicker.Size = new System.Drawing.Size(260, 22);
+            this.pDateTimePicker.TabIndex = 6;
+            this.pDateTimePicker.ValueChanged += new System.EventHandler(this.dDateTimePicker_ValueChanged);
             // 
             // label2
             // 
@@ -201,9 +204,9 @@
             this.label3.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(18, 244);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 16);
+            this.label3.Size = new System.Drawing.Size(158, 16);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Pickup Time";
+            this.label3.Text = "Pickup Date and Time";
             // 
             // label1
             // 
@@ -218,23 +221,24 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.checkBox14);
-            this.groupBox2.Controls.Add(this.checkBox12);
-            this.groupBox2.Controls.Add(this.checkBox13);
+            this.groupBox2.Controls.Add(this.hatchbackCheckBox);
+            this.groupBox2.Controls.Add(this.electricCheckBox);
+            this.groupBox2.Controls.Add(this.dieselCheckBox);
+            this.groupBox2.Controls.Add(this.gasolineCheckBox);
             this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.checkBox11);
-            this.groupBox2.Controls.Add(this.checkBox10);
+            this.groupBox2.Controls.Add(this.manualCheckBox);
+            this.groupBox2.Controls.Add(this.automaticCheckBox);
             this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.checkBox9);
-            this.groupBox2.Controls.Add(this.checkBox8);
-            this.groupBox2.Controls.Add(this.checkBox7);
-            this.groupBox2.Controls.Add(this.checkBox6);
-            this.groupBox2.Controls.Add(this.checkBox5);
+            this.groupBox2.Controls.Add(this.eightCheckBox);
+            this.groupBox2.Controls.Add(this.sevenCheckBox);
+            this.groupBox2.Controls.Add(this.fiveCheckBox);
+            this.groupBox2.Controls.Add(this.fourCheckBox);
+            this.groupBox2.Controls.Add(this.twoCheckBox);
             this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.checkBox4);
-            this.groupBox2.Controls.Add(this.checkBox3);
-            this.groupBox2.Controls.Add(this.checkBox2);
-            this.groupBox2.Controls.Add(this.checkBox1);
+            this.groupBox2.Controls.Add(this.minivanCheckBox);
+            this.groupBox2.Controls.Add(this.coupeCheckBox);
+            this.groupBox2.Controls.Add(this.suvCheckBox);
+            this.groupBox2.Controls.Add(this.sedanCheckBox);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.AliceBlue;
@@ -245,38 +249,53 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Vehicle Information";
             // 
-            // checkBox14
+            // hatchbackCheckBox
             // 
-            this.checkBox14.AutoSize = true;
-            this.checkBox14.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox14.Location = new System.Drawing.Point(302, 167);
-            this.checkBox14.Name = "checkBox14";
-            this.checkBox14.Size = new System.Drawing.Size(73, 20);
-            this.checkBox14.TabIndex = 28;
-            this.checkBox14.Text = "Electric";
-            this.checkBox14.UseVisualStyleBackColor = true;
+            this.hatchbackCheckBox.AutoSize = true;
+            this.hatchbackCheckBox.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hatchbackCheckBox.Location = new System.Drawing.Point(399, 57);
+            this.hatchbackCheckBox.Name = "hatchbackCheckBox";
+            this.hatchbackCheckBox.Size = new System.Drawing.Size(93, 20);
+            this.hatchbackCheckBox.TabIndex = 29;
+            this.hatchbackCheckBox.Text = "Hatchback";
+            this.hatchbackCheckBox.UseVisualStyleBackColor = true;
+            this.hatchbackCheckBox.CheckedChanged += new System.EventHandler(this.hatchbackCheckBox_CheckedChanged);
             // 
-            // checkBox12
+            // electricCheckBox
             // 
-            this.checkBox12.AutoSize = true;
-            this.checkBox12.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox12.Location = new System.Drawing.Point(170, 167);
-            this.checkBox12.Name = "checkBox12";
-            this.checkBox12.Size = new System.Drawing.Size(66, 20);
-            this.checkBox12.TabIndex = 27;
-            this.checkBox12.Text = "Diesel";
-            this.checkBox12.UseVisualStyleBackColor = true;
+            this.electricCheckBox.AutoSize = true;
+            this.electricCheckBox.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.electricCheckBox.Location = new System.Drawing.Point(302, 167);
+            this.electricCheckBox.Name = "electricCheckBox";
+            this.electricCheckBox.Size = new System.Drawing.Size(73, 20);
+            this.electricCheckBox.TabIndex = 28;
+            this.electricCheckBox.Text = "Electric";
+            this.electricCheckBox.UseVisualStyleBackColor = true;
+            this.electricCheckBox.CheckedChanged += new System.EventHandler(this.electricCheckBox_CheckedChanged);
             // 
-            // checkBox13
+            // dieselCheckBox
             // 
-            this.checkBox13.AutoSize = true;
-            this.checkBox13.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox13.Location = new System.Drawing.Point(21, 167);
-            this.checkBox13.Name = "checkBox13";
-            this.checkBox13.Size = new System.Drawing.Size(83, 20);
-            this.checkBox13.TabIndex = 26;
-            this.checkBox13.Text = "Gasoline";
-            this.checkBox13.UseVisualStyleBackColor = true;
+            this.dieselCheckBox.AutoSize = true;
+            this.dieselCheckBox.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dieselCheckBox.Location = new System.Drawing.Point(161, 167);
+            this.dieselCheckBox.Name = "dieselCheckBox";
+            this.dieselCheckBox.Size = new System.Drawing.Size(66, 20);
+            this.dieselCheckBox.TabIndex = 27;
+            this.dieselCheckBox.Text = "Diesel";
+            this.dieselCheckBox.UseVisualStyleBackColor = true;
+            this.dieselCheckBox.CheckedChanged += new System.EventHandler(this.dieselCheckBox_CheckedChanged);
+            // 
+            // gasolineCheckBox
+            // 
+            this.gasolineCheckBox.AutoSize = true;
+            this.gasolineCheckBox.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gasolineCheckBox.Location = new System.Drawing.Point(21, 167);
+            this.gasolineCheckBox.Name = "gasolineCheckBox";
+            this.gasolineCheckBox.Size = new System.Drawing.Size(83, 20);
+            this.gasolineCheckBox.TabIndex = 26;
+            this.gasolineCheckBox.Text = "Gasoline";
+            this.gasolineCheckBox.UseVisualStyleBackColor = true;
+            this.gasolineCheckBox.CheckedChanged += new System.EventHandler(this.gasolineCheckBox_CheckedChanged);
             // 
             // label18
             // 
@@ -288,27 +307,29 @@
             this.label18.TabIndex = 25;
             this.label18.Text = "Fuel Type";
             // 
-            // checkBox11
+            // manualCheckBox
             // 
-            this.checkBox11.AutoSize = true;
-            this.checkBox11.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox11.Location = new System.Drawing.Point(161, 221);
-            this.checkBox11.Name = "checkBox11";
-            this.checkBox11.Size = new System.Drawing.Size(73, 20);
-            this.checkBox11.TabIndex = 24;
-            this.checkBox11.Text = "Manual";
-            this.checkBox11.UseVisualStyleBackColor = true;
+            this.manualCheckBox.AutoSize = true;
+            this.manualCheckBox.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manualCheckBox.Location = new System.Drawing.Point(161, 221);
+            this.manualCheckBox.Name = "manualCheckBox";
+            this.manualCheckBox.Size = new System.Drawing.Size(73, 20);
+            this.manualCheckBox.TabIndex = 24;
+            this.manualCheckBox.Text = "Manual";
+            this.manualCheckBox.UseVisualStyleBackColor = true;
+            this.manualCheckBox.CheckedChanged += new System.EventHandler(this.manualCheckBox_CheckedChanged);
             // 
-            // checkBox10
+            // automaticCheckBox
             // 
-            this.checkBox10.AutoSize = true;
-            this.checkBox10.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox10.Location = new System.Drawing.Point(21, 221);
-            this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(89, 20);
-            this.checkBox10.TabIndex = 23;
-            this.checkBox10.Text = "Automatic";
-            this.checkBox10.UseVisualStyleBackColor = true;
+            this.automaticCheckBox.AutoSize = true;
+            this.automaticCheckBox.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.automaticCheckBox.Location = new System.Drawing.Point(21, 221);
+            this.automaticCheckBox.Name = "automaticCheckBox";
+            this.automaticCheckBox.Size = new System.Drawing.Size(89, 20);
+            this.automaticCheckBox.TabIndex = 23;
+            this.automaticCheckBox.Text = "Automatic";
+            this.automaticCheckBox.UseVisualStyleBackColor = true;
+            this.automaticCheckBox.CheckedChanged += new System.EventHandler(this.automaticCheckBox_CheckedChanged);
             // 
             // label17
             // 
@@ -320,60 +341,65 @@
             this.label17.TabIndex = 22;
             this.label17.Text = "Transmission";
             // 
-            // checkBox9
+            // eightCheckBox
             // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox9.Location = new System.Drawing.Point(301, 113);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(35, 20);
-            this.checkBox9.TabIndex = 21;
-            this.checkBox9.Text = "8";
-            this.checkBox9.UseVisualStyleBackColor = true;
+            this.eightCheckBox.AutoSize = true;
+            this.eightCheckBox.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eightCheckBox.Location = new System.Drawing.Point(301, 113);
+            this.eightCheckBox.Name = "eightCheckBox";
+            this.eightCheckBox.Size = new System.Drawing.Size(35, 20);
+            this.eightCheckBox.TabIndex = 21;
+            this.eightCheckBox.Text = "8";
+            this.eightCheckBox.UseVisualStyleBackColor = true;
+            this.eightCheckBox.CheckedChanged += new System.EventHandler(this.eightCheckBox_CheckedChanged);
             // 
-            // checkBox8
+            // sevenCheckBox
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox8.Location = new System.Drawing.Point(231, 113);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(35, 20);
-            this.checkBox8.TabIndex = 20;
-            this.checkBox8.Text = "7";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.sevenCheckBox.AutoSize = true;
+            this.sevenCheckBox.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sevenCheckBox.Location = new System.Drawing.Point(231, 113);
+            this.sevenCheckBox.Name = "sevenCheckBox";
+            this.sevenCheckBox.Size = new System.Drawing.Size(35, 20);
+            this.sevenCheckBox.TabIndex = 20;
+            this.sevenCheckBox.Text = "7";
+            this.sevenCheckBox.UseVisualStyleBackColor = true;
+            this.sevenCheckBox.CheckedChanged += new System.EventHandler(this.sevenCheckBox_CheckedChanged);
             // 
-            // checkBox7
+            // fiveCheckBox
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox7.Location = new System.Drawing.Point(161, 113);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(35, 20);
-            this.checkBox7.TabIndex = 19;
-            this.checkBox7.Text = "5";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.fiveCheckBox.AutoSize = true;
+            this.fiveCheckBox.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fiveCheckBox.Location = new System.Drawing.Point(161, 113);
+            this.fiveCheckBox.Name = "fiveCheckBox";
+            this.fiveCheckBox.Size = new System.Drawing.Size(35, 20);
+            this.fiveCheckBox.TabIndex = 19;
+            this.fiveCheckBox.Text = "5";
+            this.fiveCheckBox.UseVisualStyleBackColor = true;
+            this.fiveCheckBox.CheckedChanged += new System.EventHandler(this.fiveCheckBox_CheckedChanged);
             // 
-            // checkBox6
+            // fourCheckBox
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox6.Location = new System.Drawing.Point(91, 113);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(35, 20);
-            this.checkBox6.TabIndex = 18;
-            this.checkBox6.Text = "4";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.fourCheckBox.AutoSize = true;
+            this.fourCheckBox.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fourCheckBox.Location = new System.Drawing.Point(91, 113);
+            this.fourCheckBox.Name = "fourCheckBox";
+            this.fourCheckBox.Size = new System.Drawing.Size(35, 20);
+            this.fourCheckBox.TabIndex = 18;
+            this.fourCheckBox.Text = "4";
+            this.fourCheckBox.UseVisualStyleBackColor = true;
+            this.fourCheckBox.CheckedChanged += new System.EventHandler(this.fourCheckBox_CheckedChanged);
             // 
-            // checkBox5
+            // twoCheckBox
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox5.Location = new System.Drawing.Point(21, 113);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(35, 20);
-            this.checkBox5.TabIndex = 17;
-            this.checkBox5.Text = "2";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.twoCheckBox.AutoSize = true;
+            this.twoCheckBox.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.twoCheckBox.Location = new System.Drawing.Point(21, 113);
+            this.twoCheckBox.Name = "twoCheckBox";
+            this.twoCheckBox.Size = new System.Drawing.Size(35, 20);
+            this.twoCheckBox.TabIndex = 17;
+            this.twoCheckBox.Text = "2";
+            this.twoCheckBox.UseVisualStyleBackColor = true;
+            this.twoCheckBox.CheckedChanged += new System.EventHandler(this.twoCheckBox_CheckedChanged);
             // 
             // label8
             // 
@@ -385,49 +411,53 @@
             this.label8.TabIndex = 16;
             this.label8.Text = "Passenger Capacity";
             // 
-            // checkBox4
+            // minivanCheckBox
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox4.Location = new System.Drawing.Point(302, 57);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(75, 20);
-            this.checkBox4.TabIndex = 15;
-            this.checkBox4.Text = "Minivan";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.minivanCheckBox.AutoSize = true;
+            this.minivanCheckBox.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minivanCheckBox.Location = new System.Drawing.Point(302, 57);
+            this.minivanCheckBox.Name = "minivanCheckBox";
+            this.minivanCheckBox.Size = new System.Drawing.Size(75, 20);
+            this.minivanCheckBox.TabIndex = 15;
+            this.minivanCheckBox.Text = "Minivan";
+            this.minivanCheckBox.UseVisualStyleBackColor = true;
+            this.minivanCheckBox.CheckedChanged += new System.EventHandler(this.minivanCheckBox_CheckedChanged);
             // 
-            // checkBox3
+            // coupeCheckBox
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox3.Location = new System.Drawing.Point(119, 57);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(69, 20);
-            this.checkBox3.TabIndex = 14;
-            this.checkBox3.Text = "Coupe";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.coupeCheckBox.AutoSize = true;
+            this.coupeCheckBox.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.coupeCheckBox.Location = new System.Drawing.Point(119, 57);
+            this.coupeCheckBox.Name = "coupeCheckBox";
+            this.coupeCheckBox.Size = new System.Drawing.Size(69, 20);
+            this.coupeCheckBox.TabIndex = 14;
+            this.coupeCheckBox.Text = "Coupe";
+            this.coupeCheckBox.UseVisualStyleBackColor = true;
+            this.coupeCheckBox.CheckedChanged += new System.EventHandler(this.coupeCheckBox_CheckedChanged);
             // 
-            // checkBox2
+            // suvCheckBox
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(218, 57);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(54, 20);
-            this.checkBox2.TabIndex = 13;
-            this.checkBox2.Text = "SUV";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.suvCheckBox.AutoSize = true;
+            this.suvCheckBox.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.suvCheckBox.Location = new System.Drawing.Point(218, 57);
+            this.suvCheckBox.Name = "suvCheckBox";
+            this.suvCheckBox.Size = new System.Drawing.Size(54, 20);
+            this.suvCheckBox.TabIndex = 13;
+            this.suvCheckBox.Text = "SUV";
+            this.suvCheckBox.UseVisualStyleBackColor = true;
+            this.suvCheckBox.CheckedChanged += new System.EventHandler(this.suvCheckBox_CheckedChanged);
             // 
-            // checkBox1
+            // sedanCheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(21, 59);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(68, 20);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.Text = "Sedan";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.sedanCheckBox.AutoSize = true;
+            this.sedanCheckBox.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sedanCheckBox.Location = new System.Drawing.Point(21, 59);
+            this.sedanCheckBox.Name = "sedanCheckBox";
+            this.sedanCheckBox.Size = new System.Drawing.Size(68, 20);
+            this.sedanCheckBox.TabIndex = 12;
+            this.sedanCheckBox.Text = "Sedan";
+            this.sedanCheckBox.UseVisualStyleBackColor = true;
+            this.sedanCheckBox.CheckedChanged += new System.EventHandler(this.sedanCheckBox_CheckedChanged);
             // 
             // label7
             // 
@@ -457,29 +487,29 @@
             this.carResultDataGridView.AllowUserToDeleteRows = false;
             this.carResultDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.carResultDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.AliceBlue;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.carResultDataGridView.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.AliceBlue;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.carResultDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.carResultDataGridView.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.carResultDataGridView.Location = new System.Drawing.Point(7, 26);
             this.carResultDataGridView.Margin = new System.Windows.Forms.Padding(0);
             this.carResultDataGridView.Name = "carResultDataGridView";
             this.carResultDataGridView.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.carResultDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.carResultDataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.carResultDataGridView.Size = new System.Drawing.Size(794, 483);
             this.carResultDataGridView.TabIndex = 0;
             this.carResultDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.carResultDataGridView_CellClick);
@@ -496,16 +526,16 @@
             this.searchButton.UseVisualStyleBackColor = true;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
-            // label9
+            // welcomeLabel
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(12, 9);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(361, 46);
-            this.label9.TabIndex = 4;
-            this.label9.Text = "Car Rental Search";
+            this.welcomeLabel.AutoSize = true;
+            this.welcomeLabel.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.welcomeLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.welcomeLabel.Location = new System.Drawing.Point(12, 9);
+            this.welcomeLabel.Name = "welcomeLabel";
+            this.welcomeLabel.Size = new System.Drawing.Size(361, 46);
+            this.welcomeLabel.TabIndex = 4;
+            this.welcomeLabel.Text = "Car Rental Search";
             // 
             // resetButton
             // 
@@ -515,7 +545,7 @@
             this.resetButton.Name = "resetButton";
             this.resetButton.Size = new System.Drawing.Size(291, 40);
             this.resetButton.TabIndex = 12;
-            this.resetButton.Text = "Start Over";
+            this.resetButton.Text = "New Search";
             this.resetButton.UseVisualStyleBackColor = true;
             this.resetButton.Click += new System.EventHandler(this.resetButton_Click);
             // 
@@ -624,7 +654,7 @@
             this.rDateTimePicker.Name = "rDateTimePicker";
             this.rDateTimePicker.Size = new System.Drawing.Size(258, 22);
             this.rDateTimePicker.TabIndex = 7;
-            this.rDateTimePicker.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
+            this.rDateTimePicker.ValueChanged += new System.EventHandler(this.rDateTimePicker_ValueChanged);
             // 
             // label11
             // 
@@ -632,9 +662,9 @@
             this.label11.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(18, 244);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(93, 16);
+            this.label11.Size = new System.Drawing.Size(159, 16);
             this.label11.TabIndex = 3;
-            this.label11.Text = "Return Time";
+            this.label11.Text = "Return Date and Time";
             // 
             // label12
             // 
@@ -685,11 +715,21 @@
             this.infoLabel.AutoSize = true;
             this.infoLabel.BackColor = System.Drawing.Color.Black;
             this.infoLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.infoLabel.Location = new System.Drawing.Point(6, 22);
+            this.infoLabel.Location = new System.Drawing.Point(6, 19);
             this.infoLabel.Name = "infoLabel";
             this.infoLabel.Size = new System.Drawing.Size(163, 18);
             this.infoLabel.TabIndex = 0;
             this.infoLabel.Text = "Waiting for Selection...";
+            // 
+            // errorLabel
+            // 
+            this.errorLabel.AutoSize = true;
+            this.errorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorLabel.ForeColor = System.Drawing.Color.Red;
+            this.errorLabel.Location = new System.Drawing.Point(614, 23);
+            this.errorLabel.Name = "errorLabel";
+            this.errorLabel.Size = new System.Drawing.Size(0, 29);
+            this.errorLabel.TabIndex = 30;
             // 
             // StartReservation
             // 
@@ -697,12 +737,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1430, 698);
+            this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.resetButton);
             this.Controls.Add(this.searchButton);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.welcomeLabel);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -732,22 +773,22 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dDateTimePicker;
+        private System.Windows.Forms.DateTimePicker pDateTimePicker;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox minivanCheckBox;
+        private System.Windows.Forms.CheckBox coupeCheckBox;
+        private System.Windows.Forms.CheckBox suvCheckBox;
+        private System.Windows.Forms.CheckBox sedanCheckBox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox twoCheckBox;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox fourCheckBox;
+        private System.Windows.Forms.CheckBox eightCheckBox;
+        private System.Windows.Forms.CheckBox sevenCheckBox;
+        private System.Windows.Forms.CheckBox fiveCheckBox;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button searchButton;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label welcomeLabel;
         private System.Windows.Forms.Button resetButton;
         private CRA291DataSet cRA291DataSet;
         private System.Windows.Forms.BindingSource carBindingSource;
@@ -769,16 +810,18 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.CheckBox checkBox12;
-        private System.Windows.Forms.CheckBox checkBox13;
+        private System.Windows.Forms.CheckBox dieselCheckBox;
+        private System.Windows.Forms.CheckBox gasolineCheckBox;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.CheckBox checkBox11;
-        private System.Windows.Forms.CheckBox checkBox10;
+        private System.Windows.Forms.CheckBox manualCheckBox;
+        private System.Windows.Forms.CheckBox automaticCheckBox;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.CheckBox checkBox14;
+        private System.Windows.Forms.CheckBox electricCheckBox;
         private System.Windows.Forms.DataGridView carResultDataGridView;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label infoLabel;
+        private System.Windows.Forms.Label errorLabel;
+        private System.Windows.Forms.CheckBox hatchbackCheckBox;
     }
 }
