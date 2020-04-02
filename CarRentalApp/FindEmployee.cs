@@ -17,7 +17,7 @@ namespace CarRentalApp
             InitializeComponent();
         }
         /*
-         * Allowing only numerical values for for numeric fields
+         * Allowing only numerical values for for numeric fields (integer like only)
          */
         private void numericTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
