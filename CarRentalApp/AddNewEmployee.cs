@@ -24,6 +24,8 @@ namespace CarRentalApp
             dateOfBirthPicker.MinDate = new DateTime(1900, 1, 1);
             dateOfBirthPicker.MaxDate = new DateTime(2002, 1, 1);
             dateOfBirthPicker.Value = new DateTime(1990, 1, 1);
+            passwordBox.UseSystemPasswordChar = true;
+            confirmBox.UseSystemPasswordChar = true;
         }
 
         /*
