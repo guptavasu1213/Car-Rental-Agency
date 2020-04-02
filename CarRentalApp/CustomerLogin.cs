@@ -29,9 +29,9 @@ namespace CarRentalApp
             newCxButton.Location = new Point(newCxLabel.Location.X, newCxButton.Location.Y);
             vSeparator1.Location = new Point(third+10, vSeparator1.Location.Y);
 
-            BDay.MinDate = new DateTime(1 / 1 / 1900);
-            BDay.MaxDate = new DateTime(1 / 1 / 2002);
-            BDay.Value = new DateTime(1 / 1 / 1990);
+            BDay.MinDate = new DateTime(1900, 1, 1);
+            BDay.MaxDate = new DateTime(2002, 1, 1);
+            BDay.Value = new DateTime(1990, 1, 1);
 
             hintColor = inputEmail.ForeColor;
         }
