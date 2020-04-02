@@ -74,7 +74,7 @@
             this.resultLabel.AutoSize = true;
             this.resultLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.resultLabel.Location = new System.Drawing.Point(14, 446);
+            this.resultLabel.Location = new System.Drawing.Point(89, 349);
             this.resultLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.resultLabel.Name = "resultLabel";
             this.resultLabel.Size = new System.Drawing.Size(0, 19);
