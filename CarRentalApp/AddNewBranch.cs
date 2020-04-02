@@ -29,10 +29,11 @@ namespace CarRentalApp
             String province = provinceTextBox.Text.TrimEnd(); //MAYBE AN INTEGER FIELD
             String country = countryTextBox.Text.TrimEnd();
             String phoneNumber = phoneNumberTextBox.Text.TrimEnd();
+            String email = emailTextBox.Text.TrimEnd();
 
             // Check to ensure all the fields have text
             if (branchName == "" || streetAddress == "" || phoneNumber == "" || city == "" || province == "" ||
-                country == "")
+                country == "" || email == "")
             {
                 resultLabel.Text = "All fields are required";
                 resultLabel.ForeColor = Color.FromArgb(192, 0, 0); // dark red
@@ -43,8 +44,11 @@ namespace CarRentalApp
                 resultLabel.Text = "Added successfully to the database!";
                 resultLabel.ForeColor = Color.FromArgb(0, 192, 0); // Dark Green
                 resultLabel.Visible = true;
-
-                // RUN THE QUERY
+                
+                // Creating the query
+                string query = "INSERT INTO Branch(Name, City, Province, Country, Street_Address, Phone, Email, Status) " +
+                    $"VALUES('{branchName}', '{city}', '{province}', '{country}', '{streetAddress}', {phoneNumber}, '{email}', 'Active');";
+                Database.runQuery(query);
             }
         }
         /*
