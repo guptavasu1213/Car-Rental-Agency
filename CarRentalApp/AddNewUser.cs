@@ -68,7 +68,7 @@ namespace CarRentalApp
             cx.SelfServer = false;
 
             // Check to ensure all the fields have text
-            if (cx.FirstName == "" || cx.LastName == "" || cx.PhoneNumber < 1000000000 || cx.Insurance == "" ||
+            if (cx.FirstName == "" || cx.LastName == "" || cx.PhoneNumber > 999999999 || cx.Insurance == "" ||
                 cx.Drivers == "" || cx.EmailAddress == "" || cx.Address == "" || cx.City == "" || cx.Province == "" ||
                 cx.Country == "")
             {

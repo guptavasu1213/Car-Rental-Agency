@@ -51,6 +51,8 @@
             this.addressBox = new System.Windows.Forms.TextBox();
             this.BDay = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
+            this.cardNoBox = new System.Windows.Forms.TextBox();
+            this.cardTypeCombo = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // header
@@ -218,7 +220,7 @@
             // newCxButton
             // 
             this.newCxButton.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newCxButton.Location = new System.Drawing.Point(470, 464);
+            this.newCxButton.Location = new System.Drawing.Point(476, 518);
             this.newCxButton.Name = "newCxButton";
             this.newCxButton.Size = new System.Drawing.Size(125, 40);
             this.newCxButton.TabIndex = 15;
@@ -257,7 +259,7 @@
             this.warningText.BackColor = System.Drawing.SystemColors.Control;
             this.warningText.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.warningText.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.warningText.Location = new System.Drawing.Point(326, 443);
+            this.warningText.Location = new System.Drawing.Point(326, 493);
             this.warningText.Name = "warningText";
             this.warningText.Size = new System.Drawing.Size(421, 19);
             this.warningText.TabIndex = 19;
@@ -336,11 +338,42 @@
             this.label1.TabIndex = 25;
             this.label1.Text = "Date of Birth";
             // 
+            // cardNoBox
+            // 
+            this.cardNoBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cardNoBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cardNoBox.Location = new System.Drawing.Point(325, 459);
+            this.cardNoBox.Margin = new System.Windows.Forms.Padding(4);
+            this.cardNoBox.Name = "cardNoBox";
+            this.cardNoBox.Size = new System.Drawing.Size(207, 26);
+            this.cardNoBox.TabIndex = 26;
+            this.cardNoBox.Text = "Card Number";
+            this.cardNoBox.Enter += new System.EventHandler(this.cardNoBox_Enter);
+            this.cardNoBox.Leave += new System.EventHandler(this.cardNoBox_Leave);
+            // 
+            // cardTypeCombo
+            // 
+            this.cardTypeCombo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cardTypeCombo.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cardTypeCombo.FormattingEnabled = true;
+            this.cardTypeCombo.Items.AddRange(new object[] {
+            "Visa",
+            "Mastercard",
+            "American Express",
+            "Discovery"});
+            this.cardTypeCombo.Location = new System.Drawing.Point(543, 459);
+            this.cardTypeCombo.Name = "cardTypeCombo";
+            this.cardTypeCombo.Size = new System.Drawing.Size(204, 26);
+            this.cardTypeCombo.TabIndex = 27;
+            this.cardTypeCombo.Text = "Card Type";
+            // 
             // CustomerLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 523);
+            this.ClientSize = new System.Drawing.Size(801, 573);
+            this.Controls.Add(this.cardTypeCombo);
+            this.Controls.Add(this.cardNoBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BDay);
             this.Controls.Add(this.addressBox);
@@ -397,5 +430,7 @@
         private System.Windows.Forms.TextBox addressBox;
         private System.Windows.Forms.DateTimePicker BDay;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox cardNoBox;
+        private System.Windows.Forms.ComboBox cardTypeCombo;
     }
 }
