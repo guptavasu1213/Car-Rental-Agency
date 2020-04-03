@@ -32,13 +32,13 @@
             this.logoutButton = new System.Windows.Forms.Button();
             this.companyNameLabel = new System.Windows.Forms.Label();
             this.leftSidePanel = new System.Windows.Forms.Panel();
-            this.findVehicleTypeLabel = new System.Windows.Forms.Label();
+            this.popularCarLabel = new System.Windows.Forms.Label();
             this.popularCarTypeLabel = new System.Windows.Forms.Label();
-            this.top100CustomersLabel = new System.Windows.Forms.Label();
+            this.findVehicleTypeLabel = new System.Windows.Forms.Label();
             this.popularBranchLabel = new System.Windows.Forms.Label();
+            this.top100CustomersLabel = new System.Windows.Forms.Label();
             this.findBranchLabel = new System.Windows.Forms.Label();
             this.addNewBranchLabel = new System.Windows.Forms.Label();
-            this.popularCarLabel = new System.Windows.Forms.Label();
             this.top10EmployeeLabel = new System.Windows.Forms.Label();
             this.branchesLabel = new System.Windows.Forms.Label();
             this.findVehicleLabel = new System.Windows.Forms.Label();
@@ -128,23 +128,23 @@
             this.leftSidePanel.Location = new System.Drawing.Point(0, 70);
             this.leftSidePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.leftSidePanel.Name = "leftSidePanel";
-            this.leftSidePanel.Size = new System.Drawing.Size(177, 879);
+            this.leftSidePanel.Size = new System.Drawing.Size(177, 985);
             this.leftSidePanel.TabIndex = 1;
             this.leftSidePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.leftSidePanel_Paint);
             // 
-            // findVehicleTypeLabel
+            // popularCarLabel
             // 
-            this.findVehicleTypeLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.findVehicleTypeLabel.ForeColor = System.Drawing.Color.White;
-            this.findVehicleTypeLabel.Location = new System.Drawing.Point(2, 308);
-            this.findVehicleTypeLabel.Name = "findVehicleTypeLabel";
-            this.findVehicleTypeLabel.Size = new System.Drawing.Size(171, 30);
-            this.findVehicleTypeLabel.TabIndex = 25;
-            this.findVehicleTypeLabel.Text = "Find Car Type";
-            this.findVehicleTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.findVehicleTypeLabel.Click += new System.EventHandler(this.findVehicleTypeLabel_Click);
-            this.findVehicleTypeLabel.MouseLeave += new System.EventHandler(this.findVehicleTypeLabel_MouseLeave);
-            this.findVehicleTypeLabel.MouseHover += new System.EventHandler(this.findVehicleTypeLabel_MouseHover);
+            this.popularCarLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.popularCarLabel.ForeColor = System.Drawing.Color.White;
+            this.popularCarLabel.Location = new System.Drawing.Point(1, 627);
+            this.popularCarLabel.Name = "popularCarLabel";
+            this.popularCarLabel.Size = new System.Drawing.Size(176, 30);
+            this.popularCarLabel.TabIndex = 19;
+            this.popularCarLabel.Text = "Popular Car";
+            this.popularCarLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.popularCarLabel.Click += new System.EventHandler(this.popularCarLabel_Click);
+            this.popularCarLabel.MouseLeave += new System.EventHandler(this.popularCarLabel_MouseLeave);
+            this.popularCarLabel.MouseHover += new System.EventHandler(this.popularCarLabel_MouseHover);
             // 
             // popularCarTypeLabel
             // 
@@ -160,19 +160,19 @@
             this.popularCarTypeLabel.MouseLeave += new System.EventHandler(this.popularCarTypeLabel_MouseLeave);
             this.popularCarTypeLabel.MouseHover += new System.EventHandler(this.popularCarTypeLabel_MouseHover);
             // 
-            // top100CustomersLabel
+            // findVehicleTypeLabel
             // 
-            this.top100CustomersLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.top100CustomersLabel.ForeColor = System.Drawing.Color.White;
-            this.top100CustomersLabel.Location = new System.Drawing.Point(2, 741);
-            this.top100CustomersLabel.Name = "top100CustomersLabel";
-            this.top100CustomersLabel.Size = new System.Drawing.Size(172, 30);
-            this.top100CustomersLabel.TabIndex = 23;
-            this.top100CustomersLabel.Text = "Top Customers";
-            this.top100CustomersLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.top100CustomersLabel.Click += new System.EventHandler(this.top100CustomersLabel_Click);
-            this.top100CustomersLabel.MouseLeave += new System.EventHandler(this.top100CustomersLabel_MouseLeave);
-            this.top100CustomersLabel.MouseHover += new System.EventHandler(this.top100CustomersLabel_MouseHover);
+            this.findVehicleTypeLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.findVehicleTypeLabel.ForeColor = System.Drawing.Color.White;
+            this.findVehicleTypeLabel.Location = new System.Drawing.Point(2, 308);
+            this.findVehicleTypeLabel.Name = "findVehicleTypeLabel";
+            this.findVehicleTypeLabel.Size = new System.Drawing.Size(171, 30);
+            this.findVehicleTypeLabel.TabIndex = 25;
+            this.findVehicleTypeLabel.Text = "Find Car Type";
+            this.findVehicleTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.findVehicleTypeLabel.Click += new System.EventHandler(this.findVehicleTypeLabel_Click);
+            this.findVehicleTypeLabel.MouseLeave += new System.EventHandler(this.findVehicleTypeLabel_MouseLeave);
+            this.findVehicleTypeLabel.MouseHover += new System.EventHandler(this.findVehicleTypeLabel_MouseHover);
             // 
             // popularBranchLabel
             // 
@@ -187,6 +187,20 @@
             this.popularBranchLabel.Click += new System.EventHandler(this.popularBranchLabel_Click);
             this.popularBranchLabel.MouseLeave += new System.EventHandler(this.popularBranchLabel_MouseLeave);
             this.popularBranchLabel.MouseHover += new System.EventHandler(this.popularBranchLabel_MouseHover);
+            // 
+            // top100CustomersLabel
+            // 
+            this.top100CustomersLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.top100CustomersLabel.ForeColor = System.Drawing.Color.White;
+            this.top100CustomersLabel.Location = new System.Drawing.Point(2, 741);
+            this.top100CustomersLabel.Name = "top100CustomersLabel";
+            this.top100CustomersLabel.Size = new System.Drawing.Size(172, 30);
+            this.top100CustomersLabel.TabIndex = 23;
+            this.top100CustomersLabel.Text = "Top Customers";
+            this.top100CustomersLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.top100CustomersLabel.Click += new System.EventHandler(this.top100CustomersLabel_Click);
+            this.top100CustomersLabel.MouseLeave += new System.EventHandler(this.top100CustomersLabel_MouseLeave);
+            this.top100CustomersLabel.MouseHover += new System.EventHandler(this.top100CustomersLabel_MouseHover);
             // 
             // findBranchLabel
             // 
@@ -215,20 +229,6 @@
             this.addNewBranchLabel.Click += new System.EventHandler(this.addNewBranchLabel_Click);
             this.addNewBranchLabel.MouseLeave += new System.EventHandler(this.addBranchLabel_MouseLeave);
             this.addNewBranchLabel.MouseHover += new System.EventHandler(this.addBranchLabel_MouseHover);
-            // 
-            // popularCarLabel
-            // 
-            this.popularCarLabel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.popularCarLabel.ForeColor = System.Drawing.Color.White;
-            this.popularCarLabel.Location = new System.Drawing.Point(1, 627);
-            this.popularCarLabel.Name = "popularCarLabel";
-            this.popularCarLabel.Size = new System.Drawing.Size(176, 30);
-            this.popularCarLabel.TabIndex = 19;
-            this.popularCarLabel.Text = "Popular Car";
-            this.popularCarLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.popularCarLabel.Click += new System.EventHandler(this.popularCarLabel_Click);
-            this.popularCarLabel.MouseLeave += new System.EventHandler(this.popularCarLabel_MouseLeave);
-            this.popularCarLabel.MouseHover += new System.EventHandler(this.popularCarLabel_MouseHover);
             // 
             // top10EmployeeLabel
             // 
@@ -447,7 +447,7 @@
             this.rightHandSidePanel.Location = new System.Drawing.Point(213, 81);
             this.rightHandSidePanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rightHandSidePanel.Name = "rightHandSidePanel";
-            this.rightHandSidePanel.Size = new System.Drawing.Size(1717, 826);
+            this.rightHandSidePanel.Size = new System.Drawing.Size(1717, 1002);
             this.rightHandSidePanel.TabIndex = 2;
             // 
             // AdminPortal
@@ -455,7 +455,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1924, 949);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.rightHandSidePanel);
             this.Controls.Add(this.leftSidePanel);
             this.Controls.Add(this.topPanel);
