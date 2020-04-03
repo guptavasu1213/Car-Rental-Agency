@@ -1,6 +1,6 @@
 ﻿namespace CarRentalApp
 {
-    partial class Top10Employees
+    partial class TopEmployees
     {
         /// <summary>
         /// Required designer variable.
@@ -295,9 +295,9 @@
             this.findTop10EmployeesLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.findTop10EmployeesLabel.Location = new System.Drawing.Point(43, 23);
             this.findTop10EmployeesLabel.Name = "findTop10EmployeesLabel";
-            this.findTop10EmployeesLabel.Size = new System.Drawing.Size(407, 51);
+            this.findTop10EmployeesLabel.Size = new System.Drawing.Size(357, 51);
             this.findTop10EmployeesLabel.TabIndex = 0;
-            this.findTop10EmployeesLabel.Text = "Find Top 10 Employees";
+            this.findTop10EmployeesLabel.Text = "Find Top Employees";
             // 
             // topPanel
             // 
@@ -325,7 +325,7 @@
             this.topEmployeeDataGridView.Size = new System.Drawing.Size(1099, 724);
             this.topEmployeeDataGridView.TabIndex = 30;
             // 
-            // Top10Employees
+            // TopEmployees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -334,7 +334,7 @@
             this.Controls.Add(this.topEmployeeDataGridView);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.topPanel);
-            this.Name = "Top10Employees";
+            this.Name = "TopEmployees";
             this.Text = "Top10Employees";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

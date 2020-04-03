@@ -257,7 +257,7 @@ namespace CarRentalApp
          */
         private void top10EmployeeLabel_Click(object sender, EventArgs e)
         {
-            Top10Employees top10EmployeesForm = new Top10Employees();
+            TopEmployees top10EmployeesForm = new TopEmployees();
             settingUpRightSidePanel(top10EmployeesForm);
         }
         /*
@@ -266,7 +266,7 @@ namespace CarRentalApp
          */
         private void top100CustomersLabel_Click(object sender, EventArgs e)
         {
-            FindTop100Customers findTop100CustomersForm = new FindTop100Customers();
+            TopCustomers findTop100CustomersForm = new TopCustomers();
             settingUpRightSidePanel(findTop100CustomersForm);
         }
         /*

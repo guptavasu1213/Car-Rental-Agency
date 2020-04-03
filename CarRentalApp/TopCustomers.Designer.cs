@@ -1,6 +1,6 @@
 ﻿namespace CarRentalApp
 {
-    partial class FindTop100Customers
+    partial class TopCustomers
     {
         /// <summary>
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CarRentalApp
 {
-    public partial class Top10Employees : Form
+    public partial class TopEmployees : Form
     {
-        public Top10Employees()
+        public TopEmployees()
         {
             InitializeComponent();
         }

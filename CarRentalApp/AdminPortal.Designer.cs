@@ -90,13 +90,13 @@
             // companyNameLabel
             // 
             this.companyNameLabel.AutoSize = true;
-            this.companyNameLabel.Font = new System.Drawing.Font("Microsoft Uighur", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.companyNameLabel.Font = new System.Drawing.Font("Segoe UI Historic", 25.2F);
             this.companyNameLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.companyNameLabel.Location = new System.Drawing.Point(3, 4);
             this.companyNameLabel.Name = "companyNameLabel";
-            this.companyNameLabel.Size = new System.Drawing.Size(345, 63);
+            this.companyNameLabel.Size = new System.Drawing.Size(211, 59);
             this.companyNameLabel.TabIndex = 0;
-            this.companyNameLabel.Text = "<Our Company Name>";
+            this.companyNameLabel.Text = "Hi Admin,";
             // 
             // leftSidePanel
             // 
@@ -140,7 +140,7 @@
             this.findVehicleTypeLabel.Name = "findVehicleTypeLabel";
             this.findVehicleTypeLabel.Size = new System.Drawing.Size(171, 30);
             this.findVehicleTypeLabel.TabIndex = 25;
-            this.findVehicleTypeLabel.Text = "Find Vehicle Type";
+            this.findVehicleTypeLabel.Text = "Find Car Type";
             this.findVehicleTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.findVehicleTypeLabel.Click += new System.EventHandler(this.findVehicleTypeLabel_Click);
             this.findVehicleTypeLabel.MouseLeave += new System.EventHandler(this.findVehicleTypeLabel_MouseLeave);
@@ -168,7 +168,7 @@
             this.top100CustomersLabel.Name = "top100CustomersLabel";
             this.top100CustomersLabel.Size = new System.Drawing.Size(172, 30);
             this.top100CustomersLabel.TabIndex = 23;
-            this.top100CustomersLabel.Text = "Top 100 Customers";
+            this.top100CustomersLabel.Text = "Top Customers";
             this.top100CustomersLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.top100CustomersLabel.Click += new System.EventHandler(this.top100CustomersLabel_Click);
             this.top100CustomersLabel.MouseLeave += new System.EventHandler(this.top100CustomersLabel_MouseLeave);
@@ -238,7 +238,7 @@
             this.top10EmployeeLabel.Name = "top10EmployeeLabel";
             this.top10EmployeeLabel.Size = new System.Drawing.Size(175, 30);
             this.top10EmployeeLabel.TabIndex = 18;
-            this.top10EmployeeLabel.Text = "Top 10 Employees";
+            this.top10EmployeeLabel.Text = "Top Employees";
             this.top10EmployeeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.top10EmployeeLabel.Click += new System.EventHandler(this.top10EmployeeLabel_Click);
             this.top10EmployeeLabel.MouseLeave += new System.EventHandler(this.top10EmployeeLabel_MouseLeave);
@@ -264,7 +264,7 @@
             this.findVehicleLabel.Name = "findVehicleLabel";
             this.findVehicleLabel.Size = new System.Drawing.Size(171, 30);
             this.findVehicleLabel.TabIndex = 9;
-            this.findVehicleLabel.Text = "Find Vehicle";
+            this.findVehicleLabel.Text = "Find Car";
             this.findVehicleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.findVehicleLabel.Click += new System.EventHandler(this.findVehicleLabel_Click);
             this.findVehicleLabel.MouseLeave += new System.EventHandler(this.findVehicle_MouseLeave);
@@ -292,7 +292,7 @@
             this.addNewUserLabel.Name = "addNewUserLabel";
             this.addNewUserLabel.Size = new System.Drawing.Size(176, 30);
             this.addNewUserLabel.TabIndex = 5;
-            this.addNewUserLabel.Text = "Add New User";
+            this.addNewUserLabel.Text = "Add New Customer";
             this.addNewUserLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.addNewUserLabel.Click += new System.EventHandler(this.addNewUserLabel_Click);
             this.addNewUserLabel.MouseLeave += new System.EventHandler(this.addUserLabel_MouseLeave);
@@ -334,7 +334,7 @@
             this.addVehicleTypeLabel.Name = "addVehicleTypeLabel";
             this.addVehicleTypeLabel.Size = new System.Drawing.Size(172, 30);
             this.addVehicleTypeLabel.TabIndex = 13;
-            this.addVehicleTypeLabel.Text = "Add Vehicle Type";
+            this.addVehicleTypeLabel.Text = "Add Car Type";
             this.addVehicleTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.addVehicleTypeLabel.Click += new System.EventHandler(this.addVehicleTypeLabel_Click);
             this.addVehicleTypeLabel.MouseLeave += new System.EventHandler(this.addVehicleTypeLabel_MouseLeave);
@@ -362,7 +362,7 @@
             this.findUserLabel.Name = "findUserLabel";
             this.findUserLabel.Size = new System.Drawing.Size(171, 30);
             this.findUserLabel.TabIndex = 8;
-            this.findUserLabel.Text = "Find User";
+            this.findUserLabel.Text = "Find Customer";
             this.findUserLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.findUserLabel.Click += new System.EventHandler(this.findUserLabel_Click);
             this.findUserLabel.MouseLeave += new System.EventHandler(this.findUserLabel_MouseLeave);
@@ -376,7 +376,7 @@
             this.addNewVehicleLabel.Name = "addNewVehicleLabel";
             this.addNewVehicleLabel.Size = new System.Drawing.Size(172, 30);
             this.addNewVehicleLabel.TabIndex = 7;
-            this.addNewVehicleLabel.Text = "Add New Vehicle";
+            this.addNewVehicleLabel.Text = "Add New Car";
             this.addNewVehicleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.addNewVehicleLabel.Click += new System.EventHandler(this.addNewVehicleLabel_Click);
             this.addNewVehicleLabel.MouseLeave += new System.EventHandler(this.addVehicleLabel_MouseLeave);
@@ -391,7 +391,7 @@
             this.statsLabel.Name = "statsLabel";
             this.statsLabel.Size = new System.Drawing.Size(172, 39);
             this.statsLabel.TabIndex = 4;
-            this.statsLabel.Text = "Report";
+            this.statsLabel.Text = "Reports";
             this.statsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bookingsLabel
@@ -427,7 +427,7 @@
             this.vehiclesLabel.Name = "vehiclesLabel";
             this.vehiclesLabel.Size = new System.Drawing.Size(172, 39);
             this.vehiclesLabel.TabIndex = 1;
-            this.vehiclesLabel.Text = "Vehicles";
+            this.vehiclesLabel.Text = "Cars";
             this.vehiclesLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // usersLabel
@@ -439,7 +439,7 @@
             this.usersLabel.Name = "usersLabel";
             this.usersLabel.Size = new System.Drawing.Size(172, 39);
             this.usersLabel.TabIndex = 0;
-            this.usersLabel.Text = "Users";
+            this.usersLabel.Text = "Customers";
             this.usersLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // rightHandSidePanel
