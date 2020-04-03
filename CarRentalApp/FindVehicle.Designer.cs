@@ -65,11 +65,11 @@
             this.nameGroupBox.Controls.Add(this.modelLabel);
             this.nameGroupBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameGroupBox.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.nameGroupBox.Location = new System.Drawing.Point(15, 268);
-            this.nameGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nameGroupBox.Location = new System.Drawing.Point(11, 218);
+            this.nameGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.nameGroupBox.Name = "nameGroupBox";
-            this.nameGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.nameGroupBox.Size = new System.Drawing.Size(456, 207);
+            this.nameGroupBox.Padding = new System.Windows.Forms.Padding(2);
+            this.nameGroupBox.Size = new System.Drawing.Size(342, 168);
             this.nameGroupBox.TabIndex = 37;
             this.nameGroupBox.TabStop = false;
             this.nameGroupBox.Text = "Look up by Make and Model";
@@ -79,9 +79,10 @@
             this.makeModelResultLabel.AutoSize = true;
             this.makeModelResultLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.makeModelResultLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.makeModelResultLabel.Location = new System.Drawing.Point(25, 140);
+            this.makeModelResultLabel.Location = new System.Drawing.Point(19, 114);
+            this.makeModelResultLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.makeModelResultLabel.Name = "makeModelResultLabel";
-            this.makeModelResultLabel.Size = new System.Drawing.Size(0, 22);
+            this.makeModelResultLabel.Size = new System.Drawing.Size(0, 19);
             this.makeModelResultLabel.TabIndex = 18;
             this.makeModelResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.makeModelResultLabel.Visible = false;
@@ -92,10 +93,10 @@
             this.makeModelSearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.makeModelSearchButton.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.makeModelSearchButton.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.makeModelSearchButton.Location = new System.Drawing.Point(268, 149);
-            this.makeModelSearchButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.makeModelSearchButton.Location = new System.Drawing.Point(201, 121);
+            this.makeModelSearchButton.Margin = new System.Windows.Forms.Padding(2);
             this.makeModelSearchButton.Name = "makeModelSearchButton";
-            this.makeModelSearchButton.Size = new System.Drawing.Size(87, 37);
+            this.makeModelSearchButton.Size = new System.Drawing.Size(65, 30);
             this.makeModelSearchButton.TabIndex = 9;
             this.makeModelSearchButton.Text = "Search";
             this.makeModelSearchButton.UseVisualStyleBackColor = false;
@@ -105,20 +106,20 @@
             // 
             this.modelTextBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modelTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.modelTextBox.Location = new System.Drawing.Point(179, 94);
-            this.modelTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.modelTextBox.Location = new System.Drawing.Point(134, 76);
+            this.modelTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.modelTextBox.Name = "modelTextBox";
-            this.modelTextBox.Size = new System.Drawing.Size(255, 30);
+            this.modelTextBox.Size = new System.Drawing.Size(192, 26);
             this.modelTextBox.TabIndex = 6;
             // 
             // makeTextBox
             // 
             this.makeTextBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.makeTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.makeTextBox.Location = new System.Drawing.Point(179, 47);
-            this.makeTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.makeTextBox.Location = new System.Drawing.Point(134, 38);
+            this.makeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.makeTextBox.Name = "makeTextBox";
-            this.makeTextBox.Size = new System.Drawing.Size(255, 30);
+            this.makeTextBox.Size = new System.Drawing.Size(192, 26);
             this.makeTextBox.TabIndex = 5;
             // 
             // makeLabel
@@ -126,9 +127,10 @@
             this.makeLabel.AutoSize = true;
             this.makeLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.makeLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.makeLabel.Location = new System.Drawing.Point(19, 47);
+            this.makeLabel.Location = new System.Drawing.Point(14, 38);
+            this.makeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.makeLabel.Name = "makeLabel";
-            this.makeLabel.Size = new System.Drawing.Size(51, 22);
+            this.makeLabel.Size = new System.Drawing.Size(43, 19);
             this.makeLabel.TabIndex = 2;
             this.makeLabel.Text = "Make";
             // 
@@ -137,9 +139,10 @@
             this.modelLabel.AutoSize = true;
             this.modelLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modelLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.modelLabel.Location = new System.Drawing.Point(19, 94);
+            this.modelLabel.Location = new System.Drawing.Point(14, 76);
+            this.modelLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.modelLabel.Name = "modelLabel";
-            this.modelLabel.Size = new System.Drawing.Size(58, 22);
+            this.modelLabel.Size = new System.Drawing.Size(48, 19);
             this.modelLabel.TabIndex = 1;
             this.modelLabel.Text = "Model";
             // 
@@ -151,9 +154,9 @@
             this.topPanel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.topPanel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.topPanel.Margin = new System.Windows.Forms.Padding(2);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1409, 85);
+            this.topPanel.Size = new System.Drawing.Size(1057, 69);
             this.topPanel.TabIndex = 36;
             // 
             // findExistingVehicleLabel
@@ -161,9 +164,10 @@
             this.findExistingVehicleLabel.AutoSize = true;
             this.findExistingVehicleLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.findExistingVehicleLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.findExistingVehicleLabel.Location = new System.Drawing.Point(43, 23);
+            this.findExistingVehicleLabel.Location = new System.Drawing.Point(32, 19);
+            this.findExistingVehicleLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.findExistingVehicleLabel.Name = "findExistingVehicleLabel";
-            this.findExistingVehicleLabel.Size = new System.Drawing.Size(414, 51);
+            this.findExistingVehicleLabel.Size = new System.Drawing.Size(327, 40);
             this.findExistingVehicleLabel.TabIndex = 0;
             this.findExistingVehicleLabel.Text = "Find an Existing Vehicle";
             // 
@@ -175,11 +179,11 @@
             this.groupBox2.Controls.Add(this.licensePlateNumLabel);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.groupBox2.Location = new System.Drawing.Point(15, 495);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Location = new System.Drawing.Point(11, 402);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(460, 156);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(345, 127);
             this.groupBox2.TabIndex = 39;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Look up by License Plate";
@@ -189,9 +193,10 @@
             this.licensePlateResultLabel.AutoSize = true;
             this.licensePlateResultLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.licensePlateResultLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.licensePlateResultLabel.Location = new System.Drawing.Point(29, 89);
+            this.licensePlateResultLabel.Location = new System.Drawing.Point(22, 72);
+            this.licensePlateResultLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.licensePlateResultLabel.Name = "licensePlateResultLabel";
-            this.licensePlateResultLabel.Size = new System.Drawing.Size(0, 22);
+            this.licensePlateResultLabel.Size = new System.Drawing.Size(0, 19);
             this.licensePlateResultLabel.TabIndex = 26;
             this.licensePlateResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.licensePlateResultLabel.Visible = false;
@@ -202,10 +207,10 @@
             this.licensePlateSearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.licensePlateSearchButton.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.licensePlateSearchButton.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.licensePlateSearchButton.Location = new System.Drawing.Point(272, 97);
-            this.licensePlateSearchButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.licensePlateSearchButton.Location = new System.Drawing.Point(204, 79);
+            this.licensePlateSearchButton.Margin = new System.Windows.Forms.Padding(2);
             this.licensePlateSearchButton.Name = "licensePlateSearchButton";
-            this.licensePlateSearchButton.Size = new System.Drawing.Size(87, 37);
+            this.licensePlateSearchButton.Size = new System.Drawing.Size(65, 30);
             this.licensePlateSearchButton.TabIndex = 25;
             this.licensePlateSearchButton.Text = "Search";
             this.licensePlateSearchButton.UseVisualStyleBackColor = false;
@@ -215,10 +220,10 @@
             // 
             this.licensePlateNumTextBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.licensePlateNumTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.licensePlateNumTextBox.Location = new System.Drawing.Point(183, 46);
-            this.licensePlateNumTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.licensePlateNumTextBox.Location = new System.Drawing.Point(137, 37);
+            this.licensePlateNumTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.licensePlateNumTextBox.Name = "licensePlateNumTextBox";
-            this.licensePlateNumTextBox.Size = new System.Drawing.Size(255, 30);
+            this.licensePlateNumTextBox.Size = new System.Drawing.Size(192, 26);
             this.licensePlateNumTextBox.TabIndex = 24;
             // 
             // licensePlateNumLabel
@@ -226,9 +231,10 @@
             this.licensePlateNumLabel.AutoSize = true;
             this.licensePlateNumLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.licensePlateNumLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.licensePlateNumLabel.Location = new System.Drawing.Point(23, 46);
+            this.licensePlateNumLabel.Location = new System.Drawing.Point(17, 37);
+            this.licensePlateNumLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.licensePlateNumLabel.Name = "licensePlateNumLabel";
-            this.licensePlateNumLabel.Size = new System.Drawing.Size(140, 22);
+            this.licensePlateNumLabel.Size = new System.Drawing.Size(112, 19);
             this.licensePlateNumLabel.TabIndex = 23;
             this.licensePlateNumLabel.Text = "License Plate No.";
             // 
@@ -236,11 +242,12 @@
             // 
             this.carIDTextbox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.carIDTextbox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.carIDTextbox.Location = new System.Drawing.Point(183, 46);
-            this.carIDTextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.carIDTextbox.Location = new System.Drawing.Point(137, 37);
+            this.carIDTextbox.Margin = new System.Windows.Forms.Padding(2);
             this.carIDTextbox.Name = "carIDTextbox";
-            this.carIDTextbox.Size = new System.Drawing.Size(255, 30);
+            this.carIDTextbox.Size = new System.Drawing.Size(192, 26);
             this.carIDTextbox.TabIndex = 24;
+            this.carIDTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numericTextBox_KeyPress);
             // 
             // employeeIDGroupBox
             // 
@@ -250,11 +257,11 @@
             this.employeeIDGroupBox.Controls.Add(this.carIDLabel);
             this.employeeIDGroupBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employeeIDGroupBox.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.employeeIDGroupBox.Location = new System.Drawing.Point(15, 100);
-            this.employeeIDGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employeeIDGroupBox.Location = new System.Drawing.Point(11, 81);
+            this.employeeIDGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.employeeIDGroupBox.Name = "employeeIDGroupBox";
-            this.employeeIDGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.employeeIDGroupBox.Size = new System.Drawing.Size(460, 156);
+            this.employeeIDGroupBox.Padding = new System.Windows.Forms.Padding(2);
+            this.employeeIDGroupBox.Size = new System.Drawing.Size(345, 127);
             this.employeeIDGroupBox.TabIndex = 43;
             this.employeeIDGroupBox.TabStop = false;
             this.employeeIDGroupBox.Text = "Look up by Car ID";
@@ -264,9 +271,10 @@
             this.carIDResultLabel.AutoSize = true;
             this.carIDResultLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.carIDResultLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.carIDResultLabel.Location = new System.Drawing.Point(29, 89);
+            this.carIDResultLabel.Location = new System.Drawing.Point(22, 72);
+            this.carIDResultLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.carIDResultLabel.Name = "carIDResultLabel";
-            this.carIDResultLabel.Size = new System.Drawing.Size(0, 22);
+            this.carIDResultLabel.Size = new System.Drawing.Size(0, 19);
             this.carIDResultLabel.TabIndex = 26;
             this.carIDResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.carIDResultLabel.Visible = false;
@@ -277,10 +285,10 @@
             this.carIDSearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.carIDSearchButton.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.carIDSearchButton.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.carIDSearchButton.Location = new System.Drawing.Point(272, 97);
-            this.carIDSearchButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.carIDSearchButton.Location = new System.Drawing.Point(204, 79);
+            this.carIDSearchButton.Margin = new System.Windows.Forms.Padding(2);
             this.carIDSearchButton.Name = "carIDSearchButton";
-            this.carIDSearchButton.Size = new System.Drawing.Size(87, 37);
+            this.carIDSearchButton.Size = new System.Drawing.Size(65, 30);
             this.carIDSearchButton.TabIndex = 25;
             this.carIDSearchButton.Text = "Search";
             this.carIDSearchButton.UseVisualStyleBackColor = false;
@@ -291,9 +299,10 @@
             this.carIDLabel.AutoSize = true;
             this.carIDLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.carIDLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.carIDLabel.Location = new System.Drawing.Point(23, 46);
+            this.carIDLabel.Location = new System.Drawing.Point(17, 37);
+            this.carIDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.carIDLabel.Name = "carIDLabel";
-            this.carIDLabel.Size = new System.Drawing.Size(58, 22);
+            this.carIDLabel.Size = new System.Drawing.Size(48, 19);
             this.carIDLabel.TabIndex = 23;
             this.carIDLabel.Text = "Car ID";
             // 
@@ -303,28 +312,26 @@
             this.vehicleInfoDataGridView.AllowUserToDeleteRows = false;
             this.vehicleInfoDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.vehicleInfoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.vehicleInfoDataGridView.Location = new System.Drawing.Point(499, 111);
-            this.vehicleInfoDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.vehicleInfoDataGridView.Location = new System.Drawing.Point(374, 90);
             this.vehicleInfoDataGridView.Name = "vehicleInfoDataGridView";
             this.vehicleInfoDataGridView.RowHeadersVisible = false;
             this.vehicleInfoDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.vehicleInfoDataGridView.Size = new System.Drawing.Size(1099, 724);
+            this.vehicleInfoDataGridView.Size = new System.Drawing.Size(824, 588);
             this.vehicleInfoDataGridView.TabIndex = 44;
             this.vehicleInfoDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.vehicleInfoDataGridView_CellValueChanged);
             this.vehicleInfoDataGridView.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.vehicleInfoDataGridView_EditingControlShowing);
             // 
             // FindVehicle
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1409, 885);
+            this.ClientSize = new System.Drawing.Size(1057, 719);
             this.Controls.Add(this.vehicleInfoDataGridView);
             this.Controls.Add(this.nameGroupBox);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.employeeIDGroupBox);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FindVehicle";
             this.Text = "FindVehicle";
             this.nameGroupBox.ResumeLayout(false);

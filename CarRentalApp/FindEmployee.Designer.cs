@@ -67,9 +67,10 @@
             this.employeeIDResultLabel.AutoSize = true;
             this.employeeIDResultLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employeeIDResultLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.employeeIDResultLabel.Location = new System.Drawing.Point(29, 89);
+            this.employeeIDResultLabel.Location = new System.Drawing.Point(22, 72);
+            this.employeeIDResultLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.employeeIDResultLabel.Name = "employeeIDResultLabel";
-            this.employeeIDResultLabel.Size = new System.Drawing.Size(0, 22);
+            this.employeeIDResultLabel.Size = new System.Drawing.Size(0, 19);
             this.employeeIDResultLabel.TabIndex = 26;
             this.employeeIDResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.employeeIDResultLabel.Visible = false;
@@ -80,10 +81,10 @@
             this.employeeIDSearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.employeeIDSearchButton.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employeeIDSearchButton.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.employeeIDSearchButton.Location = new System.Drawing.Point(272, 97);
-            this.employeeIDSearchButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employeeIDSearchButton.Location = new System.Drawing.Point(204, 79);
+            this.employeeIDSearchButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.employeeIDSearchButton.Name = "employeeIDSearchButton";
-            this.employeeIDSearchButton.Size = new System.Drawing.Size(87, 37);
+            this.employeeIDSearchButton.Size = new System.Drawing.Size(65, 30);
             this.employeeIDSearchButton.TabIndex = 25;
             this.employeeIDSearchButton.Text = "Search";
             this.employeeIDSearchButton.UseVisualStyleBackColor = false;
@@ -94,9 +95,10 @@
             this.customerIDLabel.AutoSize = true;
             this.customerIDLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.customerIDLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.customerIDLabel.Location = new System.Drawing.Point(23, 46);
+            this.customerIDLabel.Location = new System.Drawing.Point(17, 37);
+            this.customerIDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.customerIDLabel.Name = "customerIDLabel";
-            this.customerIDLabel.Size = new System.Drawing.Size(106, 22);
+            this.customerIDLabel.Size = new System.Drawing.Size(86, 19);
             this.customerIDLabel.TabIndex = 23;
             this.customerIDLabel.Text = "Employee ID";
             // 
@@ -108,11 +110,11 @@
             this.employeeIDGroupBox.Controls.Add(this.customerIDLabel);
             this.employeeIDGroupBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employeeIDGroupBox.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.employeeIDGroupBox.Location = new System.Drawing.Point(15, 121);
-            this.employeeIDGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employeeIDGroupBox.Location = new System.Drawing.Point(11, 98);
+            this.employeeIDGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.employeeIDGroupBox.Name = "employeeIDGroupBox";
-            this.employeeIDGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.employeeIDGroupBox.Size = new System.Drawing.Size(460, 156);
+            this.employeeIDGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.employeeIDGroupBox.Size = new System.Drawing.Size(345, 127);
             this.employeeIDGroupBox.TabIndex = 35;
             this.employeeIDGroupBox.TabStop = false;
             this.employeeIDGroupBox.Text = "Look up by Employee ID";
@@ -121,20 +123,22 @@
             // 
             this.employeeIDTextbox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.employeeIDTextbox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.employeeIDTextbox.Location = new System.Drawing.Point(183, 46);
-            this.employeeIDTextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.employeeIDTextbox.Location = new System.Drawing.Point(137, 37);
+            this.employeeIDTextbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.employeeIDTextbox.Name = "employeeIDTextbox";
-            this.employeeIDTextbox.Size = new System.Drawing.Size(255, 30);
+            this.employeeIDTextbox.Size = new System.Drawing.Size(192, 26);
             this.employeeIDTextbox.TabIndex = 24;
+            this.employeeIDTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numericTextBox_KeyPress);
             // 
             // sinResultLabel
             // 
             this.sinResultLabel.AutoSize = true;
             this.sinResultLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sinResultLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.sinResultLabel.Location = new System.Drawing.Point(29, 89);
+            this.sinResultLabel.Location = new System.Drawing.Point(22, 72);
+            this.sinResultLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.sinResultLabel.Name = "sinResultLabel";
-            this.sinResultLabel.Size = new System.Drawing.Size(0, 22);
+            this.sinResultLabel.Size = new System.Drawing.Size(0, 19);
             this.sinResultLabel.TabIndex = 26;
             this.sinResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.sinResultLabel.Visible = false;
@@ -145,10 +149,10 @@
             this.sinSearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.sinSearchButton.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sinSearchButton.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.sinSearchButton.Location = new System.Drawing.Point(272, 97);
-            this.sinSearchButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.sinSearchButton.Location = new System.Drawing.Point(204, 79);
+            this.sinSearchButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.sinSearchButton.Name = "sinSearchButton";
-            this.sinSearchButton.Size = new System.Drawing.Size(87, 37);
+            this.sinSearchButton.Size = new System.Drawing.Size(65, 30);
             this.sinSearchButton.TabIndex = 25;
             this.sinSearchButton.Text = "Search";
             this.sinSearchButton.UseVisualStyleBackColor = false;
@@ -158,10 +162,10 @@
             // 
             this.sinTextBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sinTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.sinTextBox.Location = new System.Drawing.Point(183, 46);
-            this.sinTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.sinTextBox.Location = new System.Drawing.Point(137, 37);
+            this.sinTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.sinTextBox.Name = "sinTextBox";
-            this.sinTextBox.Size = new System.Drawing.Size(255, 30);
+            this.sinTextBox.Size = new System.Drawing.Size(192, 26);
             this.sinTextBox.TabIndex = 24;
             // 
             // emailLabel
@@ -169,9 +173,10 @@
             this.emailLabel.AutoSize = true;
             this.emailLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.emailLabel.Location = new System.Drawing.Point(23, 46);
+            this.emailLabel.Location = new System.Drawing.Point(17, 37);
+            this.emailLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(37, 22);
+            this.emailLabel.Size = new System.Drawing.Size(30, 19);
             this.emailLabel.TabIndex = 23;
             this.emailLabel.Text = "SIN";
             // 
@@ -183,11 +188,11 @@
             this.groupBox2.Controls.Add(this.emailLabel);
             this.groupBox2.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.groupBox2.Location = new System.Drawing.Point(15, 516);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox2.Location = new System.Drawing.Point(11, 419);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(460, 156);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Size = new System.Drawing.Size(345, 127);
             this.groupBox2.TabIndex = 31;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Look up by SIN";
@@ -197,9 +202,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label2.Location = new System.Drawing.Point(25, 254);
+            this.label2.Location = new System.Drawing.Point(19, 206);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 22);
+            this.label2.Size = new System.Drawing.Size(0, 19);
             this.label2.TabIndex = 20;
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -212,11 +218,11 @@
             this.groupBox1.Controls.Add(this.phoneNumberLabel);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.groupBox1.Location = new System.Drawing.Point(15, 694);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(11, 564);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(460, 164);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(345, 133);
             this.groupBox1.TabIndex = 32;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Look up by Phone Number";
@@ -226,9 +232,10 @@
             this.phoneNumResultLabel.AutoSize = true;
             this.phoneNumResultLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneNumResultLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.phoneNumResultLabel.Location = new System.Drawing.Point(24, 90);
+            this.phoneNumResultLabel.Location = new System.Drawing.Point(18, 73);
+            this.phoneNumResultLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.phoneNumResultLabel.Name = "phoneNumResultLabel";
-            this.phoneNumResultLabel.Size = new System.Drawing.Size(0, 22);
+            this.phoneNumResultLabel.Size = new System.Drawing.Size(0, 19);
             this.phoneNumResultLabel.TabIndex = 20;
             this.phoneNumResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.phoneNumResultLabel.Visible = false;
@@ -237,10 +244,10 @@
             // 
             this.phoneNumberTextBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneNumberTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.phoneNumberTextBox.Location = new System.Drawing.Point(177, 47);
-            this.phoneNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.phoneNumberTextBox.Location = new System.Drawing.Point(133, 38);
+            this.phoneNumberTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
-            this.phoneNumberTextBox.Size = new System.Drawing.Size(255, 30);
+            this.phoneNumberTextBox.Size = new System.Drawing.Size(192, 26);
             this.phoneNumberTextBox.TabIndex = 7;
             this.phoneNumberTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numericTextBox_KeyPress);
             // 
@@ -250,10 +257,10 @@
             this.phoneNumSearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.phoneNumSearchButton.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneNumSearchButton.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.phoneNumSearchButton.Location = new System.Drawing.Point(267, 98);
-            this.phoneNumSearchButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.phoneNumSearchButton.Location = new System.Drawing.Point(200, 80);
+            this.phoneNumSearchButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.phoneNumSearchButton.Name = "phoneNumSearchButton";
-            this.phoneNumSearchButton.Size = new System.Drawing.Size(87, 37);
+            this.phoneNumSearchButton.Size = new System.Drawing.Size(65, 30);
             this.phoneNumSearchButton.TabIndex = 19;
             this.phoneNumSearchButton.Text = "Search";
             this.phoneNumSearchButton.UseVisualStyleBackColor = false;
@@ -264,9 +271,10 @@
             this.phoneNumberLabel.AutoSize = true;
             this.phoneNumberLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneNumberLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.phoneNumberLabel.Location = new System.Drawing.Point(17, 47);
+            this.phoneNumberLabel.Location = new System.Drawing.Point(13, 38);
+            this.phoneNumberLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.phoneNumberLabel.Name = "phoneNumberLabel";
-            this.phoneNumberLabel.Size = new System.Drawing.Size(127, 22);
+            this.phoneNumberLabel.Size = new System.Drawing.Size(102, 19);
             this.phoneNumberLabel.TabIndex = 3;
             this.phoneNumberLabel.Text = "Phone Number";
             // 
@@ -275,9 +283,10 @@
             this.nameResultLabel.AutoSize = true;
             this.nameResultLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameResultLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.nameResultLabel.Location = new System.Drawing.Point(25, 140);
+            this.nameResultLabel.Location = new System.Drawing.Point(19, 114);
+            this.nameResultLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.nameResultLabel.Name = "nameResultLabel";
-            this.nameResultLabel.Size = new System.Drawing.Size(0, 22);
+            this.nameResultLabel.Size = new System.Drawing.Size(0, 19);
             this.nameResultLabel.TabIndex = 18;
             this.nameResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.nameResultLabel.Visible = false;
@@ -288,10 +297,10 @@
             this.nameSearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.nameSearchButton.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameSearchButton.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.nameSearchButton.Location = new System.Drawing.Point(268, 149);
-            this.nameSearchButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nameSearchButton.Location = new System.Drawing.Point(201, 121);
+            this.nameSearchButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nameSearchButton.Name = "nameSearchButton";
-            this.nameSearchButton.Size = new System.Drawing.Size(87, 37);
+            this.nameSearchButton.Size = new System.Drawing.Size(65, 30);
             this.nameSearchButton.TabIndex = 9;
             this.nameSearchButton.Text = "Search";
             this.nameSearchButton.UseVisualStyleBackColor = false;
@@ -301,20 +310,20 @@
             // 
             this.lastNameTextBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastNameTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lastNameTextBox.Location = new System.Drawing.Point(179, 94);
-            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lastNameTextBox.Location = new System.Drawing.Point(134, 76);
+            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(255, 30);
+            this.lastNameTextBox.Size = new System.Drawing.Size(192, 26);
             this.lastNameTextBox.TabIndex = 6;
             // 
             // firstNameTextBox
             // 
             this.firstNameTextBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstNameTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.firstNameTextBox.Location = new System.Drawing.Point(179, 47);
-            this.firstNameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.firstNameTextBox.Location = new System.Drawing.Point(134, 38);
+            this.firstNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.Size = new System.Drawing.Size(255, 30);
+            this.firstNameTextBox.Size = new System.Drawing.Size(192, 26);
             this.firstNameTextBox.TabIndex = 5;
             // 
             // firstNameLabel
@@ -322,9 +331,10 @@
             this.firstNameLabel.AutoSize = true;
             this.firstNameLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstNameLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.firstNameLabel.Location = new System.Drawing.Point(19, 47);
+            this.firstNameLabel.Location = new System.Drawing.Point(14, 38);
+            this.firstNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.firstNameLabel.Name = "firstNameLabel";
-            this.firstNameLabel.Size = new System.Drawing.Size(92, 22);
+            this.firstNameLabel.Size = new System.Drawing.Size(75, 19);
             this.firstNameLabel.TabIndex = 2;
             this.firstNameLabel.Text = "First Name";
             // 
@@ -333,9 +343,10 @@
             this.LastNameLabel.AutoSize = true;
             this.LastNameLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastNameLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.LastNameLabel.Location = new System.Drawing.Point(19, 94);
+            this.LastNameLabel.Location = new System.Drawing.Point(14, 76);
+            this.LastNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LastNameLabel.Name = "LastNameLabel";
-            this.LastNameLabel.Size = new System.Drawing.Size(91, 22);
+            this.LastNameLabel.Size = new System.Drawing.Size(74, 19);
             this.LastNameLabel.TabIndex = 1;
             this.LastNameLabel.Text = "Last Name";
             // 
@@ -349,11 +360,11 @@
             this.nameGroupBox.Controls.Add(this.LastNameLabel);
             this.nameGroupBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameGroupBox.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.nameGroupBox.Location = new System.Drawing.Point(15, 289);
-            this.nameGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.nameGroupBox.Location = new System.Drawing.Point(11, 235);
+            this.nameGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nameGroupBox.Name = "nameGroupBox";
-            this.nameGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.nameGroupBox.Size = new System.Drawing.Size(456, 207);
+            this.nameGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nameGroupBox.Size = new System.Drawing.Size(342, 168);
             this.nameGroupBox.TabIndex = 29;
             this.nameGroupBox.TabStop = false;
             this.nameGroupBox.Text = "Look up by Name";
@@ -363,9 +374,10 @@
             this.findExistingEmployeeLabel.AutoSize = true;
             this.findExistingEmployeeLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.findExistingEmployeeLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.findExistingEmployeeLabel.Location = new System.Drawing.Point(43, 23);
+            this.findExistingEmployeeLabel.Location = new System.Drawing.Point(32, 19);
+            this.findExistingEmployeeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.findExistingEmployeeLabel.Name = "findExistingEmployeeLabel";
-            this.findExistingEmployeeLabel.Size = new System.Drawing.Size(455, 51);
+            this.findExistingEmployeeLabel.Size = new System.Drawing.Size(362, 40);
             this.findExistingEmployeeLabel.TabIndex = 0;
             this.findExistingEmployeeLabel.Text = "Find an Existing Employee";
             // 
@@ -377,9 +389,9 @@
             this.topPanel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.topPanel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.topPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1439, 85);
+            this.topPanel.Size = new System.Drawing.Size(1079, 69);
             this.topPanel.TabIndex = 28;
             // 
             // employeeInfoDataGridView
@@ -388,27 +400,25 @@
             this.employeeInfoDataGridView.AllowUserToDeleteRows = false;
             this.employeeInfoDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.employeeInfoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.employeeInfoDataGridView.Location = new System.Drawing.Point(505, 134);
-            this.employeeInfoDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.employeeInfoDataGridView.Location = new System.Drawing.Point(379, 109);
             this.employeeInfoDataGridView.Name = "employeeInfoDataGridView";
-            this.employeeInfoDataGridView.Size = new System.Drawing.Size(1099, 724);
+            this.employeeInfoDataGridView.Size = new System.Drawing.Size(824, 588);
             this.employeeInfoDataGridView.TabIndex = 27;
             this.employeeInfoDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.employeeInfoDataGridView_CellValueChanged);
             this.employeeInfoDataGridView.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.employeeInfoDataGridView_EditingControlShowing);
             // 
             // FindEmployee
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1439, 901);
+            this.ClientSize = new System.Drawing.Size(1079, 732);
             this.Controls.Add(this.employeeInfoDataGridView);
             this.Controls.Add(this.employeeIDGroupBox);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.nameGroupBox);
             this.Controls.Add(this.topPanel);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FindEmployee";
             this.Text = "FindEmployee";
             this.employeeIDGroupBox.ResumeLayout(false);

@@ -7,14 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+
 
 namespace CarRentalApp
 {
     public partial class FindBooking : Form
     {
+
+        SqlConnection con;
+        SqlCommand cmd;
+        SqlDataReader dr;
+
         public FindBooking()
         {
             InitializeComponent();
+            lateReturnLabel.Visible = false;
+            lateReturnButton.Visible = false;
         }
         /*
          * Allowing only numerical values for for numeric fields (integer like only)
@@ -63,6 +72,40 @@ namespace CarRentalApp
                 String query = $"select * from [Transaction] where TRANSACTION_ID = {transactionID};";
                 // Runs query and updates table
                 Common.validTextboxEntry(transactionResultLabel, query, transactionInfoDataGridView);
+
+                DateTime returnDateTime = DateTime.Now;
+                string transactionStatus = "";
+                int resultFeeCheck = 0;
+
+                con = new SqlConnection("" +
+                "Data Source=142.59.80.79,5291; " +
+                "Initial Catalog=CRA291;" +
+                "User ID=SA;" +
+                "Password=@291CRAsql$");
+
+                cmd = new SqlCommand();
+                con.Open();
+                cmd.Connection = con;
+
+                cmd.CommandText = "" +
+                    "select Return_Date_Time, Status " +
+                    "from [Transaction] " +
+                    "where TRANSACTION_ID = " + transactionID;
+
+
+                dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    returnDateTime = DateTime.Parse(dr["Return_Date_Time"].ToString());
+                    transactionStatus = dr["Status"].ToString();
+                }
+                resultFeeCheck = DateTime.Compare(returnDateTime, DateTime.Now);
+                if (resultFeeCheck < 0 && transactionStatus == "Success")
+                {
+                    lateReturnLabel.Visible = true;
+                    lateReturnButton.Visible = true;
+                }
             }
         }
 
@@ -210,5 +253,61 @@ namespace CarRentalApp
             }
         }
 
+        private void lateReturnButton_Click(object sender, EventArgs e)
+        {
+            String transactionID = transactionIDTextBox.Text.TrimEnd();
+            double currentAmount = 0;
+
+            con = new SqlConnection("" +
+                "Data Source=142.59.80.79,5291; " +
+                "Initial Catalog=CRA291;" +
+                "User ID=SA;" +
+                "Password=@291CRAsql$");
+
+            cmd = new SqlCommand();
+            con.Open();
+            cmd.Connection = con;
+
+            cmd.CommandText = "" +
+                "select Amount " +
+                "from [Transaction] " +
+                "where TRANSACTION_ID = " + transactionID;
+
+
+            dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                currentAmount = Convert.ToDouble(dr["Amount"]);
+            }
+
+            con.Close();
+
+            currentAmount += 29.99;
+
+            int rowUpdated = 0;
+
+            cmd = new SqlCommand();
+            con.Open();
+            cmd.Connection = con;
+
+            cmd.CommandText = "UPDATE [Transaction] SET Amount = " + currentAmount + " , Status = 'Closed' Where TRANSACTION_ID = " + transactionID;
+
+            rowUpdated = cmd.ExecuteNonQuery();
+
+            con.Close();
+
+
+            if (rowUpdated > 0)
+            {
+                MessageBox.Show("Late Fee Charged Successfully\nTransaction now closed.", "Transaction Update");
+                lateReturnLabel.Visible = false;
+                lateReturnButton.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Could not charge late fee", "Error");
+            }
+        }
     }
 }
