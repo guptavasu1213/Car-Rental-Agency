@@ -32,11 +32,13 @@ namespace CarRentalApp
         string entryPaymentMethod;
         string entryStatus;
         string entryMembership;
+        int successfulTransactionFlag = 0;
         DateTime entryTransactionDateTime;
 
         public StartReservation(Customer cx)
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
             this.User = cx;
             if (cx == null)
             {
@@ -604,10 +606,63 @@ namespace CarRentalApp
             this.Close();
             NewForm.Show();
         }
-
-        private void carResultDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        /*
+ * Runs the query to validate if the user pickup date and drop date are valid for a given car.
+ * Returns true if the pickup and dropoff time are valid; else return false
+ */
+        private bool validatePickupAndDropDateTime(int carID, string pickupDateTime, string dropDateTime)
         {
 
+            string query =
+                "select * " +
+                "from [Transaction] " +
+                $"where CAR_ID = {carID} " +
+                    "and [Transaction].Status = 'Success' " +
+                    $"and (('{pickupDateTime}' between Pickup_Date_Time and Return_Date_Time) " +
+                    $"or ('{dropDateTime}' between Pickup_Date_Time and Return_Date_Time) " +
+                    $"or ('{pickupDateTime}' < Pickup_Date_Time and '{dropDateTime}' > Return_Date_Time));";
+
+            // fill the table with the value retrieved
+            DataTable table = Database.getDataTableAfterRunningQuery(query);
+            // If: Resulting table after the query is empty
+            if (table.Rows.Count == 0) { return true; }
+            else { return false; }
+        }
+        /*
+         * Finds any other car at the given branch with a car price higher than the current price point.
+         * If a higher price car ain't available, then the we look for same price point car
+         */
+        private DataTable findOtherCars(Double dailyRate, Double weeklyRate, Double monthyRate, string pickupDateTime, string dropDateTime)
+        {
+            string pickupBranch = pBranchComboBox.Text;
+            string query =
+                "select * " +
+                "from Car, Branch, Type " +
+                $"where Car.BRANCH_ID = Branch.BRANCH_ID " +
+                    $"and Car.TYPE_NAME = Type.TYPE_NAME " +
+                    $"and Branch.Name = '{pickupBranch}' " +
+                    $"and(Type.Daily_Fee > {dailyRate} or Type.Weekly_Fee > {weeklyRate} or Type.Monthly_Fee > {monthyRate}) " +
+                    "and not exists ( " +
+                        "select CAR_ID " +
+                        "from [Transaction] " +
+                        "where Car.CAR_ID = [Transaction].CAR_ID " +
+                        $"and (('{pickupDateTime}' between Pickup_Date_Time and Return_Date_Time) " +
+                        $"or('{dropDateTime}' between Pickup_Date_Time and Return_Date_Time) " +
+                        $"or('{pickupDateTime}' < Pickup_Date_Time and '{dropDateTime}' > Return_Date_Time)));";
+
+            // fill the table with the value retrieved
+            DataTable table = Database.getDataTableAfterRunningQuery(query);
+            // If: Resulting table after the query is empty
+            if (table.Rows.Count == 0) { return null; }
+            else
+            {
+                return table;
+            }
+        }
+        private void carResultDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            successfulTransactionFlag = 0;
+            string summary = "";
             string rentalType;
             double rentalCost = 0;
             double dailyRate = 0;
@@ -618,8 +673,10 @@ namespace CarRentalApp
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = carResultDataGridView.Rows[e.RowIndex];
-                entryCarID = Convert.ToInt32(row.Cells["Car ID"].Value);
+                //entryCarID = Convert.ToInt32(row.Cells["Car ID"].Value);
                 rentalType = row.Cells["Type"].Value.ToString();
+                string typeVal = row.Cells["Type"].Value.ToString();
+                string fuelVal = row.Cells["Fuel"].Value.ToString();
 
                 con = new SqlConnection("" +
                 "Data Source=142.59.80.79,5291; " +
@@ -647,32 +704,37 @@ namespace CarRentalApp
 
                 con.Close();
 
+                entryCarID = Convert.ToInt32(row.Cells["Car ID"].Value);
+                string pickupDateTime = pDateTimePicker.Value.ToString();
+                string returnDateTime = rDateTimePicker.Value.ToString();
 
-                con = new SqlConnection("" +
-                "Data Source=142.59.80.79,5291; " +
-                "Initial Catalog=CRA291;" +
-                "User ID=SA;" +
-                "Password=@291CRAsql$");
-
-                cmd = new SqlCommand();
-                con.Open();
-                cmd.Connection = con;
-
-                cmd.CommandText = "" +
-                "SELECT Daily_Fee, Weekly_Fee, Monthly_Fee " +
-                "FROM Type " +
-                "WHERE TYPE_NAME = '" + rentalType + "'";
-
-                dr = cmd.ExecuteReader();
-
-                while (dr.Read())
+                // If the pickup or drop off datetime are invalid
+                if (!validatePickupAndDropDateTime(entryCarID, pickupDateTime, returnDateTime))
                 {
-                    dailyRate = Convert.ToDouble(dr["Daily_Fee"]);
-                    weeklyRate = Convert.ToDouble(dr["Weekly_Fee"]);
-                    monthyRate = Convert.ToDouble(dr["Monthly_Fee"]);
+                    if (User.Status != "Gold")
+                    {
+                        infoLabel.Text = "The car is not available at the given date. Upgrading is not allowed for Basic membership";
+                        return;
+                    }
+
+                    summary = "The car you found is not available during the selected time! Looking for other cars . . \n";
+                    //infoLabel.Text = sum;
+                    DataTable table = findOtherCars(dailyRate, weeklyRate, monthyRate, pickupDateTime, returnDateTime);
+
+                    if (table == null)
+                    {
+                        infoLabel.Text = "Sorry Gold Member, No cars found! Try another Branch!";
+                        return;
+                    }
+
+                    garbageDataView.DataSource = table;
+                    row = garbageDataView.Rows[0];
+
+                    entryCarID = Convert.ToInt32(row.Cells["Car_ID"].Value);
+                    typeVal = row.Cells["TYPE_NAME"].Value.ToString();
+                    fuelVal = row.Cells["Fuel_Type"].Value.ToString();
                 }
 
-                con.Close();
 
                 TimeSpan rentalTime = rDateTimePicker.Value.Subtract(pDateTimePicker.Value);
                 int rentalDays = rentalTime.Days;
@@ -698,12 +760,12 @@ namespace CarRentalApp
 
                 // displaying the rental summary here
 
-                string summary = row.Cells["Year"].Value.ToString() + " "
+                summary += row.Cells["Year"].Value.ToString() + " "
                 + row.Cells["Make"].Value.ToString() + " "
                 + row.Cells["Model"].Value.ToString() + " ("
-                + row.Cells["Type"].Value.ToString() + "/"
+                + typeVal + "/"
                 + row.Cells["Transmission"].Value.ToString() + "/"
-                + row.Cells["Fuel"].Value.ToString() + "/"
+                + fuelVal + "/"
                 + row.Cells["Capacity"].Value.ToString() + " Seats)\n"
                 + pDateTimePicker.Value.ToString("dddd, MMMM d, yyyy")
                 + " — " + rDateTimePicker.Value.ToString("dddd, MMMM d, yyyy") + "\n"
@@ -723,6 +785,7 @@ namespace CarRentalApp
                 else infoLabel.Text = summary + "Total: " + rentalCost;
             }
             entryAmount = rentalCost;
+            successfulTransactionFlag = 1;
         }
 
         private void dDateTimePicker_ValueChanged(object sender, EventArgs e)
@@ -846,6 +909,16 @@ namespace CarRentalApp
 
         private void rentCarButton_Click(object sender, EventArgs e)
         {
+            if (successfulTransactionFlag == 0)
+            {
+                MessageBox.Show("No car rented!");
+                return;
+            }
+            else // When the transaction is successful
+            {
+                successfulTransactionFlag = 0;
+            }
+
             if (entryCarID == 5921)
             {
                 carResultDataGridView.DataSource = null;
