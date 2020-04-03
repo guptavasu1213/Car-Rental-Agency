@@ -202,7 +202,7 @@ namespace CarRentalApp
                 "FROM Branch " +
                 "WHERE Country = '" + pCountryComboBoxASelection +
                 "' and Province = '" + pProvinceComboBoxSelection +
-                "' and City = '" + pCityComboBoxSelection + "'";
+                "' and City = '" + pCityComboBoxSelection + "' and Status = 'Active'";
 
             dr = cmd.ExecuteReader();
 
@@ -350,7 +350,7 @@ namespace CarRentalApp
                 "FROM Branch " +
                 "WHERE Country = '" + rCountryComboBoxASelection +
                 "' and Province = '" + rProvinceComboBoxSelection +
-                "' and City = '" + rCityComboBoxSelection + "'";
+                "' and City = '" + rCityComboBoxSelection + "' and Status = 'Active'";
 
             dr = cmd.ExecuteReader();
 
@@ -809,6 +809,11 @@ namespace CarRentalApp
                 infoLabel.Text = "Waiting for Selection...";
             }
             else if (entryCardNumber == "")
+            {
+                carResultDataGridView.DataSource = null;
+                errorLabel.Text = "No Card on File";
+            }
+            else if (entryCardType == "")
             {
                 carResultDataGridView.DataSource = null;
                 errorLabel.Text = "No Card on File";
