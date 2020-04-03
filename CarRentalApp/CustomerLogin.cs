@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 using System.Data;
 
 namespace CarRentalApp
@@ -199,14 +199,29 @@ namespace CarRentalApp
             string email = EmailBox.Text.Trim();
             if (!Login.IsValidEmail(email))
             {
-                MessageBox.Show("Error: Email address provided is invalid", "Error");
+                MessageBox.Show("Error: Email address provided is invalid", "Password Error");
                 return;
             }
             if (passwordBox.Text != confirmBox.Text)
             {
-                MessageBox.Show("Error: Passwords do not match", "Error");
+                MessageBox.Show("Error: Passwords do not match", "Password Error");
                 return;
             }
+
+            Match match = Regex.Match(expiryBox.Text, @"[0-9][0-9]\/[0-9][0-9]");
+
+            if (!match.Success)
+            {
+                MessageBox.Show("Error: Expiry field not valid", "Invalid Expiry");
+            }
+
+            match = Regex.Match(cardNoBox.Text, @"[0-9]{16}");
+
+            if (!match.Success)
+            {
+                MessageBox.Show("Error: Card number should be 16 numberic digits", "Invalid Card");
+            }
+
             // Use try-catch in case the values are not going to be compatible (ie. letters entered in Age)
             try
             {
@@ -286,6 +301,26 @@ namespace CarRentalApp
         private void addressBox_Leave(object sender, EventArgs e)
         {
             AddText(addressBox, "Street Address", sender, e);
+        }
+
+        private void cardNoBox_Enter(object sender, EventArgs e)
+        {
+            RemoveText(cardNoBox, "Card Number", sender, e);
+        }
+
+        private void cardNoBox_Leave(object sender, EventArgs e)
+        {
+            AddText(cardNoBox, "Card Number", sender, e);
+        }
+
+        private void expiryBox_Enter(object sender, EventArgs e)
+        {
+            RemoveText(expiryBox, "Expiry MM/YY", sender, e);
+        }
+
+        private void expiryBox_Leave(object sender, EventArgs e)
+        {
+            AddText(expiryBox, "Expiry MM/YY", sender, e);
         }
     }
 }
