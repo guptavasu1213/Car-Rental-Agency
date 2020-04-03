@@ -73,7 +73,6 @@ namespace CarRentalApp
          */
         private void searchSpecificButton_Click(object sender, EventArgs e)
         {
-            everySearchErrorLabel.Visible = false; // Making the error label for every search invisible
             specificSearchErrorLabel.Visible = true; // Making the error label for specific search visible
             string query;
 
@@ -104,43 +103,6 @@ namespace CarRentalApp
             else { return; }
             // Run query and update the table
             Common.validTextboxEntry(specificSearchErrorLabel, query, popularBranchesDataGridView);
-        }
-        /*
-         * When a admin searches for the most popular branchs for
-         * - Each City or 
-         * - Each Province or 
-         * - Each Country
-         */
-        private void searchEveryButton_Click(object sender, EventArgs e)
-        {
-            specificSearchErrorLabel.Visible = false; // Making the error label for specific search invisible
-
-           if (cityRadio.Checked)
-            {
-                cityRadio.Checked = false; // Uncheck the button after the search
-                everySearchErrorLabel.Visible = false;
-
-                //run all cities query
-            }
-            else if (provinceRadio.Checked)
-            {
-                provinceRadio.Checked = false; // Uncheck the button after the search
-                everySearchErrorLabel.Visible = false;
-
-                //run all provinces query
-            }
-            else if (countryRadio.Checked)
-            {
-                countryRadio.Checked = false;// Uncheck the button after the search
-                everySearchErrorLabel.Visible = false;
-
-                //run all countries query
-            }
-            else
-            {
-                // You need to select an option
-                everySearchErrorLabel.Visible = true;
-            }
         }
     }
 }

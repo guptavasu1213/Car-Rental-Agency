@@ -43,25 +43,17 @@
             this.topPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.topEmployeeDataGridView = new System.Windows.Forms.DataGridView();
-            this.branchRadio = new System.Windows.Forms.RadioButton();
-            this.cityRadio = new System.Windows.Forms.RadioButton();
-            this.provinceRadio = new System.Windows.Forms.RadioButton();
-            this.countryRadio = new System.Windows.Forms.RadioButton();
-            this.selectionFilterGroupBox = new System.Windows.Forms.GroupBox();
-            this.searchEveryButton = new System.Windows.Forms.Button();
-            this.everySearchErrorLabel = new System.Windows.Forms.Label();
             this.specificParamGroupBox.SuspendLayout();
             this.topPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.topEmployeeDataGridView)).BeginInit();
-            this.selectionFilterGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // specificSearchErrorLabel
             // 
             this.specificSearchErrorLabel.AutoSize = true;
             this.specificSearchErrorLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.specificSearchErrorLabel.Location = new System.Drawing.Point(19, 510);
+            this.specificSearchErrorLabel.Location = new System.Drawing.Point(9, 249);
             this.specificSearchErrorLabel.Name = "specificSearchErrorLabel";
             this.specificSearchErrorLabel.Size = new System.Drawing.Size(336, 22);
             this.specificSearchErrorLabel.TabIndex = 10;
@@ -74,7 +66,7 @@
             this.searchSpecificButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.searchSpecificButton.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchSpecificButton.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.searchSpecificButton.Location = new System.Drawing.Point(109, 553);
+            this.searchSpecificButton.Location = new System.Drawing.Point(99, 292);
             this.searchSpecificButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.searchSpecificButton.Name = "searchSpecificButton";
             this.searchSpecificButton.Size = new System.Drawing.Size(172, 37);
@@ -170,14 +162,14 @@
             this.specificParamGroupBox.Controls.Add(this.branchLabel);
             this.specificParamGroupBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.specificParamGroupBox.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.specificParamGroupBox.Location = new System.Drawing.Point(40, 289);
+            this.specificParamGroupBox.Location = new System.Drawing.Point(30, 28);
             this.specificParamGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.specificParamGroupBox.Name = "specificParamGroupBox";
             this.specificParamGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.specificParamGroupBox.Size = new System.Drawing.Size(311, 218);
             this.specificParamGroupBox.TabIndex = 2;
             this.specificParamGroupBox.TabStop = false;
-            this.specificParamGroupBox.Text = "Searching by a specific parameter?";
+            this.specificParamGroupBox.Text = "Search by only one parameter";
             // 
             // countryTextBox
             // 
@@ -215,17 +207,14 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.specificSearchErrorLabel);
-            this.panel1.Controls.Add(this.everySearchErrorLabel);
             this.panel1.Controls.Add(this.searchSpecificButton);
-            this.panel1.Controls.Add(this.searchEveryButton);
-            this.panel1.Controls.Add(this.selectionFilterGroupBox);
             this.panel1.Controls.Add(this.specificParamGroupBox);
             this.panel1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.panel1.Location = new System.Drawing.Point(0, 79);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(409, 647);
+            this.panel1.Size = new System.Drawing.Size(409, 363);
             this.panel1.TabIndex = 12;
             // 
             // topEmployeeDataGridView
@@ -242,106 +231,7 @@
             this.topEmployeeDataGridView.Size = new System.Drawing.Size(1099, 724);
             this.topEmployeeDataGridView.TabIndex = 31;
             // 
-            // branchRadio
-            // 
-            this.branchRadio.AutoSize = true;
-            this.branchRadio.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.branchRadio.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.branchRadio.Location = new System.Drawing.Point(21, 33);
-            this.branchRadio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.branchRadio.Name = "branchRadio";
-            this.branchRadio.Size = new System.Drawing.Size(84, 26);
-            this.branchRadio.TabIndex = 0;
-            this.branchRadio.TabStop = true;
-            this.branchRadio.Text = "Branch";
-            this.branchRadio.UseVisualStyleBackColor = true;
-            // 
-            // cityRadio
-            // 
-            this.cityRadio.AutoSize = true;
-            this.cityRadio.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cityRadio.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.cityRadio.Location = new System.Drawing.Point(21, 62);
-            this.cityRadio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cityRadio.Name = "cityRadio";
-            this.cityRadio.Size = new System.Drawing.Size(60, 26);
-            this.cityRadio.TabIndex = 1;
-            this.cityRadio.TabStop = true;
-            this.cityRadio.Text = "City";
-            this.cityRadio.UseVisualStyleBackColor = true;
-            // 
-            // provinceRadio
-            // 
-            this.provinceRadio.AutoSize = true;
-            this.provinceRadio.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.provinceRadio.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.provinceRadio.Location = new System.Drawing.Point(21, 89);
-            this.provinceRadio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.provinceRadio.Name = "provinceRadio";
-            this.provinceRadio.Size = new System.Drawing.Size(96, 26);
-            this.provinceRadio.TabIndex = 2;
-            this.provinceRadio.TabStop = true;
-            this.provinceRadio.Text = "Province";
-            this.provinceRadio.UseVisualStyleBackColor = true;
-            // 
-            // countryRadio
-            // 
-            this.countryRadio.AutoSize = true;
-            this.countryRadio.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.countryRadio.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.countryRadio.Location = new System.Drawing.Point(21, 117);
-            this.countryRadio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.countryRadio.Name = "countryRadio";
-            this.countryRadio.Size = new System.Drawing.Size(92, 26);
-            this.countryRadio.TabIndex = 3;
-            this.countryRadio.TabStop = true;
-            this.countryRadio.Text = "Country";
-            this.countryRadio.UseVisualStyleBackColor = true;
-            // 
-            // selectionFilterGroupBox
-            // 
-            this.selectionFilterGroupBox.Controls.Add(this.countryRadio);
-            this.selectionFilterGroupBox.Controls.Add(this.provinceRadio);
-            this.selectionFilterGroupBox.Controls.Add(this.cityRadio);
-            this.selectionFilterGroupBox.Controls.Add(this.branchRadio);
-            this.selectionFilterGroupBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.selectionFilterGroupBox.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.selectionFilterGroupBox.Location = new System.Drawing.Point(40, 2);
-            this.selectionFilterGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.selectionFilterGroupBox.Name = "selectionFilterGroupBox";
-            this.selectionFilterGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.selectionFilterGroupBox.Size = new System.Drawing.Size(311, 170);
-            this.selectionFilterGroupBox.TabIndex = 1;
-            this.selectionFilterGroupBox.TabStop = false;
-            this.selectionFilterGroupBox.Text = "For every:";
-            // 
-            // searchEveryButton
-            // 
-            this.searchEveryButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.searchEveryButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.searchEveryButton.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchEveryButton.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.searchEveryButton.Location = new System.Drawing.Point(109, 215);
-            this.searchEveryButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.searchEveryButton.Name = "searchEveryButton";
-            this.searchEveryButton.Size = new System.Drawing.Size(172, 37);
-            this.searchEveryButton.TabIndex = 7;
-            this.searchEveryButton.Text = "Search";
-            this.searchEveryButton.UseVisualStyleBackColor = false;
-            this.searchEveryButton.Click += new System.EventHandler(this.searchEveryButton_Click);
-            // 
-            // everySearchErrorLabel
-            // 
-            this.everySearchErrorLabel.AutoSize = true;
-            this.everySearchErrorLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.everySearchErrorLabel.Location = new System.Drawing.Point(77, 176);
-            this.everySearchErrorLabel.Name = "everySearchErrorLabel";
-            this.everySearchErrorLabel.Size = new System.Drawing.Size(241, 22);
-            this.everySearchErrorLabel.TabIndex = 9;
-            this.everySearchErrorLabel.Text = "Error: Please select one option";
-            this.everySearchErrorLabel.Visible = false;
-            // 
-            // FindTop100Customers
+            // TopCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -350,8 +240,8 @@
             this.Controls.Add(this.topEmployeeDataGridView);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "FindTop100Customers";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "TopCustomers";
             this.Text = "FindTop100Customers";
             this.specificParamGroupBox.ResumeLayout(false);
             this.specificParamGroupBox.PerformLayout();
@@ -360,8 +250,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.topEmployeeDataGridView)).EndInit();
-            this.selectionFilterGroupBox.ResumeLayout(false);
-            this.selectionFilterGroupBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -381,13 +269,6 @@
         private System.Windows.Forms.TextBox provinceTextBox;
         private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label everySearchErrorLabel;
-        private System.Windows.Forms.Button searchEveryButton;
-        private System.Windows.Forms.GroupBox selectionFilterGroupBox;
-        private System.Windows.Forms.RadioButton countryRadio;
-        private System.Windows.Forms.RadioButton provinceRadio;
-        private System.Windows.Forms.RadioButton cityRadio;
-        private System.Windows.Forms.RadioButton branchRadio;
         private System.Windows.Forms.DataGridView topEmployeeDataGridView;
     }
 }
