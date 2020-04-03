@@ -41,10 +41,16 @@
             this.topPanel = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.transactionInfoDataGridView = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.transactionResultLabel = new System.Windows.Forms.Label();
+            this.transactionIDSearchButton = new System.Windows.Forms.Button();
+            this.transactionIDTextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox3.SuspendLayout();
             this.topPanel.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.transactionInfoDataGridView)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // branchIDResultLabel
@@ -83,6 +89,7 @@
             this.branchIDTextBox.Name = "branchIDTextBox";
             this.branchIDTextBox.Size = new System.Drawing.Size(308, 30);
             this.branchIDTextBox.TabIndex = 24;
+            this.branchIDTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numericTextBox_KeyPress);
             // 
             // customerIDResultLabel
             // 
@@ -120,6 +127,7 @@
             this.customerIDTextbox.Name = "customerIDTextbox";
             this.customerIDTextbox.Size = new System.Drawing.Size(308, 30);
             this.customerIDTextbox.TabIndex = 24;
+            this.customerIDTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numericTextBox_KeyPress);
             // 
             // branchIDLabel
             // 
@@ -140,7 +148,7 @@
             this.groupBox3.Controls.Add(this.customerIDLabel);
             this.groupBox3.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.groupBox3.Location = new System.Drawing.Point(15, 89);
+            this.groupBox3.Location = new System.Drawing.Point(12, 348);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -192,7 +200,7 @@
             this.groupBox4.Controls.Add(this.branchIDLabel);
             this.groupBox4.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.groupBox4.Location = new System.Drawing.Point(15, 362);
+            this.groupBox4.Location = new System.Drawing.Point(12, 621);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -217,17 +225,84 @@
             this.transactionInfoDataGridView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.transactionInfoDataGridView_CellValueChanged);
             this.transactionInfoDataGridView.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.transactionInfoDataGridView_EditingControlShowing);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.transactionResultLabel);
+            this.groupBox1.Controls.Add(this.transactionIDSearchButton);
+            this.groupBox1.Controls.Add(this.transactionIDTextBox);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.groupBox1.Location = new System.Drawing.Point(12, 112);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(473, 172);
+            this.groupBox1.TabIndex = 34;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Look up by Transaction ID";
+            // 
+            // transactionResultLabel
+            // 
+            this.transactionResultLabel.AutoSize = true;
+            this.transactionResultLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.transactionResultLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.transactionResultLabel.Location = new System.Drawing.Point(13, 101);
+            this.transactionResultLabel.Name = "transactionResultLabel";
+            this.transactionResultLabel.Size = new System.Drawing.Size(0, 22);
+            this.transactionResultLabel.TabIndex = 26;
+            this.transactionResultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.transactionResultLabel.Visible = false;
+            // 
+            // transactionIDSearchButton
+            // 
+            this.transactionIDSearchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.transactionIDSearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.transactionIDSearchButton.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.transactionIDSearchButton.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.transactionIDSearchButton.Location = new System.Drawing.Point(255, 101);
+            this.transactionIDSearchButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.transactionIDSearchButton.Name = "transactionIDSearchButton";
+            this.transactionIDSearchButton.Size = new System.Drawing.Size(87, 37);
+            this.transactionIDSearchButton.TabIndex = 25;
+            this.transactionIDSearchButton.Text = "Search";
+            this.transactionIDSearchButton.UseVisualStyleBackColor = false;
+            this.transactionIDSearchButton.Click += new System.EventHandler(this.transactionIDSearchButton_Click);
+            // 
+            // transactionIDTextBox
+            // 
+            this.transactionIDTextBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.transactionIDTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.transactionIDTextBox.Location = new System.Drawing.Point(144, 46);
+            this.transactionIDTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.transactionIDTextBox.Name = "transactionIDTextBox";
+            this.transactionIDTextBox.Size = new System.Drawing.Size(308, 30);
+            this.transactionIDTextBox.TabIndex = 24;
+            this.transactionIDTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.numericTextBox_KeyPress);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label2.Location = new System.Drawing.Point(13, 49);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(120, 22);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Transaction ID";
+            // 
             // FindBooking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1647, 968);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.transactionInfoDataGridView);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.groupBox4);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FindBooking";
             this.Text = "FindBooking";
             this.groupBox3.ResumeLayout(false);
@@ -237,6 +312,8 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.transactionInfoDataGridView)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -255,5 +332,10 @@
         private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView transactionInfoDataGridView;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label transactionResultLabel;
+        private System.Windows.Forms.Button transactionIDSearchButton;
+        private System.Windows.Forms.TextBox transactionIDTextBox;
+        private System.Windows.Forms.Label label2;
     }
 }

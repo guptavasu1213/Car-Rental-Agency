@@ -1,6 +1,6 @@
 ﻿namespace CarRentalApp
 {
-    partial class PopularCarType
+    partial class TopCustomers
     {
         /// <summary>
         /// Required designer variable.
@@ -28,76 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.topPanel = new System.Windows.Forms.Panel();
-            this.findMostPopularCarTypeLabel = new System.Windows.Forms.Label();
-            this.popularCarTypeDataGridView = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.specificSearchErrorLabel = new System.Windows.Forms.Label();
             this.searchSpecificButton = new System.Windows.Forms.Button();
-            this.specificParamGroupBox = new System.Windows.Forms.GroupBox();
-            this.countryTextBox = new System.Windows.Forms.TextBox();
-            this.provinceTextBox = new System.Windows.Forms.TextBox();
+            this.findTopCustomersLabel = new System.Windows.Forms.Label();
             this.cityTextBox = new System.Windows.Forms.TextBox();
             this.branchTextBox = new System.Windows.Forms.TextBox();
             this.countryLabel = new System.Windows.Forms.Label();
             this.cityLabel = new System.Windows.Forms.Label();
             this.provinceLabel = new System.Windows.Forms.Label();
             this.branchLabel = new System.Windows.Forms.Label();
-            this.topPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.popularCarTypeDataGridView)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.specificParamGroupBox = new System.Windows.Forms.GroupBox();
+            this.countryTextBox = new System.Windows.Forms.TextBox();
+            this.provinceTextBox = new System.Windows.Forms.TextBox();
+            this.topPanel = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.topEmployeeDataGridView = new System.Windows.Forms.DataGridView();
             this.specificParamGroupBox.SuspendLayout();
+            this.topPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.topEmployeeDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // topPanel
-            // 
-            this.topPanel.CausesValidation = false;
-            this.topPanel.Controls.Add(this.findMostPopularCarTypeLabel);
-            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.topPanel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.topPanel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1737, 85);
-            this.topPanel.TabIndex = 7;
-            // 
-            // findMostPopularCarTypeLabel
-            // 
-            this.findMostPopularCarTypeLabel.AutoSize = true;
-            this.findMostPopularCarTypeLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.findMostPopularCarTypeLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.findMostPopularCarTypeLabel.Location = new System.Drawing.Point(43, 23);
-            this.findMostPopularCarTypeLabel.Name = "findMostPopularCarTypeLabel";
-            this.findMostPopularCarTypeLabel.Size = new System.Drawing.Size(483, 51);
-            this.findMostPopularCarTypeLabel.TabIndex = 0;
-            this.findMostPopularCarTypeLabel.Text = "Find Most Popular Car Type";
-            // 
-            // popularCarTypeDataGridView
-            // 
-            this.popularCarTypeDataGridView.AllowUserToAddRows = false;
-            this.popularCarTypeDataGridView.AllowUserToDeleteRows = false;
-            this.popularCarTypeDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.popularCarTypeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.popularCarTypeDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.popularCarTypeDataGridView.Location = new System.Drawing.Point(451, 113);
-            this.popularCarTypeDataGridView.Margin = new System.Windows.Forms.Padding(4);
-            this.popularCarTypeDataGridView.Name = "popularCarTypeDataGridView";
-            this.popularCarTypeDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.popularCarTypeDataGridView.Size = new System.Drawing.Size(1099, 724);
-            this.popularCarTypeDataGridView.TabIndex = 29;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.specificSearchErrorLabel);
-            this.panel1.Controls.Add(this.searchSpecificButton);
-            this.panel1.Controls.Add(this.specificParamGroupBox);
-            this.panel1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel1.Location = new System.Drawing.Point(12, 113);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(409, 363);
-            this.panel1.TabIndex = 30;
             // 
             // specificSearchErrorLabel
             // 
@@ -125,46 +75,16 @@
             this.searchSpecificButton.UseVisualStyleBackColor = false;
             this.searchSpecificButton.Click += new System.EventHandler(this.searchSpecificButton_Click);
             // 
-            // specificParamGroupBox
+            // findTopCustomersLabel
             // 
-            this.specificParamGroupBox.Controls.Add(this.countryTextBox);
-            this.specificParamGroupBox.Controls.Add(this.provinceTextBox);
-            this.specificParamGroupBox.Controls.Add(this.cityTextBox);
-            this.specificParamGroupBox.Controls.Add(this.branchTextBox);
-            this.specificParamGroupBox.Controls.Add(this.countryLabel);
-            this.specificParamGroupBox.Controls.Add(this.cityLabel);
-            this.specificParamGroupBox.Controls.Add(this.provinceLabel);
-            this.specificParamGroupBox.Controls.Add(this.branchLabel);
-            this.specificParamGroupBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.specificParamGroupBox.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.specificParamGroupBox.Location = new System.Drawing.Point(30, 28);
-            this.specificParamGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.specificParamGroupBox.Name = "specificParamGroupBox";
-            this.specificParamGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.specificParamGroupBox.Size = new System.Drawing.Size(311, 218);
-            this.specificParamGroupBox.TabIndex = 2;
-            this.specificParamGroupBox.TabStop = false;
-            this.specificParamGroupBox.Text = "Search by only one parameter";
-            // 
-            // countryTextBox
-            // 
-            this.countryTextBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.countryTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.countryTextBox.Location = new System.Drawing.Point(103, 160);
-            this.countryTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.countryTextBox.Name = "countryTextBox";
-            this.countryTextBox.Size = new System.Drawing.Size(175, 30);
-            this.countryTextBox.TabIndex = 7;
-            // 
-            // provinceTextBox
-            // 
-            this.provinceTextBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.provinceTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.provinceTextBox.Location = new System.Drawing.Point(103, 119);
-            this.provinceTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.provinceTextBox.Name = "provinceTextBox";
-            this.provinceTextBox.Size = new System.Drawing.Size(175, 30);
-            this.provinceTextBox.TabIndex = 6;
+            this.findTopCustomersLabel.AutoSize = true;
+            this.findTopCustomersLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.findTopCustomersLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.findTopCustomersLabel.Location = new System.Drawing.Point(43, 23);
+            this.findTopCustomersLabel.Name = "findTopCustomersLabel";
+            this.findTopCustomersLabel.Size = new System.Drawing.Size(357, 51);
+            this.findTopCustomersLabel.TabIndex = 0;
+            this.findTopCustomersLabel.Text = "Find Top Customers";
             // 
             // cityTextBox
             // 
@@ -230,43 +150,125 @@
             this.branchLabel.TabIndex = 0;
             this.branchLabel.Text = "Branch ";
             // 
-            // PopularCarType
+            // specificParamGroupBox
+            // 
+            this.specificParamGroupBox.Controls.Add(this.countryTextBox);
+            this.specificParamGroupBox.Controls.Add(this.provinceTextBox);
+            this.specificParamGroupBox.Controls.Add(this.cityTextBox);
+            this.specificParamGroupBox.Controls.Add(this.branchTextBox);
+            this.specificParamGroupBox.Controls.Add(this.countryLabel);
+            this.specificParamGroupBox.Controls.Add(this.cityLabel);
+            this.specificParamGroupBox.Controls.Add(this.provinceLabel);
+            this.specificParamGroupBox.Controls.Add(this.branchLabel);
+            this.specificParamGroupBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.specificParamGroupBox.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.specificParamGroupBox.Location = new System.Drawing.Point(30, 28);
+            this.specificParamGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.specificParamGroupBox.Name = "specificParamGroupBox";
+            this.specificParamGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.specificParamGroupBox.Size = new System.Drawing.Size(311, 218);
+            this.specificParamGroupBox.TabIndex = 2;
+            this.specificParamGroupBox.TabStop = false;
+            this.specificParamGroupBox.Text = "Search by only one parameter";
+            // 
+            // countryTextBox
+            // 
+            this.countryTextBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countryTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.countryTextBox.Location = new System.Drawing.Point(103, 160);
+            this.countryTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.countryTextBox.Name = "countryTextBox";
+            this.countryTextBox.Size = new System.Drawing.Size(175, 30);
+            this.countryTextBox.TabIndex = 7;
+            // 
+            // provinceTextBox
+            // 
+            this.provinceTextBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.provinceTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.provinceTextBox.Location = new System.Drawing.Point(103, 119);
+            this.provinceTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.provinceTextBox.Name = "provinceTextBox";
+            this.provinceTextBox.Size = new System.Drawing.Size(175, 30);
+            this.provinceTextBox.TabIndex = 6;
+            // 
+            // topPanel
+            // 
+            this.topPanel.CausesValidation = false;
+            this.topPanel.Controls.Add(this.findTopCustomersLabel);
+            this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.topPanel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.topPanel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.topPanel.Location = new System.Drawing.Point(0, 0);
+            this.topPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.topPanel.Name = "topPanel";
+            this.topPanel.Size = new System.Drawing.Size(1624, 85);
+            this.topPanel.TabIndex = 13;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.specificSearchErrorLabel);
+            this.panel1.Controls.Add(this.searchSpecificButton);
+            this.panel1.Controls.Add(this.specificParamGroupBox);
+            this.panel1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.Location = new System.Drawing.Point(0, 79);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(409, 363);
+            this.panel1.TabIndex = 12;
+            // 
+            // topEmployeeDataGridView
+            // 
+            this.topEmployeeDataGridView.AllowUserToAddRows = false;
+            this.topEmployeeDataGridView.AllowUserToDeleteRows = false;
+            this.topEmployeeDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.topEmployeeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.topEmployeeDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.topEmployeeDataGridView.Location = new System.Drawing.Point(416, 91);
+            this.topEmployeeDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.topEmployeeDataGridView.Name = "topEmployeeDataGridView";
+            this.topEmployeeDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.topEmployeeDataGridView.Size = new System.Drawing.Size(1099, 724);
+            this.topEmployeeDataGridView.TabIndex = 31;
+            // 
+            // TopCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1737, 879);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.popularCarTypeDataGridView);
+            this.ClientSize = new System.Drawing.Size(1624, 878);
+            this.Controls.Add(this.topEmployeeDataGridView);
             this.Controls.Add(this.topPanel);
-            this.Name = "PopularCarType";
-            this.Text = "PopularCarType";
-            this.topPanel.ResumeLayout(false);
-            this.topPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.popularCarTypeDataGridView)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "TopCustomers";
+            this.Text = "FindTop100Customers";
             this.specificParamGroupBox.ResumeLayout(false);
             this.specificParamGroupBox.PerformLayout();
+            this.topPanel.ResumeLayout(false);
+            this.topPanel.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.topEmployeeDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel topPanel;
-        private System.Windows.Forms.Label findMostPopularCarTypeLabel;
-        private System.Windows.Forms.DataGridView popularCarTypeDataGridView;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label specificSearchErrorLabel;
         private System.Windows.Forms.Button searchSpecificButton;
-        private System.Windows.Forms.GroupBox specificParamGroupBox;
-        private System.Windows.Forms.TextBox countryTextBox;
-        private System.Windows.Forms.TextBox provinceTextBox;
+        private System.Windows.Forms.Label findTopCustomersLabel;
         private System.Windows.Forms.TextBox cityTextBox;
         private System.Windows.Forms.TextBox branchTextBox;
         private System.Windows.Forms.Label countryLabel;
         private System.Windows.Forms.Label cityLabel;
         private System.Windows.Forms.Label provinceLabel;
         private System.Windows.Forms.Label branchLabel;
+        private System.Windows.Forms.GroupBox specificParamGroupBox;
+        private System.Windows.Forms.TextBox countryTextBox;
+        private System.Windows.Forms.TextBox provinceTextBox;
+        private System.Windows.Forms.Panel topPanel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView topEmployeeDataGridView;
     }
 }

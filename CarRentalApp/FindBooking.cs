@@ -44,6 +44,27 @@ namespace CarRentalApp
                 e.Handled = true;
             }
         }
+        
+        private void transactionIDSearchButton_Click(object sender, EventArgs e)
+        {
+            branchIDResultLabel.Visible = false;
+            customerIDResultLabel.Visible = false;
+            transactionResultLabel.Visible = true;
+
+            String transactionID = transactionIDTextBox.Text.TrimEnd();
+            if (transactionID == "") // If the text field is empty
+            {
+                transactionResultLabel.Text = "Please enter something";
+                transactionResultLabel.ForeColor = Color.FromArgb(192, 0, 0); //dark red
+            }
+            else
+            {
+                // Creating the query
+                String query = $"select * from [Transaction] where TRANSACTION_ID = {transactionID};";
+                // Runs query and updates table
+                Common.validTextboxEntry(transactionResultLabel, query, transactionInfoDataGridView);
+            }
+        }
 
         /*
          * When search button is clicked while searching for all transactions by customer ID,
@@ -54,6 +75,7 @@ namespace CarRentalApp
         {
             branchIDResultLabel.Visible = false;
             customerIDResultLabel.Visible = true;
+            transactionResultLabel.Visible = false;
 
             String customerID = customerIDTextbox.Text.TrimEnd();
             if (customerID == "") // If the text field is empty
@@ -78,6 +100,8 @@ namespace CarRentalApp
         {
             branchIDResultLabel.Visible = true;
             customerIDResultLabel.Visible = false;
+            transactionResultLabel.Visible = false;
+
 
             String branchID = branchIDTextBox.Text.TrimEnd();
             if (branchID == "") // If the text field is empty
@@ -185,5 +209,6 @@ namespace CarRentalApp
                 e.Control.KeyPress -= checkForANumber;
             }
         }
+
     }
 }

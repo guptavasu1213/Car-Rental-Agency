@@ -137,11 +137,11 @@
     <Compile Include="FindEmployee.Designer.cs">
       <DependentUpon>FindEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="FindTop100Customers.cs">
+    <Compile Include="TopCustomers.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FindTop100Customers.Designer.cs">
-      <DependentUpon>FindTop100Customers.cs</DependentUpon>
+    <Compile Include="TopCustomers.Designer.cs">
+      <DependentUpon>TopCustomers.cs</DependentUpon>
     </Compile>
     <Compile Include="FindUser.cs">
       <SubType>Form</SubType>
@@ -200,11 +200,11 @@
     <Compile Include="startReservation.Designer.cs">
       <DependentUpon>startReservation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Top10Employees.cs">
+    <Compile Include="TopEmployees.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Top10Employees.Designer.cs">
-      <DependentUpon>Top10Employees.cs</DependentUpon>
+    <Compile Include="TopEmployees.Designer.cs">
+      <DependentUpon>TopEmployees.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddNewBooking.resx">
       <DependentUpon>AddNewBooking.cs</DependentUpon>
@@ -242,8 +242,8 @@
     <EmbeddedResource Include="FindEmployee.resx">
       <DependentUpon>FindEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FindTop100Customers.resx">
-      <DependentUpon>FindTop100Customers.cs</DependentUpon>
+    <EmbeddedResource Include="TopCustomers.resx">
+      <DependentUpon>TopCustomers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FindUser.resx">
       <DependentUpon>FindUser.cs</DependentUpon>
@@ -278,8 +278,8 @@
     <EmbeddedResource Include="startReservation.resx">
       <DependentUpon>startReservation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Top10Employees.resx">
-      <DependentUpon>Top10Employees.cs</DependentUpon>
+    <EmbeddedResource Include="TopEmployees.resx">
+      <DependentUpon>TopEmployees.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="CRA291DataSet.xsc">
       <DependentUpon>CRA291DataSet.xsd</DependentUpon>

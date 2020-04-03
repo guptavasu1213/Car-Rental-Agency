@@ -15,111 +15,8 @@ namespace CarRentalApp
         public AddNewBooking()
         {
             InitializeComponent();
-            // Populating the drop down menus 
-            carFuelComboBox.Items.Add("Petrol");
-            carFuelComboBox.Items.Add("Diesel");
-            carTransmissionComboBox.Items.Add("Automatic");
-            carTransmissionComboBox.Items.Add("Manual");
-
-            // DELETE ALL THESE
-            pickupComboBox.Items.Add("Vasu");
-            dropOffComboBox.Items.Add("Ahsan");
-            makeComboCox.Items.Add("Alex");
-            modelComboBox.Items.Add("Worthy");
-        }
-        /*
-         * Whenever the customer ID text box is left, the text within the textbox 
-         * is evaluated. If the customer ID entered in the textbox is found in the 
-         * database, then the user is notified.
-         */
-        private void customerIDTextBox_Leave(object sender, EventArgs e)
-        {
-            String customerID = customerIDTextBox.Text.Trim();
-            if (customerID.Length == 0) // Textbox is empty
-            {
-                customerResultLabel.Text = "Field is empty";
-                customerResultLabel.ForeColor = Color.FromArgb(192, 0, 0); // Dark red
-                return;
-            }
-            // If customer id is in the database
-            if (customerID == "123")
-            {
-                customerResultLabel.Text = "Valid Customer ID";
-                customerResultLabel.ForeColor = Color.FromArgb(0, 192, 0); // Dark green
-            }
-            // If the customer ID is not found in the database
-            else
-            {
-                customerResultLabel.Text = "Invalid Customer ID";
-                customerResultLabel.ForeColor = Color.FromArgb(192, 0, 0); // Dark red
-            }
         }
 
-        /*
-         * Checks if the following mandatory fields are selected:
-         * - Validity of Customer ID 
-         * - Pickup branch 
-         * - Dropoff Branch
-         * - Make
-         * - Model         
-         * Returns: True if all the mandatory fields are filled and valid. False if there is any invalid
-         * entry
-         */
-        private bool errorCheckForEmptyMandatoryFields()
-        {
-            int flag = 0;
-            // Customer ID 
-            if (customerResultLabel.ForeColor == Color.FromArgb(192, 0, 0))
-            {
-                flag = 1;
-            }
-
-            // Pickup branch drop down
-            if (pickupComboBox.SelectedIndex == -1)
-            {
-                errorPickupBranch.Text = "Please select a branch";
-                flag = 1;
-            }
-            else
-            {
-                errorPickupBranch.Text = "";
-            }
-            // Dropoff branch drop down
-            if (dropOffComboBox.SelectedIndex == -1)
-            {
-                errorDropoffBranch.Text = "Please select a branch";
-                flag = 1;
-            }
-            else
-            {
-                errorDropoffBranch.Text = "";
-
-            }
-            // Make drop down
-            if (makeComboCox.SelectedIndex == -1)
-            {
-                errorMake.Text = "Please select a make of car";
-                flag = 1;
-            }
-            else
-            {
-                errorMake.Text = "";
-            }
-            // Model drop down
-            if (modelComboBox.SelectedIndex == -1)
-            {
-                errorModel.Text = "Please select a model of a car";
-                flag = 1;
-            }
-            else
-            {
-                errorModel.Text = "";
-            }
-
-            // Returning appropriate values
-            if (flag == 1) { return false; }
-            else { return true; }
-        }
         /*
          * When submit button is clicked, the mandatory fields are checked if they are filled.
          * If all the mandatory fields are selected, then we check for all the optional fields 
@@ -127,64 +24,68 @@ namespace CarRentalApp
          */
         private void submitButton_Click(object sender, EventArgs e)
         {
-            //if (pickUpDate.Value.Date < DateTime.Today)
-            //{
-            //    resultLabel.Visible = true;
-            //    resultLabel.Text = "NOOOOOOOOOOOOOO";
-            //    resultLabel.ForeColor = Color.FromArgb(192, 0, 0);
-            //}
-            //else
-            //{
-            //    resultLabel.Visible = true;
-            //    resultLabel.Text = "YEEEE";
-            //    resultLabel.ForeColor = Color.FromArgb(0, 192, 0);
-            //}
+            resultLabel.Visible = true;
 
-            // Check if the mandatory fields are filled
-            if (!errorCheckForEmptyMandatoryFields())
+            String customerID = customerIDTextBox.Text.TrimEnd(); // Value in textbox
+            if (customerID == "") // If the text field is empty
             {
-                resultLabel.ForeColor = Color.FromArgb(192, 0, 0); // dark red
-                resultLabel.Text = "Please enter all the mandatory fields";
-                return;
+                resultLabel.Text = "Please enter something";
+                resultLabel.ForeColor = Color.FromArgb(192, 0, 0); //dark red
             }
-
-            // Setting the result label
-            resultLabel.ForeColor = Color.FromArgb(0, 192, 0); // dark green
-            resultLabel.Text = "Added the transaction to the database!\nYour Transaction Number is #1234567";
-
-            // Check if Transmission and Fuel type are selected
-            if (carTransmissionComboBox.SelectedIndex != -1 && carFuelComboBox.SelectedIndex != -1)
+            else
             {
-                //resultLabel.Text = "Both are selected";
+                // Changing the result label
+                resultLabel.Text = "Running the query . . . ";
+                resultLabel.ForeColor = Color.FromArgb(0, 192, 0); //dark green
 
-                // Get the values for all the fields
-                // Run a query
-                // Generate booking number
-            }
-            else if (carTransmissionComboBox.SelectedIndex != -1) // Check if Transmission is selected
-            {
-                //resultLabel.Text = "Trans is selected";
+                // Creating the query
+                String query = $"select * from Customer where CUSTOMER_ID = '{customerID}'";
+                // Runs query and updates table
+                DataTable table = Database.getDataTableAfterRunningQuery(query);
 
-                // Get the values for all the fields
-                // Run a query
-                // Generate booking number
-            }
-            else if (carFuelComboBox.SelectedIndex != -1) // Fuel type is selected
-            {
-                //resultLabel.Text = "Fuel type is selected";
+                Customer user;
 
-                // Get the values for all the fields
-                // Run a query
-                // Generate booking number
-            }
-            else // None of the optional fields are selected
-            {
-                //resultLabel.Text = "None of the optional fields are selected";
+                user = new Customer();
+                user.ID = Int32.Parse(table.Rows[0][0].ToString());
+                user.FirstName = table.Rows[0][1].ToString();
+                user.Status = table.Rows[0][2].ToString();
+                user.cardType = table.Rows[0][3].ToString();
+                user.cardNumber = table.Rows[0][4].ToString();
 
-                // Get the values for all the fields
-                // Run a query
-                // Generate booking number
+                StartReservation startreservation = new StartReservation(user);
+                startreservation.ShowDialog();
+
             }
         }
     }
 }
+
+//// Load user details from database
+//string query = String.Format("SELECT CUSTOMER_ID, First_Name, Membership_Status, Card_Type, Card_Number FROM Customer WHERE Email = '{0}';", email);
+//DataTable table = Database.SqlQuery(query);
+//                this.User = new Customer();
+//                this.User.ID = Int32.Parse(table.Rows[0][0].ToString());
+//                this.User.FirstName = table.Rows[0][1].ToString();
+//                this.User.Status = table.Rows[0][2].ToString();
+//                this.User.cardType = table.Rows[0][3].ToString();
+//                this.User.cardNumber = table.Rows[0][4].ToString();
+
+//                Console.WriteLine("" +
+//                    "ID = {0}, " +
+//                    "FirstName = {1}, " +
+//                    "Status = {2}, " +
+//                    "Card Type = {3}, " +
+//                    "Card Number = {4}",
+//                    this.User.ID,
+//                    this.User.FirstName,
+//                    this.User.Status,
+//                    this.User.cardType,
+//                    this.User.cardNumber);
+
+//                this.Close();
+
+//StartReservation startreservation = new StartReservation(this.User);
+//                this.Opacity = 0.0;
+//                startreservation.ShowDialog();
+//                this.Opacity = 100.0;
+

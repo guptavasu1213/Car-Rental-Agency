@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CarRentalApp
 {
-    public partial class FindTop100Customers : Form
+    public partial class TopCustomers : Form
     {
-        public FindTop100Customers()
+        public TopCustomers()
         {
             InitializeComponent();
         }
@@ -51,6 +51,26 @@ namespace CarRentalApp
             return true;
         }
         /*
+         * Getting the query to get the list of customers with most number of successful transactions and the parameter passed
+         */
+        private string getTextBoxQuery(string parameter)
+        {
+            return
+                "select Customer.CUSTOMER_ID, Customer.First_Name, Customer.Last_Name, Customer.Email, temp.TransactionCount " +
+                "from Customer, " +
+                    "(select Customer.CUSTOMER_ID, count(*) as 'TransactionCount' " +
+                    "from[Transaction], Branch, Customer " +
+                    "where [Transaction].PICKUP_BRANCH_ID = Branch.BRANCH_ID and " +
+                    "[Transaction].CUSTOMER_ID = Customer.CUSTOMER_ID and " +
+                    "[Transaction].Status = 'Success' and " +
+                    $"{parameter} " +
+                    "group by Customer.CUSTOMER_ID) as temp " +
+                "where Customer.CUSTOMER_ID = temp.CUSTOMER_ID " +
+                "order by temp.TransactionCount DESC;";
+        }
+
+
+        /*
          * When the admin searches for the most popular car for a specific:
          * - Branch
          * - City
@@ -61,73 +81,38 @@ namespace CarRentalApp
          */
         private void searchSpecificButton_Click(object sender, EventArgs e)
         {
-            everySearchErrorLabel.Visible = false; // Making the error label for every search invisible
+            specificSearchErrorLabel.Visible = true; // Making the error label for specific search invisible
+            string query;
 
-            if (!errorCheckSpecificFields()) { return; } // Error checking for invalid number of input entries
-
-            specificSearchErrorLabel.Visible = false; // Making the error label for specific search invisible
+            if (!errorCheckSpecificFields()) // Error checking for invalid number of input entries
+            {
+                specificSearchErrorLabel.ForeColor = Color.FromArgb(192, 0, 0); //dark red
+                return;
+            }
 
             if (branchTextBox.Text.TrimEnd() != "")
             {
                 // query by the branch name
+                query = getTextBoxQuery($"Branch.Name = '{branchTextBox.Text.TrimEnd()}'");
             }
-            if (cityTextBox.Text.TrimEnd() != "")
+            else if (cityTextBox.Text.TrimEnd() != "")
             {
                 // query by city name
+                query = getTextBoxQuery($"Branch.City = '{cityTextBox.Text.TrimEnd()}'");
             }
-            if (provinceTextBox.Text.TrimEnd() != "")
+            else if (provinceTextBox.Text.TrimEnd() != "")
             {
                 // query by province name
+                query = getTextBoxQuery($"Branch.Province = '{provinceTextBox.Text.TrimEnd()}'");
             }
-            if (countryTextBox.Text.TrimEnd() != "")
+            else if (countryTextBox.Text.TrimEnd() != "")
             {
                 // query by country name
+                query = getTextBoxQuery($"Branch.Country = '{countryTextBox.Text.TrimEnd()}'");
             }
-        }
-        /*
-         * When a admin searches for the most popular cars for
-         * - Each Branch
-         * - Each City or 
-         * - Each Province or 
-         * - Each Country
-         */
-        private void searchEveryButton_Click(object sender, EventArgs e)
-        {
-            specificSearchErrorLabel.Visible = false; // Making the error label for specific search invisible
-
-            if (branchRadio.Checked)
-            {
-                branchRadio.Checked = false; // Uncheck the button after the search
-                everySearchErrorLabel.Visible = false;
-
-                //run all branches query
-            }
-            else if (cityRadio.Checked)
-            {
-                cityRadio.Checked = false; // Uncheck the button after the search
-                everySearchErrorLabel.Visible = false;
-
-                //run all cities query
-            }
-            else if (provinceRadio.Checked)
-            {
-                provinceRadio.Checked = false; // Uncheck the button after the search
-                everySearchErrorLabel.Visible = false;
-
-                //run all provinces query
-            }
-            else if (countryRadio.Checked)
-            {
-                countryRadio.Checked = false;// Uncheck the button after the search
-                everySearchErrorLabel.Visible = false;
-
-                //run all countries query
-            }
-            else
-            {
-                // You need to select an option
-                everySearchErrorLabel.Visible = true;
-            }
+            else { return; }
+            // Run query and update the table
+            Common.validTextboxEntry(specificSearchErrorLabel, query, topEmployeeDataGridView);
         }
     }
 }
