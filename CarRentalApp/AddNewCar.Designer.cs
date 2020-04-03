@@ -32,10 +32,16 @@
             this.topPanel = new System.Windows.Forms.Panel();
             this.addNewCarLabel = new System.Windows.Forms.Label();
             this.enterCarDetailsGroupBox = new System.Windows.Forms.GroupBox();
+            this.capacityTextBox = new System.Windows.Forms.TextBox();
+            this.transmissionTextBox = new System.Windows.Forms.TextBox();
+            this.fuelTypeTextBox = new System.Windows.Forms.TextBox();
+            this.fuelTypeLabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.carTypeNameLabel = new System.Windows.Forms.Label();
             this.carTypeComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.branchIDComboBox = new System.Windows.Forms.ComboBox();
+            this.branchNameComboBox = new System.Windows.Forms.ComboBox();
             this.inServiceCheckBox = new System.Windows.Forms.CheckBox();
             this.birthDateLabel = new System.Windows.Forms.Label();
             this.insuranceLabel = new System.Windows.Forms.Label();
@@ -49,15 +55,9 @@
             this.submitButton = new System.Windows.Forms.Button();
             this.modelTextBox = new System.Windows.Forms.TextBox();
             this.makeTextBox = new System.Windows.Forms.TextBox();
-            this.fuelTypeTextBox = new System.Windows.Forms.TextBox();
             this.modelLabel = new System.Windows.Forms.Label();
-            this.fuelTypeLabel = new System.Windows.Forms.Label();
             this.makeLabel = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.capacityTextBox = new System.Windows.Forms.TextBox();
-            this.transmissionTextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.topPanel.SuspendLayout();
             this.enterCarDetailsGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -107,7 +107,7 @@
             this.enterCarDetailsGroupBox.Controls.Add(this.carTypeNameLabel);
             this.enterCarDetailsGroupBox.Controls.Add(this.carTypeComboBox);
             this.enterCarDetailsGroupBox.Controls.Add(this.label1);
-            this.enterCarDetailsGroupBox.Controls.Add(this.branchIDComboBox);
+            this.enterCarDetailsGroupBox.Controls.Add(this.branchNameComboBox);
             this.enterCarDetailsGroupBox.Controls.Add(this.inServiceCheckBox);
             this.enterCarDetailsGroupBox.Controls.Add(this.insuranceIDTextBox);
             this.enterCarDetailsGroupBox.Controls.Add(this.birthDateLabel);
@@ -135,6 +135,70 @@
             this.enterCarDetailsGroupBox.TabStop = false;
             this.enterCarDetailsGroupBox.Text = "Enter Car details";
             // 
+            // capacityTextBox
+            // 
+            this.capacityTextBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.capacityTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.capacityTextBox.Location = new System.Drawing.Point(281, 501);
+            this.capacityTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.capacityTextBox.Name = "capacityTextBox";
+            this.capacityTextBox.Size = new System.Drawing.Size(344, 30);
+            this.capacityTextBox.TabIndex = 30;
+            this.capacityTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.yearTextBox_KeyPress);
+            // 
+            // transmissionTextBox
+            // 
+            this.transmissionTextBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.transmissionTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.transmissionTextBox.Location = new System.Drawing.Point(281, 457);
+            this.transmissionTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.transmissionTextBox.Name = "transmissionTextBox";
+            this.transmissionTextBox.Size = new System.Drawing.Size(344, 30);
+            this.transmissionTextBox.TabIndex = 29;
+            // 
+            // fuelTypeTextBox
+            // 
+            this.fuelTypeTextBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fuelTypeTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.fuelTypeTextBox.Location = new System.Drawing.Point(281, 411);
+            this.fuelTypeTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.fuelTypeTextBox.Name = "fuelTypeTextBox";
+            this.fuelTypeTextBox.Size = new System.Drawing.Size(344, 30);
+            this.fuelTypeTextBox.TabIndex = 5;
+            // 
+            // fuelTypeLabel
+            // 
+            this.fuelTypeLabel.AutoSize = true;
+            this.fuelTypeLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fuelTypeLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.fuelTypeLabel.Location = new System.Drawing.Point(19, 420);
+            this.fuelTypeLabel.Name = "fuelTypeLabel";
+            this.fuelTypeLabel.Size = new System.Drawing.Size(82, 22);
+            this.fuelTypeLabel.TabIndex = 2;
+            this.fuelTypeLabel.Text = "Fuel Type";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label2.Location = new System.Drawing.Point(19, 504);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(75, 22);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Capacity";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label3.Location = new System.Drawing.Point(19, 460);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(108, 22);
+            this.label3.TabIndex = 27;
+            this.label3.Text = "Transmission";
+            // 
             // carTypeNameLabel
             // 
             this.carTypeNameLabel.AutoSize = true;
@@ -151,7 +215,7 @@
             this.carTypeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.carTypeComboBox.FormattingEnabled = true;
             this.carTypeComboBox.Location = new System.Drawing.Point(281, 96);
-            this.carTypeComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.carTypeComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.carTypeComboBox.Name = "carTypeComboBox";
             this.carTypeComboBox.Size = new System.Drawing.Size(344, 30);
             this.carTypeComboBox.TabIndex = 25;
@@ -163,25 +227,25 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.label1.Location = new System.Drawing.Point(19, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 22);
+            this.label1.Size = new System.Drawing.Size(114, 22);
             this.label1.TabIndex = 24;
-            this.label1.Text = "Branch ID";
+            this.label1.Text = "Branch Name";
             // 
-            // branchIDComboBox
+            // branchNameComboBox
             // 
-            this.branchIDComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.branchIDComboBox.FormattingEnabled = true;
-            this.branchIDComboBox.Location = new System.Drawing.Point(281, 46);
-            this.branchIDComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.branchIDComboBox.Name = "branchIDComboBox";
-            this.branchIDComboBox.Size = new System.Drawing.Size(344, 30);
-            this.branchIDComboBox.TabIndex = 23;
+            this.branchNameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.branchNameComboBox.FormattingEnabled = true;
+            this.branchNameComboBox.Location = new System.Drawing.Point(281, 46);
+            this.branchNameComboBox.Margin = new System.Windows.Forms.Padding(4);
+            this.branchNameComboBox.Name = "branchNameComboBox";
+            this.branchNameComboBox.Size = new System.Drawing.Size(344, 30);
+            this.branchNameComboBox.TabIndex = 23;
             // 
             // inServiceCheckBox
             // 
             this.inServiceCheckBox.AutoSize = true;
             this.inServiceCheckBox.Location = new System.Drawing.Point(281, 554);
-            this.inServiceCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inServiceCheckBox.Margin = new System.Windows.Forms.Padding(4);
             this.inServiceCheckBox.Name = "inServiceCheckBox";
             this.inServiceCheckBox.Size = new System.Drawing.Size(18, 17);
             this.inServiceCheckBox.TabIndex = 22;
@@ -319,16 +383,6 @@
             this.makeTextBox.Size = new System.Drawing.Size(344, 30);
             this.makeTextBox.TabIndex = 6;
             // 
-            // fuelTypeTextBox
-            // 
-            this.fuelTypeTextBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fuelTypeTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.fuelTypeTextBox.Location = new System.Drawing.Point(281, 411);
-            this.fuelTypeTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.fuelTypeTextBox.Name = "fuelTypeTextBox";
-            this.fuelTypeTextBox.Size = new System.Drawing.Size(344, 30);
-            this.fuelTypeTextBox.TabIndex = 5;
-            // 
             // modelLabel
             // 
             this.modelLabel.AutoSize = true;
@@ -339,17 +393,6 @@
             this.modelLabel.Size = new System.Drawing.Size(58, 22);
             this.modelLabel.TabIndex = 3;
             this.modelLabel.Text = "Model";
-            // 
-            // fuelTypeLabel
-            // 
-            this.fuelTypeLabel.AutoSize = true;
-            this.fuelTypeLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fuelTypeLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.fuelTypeLabel.Location = new System.Drawing.Point(19, 420);
-            this.fuelTypeLabel.Name = "fuelTypeLabel";
-            this.fuelTypeLabel.Size = new System.Drawing.Size(82, 22);
-            this.fuelTypeLabel.TabIndex = 2;
-            this.fuelTypeLabel.Text = "Fuel Type";
             // 
             // makeLabel
             // 
@@ -362,49 +405,6 @@
             this.makeLabel.TabIndex = 1;
             this.makeLabel.Text = "Make";
             // 
-            // capacityTextBox
-            // 
-            this.capacityTextBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.capacityTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.capacityTextBox.Location = new System.Drawing.Point(281, 501);
-            this.capacityTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.capacityTextBox.Name = "capacityTextBox";
-            this.capacityTextBox.Size = new System.Drawing.Size(344, 30);
-            this.capacityTextBox.TabIndex = 30;
-            this.capacityTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.yearTextBox_KeyPress);
-            // 
-            // transmissionTextBox
-            // 
-            this.transmissionTextBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.transmissionTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.transmissionTextBox.Location = new System.Drawing.Point(281, 457);
-            this.transmissionTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.transmissionTextBox.Name = "transmissionTextBox";
-            this.transmissionTextBox.Size = new System.Drawing.Size(344, 30);
-            this.transmissionTextBox.TabIndex = 29;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label2.Location = new System.Drawing.Point(19, 504);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 22);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Capacity";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label3.Location = new System.Drawing.Point(19, 460);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 22);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "Transmission";
-            // 
             // AddNewCar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -413,7 +413,7 @@
             this.ClientSize = new System.Drawing.Size(1092, 843);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.enterCarDetailsGroupBox);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddNewCar";
             this.Text = "AddNewCar";
             this.topPanel.ResumeLayout(false);
@@ -447,7 +447,7 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label birthDateLabel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox branchIDComboBox;
+        private System.Windows.Forms.ComboBox branchNameComboBox;
         private System.Windows.Forms.CheckBox inServiceCheckBox;
         private System.Windows.Forms.Label carTypeNameLabel;
         private System.Windows.Forms.ComboBox carTypeComboBox;

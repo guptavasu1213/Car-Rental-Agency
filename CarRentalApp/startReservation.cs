@@ -38,7 +38,6 @@ namespace CarRentalApp
         public StartReservation(Customer cx)
         {
             InitializeComponent();
-            WindowState = FormWindowState.Maximized;
             this.User = cx;
             if (cx == null)
             {

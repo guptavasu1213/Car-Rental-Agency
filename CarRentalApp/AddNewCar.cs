@@ -17,9 +17,9 @@ namespace CarRentalApp
             InitializeComponent();
 
             // Filling branch combo box
-            string query = "select BRANCH_ID from Branch;";
+            string query = "select Name from Branch;";
             DataTable table = Database.getDataTableAfterRunningQuery(query);
-            Common.fillComboBox(branchIDComboBox, "BRANCH_ID",  table);
+            Common.fillComboBox(branchNameComboBox, "Name",  table);
 
             // Filling TYPE_NAME combo box
             query = "select TYPE_NAME from Type;";
@@ -49,7 +49,7 @@ namespace CarRentalApp
             if (carName == "" || make == "" || model == "" || year == "" || vinNumber == "" ||
                 licensePlateNum == "" || insuranceID == "" || 
                 fuelType == "" || transmission == "" || capacity == "" ||
-                branchIDComboBox.SelectedIndex == -1 || carTypeComboBox.SelectedIndex == -1
+                branchNameComboBox.SelectedIndex == -1 || carTypeComboBox.SelectedIndex == -1
                 )
             {
                 resultLabel.Text = "All fields are required";
@@ -63,11 +63,17 @@ namespace CarRentalApp
                 resultLabel.ForeColor = Color.FromArgb(0, 192, 0); // Dark Green
                 resultLabel.Visible = true;
 
-                string branchID = branchIDComboBox.SelectedItem.ToString();
+                string branchName = branchNameComboBox.SelectedItem.ToString();
                 string typeName = carTypeComboBox.SelectedItem.ToString();
 
-                // Create the query
-                string query = "INSERT INTO Car(BRANCH_ID, TYPE_NAME, Make, Model, Year, VIN, License_Plate, Insurance_Policy_Number, In_Service, Fuel_Type, Transmission, Capacity) " +
+                // Finding the BRANCH ID for the Name in the drop down
+                string query = $"select BRANCH_ID from Branch where Name = '{branchName}';";
+                DataTable table = Database.getDataTableAfterRunningQuery(query);
+
+                var branchID = (table.Rows[0]["BRANCH_ID"]);
+
+                //// Create the query
+                query = "INSERT INTO Car(BRANCH_ID, TYPE_NAME, Make, Model, Year, VIN, License_Plate, Insurance_Policy_Number, In_Service, Fuel_Type, Transmission, Capacity) " +
                     $"VALUES('{branchID}', '{typeName}', '{make}', '{model}', {year}, '{vinNumber}', '{licensePlateNum}', '{insuranceID}', '{inService}', '{fuelType}', '{transmission}', '{capacity}')";
                 Database.runQuery(query);
             }
