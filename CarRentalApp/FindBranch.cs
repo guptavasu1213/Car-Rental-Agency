@@ -119,10 +119,7 @@ namespace CarRentalApp
          */
         private void numericTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+
         }
 
         private void branchInfoDataGridView_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
@@ -139,5 +136,12 @@ namespace CarRentalApp
                 e.Control.KeyPress -= numericTextBox_KeyPress;
             }
         }
+
+        private void branchIDTextbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

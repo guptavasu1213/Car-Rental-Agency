@@ -57,6 +57,22 @@ namespace CarRentalApp
 
             }
         }
+
+        private void customerIDTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        /*
+         * Allowing only numerical values for numeric textboxes
+         */
+        private void numericTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
 
