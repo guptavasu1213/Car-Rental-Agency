@@ -86,9 +86,7 @@
             this.rentCarButton = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.infoLabel = new System.Windows.Forms.Label();
-            this.quickCarLookupTextBox = new System.Windows.Forms.TextBox();
-            this.quickCarLookupLabel = new System.Windows.Forms.Label();
-            this.quickCarLookupButton = new System.Windows.Forms.Button();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -220,9 +218,8 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(18, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 16);
+            this.label1.Size = new System.Drawing.Size(0, 16);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Country";
             // 
             // groupBox2
             // 
@@ -751,47 +748,22 @@
             this.infoLabel.TabIndex = 0;
             this.infoLabel.Text = "Waiting for Selection...";
             // 
-            // quickCarLookupTextBox
+            // groupBox6
             // 
-            this.quickCarLookupTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quickCarLookupTextBox.Location = new System.Drawing.Point(1382, 43);
-            this.quickCarLookupTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.quickCarLookupTextBox.Name = "quickCarLookupTextBox";
-            this.quickCarLookupTextBox.Size = new System.Drawing.Size(64, 26);
-            this.quickCarLookupTextBox.TabIndex = 30;
-            // 
-            // quickCarLookupLabel
-            // 
-            this.quickCarLookupLabel.AutoSize = true;
-            this.quickCarLookupLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quickCarLookupLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.quickCarLookupLabel.Location = new System.Drawing.Point(1204, 46);
-            this.quickCarLookupLabel.Name = "quickCarLookupLabel";
-            this.quickCarLookupLabel.Size = new System.Drawing.Size(173, 19);
-            this.quickCarLookupLabel.TabIndex = 17;
-            this.quickCarLookupLabel.Text = "QUICK CAR LOOKUP";
-            // 
-            // quickCarLookupButton
-            // 
-            this.quickCarLookupButton.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quickCarLookupButton.ForeColor = System.Drawing.Color.Black;
-            this.quickCarLookupButton.Location = new System.Drawing.Point(1449, 43);
-            this.quickCarLookupButton.Name = "quickCarLookupButton";
-            this.quickCarLookupButton.Size = new System.Drawing.Size(56, 25);
-            this.quickCarLookupButton.TabIndex = 31;
-            this.quickCarLookupButton.Text = "Search";
-            this.quickCarLookupButton.UseVisualStyleBackColor = true;
-            this.quickCarLookupButton.Click += new System.EventHandler(this.findCarButton_Click);
+            this.groupBox6.Location = new System.Drawing.Point(111, 62);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(8, 8);
+            this.groupBox6.TabIndex = 30;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "groupBox6";
             // 
             // StartReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1515, 699);
-            this.Controls.Add(this.quickCarLookupButton);
-            this.Controls.Add(this.quickCarLookupLabel);
-            this.Controls.Add(this.quickCarLookupTextBox);
+            this.ClientSize = new System.Drawing.Size(962, 552);
+            this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.rentCarButton);
             this.Controls.Add(this.groupBox5);
@@ -878,9 +850,7 @@
         private System.Windows.Forms.Label infoLabel;
         private System.Windows.Forms.Label errorLabel;
         private System.Windows.Forms.CheckBox hatchbackCheckBox;
-        private System.Windows.Forms.TextBox quickCarLookupTextBox;
-        private System.Windows.Forms.Label quickCarLookupLabel;
-        private System.Windows.Forms.Button quickCarLookupButton;
         private System.Windows.Forms.Label successInfoLabel;
+        private System.Windows.Forms.GroupBox groupBox6;
     }
 }

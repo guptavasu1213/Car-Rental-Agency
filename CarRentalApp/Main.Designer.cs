@@ -37,7 +37,8 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(58, 144);
+            this.button1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(67, 146);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(365, 63);
             this.button1.TabIndex = 3;
@@ -47,7 +48,8 @@
             // 
             // admin_button
             // 
-            this.admin_button.Location = new System.Drawing.Point(58, 316);
+            this.admin_button.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.admin_button.Location = new System.Drawing.Point(67, 318);
             this.admin_button.Name = "admin_button";
             this.admin_button.Size = new System.Drawing.Size(365, 63);
             this.admin_button.TabIndex = 5;
@@ -59,7 +61,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(110, 48);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(120, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(258, 32);
             this.label1.TabIndex = 6;
@@ -68,16 +71,18 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Arial", 25.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(1, 80);
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(5, 78);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(492, 38);
+            this.label2.Size = new System.Drawing.Size(488, 38);
             this.label2.TabIndex = 7;
             this.label2.Text = "Welcome, Guest!";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // reserveButton
             // 
-            this.reserveButton.Location = new System.Drawing.Point(58, 229);
+            this.reserveButton.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reserveButton.Location = new System.Drawing.Point(67, 231);
             this.reserveButton.Name = "reserveButton";
             this.reserveButton.Size = new System.Drawing.Size(365, 63);
             this.reserveButton.TabIndex = 8;
@@ -89,6 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(494, 433);
             this.Controls.Add(this.reserveButton);
             this.Controls.Add(this.label2);
