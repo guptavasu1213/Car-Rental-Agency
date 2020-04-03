@@ -40,6 +40,10 @@ namespace CarRentalApp
 
         public string Status { get; set; }
 
+        public string cardNumber { get; set; }
+
+        public string cardType { get; set; }
+
         // password stored is hashed
         public string Password { get; set; }
 

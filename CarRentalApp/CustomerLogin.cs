@@ -178,17 +178,34 @@ namespace CarRentalApp
                 this.DialogResult = DialogResult.OK;
 
                 // Load user details from database
-                string query = String.Format("SELECT CUSTOMER_ID, First_Name, Membership_Status FROM Customer WHERE Email = '{0}';", email);
+                string query = String.Format("SELECT CUSTOMER_ID, First_Name, Membership_Status, Card_Type, Card_Number FROM Customer WHERE Email = '{0}';", email);
                 DataTable table = Database.SqlQuery(query);
                 this.User = new Customer();
                 this.User.ID = Int32.Parse(table.Rows[0][0].ToString());
                 this.User.FirstName = table.Rows[0][1].ToString();
                 this.User.Status = table.Rows[0][2].ToString();
+                this.User.cardType = table.Rows[0][3].ToString();
+                this.User.cardNumber = table.Rows[0][4].ToString();
 
-
-                Console.WriteLine("ID = {0}, FirstName = {1}, Status {2}", this.User.ID, this.User.FirstName, this.User.Status);
+                Console.WriteLine("" +
+                    "ID = {0}, " +
+                    "FirstName = {1}, " +
+                    "Status = {2}, " +
+                    "Card Type = {3}, " +
+                    "Card Number = {4}", 
+                    this.User.ID, 
+                    this.User.FirstName, 
+                    this.User.Status,
+                    this.User.cardType,
+                    this.User.cardNumber);
 
                 this.Close();
+
+                StartReservation startreservation = new StartReservation(this.User);
+                this.Opacity = 0.0;
+                startreservation.ShowDialog();
+                this.Opacity = 100.0;
+
             }
         }
 
@@ -246,6 +263,11 @@ namespace CarRentalApp
                     this.DialogResult = DialogResult.OK;
                     this.User = cx;
                     this.Close();
+
+                    StartReservation startreservation = new StartReservation(this.User);
+                    this.Opacity = 0.0;
+                    startreservation.ShowDialog();
+                    this.Opacity = 100.0;
                 }
             }
             catch (Exception ex)

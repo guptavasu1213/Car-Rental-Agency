@@ -19,11 +19,26 @@ namespace CarRentalApp
         SqlCommand cmd;
         SqlDataReader dr;
         Customer User;
-        int carID = 0;
+
+        int entryCustomerID;
+        int entryCarID = 5921;
+        int entryDropEmployeeID;
+        int entryPickupEmployeeID;
+        int entryPickupBranchID;
+        int entryDropBranchID;
+        DateTime entryPickupDateTime;
+        DateTime entryReturnDateTime;
+        double entryAmount;
+        string entryCardNumber;
+        string entryCardType;
+        string entryPaymentMethod;
+        string entryStatus;
+        DateTime entryTransactionDateTime;
 
         public StartReservation(Customer cx)
         {
             InitializeComponent();
+            WindowState = FormWindowState.Maximized;
             this.User = cx;
             if (cx == null)
             {
@@ -36,11 +51,19 @@ namespace CarRentalApp
                 welcomeLabel.Text = "★ Welcome Gold Member " + User.FirstName + " ★";
             }
             else welcomeLabel.Text = "Welcome " + User.FirstName;
+
+            entryCustomerID = this.User.ID;
+            entryCardType = this.User.cardType;
+            entryCardNumber = this.User.cardNumber;
+            entryPaymentMethod = "Online - CF";
+            entryStatus = "Success";
+            entryDropEmployeeID = 2;
+            entryPickupEmployeeID = 2;
+
             pDateTimePicker.Value = DateTime.Now;
             rDateTimePicker.Value = DateTime.Now;
 
         }
-
 
         private void StartReservation_Load(object sender, EventArgs e)
         {
@@ -506,7 +529,7 @@ namespace CarRentalApp
                 con.Open();
 
                 string sqlstring = "" +
-                    "SELECT CAR_ID as 'Car #', TYPE_NAME as 'Type', Make, Model, Year, Fuel_Type as 'Fuel', Transmission, Capacity " +
+                    "SELECT CAR_ID as 'Car ID', TYPE_NAME as 'Type', Make, Model, Year, Fuel_Type as 'Fuel', Transmission, Capacity " +
                     "FROM Branch, Car " +
                     "WHERE Branch.BRANCH_ID = Car.BRANCH_ID " +
                     "and Branch.Name = " + "'" + pBranchComboBox.Text + "' " +
@@ -546,7 +569,7 @@ namespace CarRentalApp
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = carResultDataGridView.Rows[e.RowIndex];
-                carID = Convert.ToInt32(row.Cells["Car #"].Value);
+                entryCarID = Convert.ToInt32(row.Cells["Car ID"].Value);
                 rentalType = row.Cells["Type"].Value.ToString();
 
                 con = new SqlConnection("" +
@@ -623,7 +646,7 @@ namespace CarRentalApp
                 }
                 else infoLabel.Text = summary + "Total: " + rentalCost;
             }
-
+            entryAmount = rentalCost;
         }
 
         private void dDateTimePicker_ValueChanged(object sender, EventArgs e)
@@ -745,15 +768,122 @@ namespace CarRentalApp
             errorLabel.Text = "";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void rentCarButton_Click(object sender, EventArgs e)
         {
+            if (entryCarID == 5921) { errorLabel.Text = "Complete Search to Rent Car"; }
+            else
+            { 
+            con = new SqlConnection("" +
+              "Data Source=142.59.80.79,5291; " +
+              "Initial Catalog=CRA291;" +
+              "User ID=SA;" +
+              "Password=@291CRAsql$");
 
-            infoLabel.Text = "cuID:" + User.ID.ToString() + " caID: " + carID;
+            cmd = new SqlCommand();
+            con.Open();
+            cmd.Connection = con;
 
+            cmd.CommandText = "" +
+            "SELECT BRANCH_ID " +
+            "FROM Branch " +
+            "WHERE Name = '" + pBranchComboBox.Text + "'";
+
+            dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                entryPickupBranchID = Convert.ToInt32(dr["BRANCH_ID"].ToString());
+            }
+
+            con.Close();
+
+            con = new SqlConnection("" +
+              "Data Source=142.59.80.79,5291; " +
+              "Initial Catalog=CRA291;" +
+              "User ID=SA;" +
+              "Password=@291CRAsql$");
+
+            cmd = new SqlCommand();
+            con.Open();
+            cmd.Connection = con;
+
+            cmd.CommandText = "" +
+            "SELECT BRANCH_ID " +
+            "FROM Branch " +
+            "WHERE Name = '" + rBranchComboBox.Text + "'";
+
+            dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                entryDropBranchID = Convert.ToInt32(dr["BRANCH_ID"].ToString());
+            }
+
+            con.Close();
+
+            entryPickupDateTime = pDateTimePicker.Value;
+            entryReturnDateTime = rDateTimePicker.Value;
+            entryTransactionDateTime = DateTime.Now;
+
+            carResultDataGridView.DataSource = null;
+
+           // errorLabel.Text =
+           //     "CU-ID = " + entryCustomerID + " " +
+           //     "\nCA-ID = " + entryCarID + " " +
+           //     "\nDE-ID = " + entryDropEmployeeID + " " +
+           //     "\nPE-ID = " + entryPickupEmployeeID + " " +
+           //     "\nPB-ID = " + entryPickupBranchID + " " +
+           //     "\nDB-ID = " + entryDropBranchID + " " +
+           //     "\nPDT = " + entryPickupDateTime + " " +
+           //     "\nRDT = " + entryReturnDateTime + " " +
+           //     "\nAMT = " + entryAmount + " " +
+           //     "\nCNUM = " + entryCardNumber + " " +
+           //     "\nCTYP = " + entryCardType + " " +
+           //     "\nPMTD = " + entryPaymentMethod + " " +
+           //     "\nPSTS = " + entryStatus + " " +
+           //     "\nTDT = " + entryTransactionDateTime;
+
+
+            string sql = "INSERT INTO [Transaction] (CUSTOMER_ID, CAR_ID, DROP_EMPLOYEE_ID, PICKUP_EMPLOYEE_ID, PICKUP_BRANCH_ID, DROP_BRANCH_ID, Pickup_Date_Time, Return_Date_Time, Amount, Card_Number, Card_Type, Payment_Method, Status, Transaction_Date_Time) ";
+            string values = "VALUES (@eCUID, @eCAID, @eDEID, @ePEID, @ePBID, @eDBID, @ePDT, @eRDT, @eAMT, @eCNUM, @eCTYP, @ePMTD, @ePSTS, @eTDT);";
+            string insertvals = sql + values;
+
+            int returnStatus = 0;
+            con = new SqlConnection("" +
+                "Data Source=142.59.80.79,5291; " +
+                "Initial Catalog=CRA291;" +
+                "User ID=SA;" +
+                "Password=@291CRAsql$");
+
+            cmd = new SqlCommand(insertvals, con);
+
+            cmd.Parameters.Add("@eCUID", SqlDbType.Int).Value = entryCustomerID;
+            cmd.Parameters.Add("@eCAID", SqlDbType.Int).Value = entryCarID;
+            cmd.Parameters.Add("@eDEID", SqlDbType.Int).Value = entryDropEmployeeID;
+            cmd.Parameters.Add("@ePEID", SqlDbType.Int).Value = entryPickupEmployeeID;
+            cmd.Parameters.Add("@ePBID", SqlDbType.Int).Value = entryPickupBranchID;
+            cmd.Parameters.Add("@eDBID", SqlDbType.Int).Value = entryDropBranchID;
+            cmd.Parameters.Add("@ePDT", SqlDbType.DateTime).Value = entryPickupDateTime;
+            cmd.Parameters.Add("@eRDT", SqlDbType.DateTime).Value = entryReturnDateTime;
+            cmd.Parameters.Add("@eAMT", SqlDbType.Decimal).Value = entryAmount;
+            cmd.Parameters.Add("@eCNUM", SqlDbType.Decimal).Value = entryCardNumber;
+            cmd.Parameters.Add("@eCTYP", SqlDbType.VarChar).Value = entryCardType;
+            cmd.Parameters.Add("@ePMTD", SqlDbType.VarChar).Value = entryPaymentMethod;
+            cmd.Parameters.Add("@ePSTS", SqlDbType.VarChar).Value = entryStatus;
+            cmd.Parameters.Add("@eTDT", SqlDbType.DateTime).Value = entryTransactionDateTime;
+
+            con.Open();
+            returnStatus = cmd.ExecuteNonQuery();
+            con.Close();
+
+            if  (returnStatus > 0)
+            { 
+                MessageBox.Show("Car Rental Successfull!", "Success");
+                StartReservation NewForm = new StartReservation(User);
+                NewForm.Show();
+                this.Dispose(false);
+            }
+            }
         }
     }
 }
-
-
-
-
