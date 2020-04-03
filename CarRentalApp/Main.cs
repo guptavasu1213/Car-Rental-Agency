@@ -21,6 +21,8 @@ namespace CarRentalApp
             this.Text = "Car Rental Agency";
             label2.Text = "Welcome, Guest!";
             loggedIn = false;
+            reserveButton.Width = 0;
+            reserveButton.Height = 0;
         }
 
         public void UpdateUser(Customer cx)
@@ -29,6 +31,8 @@ namespace CarRentalApp
             label2.Text = "Welcome, " + User.FirstName + "!";
             loggedIn = true;
             button1.Text = "Log Out";
+            reserveButton.Width = 365;
+            reserveButton.Height = 63;
         }
 
         private void nameTextBoxLeave(object sender, EventArgs e)
@@ -45,6 +49,8 @@ namespace CarRentalApp
                 this.loggedIn = false;
                 label2.Text = "Welcome, Guest!";
                 button1.Text = "Login for a Customized Solution";
+                reserveButton.Width = 0;
+                reserveButton.Height = 0;
             }
             else
             {
@@ -68,6 +74,14 @@ namespace CarRentalApp
             AdminLogin adminLogin = new AdminLogin();
             //this.Hide(); // Hiding this window if we want come back to it
             adminLogin.Show();
+        }
+
+        private void reserveButton_Click(object sender, EventArgs e)
+        {
+            StartReservation startreservation = new StartReservation(this.User);
+            this.Opacity = 0.0;
+            startreservation.ShowDialog();
+            this.Opacity = 100.0;
         }
     }
 }
