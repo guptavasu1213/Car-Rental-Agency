@@ -74,7 +74,7 @@ namespace CarRentalApp
         private void searchSpecificButton_Click(object sender, EventArgs e)
         {
             everySearchErrorLabel.Visible = false; // Making the error label for every search invisible
-            specificSearchErrorLabel.Visible = true; // Making the error label for specific search invisible
+            specificSearchErrorLabel.Visible = true; // Making the error label for specific search visible
             string query;
 
             if (!errorCheckSpecificFields()) // Error checking for invalid number of input entries

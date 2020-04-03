@@ -49,12 +49,12 @@
             this.branchLabel = new System.Windows.Forms.Label();
             this.findTop10EmployeesLabel = new System.Windows.Forms.Label();
             this.topPanel = new System.Windows.Forms.Panel();
-            this.resultsDataGridView = new System.Windows.Forms.DataGridView();
+            this.topEmployeeDataGridView = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.selectionFilterGroupBox.SuspendLayout();
             this.specificParamGroupBox.SuspendLayout();
             this.topPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.resultsDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.topEmployeeDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -308,27 +308,32 @@
             this.topPanel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1163, 85);
+            this.topPanel.Size = new System.Drawing.Size(1750, 85);
             this.topPanel.TabIndex = 10;
             // 
-            // resultsDataGridView
+            // topEmployeeDataGridView
             // 
-            this.resultsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.resultsDataGridView.Location = new System.Drawing.Point(428, 91);
-            this.resultsDataGridView.Name = "resultsDataGridView";
-            this.resultsDataGridView.RowTemplate.Height = 24;
-            this.resultsDataGridView.Size = new System.Drawing.Size(723, 648);
-            this.resultsDataGridView.TabIndex = 11;
+            this.topEmployeeDataGridView.AllowUserToAddRows = false;
+            this.topEmployeeDataGridView.AllowUserToDeleteRows = false;
+            this.topEmployeeDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.topEmployeeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.topEmployeeDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.topEmployeeDataGridView.Location = new System.Drawing.Point(443, 94);
+            this.topEmployeeDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.topEmployeeDataGridView.Name = "topEmployeeDataGridView";
+            this.topEmployeeDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.topEmployeeDataGridView.Size = new System.Drawing.Size(1099, 724);
+            this.topEmployeeDataGridView.TabIndex = 30;
             // 
             // Top10Employees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1163, 763);
+            this.ClientSize = new System.Drawing.Size(1750, 876);
+            this.Controls.Add(this.topEmployeeDataGridView);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.topPanel);
-            this.Controls.Add(this.resultsDataGridView);
             this.Name = "Top10Employees";
             this.Text = "Top10Employees";
             this.panel1.ResumeLayout(false);
@@ -339,7 +344,7 @@
             this.specificParamGroupBox.PerformLayout();
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.resultsDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.topEmployeeDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -367,6 +372,6 @@
         private System.Windows.Forms.Label branchLabel;
         private System.Windows.Forms.Label findTop10EmployeesLabel;
         private System.Windows.Forms.Panel topPanel;
-        private System.Windows.Forms.DataGridView resultsDataGridView;
+        private System.Windows.Forms.DataGridView topEmployeeDataGridView;
     }
 }

@@ -84,6 +84,7 @@ namespace CarRentalApp
             return table;
         }
 
+
         public static void SqlInsert(string query)
         {
             SqlDataReader dataReader;
