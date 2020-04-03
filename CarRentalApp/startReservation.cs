@@ -710,7 +710,7 @@ namespace CarRentalApp
                 // If the pickup or drop off datetime are invalid
                 if (!validatePickupAndDropDateTime(entryCarID, pickupDateTime, returnDateTime))
                 {
-                    if (User.Status != "Gold")
+                    if (entryMembership != "Gold")
                     {
                         infoLabel.Text = "The car is not available at the given date. Upgrading is not allowed for Basic membership";
                         return;
@@ -774,7 +774,7 @@ namespace CarRentalApp
 
                 double rentalSubtotal = rentalCost;
 
-                if (rBranchComboBox.Text != pBranchComboBox.Text && User.Status != "Gold")
+                if (rBranchComboBox.Text != pBranchComboBox.Text && entryMembership != "Gold")
                 {
                     rentalCost += differentBranchFee;
                     infoLabel.Text = summary

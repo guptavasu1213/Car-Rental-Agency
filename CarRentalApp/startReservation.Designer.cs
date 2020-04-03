@@ -562,7 +562,7 @@
             this.searchButton.ForeColor = System.Drawing.Color.Black;
             this.searchButton.Location = new System.Drawing.Point(16, 646);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(291, 40);
+            this.searchButton.Size = new System.Drawing.Size(291, 56);
             this.searchButton.TabIndex = 3;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
@@ -585,7 +585,7 @@
             this.resetButton.ForeColor = System.Drawing.Color.Black;
             this.resetButton.Location = new System.Drawing.Point(313, 646);
             this.resetButton.Name = "resetButton";
-            this.resetButton.Size = new System.Drawing.Size(291, 40);
+            this.resetButton.Size = new System.Drawing.Size(291, 56);
             this.resetButton.TabIndex = 12;
             this.resetButton.Text = "New Search";
             this.resetButton.UseVisualStyleBackColor = true;
@@ -736,7 +736,7 @@
             this.rentCarButton.ForeColor = System.Drawing.Color.Black;
             this.rentCarButton.Location = new System.Drawing.Point(1327, 591);
             this.rentCarButton.Name = "rentCarButton";
-            this.rentCarButton.Size = new System.Drawing.Size(179, 95);
+            this.rentCarButton.Size = new System.Drawing.Size(179, 111);
             this.rentCarButton.TabIndex = 18;
             this.rentCarButton.Text = "Rent this Car!";
             this.rentCarButton.UseVisualStyleBackColor = true;
@@ -749,7 +749,7 @@
             this.groupBox4.ForeColor = System.Drawing.Color.AliceBlue;
             this.groupBox4.Location = new System.Drawing.Point(610, 585);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(711, 101);
+            this.groupBox4.Size = new System.Drawing.Size(711, 117);
             this.groupBox4.TabIndex = 29;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Car Rental Summary";
@@ -778,7 +778,7 @@
             // 
             this.garbageDataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.garbageDataView.Location = new System.Drawing.Point(8, 34);
-            this.garbageDataView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.garbageDataView.Margin = new System.Windows.Forms.Padding(2);
             this.garbageDataView.Name = "garbageDataView";
             this.garbageDataView.RowTemplate.Height = 24;
             this.garbageDataView.Size = new System.Drawing.Size(8, 11);
@@ -790,7 +790,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1521, 703);
+            this.ClientSize = new System.Drawing.Size(1521, 714);
             this.Controls.Add(this.garbageDataView);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox4);
