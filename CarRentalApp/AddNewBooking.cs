@@ -39,7 +39,7 @@ namespace CarRentalApp
                 resultLabel.ForeColor = Color.FromArgb(0, 192, 0); //dark green
 
                 // Creating the query
-                String query = $"select * from Customer where CUSTOMER_ID = '{customerID}'";
+                String query = $"select CUSTOMER_ID, First_Name, Membership_Status, Card_Type, Card_Number from Customer where CUSTOMER_ID = '{customerID}'";
                 // Runs query and updates table
                 DataTable table = Database.getDataTableAfterRunningQuery(query);
 
