@@ -52,7 +52,7 @@
             this.BDay = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.cardNoBox = new System.Windows.Forms.TextBox();
-            this.expiryBox = new System.Windows.Forms.TextBox();
+            this.cardTypeCombo = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // header
@@ -351,25 +351,28 @@
             this.cardNoBox.Enter += new System.EventHandler(this.cardNoBox_Enter);
             this.cardNoBox.Leave += new System.EventHandler(this.cardNoBox_Leave);
             // 
-            // expiryBox
+            // cardTypeCombo
             // 
-            this.expiryBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.expiryBox.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.expiryBox.Location = new System.Drawing.Point(540, 459);
-            this.expiryBox.Margin = new System.Windows.Forms.Padding(4);
-            this.expiryBox.Name = "expiryBox";
-            this.expiryBox.Size = new System.Drawing.Size(207, 26);
-            this.expiryBox.TabIndex = 27;
-            this.expiryBox.Text = "Expiry MM/YY";
-            this.expiryBox.Enter += new System.EventHandler(this.expiryBox_Enter);
-            this.expiryBox.Leave += new System.EventHandler(this.expiryBox_Leave);
+            this.cardTypeCombo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cardTypeCombo.ForeColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cardTypeCombo.FormattingEnabled = true;
+            this.cardTypeCombo.Items.AddRange(new object[] {
+            "Visa",
+            "Mastercard",
+            "American Express",
+            "Discovery"});
+            this.cardTypeCombo.Location = new System.Drawing.Point(543, 459);
+            this.cardTypeCombo.Name = "cardTypeCombo";
+            this.cardTypeCombo.Size = new System.Drawing.Size(204, 26);
+            this.cardTypeCombo.TabIndex = 27;
+            this.cardTypeCombo.Text = "Card Type";
             // 
             // CustomerLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(801, 573);
-            this.Controls.Add(this.expiryBox);
+            this.Controls.Add(this.cardTypeCombo);
             this.Controls.Add(this.cardNoBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BDay);
@@ -428,6 +431,6 @@
         private System.Windows.Forms.DateTimePicker BDay;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox cardNoBox;
-        private System.Windows.Forms.TextBox expiryBox;
+        private System.Windows.Forms.ComboBox cardTypeCombo;
     }
 }

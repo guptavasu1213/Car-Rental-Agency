@@ -32,7 +32,7 @@ namespace CarRentalApp
 
         public string CardNumber { get; set; }
 
-        public string Expiry { get; set; }
+        public string CardType { get; set; }
 
         public string Insurance { get; set; }
 

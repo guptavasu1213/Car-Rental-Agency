@@ -208,18 +208,18 @@ namespace CarRentalApp
                 return;
             }
 
-            Match match = Regex.Match(expiryBox.Text, @"[0-9][0-9]\/[0-9][0-9]");
+            Match match = Regex.Match(cardNoBox.Text, @"[0-9]{16}");
 
             if (!match.Success)
             {
-                MessageBox.Show("Error: Expiry field not valid", "Invalid Expiry");
+                MessageBox.Show("Error: Card number should be 16 numeric digits", "Invalid Card");
+                return;
             }
 
-            match = Regex.Match(cardNoBox.Text, @"[0-9]{16}");
-
-            if (!match.Success)
+            if (cardTypeCombo.SelectedIndex == -1)
             {
-                MessageBox.Show("Error: Card number should be 16 numberic digits", "Invalid Card");
+                MessageBox.Show("Please select a credit card type", "Error");
+                return;
             }
 
             // Use try-catch in case the values are not going to be compatible (ie. letters entered in Age)
@@ -237,6 +237,8 @@ namespace CarRentalApp
                 cx.City = cityBox.Text.Trim();
                 cx.Province = provinceBox.Text.Trim();
                 cx.Country = countryBox.Text.Trim();
+                cx.CardNumber = cardNoBox.Text;
+                cx.CardType = cardTypeCombo.GetItemText(cardTypeCombo.SelectedItem);
                 cx.Status = "Basic";
                 if (Login.insertCustomer(cx))
                 {
@@ -311,16 +313,6 @@ namespace CarRentalApp
         private void cardNoBox_Leave(object sender, EventArgs e)
         {
             AddText(cardNoBox, "Card Number", sender, e);
-        }
-
-        private void expiryBox_Enter(object sender, EventArgs e)
-        {
-            RemoveText(expiryBox, "Expiry MM/YY", sender, e);
-        }
-
-        private void expiryBox_Leave(object sender, EventArgs e)
-        {
-            AddText(expiryBox, "Expiry MM/YY", sender, e);
         }
     }
 }
