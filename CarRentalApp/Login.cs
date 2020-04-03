@@ -79,7 +79,6 @@ namespace CarRentalApp
             using (SqlConnection connection = new SqlConnection(dbstring))
             using (SqlCommand command = new SqlCommand(insertvals, connection))
             {
-                command.Parameters.Add("@password", SqlDbType.VarChar).Value = Login.HashPassword(random.Next(0, 1000000000).ToString());
 
                 command.Parameters.Add("@fname", SqlDbType.VarChar).Value = cx.FirstName;
                 command.Parameters.Add("@lname", SqlDbType.VarChar).Value = cx.LastName;
@@ -98,6 +97,7 @@ namespace CarRentalApp
                 {
                     command.Parameters.Add("@password", SqlDbType.VarChar).Value = cx.Password;
                 }
+                else { command.Parameters.Add("@password", SqlDbType.VarChar).Value = Login.HashPassword(random.Next(0, 1000000000).ToString()); }
 
                 connection.Open();
                 command.ExecuteNonQuery();

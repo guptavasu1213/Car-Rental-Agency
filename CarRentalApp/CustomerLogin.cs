@@ -200,6 +200,12 @@ namespace CarRentalApp
                     this.User.cardNumber);
 
                 this.Close();
+
+                StartReservation startreservation = new StartReservation(this.User);
+                this.Opacity = 0.0;
+                startreservation.ShowDialog();
+                this.Opacity = 100.0;
+
             }
         }
 
@@ -240,6 +246,11 @@ namespace CarRentalApp
                     this.DialogResult = DialogResult.OK;
                     this.User = cx;
                     this.Close();
+
+                    StartReservation startreservation = new StartReservation(this.User);
+                    this.Opacity = 0.0;
+                    startreservation.ShowDialog();
+                    this.Opacity = 100.0;
                 }
             }
             catch (Exception ex)
