@@ -118,6 +118,7 @@
     <Compile Include="AdminPortal.Designer.cs">
       <DependentUpon>AdminPortal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Employee.cs" />
     <Compile Include="FindBooking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,7 +174,6 @@
     <Compile Include="CustomerLogin.Designer.cs">
       <DependentUpon>CustomerLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="PhoneNumber.cs" />
     <Compile Include="PopularBranch.cs">
       <SubType>Form</SubType>
     </Compile>
