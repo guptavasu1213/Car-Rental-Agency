@@ -31,6 +31,16 @@
             this.topPanel = new System.Windows.Forms.Panel();
             this.addNewUserLabel = new System.Windows.Forms.Label();
             this.enterUserDetailsGroupBox = new System.Windows.Forms.GroupBox();
+            this.countryBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.provinceBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cityBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.addressBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.emailBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.dateOfBirthPicker = new System.Windows.Forms.DateTimePicker();
             this.resultLabel = new System.Windows.Forms.Label();
             this.driverLicenseNumberTextBox = new System.Windows.Forms.TextBox();
@@ -45,16 +55,6 @@
             this.phoneNumberLabel = new System.Windows.Forms.Label();
             this.firstNameLabel = new System.Windows.Forms.Label();
             this.LastNameLabel = new System.Windows.Forms.Label();
-            this.emailBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.addressBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cityBox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.provinceBox = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.countryBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.topPanel.SuspendLayout();
             this.enterUserDetailsGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -67,9 +67,9 @@
             this.topPanel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.topPanel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
-            this.topPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.topPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(780, 69);
+            this.topPanel.Size = new System.Drawing.Size(1040, 85);
             this.topPanel.TabIndex = 14;
             // 
             // addNewUserLabel
@@ -77,12 +77,11 @@
             this.addNewUserLabel.AutoSize = true;
             this.addNewUserLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addNewUserLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.addNewUserLabel.Location = new System.Drawing.Point(32, 19);
-            this.addNewUserLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.addNewUserLabel.Location = new System.Drawing.Point(43, 23);
             this.addNewUserLabel.Name = "addNewUserLabel";
-            this.addNewUserLabel.Size = new System.Drawing.Size(208, 40);
+            this.addNewUserLabel.Size = new System.Drawing.Size(349, 51);
             this.addNewUserLabel.TabIndex = 0;
-            this.addNewUserLabel.Text = "Add New User";
+            this.addNewUserLabel.Text = "Add New Customer";
             // 
             // enterUserDetailsGroupBox
             // 
@@ -112,21 +111,127 @@
             this.enterUserDetailsGroupBox.Controls.Add(this.LastNameLabel);
             this.enterUserDetailsGroupBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.enterUserDetailsGroupBox.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.enterUserDetailsGroupBox.Location = new System.Drawing.Point(39, 99);
-            this.enterUserDetailsGroupBox.Margin = new System.Windows.Forms.Padding(2);
+            this.enterUserDetailsGroupBox.Location = new System.Drawing.Point(52, 122);
+            this.enterUserDetailsGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.enterUserDetailsGroupBox.Name = "enterUserDetailsGroupBox";
-            this.enterUserDetailsGroupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.enterUserDetailsGroupBox.Size = new System.Drawing.Size(694, 364);
+            this.enterUserDetailsGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.enterUserDetailsGroupBox.Size = new System.Drawing.Size(925, 448);
             this.enterUserDetailsGroupBox.TabIndex = 15;
             this.enterUserDetailsGroupBox.TabStop = false;
-            this.enterUserDetailsGroupBox.Text = "Enter user details";
+            this.enterUserDetailsGroupBox.Text = "Enter customer details";
+            // 
+            // countryBox
+            // 
+            this.countryBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countryBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.countryBox.Location = new System.Drawing.Point(663, 288);
+            this.countryBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.countryBox.Name = "countryBox";
+            this.countryBox.Size = new System.Drawing.Size(221, 30);
+            this.countryBox.TabIndex = 34;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label5.Location = new System.Drawing.Point(505, 292);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 22);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "Country";
+            // 
+            // provinceBox
+            // 
+            this.provinceBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.provinceBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.provinceBox.Location = new System.Drawing.Point(663, 226);
+            this.provinceBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.provinceBox.Name = "provinceBox";
+            this.provinceBox.Size = new System.Drawing.Size(221, 30);
+            this.provinceBox.TabIndex = 32;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label4.Location = new System.Drawing.Point(505, 230);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 22);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Province";
+            // 
+            // cityBox
+            // 
+            this.cityBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cityBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.cityBox.Location = new System.Drawing.Point(663, 165);
+            this.cityBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cityBox.Name = "cityBox";
+            this.cityBox.Size = new System.Drawing.Size(221, 30);
+            this.cityBox.TabIndex = 30;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label3.Location = new System.Drawing.Point(505, 169);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 22);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "City";
+            // 
+            // addressBox
+            // 
+            this.addressBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.addressBox.Location = new System.Drawing.Point(663, 103);
+            this.addressBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addressBox.Name = "addressBox";
+            this.addressBox.Size = new System.Drawing.Size(221, 30);
+            this.addressBox.TabIndex = 28;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label2.Location = new System.Drawing.Point(505, 107);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 22);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Address";
+            // 
+            // emailBox
+            // 
+            this.emailBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.emailBox.Location = new System.Drawing.Point(663, 42);
+            this.emailBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.emailBox.Name = "emailBox";
+            this.emailBox.Size = new System.Drawing.Size(221, 30);
+            this.emailBox.TabIndex = 26;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label1.Location = new System.Drawing.Point(505, 46);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 22);
+            this.label1.TabIndex = 25;
+            this.label1.Text = "Email";
             // 
             // dateOfBirthPicker
             // 
             this.dateOfBirthPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateOfBirthPicker.Location = new System.Drawing.Point(188, 184);
+            this.dateOfBirthPicker.Location = new System.Drawing.Point(251, 226);
+            this.dateOfBirthPicker.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateOfBirthPicker.Name = "dateOfBirthPicker";
-            this.dateOfBirthPicker.Size = new System.Drawing.Size(167, 26);
+            this.dateOfBirthPicker.Size = new System.Drawing.Size(221, 30);
             this.dateOfBirthPicker.TabIndex = 24;
             // 
             // resultLabel
@@ -134,10 +239,9 @@
             this.resultLabel.AutoSize = true;
             this.resultLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.resultLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.resultLabel.Location = new System.Drawing.Point(14, 311);
-            this.resultLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.resultLabel.Location = new System.Drawing.Point(19, 383);
             this.resultLabel.Name = "resultLabel";
-            this.resultLabel.Size = new System.Drawing.Size(0, 19);
+            this.resultLabel.Size = new System.Drawing.Size(0, 22);
             this.resultLabel.TabIndex = 18;
             this.resultLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -145,20 +249,20 @@
             // 
             this.driverLicenseNumberTextBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.driverLicenseNumberTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.driverLicenseNumberTextBox.Location = new System.Drawing.Point(188, 284);
-            this.driverLicenseNumberTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.driverLicenseNumberTextBox.Location = new System.Drawing.Point(251, 350);
+            this.driverLicenseNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.driverLicenseNumberTextBox.Name = "driverLicenseNumberTextBox";
-            this.driverLicenseNumberTextBox.Size = new System.Drawing.Size(167, 26);
+            this.driverLicenseNumberTextBox.Size = new System.Drawing.Size(221, 30);
             this.driverLicenseNumberTextBox.TabIndex = 17;
             // 
             // insuranceIDTexBox
             // 
             this.insuranceIDTexBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.insuranceIDTexBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.insuranceIDTexBox.Location = new System.Drawing.Point(188, 234);
-            this.insuranceIDTexBox.Margin = new System.Windows.Forms.Padding(2);
+            this.insuranceIDTexBox.Location = new System.Drawing.Point(251, 288);
+            this.insuranceIDTexBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.insuranceIDTexBox.Name = "insuranceIDTexBox";
-            this.insuranceIDTexBox.Size = new System.Drawing.Size(167, 26);
+            this.insuranceIDTexBox.Size = new System.Drawing.Size(221, 30);
             this.insuranceIDTexBox.TabIndex = 15;
             // 
             // driverLicenseNumberLabel
@@ -166,10 +270,9 @@
             this.driverLicenseNumberLabel.AutoSize = true;
             this.driverLicenseNumberLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.driverLicenseNumberLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.driverLicenseNumberLabel.Location = new System.Drawing.Point(14, 287);
-            this.driverLicenseNumberLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.driverLicenseNumberLabel.Location = new System.Drawing.Point(19, 353);
             this.driverLicenseNumberLabel.Name = "driverLicenseNumberLabel";
-            this.driverLicenseNumberLabel.Size = new System.Drawing.Size(148, 19);
+            this.driverLicenseNumberLabel.Size = new System.Drawing.Size(183, 22);
             this.driverLicenseNumberLabel.TabIndex = 13;
             this.driverLicenseNumberLabel.Text = "Driver License Number";
             // 
@@ -178,10 +281,9 @@
             this.ageLabel.AutoSize = true;
             this.ageLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ageLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ageLabel.Location = new System.Drawing.Point(14, 187);
-            this.ageLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ageLabel.Location = new System.Drawing.Point(19, 230);
             this.ageLabel.Name = "ageLabel";
-            this.ageLabel.Size = new System.Drawing.Size(87, 19);
+            this.ageLabel.Size = new System.Drawing.Size(107, 22);
             this.ageLabel.TabIndex = 11;
             this.ageLabel.Text = "Date of Birth";
             // 
@@ -190,10 +292,9 @@
             this.insuranceID.AutoSize = true;
             this.insuranceID.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.insuranceID.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.insuranceID.Location = new System.Drawing.Point(14, 237);
-            this.insuranceID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.insuranceID.Location = new System.Drawing.Point(19, 292);
             this.insuranceID.Name = "insuranceID";
-            this.insuranceID.Size = new System.Drawing.Size(86, 19);
+            this.insuranceID.Size = new System.Drawing.Size(106, 22);
             this.insuranceID.TabIndex = 10;
             this.insuranceID.Text = "Insurance ID";
             // 
@@ -203,10 +304,10 @@
             this.submitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.submitButton.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitButton.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.submitButton.Location = new System.Drawing.Point(456, 300);
-            this.submitButton.Margin = new System.Windows.Forms.Padding(2);
+            this.submitButton.Location = new System.Drawing.Point(608, 369);
+            this.submitButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.submitButton.Name = "submitButton";
-            this.submitButton.Size = new System.Drawing.Size(132, 30);
+            this.submitButton.Size = new System.Drawing.Size(176, 37);
             this.submitButton.TabIndex = 9;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = false;
@@ -216,10 +317,10 @@
             // 
             this.phoneNumberTextBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneNumberTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.phoneNumberTextBox.Location = new System.Drawing.Point(188, 134);
-            this.phoneNumberTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.phoneNumberTextBox.Location = new System.Drawing.Point(251, 165);
+            this.phoneNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
-            this.phoneNumberTextBox.Size = new System.Drawing.Size(167, 26);
+            this.phoneNumberTextBox.Size = new System.Drawing.Size(221, 30);
             this.phoneNumberTextBox.TabIndex = 7;
             this.phoneNumberTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.allowOnlyNumericalValues);
             // 
@@ -227,20 +328,20 @@
             // 
             this.lastNameTextBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastNameTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lastNameTextBox.Location = new System.Drawing.Point(188, 84);
-            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.lastNameTextBox.Location = new System.Drawing.Point(251, 103);
+            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(167, 26);
+            this.lastNameTextBox.Size = new System.Drawing.Size(221, 30);
             this.lastNameTextBox.TabIndex = 6;
             // 
             // firstNameTextBox
             // 
             this.firstNameTextBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstNameTextBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.firstNameTextBox.Location = new System.Drawing.Point(188, 34);
-            this.firstNameTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.firstNameTextBox.Location = new System.Drawing.Point(251, 42);
+            this.firstNameTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.Size = new System.Drawing.Size(167, 26);
+            this.firstNameTextBox.Size = new System.Drawing.Size(221, 30);
             this.firstNameTextBox.TabIndex = 5;
             // 
             // phoneNumberLabel
@@ -248,10 +349,9 @@
             this.phoneNumberLabel.AutoSize = true;
             this.phoneNumberLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneNumberLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.phoneNumberLabel.Location = new System.Drawing.Point(14, 137);
-            this.phoneNumberLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.phoneNumberLabel.Location = new System.Drawing.Point(19, 169);
             this.phoneNumberLabel.Name = "phoneNumberLabel";
-            this.phoneNumberLabel.Size = new System.Drawing.Size(102, 19);
+            this.phoneNumberLabel.Size = new System.Drawing.Size(127, 22);
             this.phoneNumberLabel.TabIndex = 3;
             this.phoneNumberLabel.Text = "Phone Number";
             // 
@@ -260,10 +360,9 @@
             this.firstNameLabel.AutoSize = true;
             this.firstNameLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firstNameLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.firstNameLabel.Location = new System.Drawing.Point(14, 37);
-            this.firstNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.firstNameLabel.Location = new System.Drawing.Point(19, 46);
             this.firstNameLabel.Name = "firstNameLabel";
-            this.firstNameLabel.Size = new System.Drawing.Size(75, 19);
+            this.firstNameLabel.Size = new System.Drawing.Size(92, 22);
             this.firstNameLabel.TabIndex = 2;
             this.firstNameLabel.Text = "First Name";
             // 
@@ -272,131 +371,21 @@
             this.LastNameLabel.AutoSize = true;
             this.LastNameLabel.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastNameLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.LastNameLabel.Location = new System.Drawing.Point(14, 87);
-            this.LastNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LastNameLabel.Location = new System.Drawing.Point(19, 107);
             this.LastNameLabel.Name = "LastNameLabel";
-            this.LastNameLabel.Size = new System.Drawing.Size(74, 19);
+            this.LastNameLabel.Size = new System.Drawing.Size(91, 22);
             this.LastNameLabel.TabIndex = 1;
             this.LastNameLabel.Text = "Last Name";
             // 
-            // emailBox
-            // 
-            this.emailBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.emailBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.emailBox.Location = new System.Drawing.Point(497, 34);
-            this.emailBox.Margin = new System.Windows.Forms.Padding(2);
-            this.emailBox.Name = "emailBox";
-            this.emailBox.Size = new System.Drawing.Size(167, 26);
-            this.emailBox.TabIndex = 26;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label1.Location = new System.Drawing.Point(379, 37);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 19);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Email";
-            // 
-            // addressBox
-            // 
-            this.addressBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addressBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.addressBox.Location = new System.Drawing.Point(497, 84);
-            this.addressBox.Margin = new System.Windows.Forms.Padding(2);
-            this.addressBox.Name = "addressBox";
-            this.addressBox.Size = new System.Drawing.Size(167, 26);
-            this.addressBox.TabIndex = 28;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label2.Location = new System.Drawing.Point(379, 87);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 19);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Address";
-            // 
-            // cityBox
-            // 
-            this.cityBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cityBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.cityBox.Location = new System.Drawing.Point(497, 134);
-            this.cityBox.Margin = new System.Windows.Forms.Padding(2);
-            this.cityBox.Name = "cityBox";
-            this.cityBox.Size = new System.Drawing.Size(167, 26);
-            this.cityBox.TabIndex = 30;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label3.Location = new System.Drawing.Point(379, 137);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 19);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "City";
-            // 
-            // provinceBox
-            // 
-            this.provinceBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.provinceBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.provinceBox.Location = new System.Drawing.Point(497, 184);
-            this.provinceBox.Margin = new System.Windows.Forms.Padding(2);
-            this.provinceBox.Name = "provinceBox";
-            this.provinceBox.Size = new System.Drawing.Size(167, 26);
-            this.provinceBox.TabIndex = 32;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label4.Location = new System.Drawing.Point(379, 187);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 19);
-            this.label4.TabIndex = 31;
-            this.label4.Text = "Province";
-            // 
-            // countryBox
-            // 
-            this.countryBox.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.countryBox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.countryBox.Location = new System.Drawing.Point(497, 234);
-            this.countryBox.Margin = new System.Windows.Forms.Padding(2);
-            this.countryBox.Name = "countryBox";
-            this.countryBox.Size = new System.Drawing.Size(167, 26);
-            this.countryBox.TabIndex = 34;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Emoji", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.label5.Location = new System.Drawing.Point(379, 237);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 19);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "Country";
-            // 
             // AddNewUser
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(780, 533);
+            this.ClientSize = new System.Drawing.Size(1040, 656);
             this.Controls.Add(this.enterUserDetailsGroupBox);
             this.Controls.Add(this.topPanel);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AddNewUser";
             this.Text = "Add New User";
             this.topPanel.ResumeLayout(false);
