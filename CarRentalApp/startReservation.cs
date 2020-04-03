@@ -22,8 +22,6 @@ namespace CarRentalApp
 
         int entryCustomerID;
         int entryCarID = 5921;
-        int entryDropEmployeeID;
-        int entryPickupEmployeeID;
         int entryPickupBranchID;
         int entryDropBranchID;
         DateTime entryPickupDateTime;
@@ -55,10 +53,8 @@ namespace CarRentalApp
             entryCustomerID = this.User.ID;
             entryCardType = this.User.cardType;
             entryCardNumber = this.User.cardNumber;
-            entryPaymentMethod = "Online - CF";
+            entryPaymentMethod = "Online";
             entryStatus = "Success";
-            entryDropEmployeeID = 2;
-            entryPickupEmployeeID = 2;
 
             pDateTimePicker.Value = DateTime.Now;
             rDateTimePicker.Value = DateTime.Now;
@@ -584,8 +580,8 @@ namespace CarRentalApp
         private void resetButton_Click(object sender, EventArgs e)
         {
             StartReservation NewForm = new StartReservation(User);
+            this.Close();
             NewForm.Show();
-            this.Dispose(false);
         }
 
         private void carResultDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -886,8 +882,8 @@ namespace CarRentalApp
            //     "\nTDT = " + entryTransactionDateTime;
 
 
-            string sql = "INSERT INTO [Transaction] (CUSTOMER_ID, CAR_ID, DROP_EMPLOYEE_ID, PICKUP_EMPLOYEE_ID, PICKUP_BRANCH_ID, DROP_BRANCH_ID, Pickup_Date_Time, Return_Date_Time, Amount, Card_Number, Card_Type, Payment_Method, Status, Transaction_Date_Time) ";
-            string values = "VALUES (@eCUID, @eCAID, @eDEID, @ePEID, @ePBID, @eDBID, @ePDT, @eRDT, @eAMT, @eCNUM, @eCTYP, @ePMTD, @ePSTS, @eTDT);";
+            string sql = "INSERT INTO [Transaction] (CUSTOMER_ID, CAR_ID, PICKUP_BRANCH_ID, DROP_BRANCH_ID, Pickup_Date_Time, Return_Date_Time, Amount, Card_Number, Card_Type, Payment_Method, Status, Transaction_Date_Time) ";
+            string values = "VALUES (@eCUID, @eCAID, @ePBID, @eDBID, @ePDT, @eRDT, @eAMT, @eCNUM, @eCTYP, @ePMTD, @ePSTS, @eTDT);";
             string insertvals = sql + values;
 
             int returnStatus = 0;
@@ -901,8 +897,8 @@ namespace CarRentalApp
 
             cmd.Parameters.Add("@eCUID", SqlDbType.Int).Value = entryCustomerID;
             cmd.Parameters.Add("@eCAID", SqlDbType.Int).Value = entryCarID;
-            cmd.Parameters.Add("@eDEID", SqlDbType.Int).Value = entryDropEmployeeID;
-            cmd.Parameters.Add("@ePEID", SqlDbType.Int).Value = entryPickupEmployeeID;
+            //cmd.Parameters.Add("@eDEID", SqlDbType.Int).Value = entryDropEmployeeID;
+            //cmd.Parameters.Add("@ePEID", SqlDbType.Int).Value = entryPickupEmployeeID;
             cmd.Parameters.Add("@ePBID", SqlDbType.Int).Value = entryPickupBranchID;
             cmd.Parameters.Add("@eDBID", SqlDbType.Int).Value = entryDropBranchID;
             cmd.Parameters.Add("@ePDT", SqlDbType.DateTime).Value = entryPickupDateTime;

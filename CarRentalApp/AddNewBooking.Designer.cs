@@ -124,9 +124,9 @@
             this.addNewTransactionLabel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.addNewTransactionLabel.Location = new System.Drawing.Point(43, 23);
             this.addNewTransactionLabel.Name = "addNewTransactionLabel";
-            this.addNewTransactionLabel.Size = new System.Drawing.Size(379, 51);
+            this.addNewTransactionLabel.Size = new System.Drawing.Size(324, 51);
             this.addNewTransactionLabel.TabIndex = 0;
-            this.addNewTransactionLabel.Text = "Add New Transaction";
+            this.addNewTransactionLabel.Text = "Add New Booking";
             // 
             // AddNewBooking
             // 
