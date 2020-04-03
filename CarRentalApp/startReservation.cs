@@ -67,12 +67,19 @@ namespace CarRentalApp
 
         private void StartReservation_Load(object sender, EventArgs e)
         {
-            Console.WriteLine("Status: " + User.Status);
+            quickCarLookupButton.Visible = false;
+            quickCarLookupLabel.Visible = false;
+            quickCarLookupTextBox.Visible = false;
+        }
+
+        private void pCountryComboBox_DropDown(object sender, EventArgs e)
+        {
+            pCountryComboBox.Items.Clear();
             con = new SqlConnection("" +
-                "Data Source=142.59.80.79,5291; " +
-                "Initial Catalog=CRA291;" +
-                "User ID=SA;" +
-                "Password=@291CRAsql$");
+               "Data Source=142.59.80.79,5291; " +
+               "Initial Catalog=CRA291;" +
+               "User ID=SA;" +
+               "Password=@291CRAsql$");
 
             cmd = new SqlCommand();
             con.Open();
@@ -87,7 +94,6 @@ namespace CarRentalApp
             while (dr.Read())
             {
                 pCountryComboBox.Items.Add(dr["Country"]);
-                rCountryComboBox.Items.Add(dr["Country"]);
             }
             con.Close();
         }
@@ -213,6 +219,32 @@ namespace CarRentalApp
             carResultDataGridView.DataSource = null;
             infoLabel.Text = "Waiting for Selection...";
             errorLabel.Text = "";
+        }
+
+        private void rCountryComboBox_DropDown(object sender, EventArgs e)
+        {
+            rCountryComboBox.Items.Clear();
+            con = new SqlConnection("" +
+               "Data Source=142.59.80.79,5291; " +
+               "Initial Catalog=CRA291;" +
+               "User ID=SA;" +
+               "Password=@291CRAsql$");
+
+            cmd = new SqlCommand();
+            con.Open();
+            cmd.Connection = con;
+
+            cmd.CommandText = "" +
+                "SELECT distinct Country " +
+                "FROM Branch";
+
+            dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                rCountryComboBox.Items.Add(dr["Country"]);
+            }
+            con.Close();
         }
 
         private void rCountryComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -770,7 +802,17 @@ namespace CarRentalApp
 
         private void rentCarButton_Click(object sender, EventArgs e)
         {
-            if (entryCarID == 5921) { errorLabel.Text = "Complete Search to Rent Car"; }
+            if (entryCarID == 5921)
+            {
+                carResultDataGridView.DataSource = null;
+                errorLabel.Text = "Complete Search to Rent Car";
+                infoLabel.Text = "Waiting for Selection...";
+            }
+            else if (entryCardNumber == "")
+            {
+                carResultDataGridView.DataSource = null;
+                errorLabel.Text = "No Card on File";
+            }
             else
             { 
             con = new SqlConnection("" +
@@ -884,6 +926,52 @@ namespace CarRentalApp
                 this.Dispose(false);
             }
             }
+        }
+
+        private void findCarButton_Click(object sender, EventArgs e)
+        {
+        //    string carID = carIDTextBox.Text;
+
+        //    string carQuery = "" +
+        //    "SELECT Country, Province, City, Name " +
+        //    "FROM Branch, Car " +
+        //    "WHERE Branch.BRANCH_ID = Car.BRANCH_ID " +
+        //    "AND Car.CAR_ID = '" + carID + "'";
+
+        //    Console.WriteLine(carQuery);
+
+
+        //    con = new SqlConnection("" +
+        //    "Data Source=142.59.80.79,5291; " +
+        //    "Initial Catalog=CRA291;" +
+        //    "User ID=SA;" +
+        //    "Password=@291CRAsql$");
+
+        //    cmd = new SqlCommand();
+        //    con.Open();
+        //    cmd.Connection = con;
+
+        //    cmd.CommandText = "" +
+        //    "SELECT Country, Province, City, Name " +
+        //    "FROM Branch, Car " +
+        //    "WHERE Branch.BRANCH_ID = Car.BRANCH_ID " +
+        //    "AND Car.CAR_ID = '" + carID + "'";
+
+        //    dr = cmd.ExecuteReader();
+
+        //    while (dr.Read())
+        //    {
+        //        pCountryComboBox.Items.Insert(0,dr["Country"].ToString());
+        //        pProvinceComboBox.Items.Insert(0,dr["Province"].ToString());
+        //        pCityComboBox.Items.Insert(0,dr["City"].ToString());
+        //        pBranchComboBox.Items.Insert(0,dr["Name"].ToString());
+        //    }
+        //    con.Close();
+
+        //    pCountryComboBox.SelectedIndex = 0;
+        //    pProvinceComboBox.SelectedIndex = 0;
+        //    pCityComboBox.SelectedIndex = 0;
+        //    pBranchComboBox.SelectedIndex = 0;
         }
     }
 }
