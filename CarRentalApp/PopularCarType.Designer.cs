@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.resultsDataGridView = new System.Windows.Forms.DataGridView();
             this.specificSearchErrorLabel = new System.Windows.Forms.Label();
             this.everySearchErrorLabel = new System.Windows.Forms.Label();
             this.searchSpecificButton = new System.Windows.Forms.Button();
@@ -50,21 +49,13 @@
             this.selectionFilterGroupBox = new System.Windows.Forms.GroupBox();
             this.specificParamGroupBox = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.resultsDataGridView)).BeginInit();
+            this.popularCarTypeDataGridView = new System.Windows.Forms.DataGridView();
             this.topPanel.SuspendLayout();
             this.selectionFilterGroupBox.SuspendLayout();
             this.specificParamGroupBox.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.popularCarTypeDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // resultsDataGridView
-            // 
-            this.resultsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.resultsDataGridView.Location = new System.Drawing.Point(436, 110);
-            this.resultsDataGridView.Name = "resultsDataGridView";
-            this.resultsDataGridView.RowTemplate.Height = 24;
-            this.resultsDataGridView.Size = new System.Drawing.Size(723, 648);
-            this.resultsDataGridView.TabIndex = 8;
             // 
             // specificSearchErrorLabel
             // 
@@ -125,7 +116,7 @@
             this.topPanel.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(1165, 85);
+            this.topPanel.Size = new System.Drawing.Size(1737, 85);
             this.topPanel.TabIndex = 7;
             // 
             // findMostPopularCarTypeLabel
@@ -320,18 +311,31 @@
             this.panel1.Size = new System.Drawing.Size(409, 648);
             this.panel1.TabIndex = 6;
             // 
+            // popularCarTypeDataGridView
+            // 
+            this.popularCarTypeDataGridView.AllowUserToAddRows = false;
+            this.popularCarTypeDataGridView.AllowUserToDeleteRows = false;
+            this.popularCarTypeDataGridView.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.popularCarTypeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.popularCarTypeDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.popularCarTypeDataGridView.Location = new System.Drawing.Point(451, 113);
+            this.popularCarTypeDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.popularCarTypeDataGridView.Name = "popularCarTypeDataGridView";
+            this.popularCarTypeDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.popularCarTypeDataGridView.Size = new System.Drawing.Size(1099, 724);
+            this.popularCarTypeDataGridView.TabIndex = 29;
+            // 
             // PopularCarType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1165, 769);
-            this.Controls.Add(this.resultsDataGridView);
+            this.ClientSize = new System.Drawing.Size(1737, 879);
+            this.Controls.Add(this.popularCarTypeDataGridView);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.panel1);
             this.Name = "PopularCarType";
             this.Text = "PopularCarType";
-            ((System.ComponentModel.ISupportInitialize)(this.resultsDataGridView)).EndInit();
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
             this.selectionFilterGroupBox.ResumeLayout(false);
@@ -340,13 +344,12 @@
             this.specificParamGroupBox.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.popularCarTypeDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView resultsDataGridView;
         private System.Windows.Forms.Label specificSearchErrorLabel;
         private System.Windows.Forms.Label everySearchErrorLabel;
         private System.Windows.Forms.Button searchSpecificButton;
@@ -368,5 +371,6 @@
         private System.Windows.Forms.GroupBox selectionFilterGroupBox;
         private System.Windows.Forms.GroupBox specificParamGroupBox;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView popularCarTypeDataGridView;
     }
 }

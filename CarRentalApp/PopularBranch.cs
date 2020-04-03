@@ -30,7 +30,6 @@ namespace CarRentalApp
                 countryTextBox.Text.TrimEnd() == "")
             {
                 specificSearchErrorLabel.Text = "Error: Please search by one parameter";
-                specificSearchErrorLabel.Visible = true;
                 return false;
             }
             // Counting the number of empty fields and if there are less than 2 empty fields,
@@ -44,10 +43,25 @@ namespace CarRentalApp
             if (count < 2)
             {
                 specificSearchErrorLabel.Text = "Error: Please search by only one parameter";
-                specificSearchErrorLabel.Visible = true;
                 return false;
             }
             return true;
+        }
+        /*
+         * Returns query for finding all the top branches based on number of successful transactions and the parameters entered by the user
+         */
+        private string getTextBoxQuery(string searchParameter)
+        {
+            return 
+            "select Branch.BRANCH_ID, Branch.Name, temp.TransactionCount, Branch.Street_Address, Branch.City, Branch.Province, Branch.Country" +
+            " from Branch, " +
+                    "(select Branch.BRANCH_ID, count(*) as 'TransactionCount' " +
+                    "from [Transaction], Branch " +
+                    "where [Transaction].PICKUP_BRANCH_ID = Branch.BRANCH_ID and[Transaction].Status = 'Success' " +
+                            $"and {searchParameter} " +
+                    "group by Branch.BRANCH_ID) as temp " +
+            "where Branch.BRANCH_ID = temp.BRANCH_ID " +
+            "order by temp.TransactionCount DESC;";
         }
         /*
          * When the admin searches for the most popular branch for a specific:
@@ -60,23 +74,36 @@ namespace CarRentalApp
         private void searchSpecificButton_Click(object sender, EventArgs e)
         {
             everySearchErrorLabel.Visible = false; // Making the error label for every search invisible
+            specificSearchErrorLabel.Visible = true; // Making the error label for specific search invisible
+            string query;
 
-            if (!errorCheckSpecificFields()) { return; } // Error checking for invalid number of input entries
-
-            specificSearchErrorLabel.Visible = false; // Making the error label for specific search invisible
+            if (!errorCheckSpecificFields()) // Error checking for invalid number of input entries
+            {
+                specificSearchErrorLabel.ForeColor = Color.FromArgb(192, 0, 0); //dark red
+                return;
+            } 
 
             if (cityTextBox.Text.TrimEnd() != "")
             {
                 // query by city name
+                // Finding all the transaction counts for the cities with the given name.
+                query = getTextBoxQuery($"Branch.City = '{cityTextBox.Text.TrimEnd()}'");
             }
-            if (provinceTextBox.Text.TrimEnd() != "")
+            else if (provinceTextBox.Text.TrimEnd() != "")
             {
                 // query by province name
+                // Finding all the transaction counts for the provinces with the given name.
+                query = getTextBoxQuery($"Branch.Province = '{provinceTextBox.Text.TrimEnd()}'");
             }
-            if (countryTextBox.Text.TrimEnd() != "")
+            else if (countryTextBox.Text.TrimEnd() != "")
             {
                 // query by country name
+                // Finding all the transaction counts for the country with the given name.
+                query = getTextBoxQuery($"Branch.Country = '{countryTextBox.Text.TrimEnd()}'");
             }
+            else { return; }
+            // Run query and update the table
+            Common.validTextboxEntry(specificSearchErrorLabel, query, popularBranchesDataGridView);
         }
         /*
          * When a admin searches for the most popular branchs for
