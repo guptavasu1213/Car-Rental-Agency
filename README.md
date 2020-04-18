@@ -8,12 +8,12 @@
 - - -
 
 ### Project Description
-This project involves the design and implementation of a relational database system to support the operations of a hypothetical car rental agency. The program shall allow an agent to process rental reservations, during which they will check for available cars on specific dates. 
+This project involves the design and implementation of a relational database system to support the operations of a hypothetical car rental agency. The program allows a customer to process rental reservations, during which they will check for available cars on specific dates and locations. Also, the admin portal allows an adminstrator to log in and add, remove or modify customer information, car information, employee information and pricing information. The admin portal also allows the admin to pull statistics about the most popular branch, employee, top customers and top cars based on filters like Branch, City, Province or Country.
 - - -
 
 ### Components
-* ER Diagram (Milestone 1)
-* Schema Layout (Milestone 1)
+* ER Diagram
+* Schema Layout 
 * Database development
 * Graphical User Interface
 * Below: Description of the relational database scheme of the system, with discussion regarding design decisions and efficiency. This includes integrity constraints.
