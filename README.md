@@ -21,9 +21,9 @@ This project involves the design and implementation of a relational database sys
 - - -
 
 ### Team Members
+* [Vasu](https://github.com/guptavasu1213)
 * [Alex](https://github.com/awworthy)
 * [Ahsan](https://github.com/ahshassan)
-* [Vasu](https://github.com/guptavasu1213)
 - - -
 
 ## Relational Database Scheme
