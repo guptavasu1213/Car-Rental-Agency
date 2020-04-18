@@ -1,4 +1,3 @@
-# CMPT 291 Term Project
 ## Car Rental Agency Database System
 - - -
 ### README Contents
